@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Merci pour ton non - Culture du consentement</title>
+    <title>Atelier de Consentement à Strasbourg - Merci pour ton non | Formation gratuite</title>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./public/output.css" as="style">
+    <link rel="preload" href="./public/atelier_consentement.jpg" as="image">
 
     <!-- Standard Meta Tags -->
     <meta
       name="description"
-      content="Atelier gratuit de 3 heures pour apprendre à dire non et transformer tes relations. Culture du consentement à Strasbourg."
+      content="Atelier de consentement gratuit à Strasbourg. Formation de 3 heures pour apprendre à dire non, poser ses limites et développer des relations saines. Animé par Merci pour ton non. Prochaine session : 21 septembre 2025."
     />
     <meta
       name="keywords"
-      content="consentement, relations humaines, respect, limites, communication, authenticité, Strasbourg, atelier gratuit"
+      content="atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, merci pour ton non, atelier gratuit strasbourg, culture consentement"
     />
     <meta name="author" content="Merci pour ton non" />
     <meta name="robots" content="index, follow" />
@@ -21,17 +25,17 @@
     <!-- Open Graph Meta Tags (Facebook, LinkedIn, WhatsApp) -->
     <meta
       property="og:title"
-      content="Merci pour ton non - Atelier gratuit sur le consentement"
+      content="Atelier de Consentement Gratuit à Strasbourg | Merci pour ton non"
     />
     <meta
       property="og:description"
-      content="3 heures pour apprendre à dire non et transformer tes relations. Prochain atelier le 21 septembre !"
+      content="Atelier de consentement de 3h à Strasbourg. Apprends à dire non, pose tes limites. Formation gratuite sur la culture du consentement. Inscris-toi !"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mercipourtonnon.fr" />
     <meta
       property="og:image"
-      content="https://mercipourtonnon.fr/public/atelier_consentement.png"
+      content="https://mercipourtonnon.fr/public/atelier_consentement.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -42,15 +46,15 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Merci pour ton non - Culture du consentement"
+      content="Atelier de Consentement Strasbourg | Formation Gratuite"
     />
     <meta
       name="twitter:description"
-      content="3 heures pour apprendre à dire non et transformer tes relations. Atelier gratuit à Strasbourg."
+      content="Atelier consentement gratuit à Strasbourg. 3h de formation pratique pour apprendre à dire non et créer des relations saines. Par Merci pour ton non."
     />
     <meta
       name="twitter:image"
-      content="https://mercipourtonnon.fr/public/atelier_consentement.png"
+      content="https://mercipourtonnon.fr/public/atelier_consentement.jpg"
     />
     <meta
       name="twitter:image:alt"
@@ -69,9 +73,9 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Merci pour ton non",
-        "description": "Association pour la diffusion d'une culture du consentement",
+        "description": "Organisation d'ateliers de consentement gratuits à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.",
         "url": "https://mercipourtonnon.fr",
-        "logo": "https://mercipourtonnon.fr/atelier_consentement.png",
+        "logo": "https://mercipourtonnon.fr/public/atelier_consentement.jpg",
         "sameAs": [
           "https://www.instagram.com/mercipourtonnon/",
           "https://www.facebook.com/mercipourtonnon",
@@ -81,6 +85,39 @@
           "@type": "PostalAddress",
           "addressLocality": "Strasbourg",
           "addressCountry": "FR"
+        },
+        "event": {
+          "@type": "EducationEvent",
+          "name": "Atelier découverte : Le consentement dans toutes ses dimensions",
+          "description": "Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement",
+          "startDate": "2025-09-21T10:00:00+02:00",
+          "endDate": "2025-09-21T13:00:00+02:00",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Strasbourg",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Strasbourg",
+              "addressCountry": "FR"
+            }
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Merci pour ton non",
+            "url": "https://mercipourtonnon.fr"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.billetweb.fr/multi_event.php?multi=43090",
+            "description": "Prix libre - Personne n'est refusé·e par manque d'argent"
+          },
+          "maximumAttendeeCapacity": 15,
+          "minimumAttendeeCapacity": 6
         }
       }
     </script>
@@ -216,6 +253,15 @@
         text-align: center;
       }
     </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPTGNRZSP6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KPTGNRZSP6');
+    </script>
   </head>
   <body>
     <!-- Urgency Banner -->
@@ -355,12 +401,15 @@
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="text-center md:text-left">
               <h1
-                class="hero-title text-6xl md:text-8xl font-black mb-6 title-font"
+                class="hero-title text-5xl md:text-7xl font-black mb-4 title-font"
               >
-                <span class="text-orange-500">MERCI</span><br />
-                <span class="text-gray-900">POUR TON</span><br />
-                <span class="text-purple-600">NON</span>
+                <span class="text-orange-500">Atelier de</span><br />
+                <span class="text-purple-600">Consentement</span><br />
+                <span class="text-gray-900 text-3xl md:text-5xl">à Strasbourg</span>
               </h1>
+              <p class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                MERCI POUR TON NON
+              </p>
               <p
                 class="text-xl md:text-2xl text-gray-700 max-w-2xl leading-relaxed fade-in mb-8"
               >
@@ -394,9 +443,11 @@
                 class="bg-gradient-to-br from-orange-100 to-purple-100 rounded-3xl p-4 shadow-2xl hover-lift"
               >
                 <img
-                  src="./public/atelier_consentement.png"
+                  src="./public/atelier_consentement.jpg"
                   alt="Atelier sur le consentement - Groupe de personnes discutant"
                   class="w-full h-auto rounded-2xl"
+                  width="1200"
+                  height="800"
                   loading="eager"
                 />
               </div>
@@ -419,7 +470,7 @@
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="pill-header text-3xl md:text-4xl">
-              UN ATELIER DE 3 HEURES QUI CHANGE TOUT
+              ATELIER DE CONSENTEMENT : 3 HEURES QUI CHANGENT TOUT
             </h2><br>
             <div
               class="mt-6 inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full font-semibold"
@@ -601,7 +652,7 @@
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              ILS ONT PARTICIPÉ
+              ILS ONT PARTICIPÉ À L'ATELIER DE CONSENTEMENT
             </h2>
           </div>
 
@@ -870,9 +921,12 @@
                 class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
               >
                 <img
-                  src="./public/pictures/dilara.jpeg"
-                  alt="Dilara"
+                  src="./public/pictures/dilara.jpg"
+                  alt="Dilara - Animatrice bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -889,9 +943,12 @@
                 class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
               >
                 <img
-                  src="./public/pictures/morgane.jpeg"
-                  alt="Morgane"
+                  src="./public/pictures/morgane.jpg"
+                  alt="Morgane - Animatrice bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -908,9 +965,12 @@
                 class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
               >
                 <img
-                  src="./public/pictures/mathilde.jpeg"
-                  alt="Mathilde"
+                  src="./public/pictures/mathilde.jpg"
+                  alt="Mathilde - Animatrice bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -927,9 +987,12 @@
                 class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
               >
                 <img
-                  src="./public/pictures/thomas.jpeg"
-                  alt="Thomas"
+                  src="./public/pictures/thomas.jpg"
+                  alt="Thomas - Animateur bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1264,6 +1327,7 @@
     <script
       type="text/javascript"
       src="https://www.billetweb.fr/js/export.js"
+      defer
     ></script>
   </body>
 </html>
