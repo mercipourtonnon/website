@@ -12,7 +12,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "start": "bun src/index.html",
-    "build": "bunx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "start": "bun index.html",
+    "build": "bunx @tailwindcss/cli -i ./input.css -o ./public/output.css --watch"
   }
 }
