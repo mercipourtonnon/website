@@ -8,11 +8,11 @@
     <!-- Standard Meta Tags -->
     <meta
       name="description"
-      content="Cultivons ensemble une culture du consentement pour des relations humaines plus authentiques et respectueuses. Espaces de réflexion et de pratique sur le consentement."
+      content="Atelier gratuit de 3 heures pour apprendre à dire non et transformer tes relations. Culture du consentement à Strasbourg."
     />
     <meta
       name="keywords"
-      content="consentement, relations humaines, respect, limites, communication, authenticité, Strasbourg"
+      content="consentement, relations humaines, respect, limites, communication, authenticité, Strasbourg, atelier gratuit"
     />
     <meta name="author" content="Merci pour ton non" />
     <meta name="robots" content="index, follow" />
@@ -21,11 +21,11 @@
     <!-- Open Graph Meta Tags (Facebook, LinkedIn, WhatsApp) -->
     <meta
       property="og:title"
-      content="Merci pour ton non - Culture du consentement"
+      content="Merci pour ton non - Atelier gratuit sur le consentement"
     />
     <meta
       property="og:description"
-      content="Cultivons ensemble une culture du consentement pour des relations humaines plus authentiques et respectueuses."
+      content="3 heures pour apprendre à dire non et transformer tes relations. Prochain atelier le 21 septembre !"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mercipourtonnon.fr" />
@@ -46,7 +46,7 @@
     />
     <meta
       name="twitter:description"
-      content="Cultivons ensemble une culture du consentement pour des relations humaines plus authentiques et respectueuses."
+      content="3 heures pour apprendre à dire non et transformer tes relations. Atelier gratuit à Strasbourg."
     />
     <meta
       name="twitter:image"
@@ -204,9 +204,30 @@
           transform: translate(-20px, 20px) scale(0.9);
         }
       }
+
+      .transition-text {
+        background: linear-gradient(135deg, #f97316 0%, #a855f7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin: 2rem 0;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
+    <!-- Urgency Banner -->
+    <div
+      class="bg-gradient-to-r from-orange-600 to-purple-600 text-white py-2 text-center relative"
+    >
+      <p class="text-sm font-semibold">
+        🔥 Prochaine session le 21 septembre !
+        <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>
+      </p>
+    </div>
+
     <div
       class="min-h-screen bg-gradient-to-br from-orange-50 to-purple-50 relative overflow-hidden"
     >
@@ -224,43 +245,46 @@
               Merci pour ton non
             </div>
             <div class="flex items-center gap-8">
-              <div class="hidden md:flex space-x-6">
+              <div class="hidden md:flex space-x-6 items-center">
                 <a
-                  href="#raison"
+                  href="#atelier"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Raison d'être</a
+                  >L'atelier</a
                 >
                 <a
-                  href="#approche"
+                  href="#temoignages"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Pourquoi gratuit</a
+                  >Témoignages</a
                 >
                 <a
                   href="#mission"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Mission</a
+                  >Notre mission</a
                 >
                 <a
                   href="#valeurs"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Valeurs</a
+                  >Nos valeurs</a
                 >
                 <a
-                  href="#vision"
+                  href="#equipe"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Vision</a
+                  >L'équipe</a
                 >
                 <a
-                  href="#membres"
+                  href="#faq"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Équipe</a
-                >
-                <a
-                  href="#events"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Événements</a
+                  >FAQ</a
                 >
               </div>
+
+              <!-- CTA in Navigation -->
+              <a
+                href="#events"
+                class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300"
+              >
+                <span>S'inscrire</span>
+              </a>
 
               <!-- Social Media Icons in Header -->
               <div class="flex items-center space-x-3">
@@ -272,7 +296,9 @@
                   aria-label="Instagram"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"/>
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
+                    />
                   </svg>
                 </a>
 
@@ -284,7 +310,9 @@
                   aria-label="Facebook"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
                   </svg>
                 </a>
 
@@ -296,7 +324,9 @@
                   aria-label="LinkedIn"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
                   </svg>
                 </a>
 
@@ -308,7 +338,9 @@
                   aria-label="Billetterie"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"/>
+                    <path
+                      d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
+                    />
                   </svg>
                 </a>
               </div>
@@ -332,18 +364,30 @@
               <p
                 class="text-xl md:text-2xl text-gray-700 max-w-2xl leading-relaxed fade-in mb-8"
               >
-                Cultivons ensemble une culture du consentement pour des
-                relations humaines plus authentiques et respectueuses
+                3 heures pour apprendre à dire non et transformer tes relations
               </p>
               <a
                 href="#events"
                 class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
               >
-                <span>S'inscrire à un atelier gratuit</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                <span>Je réserve ma place</span>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
                 </svg>
               </a>
+              <p class="text-sm text-gray-500 mt-4">
+                Prix libre • Prochaine session le 21 sept
+              </p>
             </div>
             <div class="relative">
               <div
@@ -367,119 +411,266 @@
         </div>
       </section>
 
-      <!-- Raison d'être -->
-      <section id="raison" class="relative z-10 px-6 py-16">
+      <!-- Workshop Details (MOVED UP) -->
+      <section
+        id="atelier"
+        class="relative z-10 px-6 py-16 bg-gradient-to-br from-yellow-50 to-orange-50"
+      >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="pill-header text-3xl md:text-4xl">
-              NOTRE RAISON D'ÊTRE
-            </h2>
+              UN ATELIER DE 3 HEURES QUI CHANGE TOUT
+            </h2><br>
+            <div
+              class="mt-6 inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full font-semibold"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+              <span>6 à 15 participants maximum</span>
+            </div>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-3xl p-8 shadow-lg hover-lift">
-              <div
-                class="bg-orange-500 text-white px-6 py-3 rounded-full inline-block mb-6 font-bold text-lg"
-              >
-                ACTUELLEMENT
-              </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                Le monde tel qu'il est
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-3xl p-8 shadow-lg">
+              <h3 class="text-2xl font-bold text-orange-500 mb-6">
+                Ce que tu vas vivre
               </h3>
-              <p class="text-gray-600 leading-relaxed mb-4">
-                Les relations humaines sont trop souvent marquées par les
-                injonctions de la société et des rapports de pouvoir et de
-                domination basées sur la contrainte, la peur ou l'évitement.
-              </p>
-              <p class="text-gray-600 leading-relaxed">
-                Dire « non » peut-être vécu comme une appréhension et recevoir
-                un "non" peut-être perçu comme un rejet.
-              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Exercices pratiques et ludiques pour incarner les notions
+                    clés</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Jeux de rôle bienveillants pour t'entraîner à dire
+                    non</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Mises en situation pour comprendre ce qui influence tes
+                    décisions</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Moments de partage dans un cadre sécurisant</span
+                  >
+                </li>
+              </ul>
             </div>
 
             <div
-              class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-lg hover-lift"
+              class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-lg"
             >
-              <div
-                class="bg-purple-600 text-white px-6 py-3 rounded-full inline-block mb-6 font-bold text-lg"
-              >
-                DEMAIN
-              </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                Le monde auquel nous aspirons
+              <h3 class="text-2xl font-bold text-purple-600 mb-6">
+                Tu repartiras avec
               </h3>
-              <p class="text-gray-600 leading-relaxed mb-4">
-                Nous aspirons à un monde où les relations humaines sont plus
-                saines, c'est-à-dire authentiques, co-construites,
-                respectueuses, intègres, et nourries par la conscience de soi et
-                le respect mutuel.
-              </p>
-              <p class="text-gray-600 leading-relaxed">
-                Un monde où chacun·e peut s'exprimer, écouter, poser ses
-                limites, et construire avec l'autre, dans un climat de confiance
-                et de responsabilité partagée.
-              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Une définition claire et mémorisable du consentement</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Des clés concrètes pour repérer les situations
+                    problématiques</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Plus de confiance pour poser tes limites</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Des outils pour des relations plus authentiques</span
+                  >
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="text-center mt-8">
+            <a
+              href="#events"
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span>Rejoindre le prochain atelier</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </a>
+          </div>
+
+          
           </div>
         </div>
       </section>
 
-      <!-- Notre Approche -->
-      <section id="approche" class="relative z-10 px-6 py-16 bg-gradient-to-br from-purple-50 to-orange-50">
+      <!-- Testimonials (MOVED UP) -->
+      <section id="temoignages" class="relative z-10 px-6 py-16">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              ATELIERS GRATUITS À PRIX LIBRE
+              ILS ONT PARTICIPÉ
             </h2>
           </div>
 
-          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-8">
-            <div class="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 class="text-2xl font-bold text-purple-600 mb-4">Association loi 1901 à but non lucratif</h3>
-                <p class="text-gray-700 mb-4 leading-relaxed">
-                  Nous sommes une <strong>association loi 1901</strong>, ce qui signifie que notre but n'est pas de faire du profit mais de servir l'intérêt général.
-                  Nous refusons la commercialisation du consentement qui transformerait un enjeu politique fondamental en produit de consommation.
-                </p>
-                <p class="text-gray-700 leading-relaxed">
-                  Nos ateliers sont <strong>gratuits à prix libre</strong> : personne n'est refusé·e par manque d'argent.
-                  L'éducation au consentement est un droit, pas un privilège. Si vous le pouvez et le souhaitez,
-                  une participation libre est bienvenue pour soutenir l'association.
-                </p>
-              </div>
-
-              <div>
-                <h3 class="text-2xl font-bold text-orange-500 mb-4">Ancrés dans les luttes féministes</h3>
-                <p class="text-gray-700 mb-4 leading-relaxed">
-                  La notion de consentement est <strong>issue des luttes féministes</strong> qui l'ont inscrite dans une analyse
-                  des rapports de pouvoir et de domination, notamment patriarcaux.
-                </p>
-                <p class="text-gray-700 leading-relaxed">
-                  Nous reconnaissons cet héritage et refusons de dépolitiser le consentement en le réduisant
-                  à une question individuelle ou interpersonnelle détachée des structures de pouvoir qui façonnent nos relations.
-                </p>
-              </div>
-            </div>
-
-            <div class="mt-8 p-6 bg-gradient-to-r from-purple-50 to-orange-50 rounded-2xl">
-              <h4 class="text-xl font-bold text-gray-900 mb-3">Qu'est-ce que le prix libre ?</h4>
-              <p class="text-gray-700 mb-3">
-                Le prix libre signifie que <strong>chacun·e participe selon ses moyens et ses envies</strong>.
-                L'accès aux ateliers n'est jamais conditionné à une participation financière.
-              </p>
-              <p class="text-gray-700">
-                Les participations libres, les subventions publiques et le bénévolat nous permettent de maintenir
-                cette accessibilité universelle tout en pérennisant nos actions.
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-purple-500"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
               </p>
             </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-yellow-500"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+              </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-green-500"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
+              </p>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-blue-500"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center mt-8">
+            <a
+              href="#events"
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span>Rejoindre le prochain atelier</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- Mission -->
+      <!-- Mission & Approach -->
       <section
         id="mission"
-        class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
+        class="relative z-10 px-6 py-16 bg-gradient-to-br from-purple-50 to-orange-50"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
@@ -488,52 +679,73 @@
             </h2>
           </div>
 
-          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
-            <p class="text-xl text-gray-700 leading-relaxed mb-8">
-              Nous avons pour mission de diffuser au plus grand nombre une
-              culture du consentement par le biais d'espaces de réflexion et de
-              pratique, où chacun·e peut explorer les enjeux du consentement —
-              dans son rapport à soi, à l'autre et à la société.
+          <!-- Mission principale simplifiée -->
+          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-12 text-center">
+            <p class="text-2xl text-gray-900 font-bold mb-6 leading-relaxed">
+              Diffuser une culture du consentement pour transformer nos relations
             </p>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              On crée des espaces sûrs où chacun·e peut apprendre à dire non, poser ses limites et construire des relations plus authentiques — dans tous les contextes de vie.
+            </p>
+          </div>
 
-            <h3 class="text-2xl font-bold text-orange-500 mb-6 title-font">
-              Nos actions visent à :
-            </h3>
-            <div class="space-y-6">
-              <div class="flex items-start gap-4">
-                <div
-                  class="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-xl font-bold"
-                >
-                  1
-                </div>
-                <p class="text-gray-700">
-                  Cultiver des compétences pour écouter ses ressentis, poser ses
-                  limites, accueillir le "non" de l'autre, et construire des
-                  accords réciproques.
+          <!-- 3 piliers principaux -->
+          <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🎯</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-3">Apprendre à dire non</h3>
+              <p class="text-gray-600">
+                Écouter ses ressentis, poser ses limites et accueillir le "non" de l'autre avec bienveillance
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 shadow-lg text-center">
+              <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🌍</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-3">Pour tous les contextes</h3>
+              <p class="text-gray-600">
+                Relations amicales, familiales, professionnelles, intimes — le consentement est partout
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">✊</span>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-3">Un enjeu collectif</h3>
+              <p class="text-gray-600">
+                Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
+              </p>
+            </div>
+          </div>
+
+          <!-- Notre approche -->
+          <div class="mb-12 text-center">
+            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
+              NOTRE APPROCHE
+            </h2>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-purple-600 mb-4">
+                  Association à but non lucratif
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Nos ateliers sont à <strong>prix libre</strong> — personne n'est refusé·e par manque d'argent. On croit que le consentement doit être accessible à tou·te·s.
                 </p>
               </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-xl font-bold"
-                >
-                  2
-                </div>
-                <p class="text-gray-700">
-                  Développer une culture du consentement dans tous les contextes
-                  de nos vies quotidiennes : affectif, professionnel, éducatif,
-                  associatif, etc.
-                </p>
-              </div>
-              <div class="flex items-start gap-4">
-                <div
-                  class="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-xl font-bold"
-                >
-                  3
-                </div>
-                <p class="text-gray-700">
-                  Inclure des publics variés (adultes, jeunes, publics plus ou
-                  moins sensibilisés), en prenant en compte les rapports de
-                  pouvoir, les inégalités d'accès, et la pluralité des vécus.
+
+              <div>
+                <h3 class="text-2xl font-bold text-orange-500 mb-4">
+                  Inclusif et accessible
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  On accueille tous les publics dans leur diversité. Nos espaces sont bienveillants et adaptés aux différents vécus et capacités.
                 </p>
               </div>
             </div>
@@ -541,175 +753,116 @@
         </div>
       </section>
 
-      <!-- Valeurs -->
+      <!-- Our Values -->
       <section id="valeurs" class="relative z-10 px-6 py-16">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="pill-header text-3xl md:text-4xl">NOS VALEURS</h2>
           </div>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div
               class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-orange-500"
             >
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Intégrité et clarté
-              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">💎</span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Intégrité et clarté
+                </h3>
+              </div>
               <p class="text-gray-600">
-                Nous encourageons l'écoute de soi, l'alignement entre ce que
-                l'on ressent, ce que l'on pense et ce que l'on dit et une
-                expression sincère et transparente.
+                On encourage l'écoute de soi, l'alignement entre ce que l'on ressent, ce que l'on pense et ce que l'on dit et une expression sincère et transparente.
               </p>
             </div>
 
             <div
               class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-purple-500"
             >
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Culture du consentement
-              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">🌿</span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Culture du consentement
+                </h3>
+              </div>
               <p class="text-gray-600">
-                Nous croyons que le respect des limites, des désaccords et des
-                "non" est une forme élevée de soin et de reconnaissance de
-                l'autre conduisant à des relations plus authentiques.
+                Le respect des limites, des désaccords et des "non" est une forme élevée de soin et de reconnaissance de l'autre conduisant à des relations plus authentiques.
               </p>
             </div>
 
             <div
               class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-yellow-500"
             >
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Réflexivité et doute
-              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">🤔</span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Réflexivité et doute
+                </h3>
+              </div>
               <p class="text-gray-600">
-                Nous considérons l'examen de nos croyances, automatismes, biais
-                et privilèges comme un levier essentiel pour agir de façon plus
-                juste.
+                L'examen de nos croyances, automatismes, biais et privilèges est un levier essentiel pour agir de façon plus juste.
               </p>
             </div>
 
             <div
               class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-green-500"
             >
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Accessibilité et inclusion
-              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">✨</span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Accessibilité et inclusion
+                </h3>
+              </div>
               <p class="text-gray-600">
-                Nous travaillons activement à rendre nos espaces
-                compréhensibles, accessibles et accueillants à la diversité des
-                vécus, des origines et des capacités.
+                On travaille activement à rendre nos espaces compréhensibles, accessibles et accueillants à la diversité des vécus, des origines et des capacités.
               </p>
             </div>
 
             <div
               class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-blue-500"
             >
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Responsabilité collective et individuelle
-              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">🤝</span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Responsabilité collective et individuelle
+                </h3>
+              </div>
               <p class="text-gray-600">
-                Nos choix sont façonnés par nos besoins fondamentaux de liens,
-                des contextes sociaux et des structures de pouvoir qu'on ne peut
-                ignorer.
+                Nos choix sont façonnés par nos besoins fondamentaux de liens, des contextes sociaux et des structures de pouvoir qu'on ne peut ignorer, on refuse donc de faire peser l'entière responsabilité sur les individus.
               </p>
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-indigo-500"
+              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-pink-500"
             >
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Gouvernance démocratique
-              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">🌈</span>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Gouvernance démocratique
+                </h3>
+              </div>
               <p class="text-gray-600">
-                Nous aspirons à ce que nos modes d'organisation internes
-                incarnent les principes que nous défendons, entre partage du
-                pouvoir, écoute et co-responsabilité.
+                On aspire à ce que nos modes d'organisation internes incarnent les principes que l'on défend, entre partage du pouvoir, écoute et co-responsabilité.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Vision -->
+      <!-- Team -->
       <section
-        id="vision"
-        class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
+        id="equipe"
+        class="relative z-10 px-6 py-16 bg-gradient-to-br from-orange-50 to-purple-50"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              NOTRE VISION
-            </h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            <div
-              class="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-3xl p-8 shadow-lg hover-lift"
-            >
-              <div class="text-4xl mb-4">👥</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Toucher un public large et diversifié
-              </h3>
-              <p class="text-gray-600">
-                Des adultes les plus sensibilisé·es aux plus éloigné·es de ces
-                enjeux.
-              </p>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-green-100 to-teal-100 rounded-3xl p-8 shadow-lg hover-lift"
-            >
-              <div class="text-4xl mb-4">🌱</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Sensibiliser les enfants et les adolescent·es
-              </h3>
-              <p class="text-gray-600">
-                Notamment à Strasbourg, pour poser les bases d'une autre culture
-                relationnelle dès le plus jeune âge.
-              </p>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl p-8 shadow-lg hover-lift"
-            >
-              <div class="text-4xl mb-4">🌍</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Essaimer sur le territoire
-              </h3>
-              <p class="text-gray-600">
-                En nouant des partenariats durables avec des structures
-                éducatives, sociales, culturelles ou institutionnelles.
-              </p>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-lg hover-lift"
-            >
-              <div class="text-4xl mb-4">💪</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Faire vivre un écosystème de professionnel·les engagé·es
-              </h3>
-              <p class="text-gray-600">
-                Qui trouvent dans l'association un cadre éthique, durable et
-                épanouissant.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Membres -->
-      <section id="membres" class="relative z-10 px-6 py-16">
-        <div class="max-w-7xl mx-auto">
-          <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">NOTRE ÉQUIPE</h2>
+            <h2 class="pill-header text-3xl md:text-4xl">L'ÉQUIPE</h2>
             <p class="text-xl text-purple-600 font-bold mt-6">
-              Des professionnel·les engagé·es pour une culture du consentement
+              Des bénévoles engagé·es pour toi
             </p>
           </div>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Dilara Simsek Araiz -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Team members simplified -->
             <div
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
             >
@@ -718,44 +871,17 @@
               >
                 <img
                   src="https://media.licdn.com/dms/image/v2/D4E03AQE3539DT7Qxew/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699719219893?e=1761177600&v=beta&t=qIS2tnSf-bgn-Sy6q-4yErf7Cw6CC79JjN7wq3ac3C4"
-                  alt="Dilara Simsek Araiz"
+                  alt="Dilara"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   onerror="this.style.display='none'"
                 />
               </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  Dilara Simsek Araiz
-                </h3>
-                <p class="text-orange-500 font-semibold mb-3">Animatrice</p>
-                <p class="text-gray-600 text-sm mb-4">
-                  Diplômée en Droit International et Action Humanitaire,
-                  spécialisée en gestion de projet, formation et accompagnement
-                  des bénévoles.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://linkedin.com/in/dilara-simsek-araiz-7948751aa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-blue-600 transition"
-                    aria-label="LinkedIn de Dilara"
-                  >
-                    <svg
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                      />
-                    </svg>
-                  </a>
-                </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-900">Dilara</h3>
+                <p class="text-orange-500 font-semibold">Animatrice</p>
               </div>
             </div>
 
-            <!-- Morgane Bourgeais -->
             <div
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
             >
@@ -764,66 +890,17 @@
               >
                 <img
                   src="https://media.licdn.com/dms/image/v2/D4E03AQFnHDPnbs7Ubw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725364018832?e=1761177600&v=beta&t=KwuY6B9pqwb0KJ6_VYhVJo_fJxElswZ3tih4Bq80LP4"
-                  alt="Morgane Bourgeais"
+                  alt="Morgane"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   onerror="this.style.display='none'"
                 />
               </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  Morgane Bourgeais
-                </h3>
-                <p class="text-orange-500 font-semibold mb-3">
-                  Formatrice & Conseillère
-                </p>
-                <p class="text-gray-600 text-sm mb-4">
-                  Juriste en droits humains, conseillère conjugale et familiale,
-                  formatrice en prévention des VHSS et santé sexuelle.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://linkedin.com/in/morgane-bourgeais-28a07b85"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-blue-600 transition"
-                    aria-label="LinkedIn de Morgane"
-                  >
-                    <svg
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://blys.space/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-orange-500 transition"
-                    aria-label="Site web de Morgane"
-                  >
-                    <svg
-                      class="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                      />
-                    </svg>
-                  </a>
-                </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-900">Morgane</h3>
+                <p class="text-orange-500 font-semibold">Formatrice</p>
               </div>
             </div>
 
-            <!-- Mathilde Brière -->
             <div
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
             >
@@ -832,45 +909,17 @@
               >
                 <img
                   src="https://media.licdn.com/dms/image/v2/D4E03AQFtRGyUf4KyJQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1704715591804?e=1761177600&v=beta&t=gAMenSTUoe0vs-X7Zd5SJB5nmLWZ8_kE3Sj0Hq5zIBI"
-                  alt="Mathilde Brière"
+                  alt="Mathilde"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   onerror="this.style.display='none'"
                 />
               </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  Mathilde Brière
-                </h3>
-                <p class="text-orange-500 font-semibold mb-3">
-                  Psychologue sociale
-                </p>
-                <p class="text-gray-600 text-sm mb-4">
-                  Docteure en Sciences de Gestion, spécialiste des comportements
-                  organisationnels et accompagnement au changement.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://linkedin.com/in/mathilde-briere-a9b984b0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-blue-600 transition"
-                    aria-label="LinkedIn de Mathilde"
-                  >
-                    <svg
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                      />
-                    </svg>
-                  </a>
-                </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-900">Mathilde</h3>
+                <p class="text-orange-500 font-semibold">Psychologue</p>
               </div>
             </div>
 
-            <!-- Thomas Jeanneau -->
             <div
               class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
             >
@@ -879,46 +928,108 @@
               >
                 <img
                   src="https://media.licdn.com/dms/image/v2/C4E03AQHRZNetf9soiw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517555595260?e=1761177600&v=beta&t=eBJSIZhvwFw7Ve2wnzYAfoiesKNikJVSeRfVJ2M4SHw"
-                  alt="Thomas Jeanneau"
+                  alt="Thomas"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   onerror="this.style.display='none'"
                 />
               </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  Thomas Jeanneau
-                </h3>
-                <p class="text-orange-500 font-semibold mb-3">Développeur produit</p>
-                <p class="text-gray-600 text-sm mb-4">
-                  Autodidacte, fondateur de La Tech Force,
-                  formateur en outils numériques.
-                </p>
-                <div class="flex space-x-3">
-                  <a
-                    href="https://linkedin.com/in/thomasjeanneauentrepreneur"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-blue-600 transition"
-                    aria-label="LinkedIn de Thomas"
-                  >
-                    <svg
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                      />
-                    </svg>
-                  </a>
-                </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg font-bold text-gray-900">Thomas</h3>
+                <p class="text-orange-500 font-semibold">Développeur</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Events -->
+      <!-- FAQ (Moved before registration) -->
+      <section id="faq" class="relative z-10 px-6 py-16">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-12 text-center">
+            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
+              TES QUESTIONS
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            <details
+              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                C'est vraiment gratuit ?
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Oui ! Le prix libre signifie que tu peux participer sans rien
+                payer. Si tu veux et peux soutenir l'association, c'est bienvenu
+                mais jamais obligatoire.
+              </p>
+            </details>
+
+            <details
+              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                C'est uniquement sur le consentement sexuel ?
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Non ! L'atelier explore le consentement dans toutes les
+                dimensions : amicales, familiales, professionnelles... Le
+                consentement concerne tous nos rapports humains.
+              </p>
+            </details>
+
+            <details
+              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                Je suis timide, vais-je devoir parler ?
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Tu restes souverain·e ! Tu peux choisir de ne pas participer à
+                certains exercices, juste observer, ou partir quand tu veux.
+                Tout dans la bienveillance.
+              </p>
+            </details>
+
+            <details
+              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                Je peux venir seul·e ?
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Bien sûr ! La plupart viennent seul·es. C'est même plus
+                enrichissant pour rencontrer de nouvelles personnes dans un
+                cadre bienveillant.
+              </p>
+            </details>
+
+            <details
+              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                Je peux annuler ?
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Oui, tu peux annuler à tout moment ! Préviens-nous juste pour
+                libérer ta place (6 à 15 personnes maximum).
+              </p>
+            </details>
+          </div>
+
+          <div class="text-center mt-10">
+            <p class="text-gray-700 mb-4">Une autre question ?</p>
+            <a
+              href="mailto:contact@mercipourtonnon.fr"
+              class="text-orange-500 font-semibold hover:text-purple-600 transition"
+            >
+              Écris-nous : mercipourtonnon@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Registration -->
       <section
         id="events"
         class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
@@ -930,11 +1041,14 @@
             <h2
               class="text-4xl md:text-5xl font-black text-white mb-8 title-font"
             >
-              ATELIERS GRATUITS À PRIX LIBRE - SUR INSCRIPTION
+              RÉSERVE TA PLACE MAINTENANT
             </h2>
+            <p class="text-white text-xl mb-8">
+              ⏰ Prochaine session bientôt !
+            </p>
             <div class="bg-white rounded-2xl p-6 max-w-4xl mx-auto">
               <a
-                title="Vente de billets en ligne"
+                title="Réservation en ligne"
                 href="https://www.billetweb.fr/multi_event.php?multi=43090"
                 class="shop_frame"
                 target="_blank"
@@ -944,14 +1058,14 @@
                 data-scrolling="no"
                 data-id="43090"
                 data-resize="1"
-                >Vente de billets en ligne</a
+                >Réservation en ligne</a
               >
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Footer -->
+      <!-- Footer with Vision integrated -->
       <footer class="relative z-10 bg-gray-900 text-white py-12 mt-16">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-8">
@@ -977,7 +1091,6 @@
                   class="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
@@ -1000,7 +1113,6 @@
                   class="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
@@ -1023,7 +1135,6 @@
                   class="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
@@ -1037,7 +1148,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="group"
-              aria-label="Billetweb - Billetterie"
+              aria-label="Billetweb"
             >
               <div
                 class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-orange-500 group-hover:scale-110"
@@ -1046,7 +1157,6 @@
                   class="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
@@ -1062,6 +1172,94 @@
         </div>
       </footer>
     </div>
+
+    <!-- Floating CTA Button -->
+    <div id="floating-cta" class="fixed bottom-8 right-8 z-50 hidden">
+      <a
+        href="#events"
+        class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
+      >
+        <span>S'inscrire</span>
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <script>
+      // Show floating CTA after scrolling past hero section
+      window.addEventListener("scroll", function () {
+        const floatingCta = document.getElementById("floating-cta");
+        const scrollPosition = window.scrollY;
+        const heroHeight = document.querySelector("section").offsetHeight;
+
+        if (scrollPosition > heroHeight) {
+          floatingCta.classList.remove("hidden");
+        } else {
+          floatingCta.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      // Workshop dates
+      const workshopDates = [
+        { date: new Date('2025-09-21T10:00:00') },
+        { date: new Date('2025-10-12T10:00:00') },
+        { date: new Date('2025-11-16T10:00:00') },
+        { date: new Date('2025-12-14T10:00:00') },
+        { date: new Date('2026-01-18T10:00:00') },
+        { date: new Date('2026-02-22T10:00:00') }
+      ];
+
+      // Get next workshop date
+      function getNextWorkshop() {
+        const now = new Date();
+        const nextWorkshop = workshopDates.find(w => w.date > now);
+        return nextWorkshop || workshopDates[0]; // Fallback to first date if all passed
+      }
+
+      // Format date for display
+      function formatDate(date) {
+        const options = { day: 'numeric', month: 'long' };
+        return date.toLocaleDateString('fr-FR', options);
+      }
+
+      function formatShortDate(date) {
+        const options = { day: 'numeric', month: 'short' };
+        return date.toLocaleDateString('fr-FR', options).replace('.', '');
+      }
+
+      // Update all date references on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        const nextWorkshop = getNextWorkshop();
+        const formattedDate = formatDate(nextWorkshop.date);
+        const shortDate = formatShortDate(nextWorkshop.date);
+
+        // Update urgency banner
+        const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
+        if (bannerText) {
+          bannerText.innerHTML = `🔥 Prochaine session le ${formattedDate} !
+            <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>`;
+        }
+
+        // Update hero section date
+        const heroDate = document.querySelector('.text-sm.text-gray-500.mt-4');
+        if (heroDate) {
+          heroDate.textContent = `Prix libre • Prochaine session le ${shortDate}`;
+        }
+      });
+    </script>
 
     <script
       type="text/javascript"
