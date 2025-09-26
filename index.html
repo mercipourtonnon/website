@@ -432,7 +432,7 @@
                 </svg>
               </a>
               <p class="text-sm text-gray-500 mt-4">
-                Prix libre • Prochaine session le 21 sept
+                Prochaine session le 21 sept
               </p>
             </div>
             <div class="relative">
@@ -1318,16 +1318,10 @@
         return date.toLocaleDateString('fr-FR', options);
       }
 
-      function formatShortDate(date) {
-        const options = { day: 'numeric', month: 'short' };
-        return date.toLocaleDateString('fr-FR', options).replace('.', '');
-      }
-
       // Update all date references on page load
       document.addEventListener('DOMContentLoaded', function() {
         const nextWorkshop = getNextWorkshop();
         const formattedDate = formatDate(nextWorkshop.date);
-        const shortDate = formatShortDate(nextWorkshop.date);
 
         // Update urgency banner
         const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
@@ -1339,7 +1333,7 @@
         // Update hero section date
         const heroDate = document.querySelector('.text-sm.text-gray-500.mt-4');
         if (heroDate) {
-          heroDate.textContent = `Prix libre • Prochaine session le ${shortDate}`;
+          heroDate.textContent = `Prochaine session le ${formattedDate}`;
         }
       });
     </script>
