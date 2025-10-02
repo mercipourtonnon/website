@@ -7,7 +7,7 @@
     "tailwindcss": "^4.1.13"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.9.2"
   },
   "scripts": {
     "start": "bun index.html",
