@@ -2,7 +2,7 @@
   "name": "mercipourtonnon",
   "private": true,
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/cli": "^4.1.14",
     "@types/bun": "latest",
     "tailwindcss": "^4.1.13"
   },
