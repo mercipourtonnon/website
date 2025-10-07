@@ -269,7 +269,7 @@
       class="bg-gradient-to-r from-orange-600 to-purple-600 text-white py-3 text-center relative"
     >
       <p class="text-sm sm:text-base font-semibold">
-        🔥 Prochaine session le 21 septembre — Places limitées (6-15 participants)
+        Prochaine session le 21 septembre — 6 à 15 participants
         <a href="#events" class="underline font-bold ml-2 hover:text-yellow-200 transition">Je m'inscris →</a>
       </p>
     </div>
@@ -1871,10 +1871,10 @@
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="pill-header text-3xl md:text-4xl">
-              PAS ENCORE CONVAINCU·E ?
+              Quelques questions fréquentes
             </h2>
             <p class="text-xl text-gray-600 mt-6">
-              On répond à tes dernières hésitations
+              On répond à tes questions
             </p>
           </div>
 
@@ -1950,7 +1950,7 @@
               href="#events"
               class="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
-              <span>J'ose franchir le pas</span>
+              <span>Je m'inscris</span>
               <svg
                 class="w-5 h-5"
                 fill="none"
@@ -2201,13 +2201,9 @@
       </footer>
     </div>
 
-    <!-- Floating CTA Button with urgency -->
+    <!-- Floating CTA Button -->
     <div id="floating-cta" class="fixed bottom-8 right-8 z-50 hidden">
       <div class="relative">
-        <!-- Urgency badge -->
-        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
-          Places limitées
-        </div>
         <a
           href="#events"
           class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
@@ -2316,10 +2312,10 @@
         const nextWorkshop = getNextWorkshop();
         const formattedDate = formatDate(nextWorkshop.date);
 
-        // Update urgency banner
+        // Update banner
         const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
         if (bannerText) {
-          bannerText.innerHTML = `🔥 Prochaine session le ${formattedDate} — Places limitées (6-15 participants)
+          bannerText.innerHTML = `Prochaine session le ${formattedDate} — 6 à 15 participants
             <a href="#events" class="underline font-bold ml-2 hover:text-yellow-200 transition">Je m'inscris →</a>`;
         }
 
