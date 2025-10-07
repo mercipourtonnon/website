@@ -2214,27 +2214,33 @@
       </footer>
     </div>
 
-    <!-- Floating CTA Button -->
+    <!-- Floating CTA Button with urgency -->
     <div id="floating-cta" class="fixed bottom-8 right-8 z-50 hidden">
-      <a
-        href="#events"
-        class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
-      >
-        <span>S'inscrire</span>
-        <svg
-          class="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <div class="relative">
+        <!-- Urgency badge -->
+        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+          Places limitées
+        </div>
+        <a
+          href="#events"
+          class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M13 7l5 5m0 0l-5 5m5-5H6"
-          />
-        </svg>
-      </a>
+          <span>S'inscrire</span>
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
 
     <script>
@@ -2326,8 +2332,8 @@
         // Update urgency banner
         const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
         if (bannerText) {
-          bannerText.innerHTML = `🔥 Prochaine session le ${formattedDate} !
-            <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>`;
+          bannerText.innerHTML = `🔥 Prochaine session le ${formattedDate} — Places limitées (6-15 participants)
+            <a href="#events" class="underline font-bold ml-2 hover:text-yellow-200 transition">Je m'inscris →</a>`;
         }
 
         // Update hero section date
