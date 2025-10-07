@@ -2100,6 +2100,42 @@
         if (heroDate) {
           heroDate.textContent = `Prochaine session le ${formattedDate}`;
         }
+
+        // Smooth scroll for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Skip if it's just "#" or empty
+            if (!href || href === '#') return;
+
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              e.preventDefault();
+
+              // Calculate offset for sticky navigation
+              const navHeight = document.querySelector('nav').offsetHeight;
+              const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = targetPosition - navHeight - 20; // 20px extra padding
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+
+              // Close mobile menu if open
+              const mobileMenu = document.getElementById('mobile-menu');
+              if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+              }
+
+              // Update URL hash without jumping
+              history.pushState(null, null, href);
+            }
+          });
+        });
       });
     </script>
 
