@@ -190,15 +190,6 @@
         }
       }
 
-      .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .hover-lift:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      }
-
       .gradient-text {
         background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
         -webkit-background-clip: text;
@@ -339,7 +330,7 @@
               <!-- CTA in Desktop Navigation -->
               <a
                 href="#events"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300"
+                class="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300"
               >
                 <span>S'inscrire</span>
               </a>
@@ -530,7 +521,7 @@
             <div class="mt-8">
               <a
                 href="#events"
-                class="block w-full text-center bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
+                class="block w-full text-center bg-orange-500 text-white px-6 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
                 onclick="closeMobileMenu()"
               >
                 Je réserve ma place
@@ -621,7 +612,7 @@
               </p>
               <a
                 href="#events"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                class="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
               >
                 <span>Je réserve ma place (prix libre)</span>
                 <svg
@@ -644,7 +635,7 @@
             </div>
             <div class="relative mt-8 lg:mt-0">
               <div
-                class="bg-gradient-to-br from-orange-100 to-purple-100 rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-xl sm:shadow-2xl hover-lift max-w-md sm:max-w-lg lg:max-w-none mx-auto"
+                class="bg-orange-100 rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-sm sm:shadow-md max-w-md sm:max-w-lg lg:max-w-none mx-auto"
               >
                 <img
                   src="./assets/atelier_consentement.jpg"
@@ -779,7 +770,7 @@
             </div>
 
             <div
-              class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-lg"
+              class="bg-purple-100 rounded-3xl p-8 shadow-lg"
             >
               <h3 class="text-2xl font-bold text-purple-600 mb-6">
                 Tu repartiras avec
@@ -849,7 +840,7 @@
           <div class="text-center mt-8">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+              class="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>Rejoindre le prochain atelier</span>
               <svg
@@ -885,7 +876,7 @@
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <!-- Horaires -->
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover-lift">
+            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -897,7 +888,7 @@
             </div>
 
             <!-- Lieu -->
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover-lift">
+            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -910,7 +901,7 @@
             </div>
 
             <!-- Participants -->
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover-lift">
+            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -922,7 +913,7 @@
             </div>
 
             <!-- Prix -->
-            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 shadow-lg text-center hover-lift">
+            <div class="bg-purple-100 rounded-2xl p-6 shadow-lg text-center">
               <div class="bg-purple-200 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -963,7 +954,7 @@
 
           <!-- Important notes -->
           <div class="mt-8 max-w-4xl mx-auto">
-            <div class="bg-gradient-to-r from-orange-50 to-purple-50 rounded-xl p-6 border-l-4 border-orange-500">
+            <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
               <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
@@ -1223,7 +1214,7 @@
           </div>
 
           <!-- Key Takeaways -->
-          <div class="mt-12 bg-gradient-to-br from-orange-100 to-purple-100 rounded-3xl p-8">
+          <div class="mt-12 bg-orange-100 rounded-3xl p-8">
             <h3 class="text-2xl font-bold text-center text-gray-900 mb-6">
               🎯 Les outils concrets que tu repartiras avec
             </h3>
@@ -1250,7 +1241,7 @@
           <div class="text-center mt-12">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+              class="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>Je réserve ma place</span>
               <svg
@@ -1286,7 +1277,7 @@
           <div class="grid md:grid-cols-2 gap-6">
             <!-- Testimonial 1 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-purple-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-purple-500"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
@@ -1295,7 +1286,7 @@
 
             <!-- Testimonial 2 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-yellow-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-yellow-500"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
@@ -1304,7 +1295,7 @@
 
             <!-- Testimonial 3 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-green-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-green-500"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
@@ -1313,7 +1304,7 @@
 
             <!-- Testimonial 4 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-blue-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-blue-500"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
@@ -1324,7 +1315,7 @@
           <div class="text-center mt-8">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+              class="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>Rejoindre le prochain atelier</span>
               <svg
@@ -1379,7 +1370,7 @@
               </p>
             </div>
 
-            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 shadow-lg text-center">
+            <div class="bg-purple-100 rounded-2xl p-6 shadow-lg text-center">
               <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span class="text-2xl">🌍</span>
               </div>
@@ -1433,7 +1424,7 @@
           <div class="text-center mt-12">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+              class="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>Participer au prochain atelier</span>
               <svg
@@ -1468,7 +1459,7 @@
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <!-- Parents -->
-            <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 shadow-lg hover-lift">
+            <div class="bg-orange-50 rounded-2xl p-6 shadow-lg">
               <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Tu es parent</h3>
               <p class="text-gray-700">
@@ -1477,7 +1468,7 @@
             </div>
 
             <!-- Professionnels -->
-            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 shadow-lg hover-lift">
+            <div class="bg-purple-50 rounded-2xl p-6 shadow-lg">
               <div class="text-4xl mb-4">💼</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Tu es professionnel·le</h3>
               <p class="text-gray-700">
@@ -1486,7 +1477,7 @@
             </div>
 
             <!-- Couples -->
-            <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 shadow-lg hover-lift">
+            <div class="bg-pink-50 rounded-2xl p-6 shadow-lg">
               <div class="text-4xl mb-4">💑</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Tu es en couple</h3>
               <p class="text-gray-700">
@@ -1495,7 +1486,7 @@
             </div>
 
             <!-- Jeunes adultes -->
-            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg hover-lift">
+            <div class="bg-blue-50 rounded-2xl p-6 shadow-lg">
               <div class="text-4xl mb-4">🎓</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Tu es étudiant·e ou jeune actif·ve</h3>
               <p class="text-gray-700">
@@ -1504,7 +1495,7 @@
             </div>
 
             <!-- Difficultés à dire non -->
-            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 shadow-lg hover-lift">
+            <div class="bg-green-50 rounded-2xl p-6 shadow-lg">
               <div class="text-4xl mb-4">🙋</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Tu as du mal à dire non</h3>
               <p class="text-gray-700">
@@ -1513,7 +1504,7 @@
             </div>
 
             <!-- Curiosité -->
-            <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-6 shadow-lg hover-lift">
+            <div class="bg-yellow-50 rounded-2xl p-6 shadow-lg">
               <div class="text-4xl mb-4">🤔</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Tu es simplement curieux·se</h3>
               <p class="text-gray-700">
@@ -1523,7 +1514,7 @@
           </div>
 
           <!-- Universality message -->
-          <div class="mt-12 max-w-3xl mx-auto bg-gradient-to-r from-orange-50 to-purple-50 rounded-2xl p-8 text-center">
+          <div class="mt-12 max-w-3xl mx-auto bg-orange-50 rounded-2xl p-8 text-center">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">
               Quel que soit ton profil...
             </h3>
@@ -1540,7 +1531,7 @@
           <div class="text-center mt-12">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+              class="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>Je découvre l'atelier</span>
               <svg
@@ -1570,7 +1561,7 @@
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-orange-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-orange-500"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-2xl">💎</span>
@@ -1584,7 +1575,7 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-purple-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-purple-500"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-2xl">🌿</span>
@@ -1598,7 +1589,7 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-yellow-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-yellow-500"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-2xl">🤔</span>
@@ -1612,7 +1603,7 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-green-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-green-500"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-2xl">✨</span>
@@ -1626,7 +1617,7 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-blue-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-blue-500"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-2xl">🤝</span>
@@ -1640,7 +1631,7 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-pink-500"
+              class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-pink-500"
             >
               <div class="flex items-center gap-2 mb-3">
                 <span class="text-2xl">🌈</span>
@@ -1658,7 +1649,7 @@
           <div class="text-center mt-12">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+              class="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>Rejoindre le mouvement</span>
               <svg
@@ -1691,7 +1682,7 @@
             </h2>
           </div>
 
-          <div class="max-w-4xl mx-auto bg-gradient-to-r from-orange-50 to-purple-50 rounded-2xl p-8 md:p-12">
+          <div class="max-w-4xl mx-auto bg-orange-50 rounded-2xl p-8 md:p-12">
             <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">
               Une équipe formée et engagée
             </h3>
@@ -1753,10 +1744,10 @@
           <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             <!-- Facilitateurs -->
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
+              class="bg-white rounded-2xl shadow-lg overflow-hidden"
             >
               <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
+                class="h-48 bg-orange-100 flex items-center justify-center"
               >
                 <img
                   src="./assets/pictures/dilara.jpg"
@@ -1775,10 +1766,10 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
+              class="bg-white rounded-2xl shadow-lg overflow-hidden"
             >
               <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
+                class="h-48 bg-orange-100 flex items-center justify-center"
               >
                 <img
                   src="./assets/pictures/morgane.jpg"
@@ -1797,10 +1788,10 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
+              class="bg-white rounded-2xl shadow-lg overflow-hidden"
             >
               <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
+                class="h-48 bg-orange-100 flex items-center justify-center"
               >
                 <img
                   src="./assets/pictures/mathilde.jpg"
@@ -1819,10 +1810,10 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
+              class="bg-white rounded-2xl shadow-lg overflow-hidden"
             >
               <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
+                class="h-48 bg-orange-100 flex items-center justify-center"
               >
                 <img
                   src="./assets/pictures/thomas.jpg"
@@ -1842,10 +1833,10 @@
 
             <!-- Communication -->
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
+              class="bg-white rounded-2xl shadow-lg overflow-hidden"
             >
               <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
+                class="h-48 bg-orange-100 flex items-center justify-center"
               >
                 <img
                   src="./assets/pictures/elisa.jpg"
@@ -1941,7 +1932,7 @@
           </div>
 
           <!-- Final push -->
-          <div class="mt-12 bg-gradient-to-r from-orange-500 to-purple-600 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+          <div class="mt-12 bg-purple-600 rounded-3xl p-8 md:p-12 text-center text-white shadow-md">
             <h3 class="text-3xl font-black mb-4">Le pire qui puisse arriver ?</h3>
             <p class="text-xl mb-6 leading-relaxed">
               Tu passes 3 heures bienveillantes, tu rencontres des personnes top, et tu repars avec des outils concrets. Le meilleur ? Tu transformes durablement tes relations.
@@ -2064,7 +2055,7 @@
       >
         <div class="max-w-7xl mx-auto">
           <div
-            class="bg-gradient-to-br from-orange-500 to-purple-600 rounded-3xl p-8 md:p-12 shadow-2xl text-center"
+            class="bg-purple-600 rounded-3xl p-8 md:p-12 shadow-md text-center"
           >
             <h2
               class="text-4xl md:text-5xl font-black text-white mb-8 title-font"
@@ -2206,7 +2197,7 @@
       <div class="relative">
         <a
           href="#events"
-          class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
+          class="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300"
         >
           <span>S'inscrire</span>
           <svg
