@@ -33,7 +33,7 @@
             }
 
             .nav-link.active::after {
-                content: '';
+                content: "";
                 position: absolute;
                 bottom: -16px;
                 left: 0;
@@ -52,7 +52,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex items-center justify-between flex-wrap gap-4">
                     <img
-                        src="./assets/logo.svg"
+                        src="./assets/logo-v1.svg"
                         alt="Merci pour ton non"
                         class="h-20 w-auto"
                     />
@@ -71,20 +71,6 @@
                 <ul class="flex gap-6 flex-wrap list-none">
                     <li>
                         <a
-                            href="#couleurs"
-                            class="nav-link text-gray-700 font-medium text-sm hover-link"
-                            >Couleurs</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#typographie"
-                            class="nav-link text-gray-700 font-medium text-sm hover-link"
-                            >Typographie</a
-                        >
-                    </li>
-                    <li>
-                        <a
                             href="#logo"
                             class="nav-link text-gray-700 font-medium text-sm hover-link"
                             >Logo</a
@@ -92,9 +78,30 @@
                     </li>
                     <li>
                         <a
+                            href="#principes"
+                            class="nav-link text-gray-700 font-medium text-sm hover-link"
+                            >Principes</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#couleurs"
+                            class="nav-link text-gray-700 font-medium text-sm hover-link"
+                            >Couleurs</a
+                        >
+                    </li>
+                    <li>
+                        <a
                             href="#palette"
                             class="nav-link text-gray-700 font-medium text-sm hover-link"
                             >Palette</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#typographie"
+                            class="nav-link text-gray-700 font-medium text-sm hover-link"
+                            >Typographie</a
                         >
                     </li>
                     <li>
@@ -127,13 +134,6 @@
                     </li>
                     <li>
                         <a
-                            href="#principes"
-                            class="nav-link text-gray-700 font-medium text-sm hover-link"
-                            >Principes</a
-                        >
-                    </li>
-                    <li>
-                        <a
                             href="#bonnes-pratiques"
                             class="nav-link text-gray-700 font-medium text-sm hover-link"
                             >Bonnes pratiques</a
@@ -160,6 +160,125 @@
                     cohérence sur tous les supports : site web, réseaux sociaux,
                     flyers, affiches.
                 </p>
+            </section>
+
+            <!-- Logo -->
+            <section
+                id="logo"
+                class="bg-white rounded-2xl p-12 mb-12 shadow-sm"
+            >
+                <h2 class="font-display text-5xl mb-6 text-gray-900">
+                    logo & identité
+                </h2>
+
+                <h3 class="text-2xl font-bold mb-4 mt-8">
+                    Construction du Logo
+                </h3>
+                <p class="text-gray-700 mb-8">
+                    Le logo utilise trois couleurs distinctes pour chaque mot,
+                    créant une identité visuelle unique et mémorable.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                    <div
+                        class="border border-gray-200 rounded-xl p-12 text-center bg-white"
+                    >
+                        <img
+                            src="./assets/logo-v1.svg"
+                            alt="Logo"
+                            class="h-32 mx-auto mb-4"
+                        />
+                        <p class="text-sm text-gray-500 mt-4">Fond blanc</p>
+                    </div>
+
+                    <div
+                        class="rounded-xl p-12 text-center"
+                        style="background: #fff8e6"
+                    >
+                        <img
+                            src="./assets/logo-v1.svg"
+                            alt="Logo"
+                            class="h-32 mx-auto mb-4"
+                        />
+                        <p class="text-sm text-gray-500 mt-4">
+                            Fond coloré clair
+                        </p>
+                    </div>
+
+                    <div
+                        class="border border-gray-200 rounded-xl p-12 text-center bg-gray-900"
+                    >
+                        <img
+                            src="./assets/logo-v1.svg"
+                            alt="Logo"
+                            class="h-32 mx-auto mb-4 brightness-125"
+                        />
+                        <p class="text-sm text-white mt-4">Fond sombre</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Principes -->
+            <section
+                id="principes"
+                class="bg-white rounded-2xl p-12 mb-12 shadow-sm"
+            >
+                <h2 class="font-display text-5xl mb-6 text-gray-900">
+                    nos principes
+                </h2>
+                <p class="text-gray-700 mb-8">
+                    Ces principes guident toutes nos décisions de design. Ils
+                    incarnent nos valeurs et définissent notre identité
+                    visuelle.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
+                        <h4 class="text-lg font-semibold mb-3">
+                            🎯 Authenticité
+                        </h4>
+                        <p class="text-gray-700">
+                            Design sincère et transparent qui reflète nos
+                            intentions réelles. Pas de surenchère visuelle, pas
+                            de promesses exagérées, juste ce que nous sommes
+                            vraiment.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                        <h4 class="text-lg font-semibold mb-3">
+                            ♿ Respect et accessibilité
+                        </h4>
+                        <p class="text-gray-700">
+                            Hiérarchie claire, contrastes élevés, espaces
+                            généreux pour tous·tes. Nous pensons nos supports
+                            pour qu'ils soient compréhensibles et utilisables
+                            par le plus grand nombre.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
+                        <h4 class="text-lg font-semibold mb-3">
+                            💬 Dialogue et ouverture
+                        </h4>
+                        <p class="text-gray-700">
+                            Ton chaleureux qui invite à l'échange plutôt qu'à la
+                            performance. Notre design crée un espace accueillant
+                            où chacun·e peut se sentir légitime.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                        <h4 class="text-lg font-semibold mb-3">
+                            🌱 Simplicité engagée
+                        </h4>
+                        <p class="text-gray-700">
+                            Épuré sans être froid, chaleureux sans être
+                            infantilisant. Design associatif assumé, loin des
+                            codes startup et corporate.
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <!-- Couleurs -->
@@ -494,8 +613,9 @@ letter-spacing: 0.05em;</code></pre>
                     Jeux de couleurs typographiques
                 </h3>
                 <p class="text-gray-700 mb-6">
-                    Les 4 couleurs peuvent être utilisées pour créer du rythme et de la personnalité
-                    dans les titres et citations. Voici quelques exemples inspirants.
+                    Les 4 couleurs peuvent être utilisées pour créer du rythme
+                    et de la personnalité dans les titres et citations. Voici
+                    quelques exemples inspirants.
                 </p>
 
                 <div class="border border-gray-200 rounded-xl p-6 my-6">
@@ -513,40 +633,75 @@ letter-spacing: 0.05em;</code></pre>
                         <span style="color: #12a19d">limites</span>
                     </div>
                     <p class="text-sm text-gray-500 mt-4">
-                        Alterner les couleurs dans les titres crée du dynamisme tout en gardant la lisibilité.
+                        Alterner les couleurs dans les titres crée du dynamisme
+                        tout en gardant la lisibilité.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                    <div class="border-l-4 p-6" style="border-color: #f5004f; background: #fff0f5">
-                        <p class="text-base font-extrabold leading-relaxed" style="color: #f5004f">
-                            "Cet atelier m'a permis de reconnecter avec mes émotions et de comprendre
-                            ce qui compte vraiment pour moi."
+                    <div
+                        class="border-l-4 p-6"
+                        style="border-color: #f5004f; background: #fff0f5"
+                    >
+                        <p
+                            class="text-base font-extrabold leading-relaxed"
+                            style="color: #f5004f"
+                        >
+                            "Cet atelier m'a permis de reconnecter avec mes
+                            émotions et de comprendre ce qui compte vraiment
+                            pour moi."
                         </p>
-                        <p class="text-sm text-gray-600 mt-3">— Alex, participant·e</p>
+                        <p class="text-sm text-gray-600 mt-3">
+                            — Alex, participant·e
+                        </p>
                     </div>
 
-                    <div class="border-l-4 p-6" style="border-color: #ffaf00; background: #fff8e6">
-                        <p class="text-base font-extrabold leading-relaxed" style="color: #ffaf00">
-                            "J'ai appris à dire non sans culpabilité. C'est libérateur."
+                    <div
+                        class="border-l-4 p-6"
+                        style="border-color: #ffaf00; background: #fff8e6"
+                    >
+                        <p
+                            class="text-base font-extrabold leading-relaxed"
+                            style="color: #ffaf00"
+                        >
+                            "J'ai appris à dire non sans culpabilité. C'est
+                            libérateur."
                         </p>
-                        <p class="text-sm text-gray-600 mt-3">— Sam, participant·e</p>
+                        <p class="text-sm text-gray-600 mt-3">
+                            — Sam, participant·e
+                        </p>
                     </div>
 
-                    <div class="border-l-4 p-6" style="border-color: #7b01fe; background: #f3e6ff">
-                        <p class="text-base font-extrabold leading-relaxed" style="color: #7b01fe">
-                            "Un espace bienveillant où j'ai pu explorer mes limites
-                            à mon rythme."
+                    <div
+                        class="border-l-4 p-6"
+                        style="border-color: #7b01fe; background: #f3e6ff"
+                    >
+                        <p
+                            class="text-base font-extrabold leading-relaxed"
+                            style="color: #7b01fe"
+                        >
+                            "Un espace bienveillant où j'ai pu explorer mes
+                            limites à mon rythme."
                         </p>
-                        <p class="text-sm text-gray-600 mt-3">— Jordan, participant·e</p>
+                        <p class="text-sm text-gray-600 mt-3">
+                            — Jordan, participant·e
+                        </p>
                     </div>
 
-                    <div class="border-l-4 p-6" style="border-color: #12a19d; background: #e6f9f8">
-                        <p class="text-base font-extrabold leading-relaxed" style="color: #12a19d">
-                            "Les outils pratiques m'aident au quotidien, dans toutes
-                            mes relations."
+                    <div
+                        class="border-l-4 p-6"
+                        style="border-color: #12a19d; background: #e6f9f8"
+                    >
+                        <p
+                            class="text-base font-extrabold leading-relaxed"
+                            style="color: #12a19d"
+                        >
+                            "Les outils pratiques m'aident au quotidien, dans
+                            toutes mes relations."
                         </p>
-                        <p class="text-sm text-gray-600 mt-3">— Charlie, participant·e</p>
+                        <p class="text-sm text-gray-600 mt-3">
+                            — Charlie, participant·e
+                        </p>
                     </div>
                 </div>
 
@@ -557,17 +712,18 @@ letter-spacing: 0.05em;</code></pre>
                     <p class="text-base leading-relaxed text-gray-700">
                         Dans nos ateliers, nous travaillons sur
                         <strong style="color: #f5004f">l'authenticité</strong>,
-                        <strong style="color: #ffaf00">le courage de poser ses limites</strong>,
-                        <strong style="color: #7b01fe">l'écoute de soi</strong> et
-                        <strong style="color: #12a19d">la validation mutuelle</strong>.
-                        Chaque couleur porte une énergie différente.
+                        <strong style="color: #ffaf00"
+                            >le courage de poser ses limites</strong
+                        >,
+                        <strong style="color: #7b01fe">l'écoute de soi</strong>
+                        et
+                        <strong style="color: #12a19d"
+                            >la validation mutuelle</strong
+                        >. Chaque couleur porte une énergie différente.
                     </p>
                 </div>
 
-                <div
-                    class="border border-gray-200 rounded-xl p-6 my-6"
-                    style="background: #fff8e6"
-                >
+                <div class="rounded-xl p-6 my-6" style="background: #fff8e6">
                     <h4 class="text-lg font-semibold mb-3">
                         💡 Règle d'interlignage
                     </h4>
@@ -581,62 +737,6 @@ letter-spacing: 0.05em;</code></pre>
                 </div>
             </section>
 
-            <!-- Logo -->
-            <section
-                id="logo"
-                class="bg-white rounded-2xl p-12 mb-12 shadow-sm"
-            >
-                <h2 class="font-display text-5xl mb-6 text-gray-900">
-                    logo & identité
-                </h2>
-
-                <h3 class="text-2xl font-bold mb-4 mt-8">
-                    Construction du Logo
-                </h3>
-                <p class="text-gray-700 mb-8">
-                    Le logo utilise trois couleurs distinctes pour chaque mot,
-                    créant une identité visuelle unique et mémorable.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                    <div
-                        class="border border-gray-200 rounded-xl p-12 text-center bg-white"
-                    >
-                        <img
-                            src="./assets/logo.svg"
-                            alt="Logo"
-                            class="h-32 mx-auto mb-4"
-                        />
-                        <p class="text-sm text-gray-500 mt-4">Fond blanc</p>
-                    </div>
-
-                    <div
-                        class="border border-gray-200 rounded-xl p-12 text-center"
-                        style="background: #fff8e6"
-                    >
-                        <img
-                            src="./assets/logo.svg"
-                            alt="Logo"
-                            class="h-32 mx-auto mb-4"
-                        />
-                        <p class="text-sm text-gray-500 mt-4">
-                            Fond coloré clair
-                        </p>
-                    </div>
-
-                    <div
-                        class="border border-gray-200 rounded-xl p-12 text-center bg-gray-900"
-                    >
-                        <img
-                            src="./assets/logo.svg"
-                            alt="Logo"
-                            class="h-32 mx-auto mb-4 brightness-125"
-                        />
-                        <p class="text-sm text-white mt-4">Fond sombre</p>
-                    </div>
-                </div>
-            </section>
-
             <!-- Palette en Action -->
             <section
                 id="palette"
@@ -646,8 +746,9 @@ letter-spacing: 0.05em;</code></pre>
                     palette en action
                 </h2>
                 <p class="text-gray-700 mb-8">
-                    Les 4 couleurs du logo créent ensemble un système visuel dynamique et humain.
-                    Voici comment les combiner harmonieusement pour donner du peps à tes créations.
+                    Les 4 couleurs du logo créent ensemble un système visuel
+                    dynamique et humain. Voici comment les combiner
+                    harmonieusement pour donner du peps à tes créations.
                 </p>
 
                 <h3 class="text-2xl font-bold mb-4 mt-8">
@@ -656,57 +757,93 @@ letter-spacing: 0.05em;</code></pre>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                     <div class="rounded-xl p-6" style="background: #fff0f5">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-8 h-8 rounded-full" style="background: #f5004f"></div>
-                            <h4 class="text-lg font-semibold" style="color: #f5004f">Pourpre</h4>
+                            <div
+                                class="w-8 h-8 rounded-full"
+                                style="background: #f5004f"
+                            ></div>
+                            <h4
+                                class="text-lg font-semibold"
+                                style="color: #f5004f"
+                            >
+                                Pourpre
+                            </h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-2">
-                            <strong>Énergie :</strong> Émotion, authenticité, découverte
+                            <strong>Énergie :</strong> Émotion, authenticité,
+                            découverte
                         </p>
                         <p class="text-sm text-gray-700">
-                            <strong>Usage :</strong> Témoignages, sections émotionnelles,
-                            moments de reconnexion à soi
+                            <strong>Usage :</strong> Témoignages, sections
+                            émotionnelles, moments de reconnexion à soi
                         </p>
                     </div>
 
                     <div class="rounded-xl p-6" style="background: #fff8e6">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-8 h-8 rounded-full" style="background: #ffaf00"></div>
-                            <h4 class="text-lg font-semibold" style="color: #ffaf00">Orange</h4>
+                            <div
+                                class="w-8 h-8 rounded-full"
+                                style="background: #ffaf00"
+                            ></div>
+                            <h4
+                                class="text-lg font-semibold"
+                                style="color: #ffaf00"
+                            >
+                                Orange
+                            </h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-2">
-                            <strong>Énergie :</strong> Action, engagement, chaleur
+                            <strong>Énergie :</strong> Action, engagement,
+                            chaleur
                         </p>
                         <p class="text-sm text-gray-700">
-                            <strong>Usage :</strong> Boutons d'inscription, CTAs principaux,
-                            informations importantes
+                            <strong>Usage :</strong> Boutons d'inscription, CTAs
+                            principaux, informations importantes
                         </p>
                     </div>
 
                     <div class="rounded-xl p-6" style="background: #f3e6ff">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-8 h-8 rounded-full" style="background: #7b01fe"></div>
-                            <h4 class="text-lg font-semibold" style="color: #7b01fe">Mauve</h4>
+                            <div
+                                class="w-8 h-8 rounded-full"
+                                style="background: #7b01fe"
+                            ></div>
+                            <h4
+                                class="text-lg font-semibold"
+                                style="color: #7b01fe"
+                            >
+                                Mauve
+                            </h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-2">
-                            <strong>Énergie :</strong> Exploration, apprentissage, créativité
+                            <strong>Énergie :</strong> Exploration,
+                            apprentissage, créativité
                         </p>
                         <p class="text-sm text-gray-700">
-                            <strong>Usage :</strong> Sections pédagogiques, contenus exploratoires,
-                            invitations à la réflexion
+                            <strong>Usage :</strong> Sections pédagogiques,
+                            contenus exploratoires, invitations à la réflexion
                         </p>
                     </div>
 
                     <div class="rounded-xl p-6" style="background: #e6f9f8">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-8 h-8 rounded-full" style="background: #12a19d"></div>
-                            <h4 class="text-lg font-semibold" style="color: #12a19d">Cyan</h4>
+                            <div
+                                class="w-8 h-8 rounded-full"
+                                style="background: #12a19d"
+                            ></div>
+                            <h4
+                                class="text-lg font-semibold"
+                                style="color: #12a19d"
+                            >
+                                Cyan
+                            </h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-2">
-                            <strong>Énergie :</strong> Validation, calme, ressources
+                            <strong>Énergie :</strong> Validation, calme,
+                            ressources
                         </p>
                         <p class="text-sm text-gray-700">
-                            <strong>Usage :</strong> Confirmations, ressources téléchargeables,
-                            sections informatives factuelles
+                            <strong>Usage :</strong> Confirmations, ressources
+                            téléchargeables, sections informatives factuelles
                         </p>
                     </div>
                 </div>
@@ -715,78 +852,141 @@ letter-spacing: 0.05em;</code></pre>
                     Combinaisons harmonieuses
                 </h3>
                 <p class="text-gray-700 mb-6">
-                    Voici des exemples de compositions utilisant plusieurs couleurs ensemble
-                    pour créer du rythme et de la personnalité.
+                    Voici des exemples de compositions utilisant plusieurs
+                    couleurs ensemble pour créer du rythme et de la
+                    personnalité.
                 </p>
 
-                <div class="rounded-xl p-8 my-6" style="background: linear-gradient(135deg, #fff8e6 0%, #f3e6ff 100%)">
+                <div
+                    class="rounded-xl p-8 my-6"
+                    style="
+                        background: linear-gradient(
+                            135deg,
+                            #fff8e6 0%,
+                            #f3e6ff 100%
+                        );
+                    "
+                >
                     <div class="font-display text-4xl mb-6 text-center">
                         <span style="color: #f5004f">explore</span>
                         <span class="text-gray-900"> tes </span>
                         <span style="color: #ffaf00">limites</span>
                     </div>
                     <div class="flex gap-3 justify-center mb-6 flex-wrap">
-                        <button class="text-white px-6 py-3 rounded-full font-bold" style="background: #ffaf00">
+                        <button
+                            class="text-white px-6 py-3 rounded-full font-bold"
+                            style="background: #ffaf00"
+                        >
                             Je m'inscris
                         </button>
-                        <button class="bg-transparent border-2 px-6 py-3 rounded-full font-bold" style="border-color: #7b01fe; color: #7b01fe">
+                        <button
+                            class="bg-transparent border-2 px-6 py-3 rounded-full font-bold"
+                            style="border-color: #7b01fe; color: #7b01fe"
+                        >
                             En savoir plus
                         </button>
                     </div>
                     <div class="flex gap-2 justify-center flex-wrap">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold border" style="background: #fff0f5; color: #f5004f; border-color: #f5004f">
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-semibold border"
+                            style="
+                                background: #fff0f5;
+                                color: #f5004f;
+                                border-color: #f5004f;
+                            "
+                        >
                             #authenticité
                         </span>
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold border" style="background: #e6f9f8; color: #12a19d; border-color: #12a19d">
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-semibold border"
+                            style="
+                                background: #e6f9f8;
+                                color: #12a19d;
+                                border-color: #12a19d;
+                            "
+                        >
                             #consentement
                         </span>
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold border" style="background: #fff8e6; color: #ffaf00; border-color: #ffaf00">
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-semibold border"
+                            style="
+                                background: #fff8e6;
+                                color: #ffaf00;
+                                border-color: #ffaf00;
+                            "
+                        >
                             #limites
                         </span>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                    <div class="border border-gray-200 rounded-xl p-6 bg-white border-l-4" style="border-left-color: #f5004f">
-                        <span class="px-3 py-1 rounded-full text-xs font-bold text-white inline-block mb-3" style="background: #f5004f">
+                    <div
+                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
+                        style="border-left-color: #f5004f"
+                    >
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-bold text-white inline-block mb-3"
+                            style="background: #f5004f"
+                        >
                             Témoignage
                         </span>
-                        <p class="text-sm font-bold mb-2" style="color: #f5004f">
+                        <p
+                            class="text-sm font-bold mb-2"
+                            style="color: #f5004f"
+                        >
                             "J'ai appris à m'écouter vraiment."
                         </p>
                         <p class="text-xs text-gray-600">— Alex</p>
                     </div>
 
                     <div class="rounded-xl p-6" style="background: #fff8e6">
-                        <h4 class="text-lg font-semibold mb-3" style="color: #ffaf00">
+                        <h4
+                            class="text-lg font-semibold mb-3"
+                            style="color: #ffaf00"
+                        >
                             Prochain atelier
                         </h4>
                         <p class="text-sm text-gray-700 mb-4">
                             Samedi 15 mars, 14h-17h à Strasbourg
                         </p>
-                        <button class="text-white px-4 py-2 rounded-full font-bold text-sm" style="background: #ffaf00">
+                        <button
+                            class="text-white px-4 py-2 rounded-full font-bold text-sm"
+                            style="background: #ffaf00"
+                        >
                             Réserver
                         </button>
                     </div>
 
-                    <div class="border border-gray-200 rounded-xl p-6 bg-white border-l-4" style="border-left-color: #12a19d">
-                        <span class="px-3 py-1 rounded-full text-xs font-bold text-white inline-block mb-3" style="background: #12a19d">
+                    <div
+                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
+                        style="border-left-color: #12a19d"
+                    >
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-bold text-white inline-block mb-3"
+                            style="background: #12a19d"
+                        >
                             Ressource
                         </span>
                         <h4 class="text-base font-semibold mb-2">
                             Guide pratique
                         </h4>
-                        <p class="text-xs text-gray-600">PDF gratuit à télécharger</p>
+                        <p class="text-xs text-gray-600">
+                            PDF gratuit à télécharger
+                        </p>
                     </div>
                 </div>
 
                 <div class="rounded-xl p-6 my-8" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">💡 Principe de variété</h4>
+                    <h4 class="text-lg font-semibold mb-3">
+                        💡 Principe de variété
+                    </h4>
                     <p class="text-gray-700">
-                        N'aie pas peur d'utiliser les 4 couleurs dans une même page !
-                        La variété crée de l'énergie et guide l'œil. Assure-toi simplement
-                        que chaque couleur ait une intention claire et qu'elles soient
-                        bien réparties pour éviter les zones trop chargées.
+                        N'aie pas peur d'utiliser les 4 couleurs dans une même
+                        page ! La variété crée de l'énergie et guide l'œil.
+                        Assure-toi simplement que chaque couleur ait une
+                        intention claire et qu'elles soient bien réparties pour
+                        éviter les zones trop chargées.
                     </p>
                 </div>
 
@@ -794,35 +994,56 @@ letter-spacing: 0.05em;</code></pre>
                     Ce qu'il faut éviter
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                    <div class="border-2 border-red-300 rounded-xl p-6 bg-red-50">
-                        <h4 class="text-lg font-semibold mb-3 text-red-700">✗ Trop de couleurs vives</h4>
+                    <div
+                        class="border-2 border-red-300 rounded-xl p-6 bg-red-50"
+                    >
+                        <h4 class="text-lg font-semibold mb-3 text-red-700">
+                            ✗ Trop de couleurs vives
+                        </h4>
                         <p class="text-sm text-gray-700">
-                            Ne pas utiliser les 4 couleurs saturées au même endroit (ex: 4 boutons
-                            primary côte à côte). Alterner avec des versions soft ou outline.
+                            Ne pas utiliser les 4 couleurs saturées au même
+                            endroit (ex: 4 boutons primary côte à côte).
+                            Alterner avec des versions soft ou outline.
                         </p>
                     </div>
 
-                    <div class="border-2 border-red-300 rounded-xl p-6 bg-red-50">
-                        <h4 class="text-lg font-semibold mb-3 text-red-700">✗ Usage incohérent</h4>
+                    <div
+                        class="border-2 border-red-300 rounded-xl p-6 bg-red-50"
+                    >
+                        <h4 class="text-lg font-semibold mb-3 text-red-700">
+                            ✗ Usage incohérent
+                        </h4>
                         <p class="text-sm text-gray-700">
-                            Éviter d'utiliser une couleur pour des intentions contradictoires
-                            (ex: orange pour "annuler" ET pour "confirmer").
+                            Éviter d'utiliser une couleur pour des intentions
+                            contradictoires (ex: orange pour "annuler" ET pour
+                            "confirmer").
                         </p>
                     </div>
 
-                    <div class="border-2 border-red-300 rounded-xl p-6 bg-red-50">
-                        <h4 class="text-lg font-semibold mb-3 text-red-700">✗ Fonds saturés</h4>
+                    <div
+                        class="border-2 border-red-300 rounded-xl p-6 bg-red-50"
+                    >
+                        <h4 class="text-lg font-semibold mb-3 text-red-700">
+                            ✗ Fonds saturés
+                        </h4>
                         <p class="text-sm text-gray-700">
-                            Ne jamais utiliser les couleurs vives (#f5004f, #ffaf00, etc.) en fond
-                            de grandes sections. Toujours utiliser les versions claires (#fff0f5, #fff8e6, etc.).
+                            Ne jamais utiliser les couleurs vives (#f5004f,
+                            #ffaf00, etc.) en fond de grandes sections. Toujours
+                            utiliser les versions claires (#fff0f5, #fff8e6,
+                            etc.).
                         </p>
                     </div>
 
-                    <div class="border-2 border-red-300 rounded-xl p-6 bg-red-50">
-                        <h4 class="text-lg font-semibold mb-3 text-red-700">✗ Contraste insuffisant</h4>
+                    <div
+                        class="border-2 border-red-300 rounded-xl p-6 bg-red-50"
+                    >
+                        <h4 class="text-lg font-semibold mb-3 text-red-700">
+                            ✗ Contraste insuffisant
+                        </h4>
                         <p class="text-sm text-gray-700">
-                            Vérifier que le texte coloré sur fond clair reste lisible.
-                            Ne pas mettre de cyan (#12a19d) sur fond blanc si le texte est petit.
+                            Vérifier que le texte coloré sur fond clair reste
+                            lisible. Ne pas mettre de cyan (#12a19d) sur fond
+                            blanc si le texte est petit.
                         </p>
                     </div>
                 </div>
@@ -887,10 +1108,7 @@ letter-spacing: 0.05em;</code></pre>
 
                 <h3 class="text-2xl font-bold mb-4 mt-8">Vocabulaire</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #fff8e6"
-                    >
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
                         <h4 class="text-lg font-semibold mb-3 text-green-700">
                             ✓ Mots à favoriser
                         </h4>
@@ -911,10 +1129,7 @@ letter-spacing: 0.05em;</code></pre>
                         </ul>
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #f3e6ff"
-                    >
+                    <div class="rounded-xl p-6" style="background: #f3e6ff">
                         <h4 class="text-lg font-semibold mb-3 text-red-700">
                             ✗ Termes à éviter
                         </h4>
@@ -987,10 +1202,7 @@ letter-spacing: 0.05em;</code></pre>
                     </table>
                 </div>
 
-                <div
-                    class="border border-gray-200 rounded-xl p-6 my-6"
-                    style="background: #fff8e6"
-                >
+                <div class="rounded-xl p-6 my-6" style="background: #fff8e6">
                     <h4 class="text-lg font-semibold mb-3">💡 Principe clé</h4>
                     <p class="text-gray-700">
                         Nous tutoyons systématiquement pour créer de la
@@ -1011,13 +1223,17 @@ letter-spacing: 0.05em;</code></pre>
                 </h2>
 
                 <p class="text-gray-700 mb-8">
-                    Nos boutons exploitent les 4 couleurs du logo pour créer du dynamisme
-                    et guider l'attention. Chaque couleur peut porter une intention différente.
+                    Nos boutons exploitent les 4 couleurs du logo pour créer du
+                    dynamisme et guider l'attention. Chaque couleur peut porter
+                    une intention différente.
                 </p>
 
-                <h3 class="text-2xl font-bold mb-4 mt-8">Boutons Primary - 4 couleurs</h3>
+                <h3 class="text-2xl font-bold mb-4 mt-8">
+                    Boutons Primary - 4 couleurs
+                </h3>
                 <p class="text-gray-700 mb-4">
-                    Utilisés pour les actions principales. Chaque couleur porte une énergie distincte.
+                    Utilisés pour les actions principales. Chaque couleur porte
+                    une énergie distincte.
                 </p>
                 <div class="flex gap-4 flex-wrap my-6">
                     <button
@@ -1056,7 +1272,8 @@ letter-spacing: 0.05em;</code></pre>
 
                 <h3 class="text-2xl font-bold mb-4 mt-8">Boutons Soft</h3>
                 <p class="text-gray-700 mb-4">
-                    Boutons avec fond clair et texte coloré, pour un effet plus doux et accessible.
+                    Boutons avec fond clair et texte coloré, pour un effet plus
+                    doux et accessible.
                 </p>
                 <div class="flex gap-4 flex-wrap my-6">
                     <button
@@ -1129,41 +1346,85 @@ letter-spacing: 0.05em;</code></pre>
                     Petits éléments pour les tags, labels, catégories.
                 </p>
                 <div class="flex gap-3 flex-wrap my-6">
-                    <span class="px-4 py-2 rounded-full text-sm font-bold text-white" style="background: #f5004f">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-bold text-white"
+                        style="background: #f5004f"
+                    >
                         Nouveauté
                     </span>
-                    <span class="px-4 py-2 rounded-full text-sm font-bold text-white" style="background: #ffaf00">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-bold text-white"
+                        style="background: #ffaf00"
+                    >
                         À venir
                     </span>
-                    <span class="px-4 py-2 rounded-full text-sm font-bold text-white" style="background: #7b01fe">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-bold text-white"
+                        style="background: #7b01fe"
+                    >
                         Complet
                     </span>
-                    <span class="px-4 py-2 rounded-full text-sm font-bold text-white" style="background: #12a19d">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-bold text-white"
+                        style="background: #12a19d"
+                    >
                         Confirmé
                     </span>
                 </div>
 
                 <div class="flex gap-3 flex-wrap my-6">
-                    <span class="px-4 py-2 rounded-full text-sm font-semibold border" style="background: #fff0f5; color: #f5004f; border-color: #f5004f">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-semibold border"
+                        style="
+                            background: #fff0f5;
+                            color: #f5004f;
+                            border-color: #f5004f;
+                        "
+                    >
                         #consentement
                     </span>
-                    <span class="px-4 py-2 rounded-full text-sm font-semibold border" style="background: #fff8e6; color: #ffaf00; border-color: #ffaf00">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-semibold border"
+                        style="
+                            background: #fff8e6;
+                            color: #ffaf00;
+                            border-color: #ffaf00;
+                        "
+                    >
                         #limites
                     </span>
-                    <span class="px-4 py-2 rounded-full text-sm font-semibold border" style="background: #f3e6ff; color: #7b01fe; border-color: #7b01fe">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-semibold border"
+                        style="
+                            background: #f3e6ff;
+                            color: #7b01fe;
+                            border-color: #7b01fe;
+                        "
+                    >
                         #écoute
                     </span>
-                    <span class="px-4 py-2 rounded-full text-sm font-semibold border" style="background: #e6f9f8; color: #12a19d; border-color: #12a19d">
+                    <span
+                        class="px-4 py-2 rounded-full text-sm font-semibold border"
+                        style="
+                            background: #e6f9f8;
+                            color: #12a19d;
+                            border-color: #12a19d;
+                        "
+                    >
                         #authenticité
                     </span>
                 </div>
 
                 <div class="rounded-xl p-6 my-8" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">💡 Conseil d'usage</h4>
+                    <h4 class="text-lg font-semibold mb-3">
+                        💡 Conseil d'usage
+                    </h4>
                     <p class="text-gray-700">
-                        N'hésite pas à varier les couleurs dans une même page pour créer du rythme visuel.
-                        Par exemple : bouton principal en orange, bouton secondaire en mauve, badges en pourpre et cyan.
-                        Cela donne un côté vivant et humain tout en restant cohérent.
+                        N'hésite pas à varier les couleurs dans une même page
+                        pour créer du rythme visuel. Par exemple : bouton
+                        principal en orange, bouton secondaire en mauve, badges
+                        en pourpre et cyan. Cela donne un côté vivant et humain
+                        tout en restant cohérent.
                     </p>
                 </div>
             </section>
@@ -1181,27 +1442,30 @@ letter-spacing: 0.05em;</code></pre>
                     Cartes avec fonds colorés
                 </h3>
                 <p class="text-gray-700 mb-6">
-                    Les 4 couleurs du logo peuvent servir de fonds clairs pour les cartes,
-                    créant une atmosphère douce et accueillante.
+                    Les 4 couleurs du logo peuvent servir de fonds clairs pour
+                    les cartes, créant une atmosphère douce et accueillante.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-6"
+                >
                     <div class="border border-gray-200 rounded-xl p-6 bg-white">
                         <h4 class="text-lg font-semibold mb-3">
                             Carte Standard
                         </h4>
                         <p class="text-gray-700 mb-3 text-sm">
-                            Fond blanc avec bordure grise subtile. Contenu neutre.
+                            Fond blanc avec bordure grise subtile. Contenu
+                            neutre.
                         </p>
                         <code class="text-xs bg-gray-100 px-2 py-1 rounded"
                             >background: #FFFFFF</code
                         >
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #fff0f5"
-                    >
-                        <h4 class="text-lg font-semibold mb-3" style="color: #f5004f">
+                    <div class="rounded-xl p-6" style="background: #fff0f5">
+                        <h4
+                            class="text-lg font-semibold mb-3"
+                            style="color: #f5004f"
+                        >
                             Carte Pourpre
                         </h4>
                         <p class="text-gray-700 mb-3 text-sm">
@@ -1212,11 +1476,11 @@ letter-spacing: 0.05em;</code></pre>
                         >
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #fff8e6"
-                    >
-                        <h4 class="text-lg font-semibold mb-3" style="color: #ffaf00">
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
+                        <h4
+                            class="text-lg font-semibold mb-3"
+                            style="color: #ffaf00"
+                        >
                             Carte Orange
                         </h4>
                         <p class="text-gray-700 mb-3 text-sm">
@@ -1227,11 +1491,11 @@ letter-spacing: 0.05em;</code></pre>
                         >
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #f3e6ff"
-                    >
-                        <h4 class="text-lg font-semibold mb-3" style="color: #7b01fe">
+                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                        <h4
+                            class="text-lg font-semibold mb-3"
+                            style="color: #7b01fe"
+                        >
                             Carte Mauve
                         </h4>
                         <p class="text-gray-700 mb-3 text-sm">
@@ -1242,15 +1506,16 @@ letter-spacing: 0.05em;</code></pre>
                         >
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #e6f9f8"
-                    >
-                        <h4 class="text-lg font-semibold mb-3" style="color: #12a19d">
+                    <div class="rounded-xl p-6" style="background: #e6f9f8">
+                        <h4
+                            class="text-lg font-semibold mb-3"
+                            style="color: #12a19d"
+                        >
                             Carte Cyan
                         </h4>
                         <p class="text-gray-700 mb-3 text-sm">
-                            Fond cyan clair pour la validation et les ressources.
+                            Fond cyan clair pour la validation et les
+                            ressources.
                         </p>
                         <code class="text-xs bg-gray-100 px-2 py-1 rounded"
                             >background: #E6F9F8</code
@@ -1262,28 +1527,45 @@ letter-spacing: 0.05em;</code></pre>
                     Cartes avec accent latéral
                 </h3>
                 <p class="text-gray-700 mb-6">
-                    Une bordure colorée à gauche ou en haut crée un point focal subtil et dynamique.
+                    Une bordure colorée à gauche ou en haut crée un point focal
+                    subtil et dynamique.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                    <div class="border border-gray-200 rounded-xl p-6 bg-white border-l-4" style="border-left-color: #f5004f">
+                    <div
+                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
+                        style="border-left-color: #f5004f"
+                    >
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #f5004f">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-bold text-white"
+                                style="background: #f5004f"
+                            >
                                 Nouveauté
                             </span>
-                            <h4 class="text-lg font-semibold">Atelier authenticité</h4>
+                            <h4 class="text-lg font-semibold">
+                                Atelier authenticité
+                            </h4>
                         </div>
                         <p class="text-gray-700 text-sm">
-                            Un atelier pour reconnecter avec tes émotions et apprendre
-                            à être pleinement toi-même.
+                            Un atelier pour reconnecter avec tes émotions et
+                            apprendre à être pleinement toi-même.
                         </p>
                     </div>
 
-                    <div class="border border-gray-200 rounded-xl p-6 bg-white border-l-4" style="border-left-color: #ffaf00">
+                    <div
+                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
+                        style="border-left-color: #ffaf00"
+                    >
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #ffaf00">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-bold text-white"
+                                style="background: #ffaf00"
+                            >
                                 À venir
                             </span>
-                            <h4 class="text-lg font-semibold">Poser ses limites</h4>
+                            <h4 class="text-lg font-semibold">
+                                Poser ses limites
+                            </h4>
                         </div>
                         <p class="text-gray-700 text-sm">
                             Apprendre à dire non avec clarté et bienveillance,
@@ -1291,9 +1573,15 @@ letter-spacing: 0.05em;</code></pre>
                         </p>
                     </div>
 
-                    <div class="border border-gray-200 rounded-xl p-6 bg-white border-l-4" style="border-left-color: #7b01fe">
+                    <div
+                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
+                        style="border-left-color: #7b01fe"
+                    >
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #7b01fe">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-bold text-white"
+                                style="background: #7b01fe"
+                            >
                                 Complet
                             </span>
                             <h4 class="text-lg font-semibold">Écoute active</h4>
@@ -1304,24 +1592,32 @@ letter-spacing: 0.05em;</code></pre>
                         </p>
                     </div>
 
-                    <div class="border border-gray-200 rounded-xl p-6 bg-white border-l-4" style="border-left-color: #12a19d">
+                    <div
+                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
+                        style="border-left-color: #12a19d"
+                    >
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #12a19d">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-bold text-white"
+                                style="background: #12a19d"
+                            >
                                 Ressource
                             </span>
-                            <h4 class="text-lg font-semibold">Guide du consentement</h4>
+                            <h4 class="text-lg font-semibold">
+                                Guide du consentement
+                            </h4>
                         </div>
                         <p class="text-gray-700 text-sm">
-                            Un PDF pratique avec outils et exercices pour intégrer
-                            le consentement au quotidien.
+                            Un PDF pratique avec outils et exercices pour
+                            intégrer le consentement au quotidien.
                         </p>
                     </div>
                 </div>
 
                 <h3 class="text-2xl font-bold mb-4 mt-8">Principe de Design</h3>
                 <p class="text-gray-700">
-                    Les cartes créent du rythme et guident l'attention grâce aux couleurs,
-                    tout en maintenant un design épuré et associatif.
+                    Les cartes créent du rythme et guident l'attention grâce aux
+                    couleurs, tout en maintenant un design épuré et associatif.
                 </p>
             </section>
 
@@ -1343,10 +1639,7 @@ letter-spacing: 0.05em;</code></pre>
                     Photographie recommandée
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #fff8e6"
-                    >
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
                         <h4 class="text-lg font-semibold mb-3">
                             ✓ Style à privilégier
                         </h4>
@@ -1374,10 +1667,7 @@ letter-spacing: 0.05em;</code></pre>
                         </ul>
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #f3e6ff"
-                    >
+                    <div class="rounded-xl p-6" style="background: #f3e6ff">
                         <h4 class="text-lg font-semibold mb-3">✗ À éviter</h4>
                         <ul class="space-y-2 text-sm text-gray-700">
                             <li>
@@ -1475,10 +1765,7 @@ letter-spacing: 0.05em;</code></pre>
                         </ul>
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #fff8e6"
-                    >
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
                         <h5 class="font-semibold mb-3">
                             Pourquoi en noir et blanc ?
                         </h5>
@@ -1515,10 +1802,7 @@ letter-spacing: 0.05em;</code></pre>
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #fff8e6"
-                    >
+                    <div class="rounded-xl p-6" style="background: #fff8e6">
                         <h5 class="font-semibold mb-4">
                             Composition de groupe (Standing)
                         </h5>
@@ -1547,10 +1831,7 @@ letter-spacing: 0.05em;</code></pre>
                         </p>
                     </div>
 
-                    <div
-                        class="border border-gray-200 rounded-xl p-6"
-                        style="background: #f3e6ff"
-                    >
+                    <div class="rounded-xl p-6" style="background: #f3e6ff">
                         <h5 class="font-semibold mb-4">
                             Illustration individuelle (Bust)
                         </h5>
@@ -1569,10 +1850,7 @@ letter-spacing: 0.05em;</code></pre>
                     </div>
                 </div>
 
-                <div
-                    class="border border-gray-200 rounded-xl p-6 my-6"
-                    style="background: #f3e6ff"
-                >
+                <div class="rounded-xl p-6 my-6" style="background: #f3e6ff">
                     <h4 class="text-lg font-semibold mb-3">
                         💡 Principe de hiérarchie visuelle
                     </h4>
@@ -1651,10 +1929,7 @@ letter-spacing: 0.05em;</code></pre>
                     </div>
                 </div>
 
-                <div
-                    class="border border-gray-200 rounded-xl p-6 my-6"
-                    style="background: #fff8e6"
-                >
+                <div class="rounded-xl p-6 my-6" style="background: #fff8e6">
                     <h4 class="text-lg font-semibold mb-3">💡 Principe clé</h4>
                     <p class="text-gray-700">
                         Tous nos visuels doivent être
@@ -1663,69 +1938,6 @@ letter-spacing: 0.05em;</code></pre>
                         l'accord explicite. Cette pratique incarne notre culture
                         du consentement.
                     </p>
-                </div>
-            </section>
-
-            <!-- Principes -->
-            <section
-                id="principes"
-                class="bg-white rounded-2xl p-12 mb-12 shadow-sm"
-            >
-                <h2 class="font-display text-5xl mb-6 text-gray-900">
-                    nos principes
-                </h2>
-                <p class="text-gray-700 mb-8">
-                    Ces principes guident toutes nos décisions de design. Ils
-                    incarnent nos valeurs et définissent notre identité
-                    visuelle.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="rounded-xl p-6" style="background: #fff8e6">
-                        <h4 class="text-lg font-semibold mb-3">
-                            🎯 Authenticité
-                        </h4>
-                        <p class="text-gray-700">
-                            Design sincère et transparent qui reflète nos
-                            intentions réelles. Pas de surenchère visuelle, pas
-                            de promesses exagérées, juste ce que nous sommes
-                            vraiment.
-                        </p>
-                    </div>
-
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
-                        <h4 class="text-lg font-semibold mb-3">
-                            ♿ Respect et accessibilité
-                        </h4>
-                        <p class="text-gray-700">
-                            Hiérarchie claire, contrastes élevés, espaces
-                            généreux pour tous·tes. Nous pensons nos supports
-                            pour qu'ils soient compréhensibles et utilisables
-                            par le plus grand nombre.
-                        </p>
-                    </div>
-
-                    <div class="rounded-xl p-6" style="background: #fff8e6">
-                        <h4 class="text-lg font-semibold mb-3">
-                            💬 Dialogue et ouverture
-                        </h4>
-                        <p class="text-gray-700">
-                            Ton chaleureux qui invite à l'échange plutôt qu'à la
-                            performance. Notre design crée un espace accueillant
-                            où chacun·e peut se sentir légitime.
-                        </p>
-                    </div>
-
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
-                        <h4 class="text-lg font-semibold mb-3">
-                            🌱 Simplicité engagée
-                        </h4>
-                        <p class="text-gray-700">
-                            Épuré sans être froid, chaleureux sans être
-                            infantilisant. Design associatif assumé, loin des
-                            codes startup et corporate.
-                        </p>
-                    </div>
                 </div>
             </section>
 
@@ -1852,10 +2064,7 @@ letter-spacing: 0.05em;</code></pre>
                     </div>
                 </div>
 
-                <div
-                    class="border border-gray-200 rounded-xl p-6 mt-8"
-                    style="background: #fff8e6"
-                >
+                <div class="rounded-xl p-6 mt-8" style="background: #fff8e6">
                     <h4 class="text-lg font-semibold mb-3">
                         💡 En cas de doute
                     </h4>
@@ -1872,7 +2081,7 @@ letter-spacing: 0.05em;</code></pre>
             <section class="bg-transparent shadow-none rounded-none p-0 mb-12">
                 <div class="text-center py-12">
                     <img
-                        src="./assets/logo.svg"
+                        src="./assets/logo-v1.svg"
                         alt="Logo"
                         class="h-24 mx-auto mb-6"
                     />
@@ -1912,36 +2121,38 @@ letter-spacing: 0.05em;</code></pre>
             });
 
             // Active link highlighting
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
 
             const observerOptions = {
                 root: null,
-                rootMargin: '-20% 0px -70% 0px',
-                threshold: 0
+                rootMargin: "-20% 0px -70% 0px",
+                threshold: 0,
             };
 
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const currentId = entry.target.getAttribute('id');
+                        const currentId = entry.target.getAttribute("id");
 
                         // Remove active class from all links
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
                         });
 
                         // Add active class to current link
-                        const activeLink = document.querySelector(`.nav-link[href="#${currentId}"]`);
+                        const activeLink = document.querySelector(
+                            `.nav-link[href="#${currentId}"]`,
+                        );
                         if (activeLink) {
-                            activeLink.classList.add('active');
+                            activeLink.classList.add("active");
                         }
                     }
                 });
             }, observerOptions);
 
             // Observe all sections
-            sections.forEach(section => {
+            sections.forEach((section) => {
                 observer.observe(section);
             });
         </script>
