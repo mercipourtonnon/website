@@ -43,16 +43,17 @@
                 border-radius: 2px;
             }
         </style>
+        <script src="https://unpkg.com/lucide@latest"></script>
     </head>
     <body
         class="min-h-screen text-gray-900"
-        style="background: linear-gradient(135deg, #fff8e6 0%, #f3e6ff 100%)"
+        style="background: linear-gradient(135deg, #fff8e6 0%, #e6e6ff 100%)"
     >
         <header class="bg-white py-4">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex items-center justify-between flex-wrap gap-4">
                     <img
-                        src="./assets/logo-v1.svg"
+                        src="./assets/logo-v2.svg"
                         alt="Merci pour ton non"
                         class="h-20 w-auto"
                         style="margin-left: -16px"
@@ -61,7 +62,7 @@
                         class="px-4 py-2 rounded-full font-semibold text-sm"
                         style="background: #fff8e6; color: #ffaf00"
                     >
-                        Version 1.0
+                        Version 2.0
                     </div>
                 </div>
             </div>
@@ -188,7 +189,7 @@
                         class="border border-gray-200 rounded-xl p-12 text-center bg-white"
                     >
                         <img
-                            src="./assets/logo-v1.svg"
+                            src="./assets/logo-v2.svg"
                             alt="Logo"
                             class="h-32 mx-auto mb-4"
                         />
@@ -199,11 +200,15 @@
                         class="rounded-xl p-12 text-center"
                         style="background: #fff8e6"
                     >
-                        <img
-                            src="./assets/logo-v1.svg"
-                            alt="Logo"
-                            class="h-32 mx-auto mb-4"
-                        />
+                        <div
+                            class="bg-white rounded-full w-36 h-36 mx-auto flex items-center justify-center mb-4"
+                        >
+                            <img
+                                src="./assets/logo-v2.svg"
+                                alt="Logo"
+                                class="h-32"
+                            />
+                        </div>
                         <p class="text-sm text-gray-500 mt-4">
                             Fond coloré clair
                         </p>
@@ -212,11 +217,15 @@
                     <div
                         class="border border-gray-200 rounded-xl p-12 text-center bg-gray-900"
                     >
-                        <img
-                            src="./assets/logo-v1.svg"
-                            alt="Logo"
-                            class="h-32 mx-auto mb-4 brightness-125"
-                        />
+                        <div
+                            class="bg-white rounded-full w-36 h-36 mx-auto flex items-center justify-center mb-4"
+                        >
+                            <img
+                                src="./assets/logo-v2.svg"
+                                alt="Logo"
+                                class="h-32"
+                            />
+                        </div>
                         <p class="text-sm text-white mt-4">Fond sombre</p>
                     </div>
                 </div>
@@ -238,8 +247,9 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="rounded-xl p-6" style="background: #fff8e6">
-                        <h4 class="text-lg font-semibold mb-3">
-                            🎯 Authenticité
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <i data-lucide="target" class="w-5 h-5" style="color: #ffaf00"></i>
+                            Authenticité
                         </h4>
                         <p class="text-gray-700">
                             Design sincère et transparent qui reflète nos
@@ -249,9 +259,10 @@
                         </p>
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
-                        <h4 class="text-lg font-semibold mb-3">
-                            ♿ Respect et accessibilité
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <i data-lucide="accessibility" class="w-5 h-5" style="color: #130077"></i>
+                            Respect et accessibilité
                         </h4>
                         <p class="text-gray-700">
                             Hiérarchie claire, contrastes élevés, espaces
@@ -262,8 +273,9 @@
                     </div>
 
                     <div class="rounded-xl p-6" style="background: #fff8e6">
-                        <h4 class="text-lg font-semibold mb-3">
-                            💬 Dialogue et ouverture
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-5 h-5" style="color: #ffaf00"></i>
+                            Dialogue et ouverture
                         </h4>
                         <p class="text-gray-700">
                             Ton chaleureux qui invite à l'échange plutôt qu'à la
@@ -272,9 +284,10 @@
                         </p>
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
-                        <h4 class="text-lg font-semibold mb-3">
-                            🌱 Simplicité engagée
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <i data-lucide="sprout" class="w-5 h-5" style="color: #130077"></i>
+                            Simplicité engagée
                         </h4>
                         <p class="text-gray-700">
                             Épuré sans être froid, chaleureux sans être
@@ -295,14 +308,14 @@
                 </h2>
                 <p class="text-gray-700 mb-8">
                     Les couleurs du logo reflètent notre identité : pourpre
-                    (merci), orange (pour), mauve (ton) et cyan (non).
+                    (merci), orange (pour ton) et indigo (non).
                 </p>
 
                 <h3 class="text-2xl font-bold mb-4 mt-8">
                     Couleurs Principales
                 </h3>
                 <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8"
                 >
                     <div
                         class="border border-gray-200 rounded-xl overflow-hidden"
@@ -335,7 +348,7 @@
                                 #FFAF00
                             </div>
                             <div class="text-xs text-gray-500 mt-2">
-                                Logo "pour", CTAs, liens actifs
+                                Logo "pour ton", CTAs, liens actifs
                             </div>
                         </div>
                     </div>
@@ -345,33 +358,15 @@
                     >
                         <div
                             class="h-32 w-full"
-                            style="background: #7b01fe"
+                            style="background: #130077"
                         ></div>
                         <div class="p-4">
-                            <div class="font-bold mb-1">Mauve vif</div>
+                            <div class="font-bold mb-1">Indigo foncé</div>
                             <div class="font-mono text-gray-500 text-sm">
-                                #7B01FE
+                                #130077
                             </div>
                             <div class="text-xs text-gray-500 mt-2">
-                                Logo "ton", titres secondaires
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="border border-gray-200 rounded-xl overflow-hidden"
-                    >
-                        <div
-                            class="h-32 w-full"
-                            style="background: #12a19d"
-                        ></div>
-                        <div class="p-4">
-                            <div class="font-bold mb-1">Cyan</div>
-                            <div class="font-mono text-gray-500 text-sm">
-                                #12A19D
-                            </div>
-                            <div class="text-xs text-gray-500 mt-2">
-                                Logo "non"
+                                Logo "non", titres secondaires
                             </div>
                         </div>
                     </div>
@@ -454,7 +449,7 @@
                     palette en action
                 </h2>
                 <p class="text-gray-700 mb-8">
-                    Les 4 couleurs du logo créent ensemble un système visuel
+                    Les 3 couleurs du logo créent ensemble un système visuel
                     dynamique et humain. Voici comment les combiner
                     harmonieusement pour donner du peps à tes créations.
                 </p>
@@ -509,17 +504,17 @@
                         </p>
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-8 h-8 rounded-full"
-                                style="background: #7b01fe"
+                                style="background: #130077"
                             ></div>
                             <h4
                                 class="text-lg font-semibold"
-                                style="color: #7b01fe"
+                                style="color: #130077"
                             >
-                                Mauve
+                                Indigo
                             </h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-2">
@@ -529,29 +524,6 @@
                         <p class="text-sm text-gray-700">
                             <strong>Usage :</strong> Sections pédagogiques,
                             contenus exploratoires, invitations à la réflexion
-                        </p>
-                    </div>
-
-                    <div class="rounded-xl p-6" style="background: #e6f9f8">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div
-                                class="w-8 h-8 rounded-full"
-                                style="background: #12a19d"
-                            ></div>
-                            <h4
-                                class="text-lg font-semibold"
-                                style="color: #12a19d"
-                            >
-                                Cyan
-                            </h4>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">
-                            <strong>Énergie :</strong> Validation, calme,
-                            ressources
-                        </p>
-                        <p class="text-sm text-gray-700">
-                            <strong>Usage :</strong> Confirmations, ressources
-                            téléchargeables, sections informatives factuelles
                         </p>
                     </div>
                 </div>
@@ -571,7 +543,7 @@
                         background: linear-gradient(
                             135deg,
                             #fff8e6 0%,
-                            #f3e6ff 100%
+                            #e6e6ff 100%
                         );
                     "
                 >
@@ -589,7 +561,7 @@
                         </button>
                         <button
                             class="bg-transparent border-2 px-6 py-3 rounded-full font-bold"
-                            style="border-color: #7b01fe; color: #7b01fe"
+                            style="border-color: #130077; color: #130077"
                         >
                             En savoir plus
                         </button>
@@ -604,16 +576,6 @@
                             "
                         >
                             #authenticité
-                        </span>
-                        <span
-                            class="px-3 py-1 rounded-full text-xs font-semibold border"
-                            style="
-                                background: #e6f9f8;
-                                color: #12a19d;
-                                border-color: #12a19d;
-                            "
-                        >
-                            #consentement
                         </span>
                         <span
                             class="px-3 py-1 rounded-full text-xs font-semibold border"
@@ -665,32 +627,15 @@
                             Réserver
                         </button>
                     </div>
-
-                    <div
-                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
-                        style="border-left-color: #12a19d"
-                    >
-                        <span
-                            class="px-3 py-1 rounded-full text-xs font-bold text-white inline-block mb-3"
-                            style="background: #12a19d"
-                        >
-                            Ressource
-                        </span>
-                        <h4 class="text-base font-semibold mb-2">
-                            Guide pratique
-                        </h4>
-                        <p class="text-xs text-gray-600">
-                            PDF gratuit à télécharger
-                        </p>
-                    </div>
                 </div>
 
                 <div class="rounded-xl p-6 my-8" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">
-                        💡 Principe de variété
+                    <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5" style="color: #ffaf00"></i>
+                        Principe de variété
                     </h4>
                     <p class="text-gray-700">
-                        N'aie pas peur d'utiliser les 4 couleurs dans une même
+                        N'aie pas peur d'utiliser les 3 couleurs dans une même
                         page ! La variété crée de l'énergie et guide l'œil.
                         Assure-toi simplement que chaque couleur ait une
                         intention claire et qu'elles soient bien réparties pour
@@ -709,7 +654,7 @@
                             ✗ Trop de couleurs vives
                         </h4>
                         <p class="text-sm text-gray-700">
-                            Ne pas utiliser les 4 couleurs saturées au même
+                            Ne pas utiliser les 3 couleurs saturées au même
                             endroit (ex: 4 boutons primary côte à côte).
                             Alterner avec des versions soft ou outline.
                         </p>
@@ -750,8 +695,8 @@
                         </h4>
                         <p class="text-sm text-gray-700">
                             Vérifier que le texte coloré sur fond clair reste
-                            lisible. Ne pas mettre de cyan (#12a19d) sur fond
-                            blanc si le texte est petit.
+                            lisible. S'assurer d'un contraste suffisant pour
+                            tous les textes.
                         </p>
                     </div>
                 </div>
@@ -873,13 +818,13 @@ letter-spacing: 0.05em;</code></pre>
                             <strong>Usage :</strong> Témoignages de
                             participant·es, citations importantes<br />
                             <strong>Style :</strong> 18-20px, Ultrabold (800),
-                            couleur mauve ou orange<br />
+                            couleur indigo ou orange<br />
                             <strong>Intention :</strong> Mettre en valeur les
                             voix authentiques, créer de l'empathie
                         </p>
                         <p
                             class="text-lg font-extrabold leading-relaxed mt-4"
-                            style="color: #7b01fe"
+                            style="color: #130077"
                         >
                             "J'ai enfin compris que dire non, c'est aussi une
                             façon de dire oui à moi-même."
@@ -929,7 +874,7 @@ letter-spacing: 0.05em;</code></pre>
                     Jeux de couleurs typographiques
                 </h3>
                 <p class="text-gray-700 mb-6">
-                    Les 4 couleurs peuvent être utilisées pour créer du rythme
+                    Les 3 couleurs peuvent être utilisées pour créer du rythme
                     et de la personnalité dans les titres et citations. Voici
                     quelques exemples inspirants.
                 </p>
@@ -944,9 +889,9 @@ letter-spacing: 0.05em;</code></pre>
                         <span style="color: #ffaf00">non</span>
                     </div>
                     <div class="font-display text-4xl leading-tight my-4">
-                        <span style="color: #7b01fe">explore</span>
+                        <span style="color: #130077">explore</span>
                         <span class="text-gray-900"> tes </span>
-                        <span style="color: #12a19d">limites</span>
+                        <span style="color: #ffaf00">limites</span>
                     </div>
                     <p class="text-sm text-gray-500 mt-4">
                         Alterner les couleurs dans les titres crée du dynamisme
@@ -990,33 +935,17 @@ letter-spacing: 0.05em;</code></pre>
 
                     <div
                         class="border-l-4 p-6"
-                        style="border-color: #7b01fe; background: #f3e6ff"
+                        style="border-color: #130077; background: #e6e6ff"
                     >
                         <p
                             class="text-base font-extrabold leading-relaxed"
-                            style="color: #7b01fe"
+                            style="color: #130077"
                         >
                             "Un espace bienveillant où j'ai pu explorer mes
                             limites à mon rythme."
                         </p>
                         <p class="text-sm text-gray-600 mt-3">
                             — Jordan, participant·e
-                        </p>
-                    </div>
-
-                    <div
-                        class="border-l-4 p-6"
-                        style="border-color: #12a19d; background: #e6f9f8"
-                    >
-                        <p
-                            class="text-base font-extrabold leading-relaxed"
-                            style="color: #12a19d"
-                        >
-                            "Les outils pratiques m'aident au quotidien, dans
-                            toutes mes relations."
-                        </p>
-                        <p class="text-sm text-gray-600 mt-3">
-                            — Charlie, participant·e
                         </p>
                     </div>
                 </div>
@@ -1030,18 +959,17 @@ letter-spacing: 0.05em;</code></pre>
                         <strong style="color: #f5004f">l'authenticité</strong>,
                         <strong style="color: #ffaf00"
                             >le courage de poser ses limites</strong
-                        >,
-                        <strong style="color: #7b01fe">l'écoute de soi</strong>
+                        >
                         et
-                        <strong style="color: #12a19d"
-                            >la validation mutuelle</strong
-                        >. Chaque couleur porte une énergie différente.
+                        <strong style="color: #130077">l'écoute de soi</strong>.
+                        Chaque couleur porte une énergie différente.
                     </p>
                 </div>
 
                 <div class="rounded-xl p-6 my-6" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">
-                        💡 Règle d'interlignage
+                    <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5" style="color: #ffaf00"></i>
+                        Règle d'interlignage
                     </h4>
                     <p class="text-gray-700">
                         Pour tous les textes de plus de 2 lignes, utiliser un
@@ -1133,7 +1061,7 @@ letter-spacing: 0.05em;</code></pre>
                         </ul>
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
                         <h4 class="text-lg font-semibold mb-3 text-red-700">
                             ✗ Termes à éviter
                         </h4>
@@ -1207,7 +1135,10 @@ letter-spacing: 0.05em;</code></pre>
                 </div>
 
                 <div class="rounded-xl p-6 my-6" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">💡 Principe clé</h4>
+                    <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5" style="color: #ffaf00"></i>
+                        Principe clé
+                    </h4>
                     <p class="text-gray-700">
                         Nous tutoyons systématiquement pour créer de la
                         proximité, nous utilisons l'écriture inclusive (·e, ·es)
@@ -1227,13 +1158,13 @@ letter-spacing: 0.05em;</code></pre>
                 </h2>
 
                 <p class="text-gray-700 mb-8">
-                    Nos boutons exploitent les 4 couleurs du logo pour créer du
+                    Nos boutons exploitent les 3 couleurs du logo pour créer du
                     dynamisme et guider l'attention. Chaque couleur peut porter
                     une intention différente.
                 </p>
 
                 <h3 class="text-2xl font-bold mb-4 mt-8">
-                    Boutons Primary - 4 couleurs
+                    Boutons Primary - 3 couleurs
                 </h3>
                 <p class="text-gray-700 mb-4">
                     Utilisés pour les actions principales. Chaque couleur porte
@@ -1258,19 +1189,11 @@ letter-spacing: 0.05em;</code></pre>
                     </button>
                     <button
                         class="text-white px-8 py-4 rounded-full font-bold transition-colors"
-                        style="background: #7b01fe"
-                        onmouseover="this.style.background='#6a01db'"
-                        onmouseout="this.style.background='#7b01fe'"
+                        style="background: #130077"
+                        onmouseover="this.style.background='#0d0055'"
+                        onmouseout="this.style.background='#130077'"
                     >
-                        En savoir plus (Mauve)
-                    </button>
-                    <button
-                        class="text-white px-8 py-4 rounded-full font-bold transition-colors"
-                        style="background: #12a19d"
-                        onmouseover="this.style.background='#0f8a87'"
-                        onmouseout="this.style.background='#12a19d'"
-                    >
-                        Valider (Cyan)
+                        En savoir plus (Indigo)
                     </button>
                 </div>
 
@@ -1298,19 +1221,11 @@ letter-spacing: 0.05em;</code></pre>
                     </button>
                     <button
                         class="px-6 py-3 rounded-full font-bold transition-colors"
-                        style="background: #f3e6ff; color: #7b01fe"
-                        onmouseover="this.style.background='#e6d1ff'"
-                        onmouseout="this.style.background='#f3e6ff'"
+                        style="background: #e6e6ff; color: #130077"
+                        onmouseover="this.style.background='#d1d1ff'"
+                        onmouseout="this.style.background='#e6e6ff'"
                     >
                         Explorer
-                    </button>
-                    <button
-                        class="px-6 py-3 rounded-full font-bold transition-colors"
-                        style="background: #e6f9f8; color: #12a19d"
-                        onmouseover="this.style.background='#d1f2f0'"
-                        onmouseout="this.style.background='#e6f9f8'"
-                    >
-                        Ressources
                     </button>
                 </div>
 
@@ -1337,9 +1252,9 @@ letter-spacing: 0.05em;</code></pre>
                     </button>
                     <button
                         class="bg-transparent border-2 px-6 py-3 rounded-full font-bold transition-colors"
-                        style="border-color: #7b01fe; color: #7b01fe"
-                        onmouseover="this.style.borderColor='#6a01db'; this.style.color='#6a01db'"
-                        onmouseout="this.style.borderColor='#7b01fe'; this.style.color='#7b01fe'"
+                        style="border-color: #130077; color: #130077"
+                        onmouseover="this.style.borderColor='#0d0055'; this.style.color='#0d0055'"
+                        onmouseout="this.style.borderColor='#130077'; this.style.color='#130077'"
                     >
                         En savoir plus
                     </button>
@@ -1364,15 +1279,9 @@ letter-spacing: 0.05em;</code></pre>
                     </span>
                     <span
                         class="px-4 py-2 rounded-full text-sm font-bold text-white"
-                        style="background: #7b01fe"
+                        style="background: #130077"
                     >
                         Complet
-                    </span>
-                    <span
-                        class="px-4 py-2 rounded-full text-sm font-bold text-white"
-                        style="background: #12a19d"
-                    >
-                        Confirmé
                     </span>
                 </div>
 
@@ -1400,35 +1309,26 @@ letter-spacing: 0.05em;</code></pre>
                     <span
                         class="px-4 py-2 rounded-full text-sm font-semibold border"
                         style="
-                            background: #f3e6ff;
-                            color: #7b01fe;
-                            border-color: #7b01fe;
+                            background: #e6e6ff;
+                            color: #130077;
+                            border-color: #130077;
                         "
                     >
                         #écoute
                     </span>
-                    <span
-                        class="px-4 py-2 rounded-full text-sm font-semibold border"
-                        style="
-                            background: #e6f9f8;
-                            color: #12a19d;
-                            border-color: #12a19d;
-                        "
-                    >
-                        #authenticité
-                    </span>
                 </div>
 
                 <div class="rounded-xl p-6 my-8" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">
-                        💡 Conseil d'usage
+                    <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5" style="color: #ffaf00"></i>
+                        Conseil d'usage
                     </h4>
                     <p class="text-gray-700">
                         N'hésite pas à varier les couleurs dans une même page
                         pour créer du rythme visuel. Par exemple : bouton
-                        principal en orange, bouton secondaire en mauve, badges
-                        en pourpre et cyan. Cela donne un côté vivant et humain
-                        tout en restant cohérent.
+                        principal en orange, bouton secondaire en indigo, badges
+                        en pourpre. Cela donne un côté vivant et humain tout en
+                        restant cohérent.
                     </p>
                 </div>
             </section>
@@ -1446,11 +1346,11 @@ letter-spacing: 0.05em;</code></pre>
                     Cartes avec fonds colorés
                 </h3>
                 <p class="text-gray-700 mb-6">
-                    Les 4 couleurs du logo peuvent servir de fonds clairs pour
+                    Les 3 couleurs du logo peuvent servir de fonds clairs pour
                     les cartes, créant une atmosphère douce et accueillante.
                 </p>
                 <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-6"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-6"
                 >
                     <div class="border border-gray-200 rounded-xl p-6 bg-white">
                         <h4 class="text-lg font-semibold mb-3">
@@ -1495,34 +1395,18 @@ letter-spacing: 0.05em;</code></pre>
                         >
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
                         <h4
                             class="text-lg font-semibold mb-3"
-                            style="color: #7b01fe"
+                            style="color: #130077"
                         >
-                            Carte Mauve
+                            Carte Indigo
                         </h4>
                         <p class="text-gray-700 mb-3 text-sm">
-                            Fond mauve clair pour l'exploration.
+                            Fond indigo clair pour l'exploration.
                         </p>
                         <code class="text-xs bg-gray-100 px-2 py-1 rounded"
-                            >background: #F3E6FF</code
-                        >
-                    </div>
-
-                    <div class="rounded-xl p-6" style="background: #e6f9f8">
-                        <h4
-                            class="text-lg font-semibold mb-3"
-                            style="color: #12a19d"
-                        >
-                            Carte Cyan
-                        </h4>
-                        <p class="text-gray-700 mb-3 text-sm">
-                            Fond cyan clair pour la validation et les
-                            ressources.
-                        </p>
-                        <code class="text-xs bg-gray-100 px-2 py-1 rounded"
-                            >background: #E6F9F8</code
+                            >background: #E6E6FF</code
                         >
                     </div>
                 </div>
@@ -1579,12 +1463,12 @@ letter-spacing: 0.05em;</code></pre>
 
                     <div
                         class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
-                        style="border-left-color: #7b01fe"
+                        style="border-left-color: #130077"
                     >
                         <div class="flex items-center gap-2 mb-3">
                             <span
                                 class="px-3 py-1 rounded-full text-xs font-bold text-white"
-                                style="background: #7b01fe"
+                                style="background: #130077"
                             >
                                 Complet
                             </span>
@@ -1593,27 +1477,6 @@ letter-spacing: 0.05em;</code></pre>
                         <p class="text-gray-700 text-sm">
                             Développer une écoute profonde de soi et des autres
                             pour des relations authentiques.
-                        </p>
-                    </div>
-
-                    <div
-                        class="border border-gray-200 rounded-xl p-6 bg-white border-l-4"
-                        style="border-left-color: #12a19d"
-                    >
-                        <div class="flex items-center gap-2 mb-3">
-                            <span
-                                class="px-3 py-1 rounded-full text-xs font-bold text-white"
-                                style="background: #12a19d"
-                            >
-                                Ressource
-                            </span>
-                            <h4 class="text-lg font-semibold">
-                                Guide du consentement
-                            </h4>
-                        </div>
-                        <p class="text-gray-700 text-sm">
-                            Un PDF pratique avec outils et exercices pour
-                            intégrer le consentement au quotidien.
                         </p>
                     </div>
                 </div>
@@ -1671,7 +1534,7 @@ letter-spacing: 0.05em;</code></pre>
                         </ul>
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
                         <h4 class="text-lg font-semibold mb-3">✗ À éviter</h4>
                         <ul class="space-y-2 text-sm text-gray-700">
                             <li>
@@ -1835,7 +1698,7 @@ letter-spacing: 0.05em;</code></pre>
                         </p>
                     </div>
 
-                    <div class="rounded-xl p-6" style="background: #f3e6ff">
+                    <div class="rounded-xl p-6" style="background: #e6e6ff">
                         <h5 class="font-semibold mb-4">
                             Illustration individuelle (Bust)
                         </h5>
@@ -1872,14 +1735,17 @@ letter-spacing: 0.05em;</code></pre>
                 </p>
 
                 <div class="border-l-4 border-orange-500 bg-orange-50 p-4 my-6">
-                    <p class="text-sm text-gray-800">
-                        <strong>⚠️ Important :</strong> Nous n'utilisons
-                        <strong>pas</strong> Lucide pour un look "SaaS startup"
-                        générique. Nous privilégions les icônes qui illustrent
-                        <strong>le côté humain, les émotions et les valeurs</strong>
-                        de notre mission (cœur, oreille, bouclier, mains). Éviter
-                        les icônes trop techniques ou corporate.
-                    </p>
+                    <div class="flex items-start gap-2 text-sm text-gray-800">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: #ffaf00"></i>
+                        <p>
+                            <strong>Important :</strong> Nous n'utilisons
+                            <strong>pas</strong> Lucide pour un look "SaaS startup"
+                            générique. Nous privilégions les icônes qui illustrent
+                            <strong>le côté humain, les émotions et les valeurs</strong>
+                            de notre mission (cœur, oreille, bouclier, mains). Éviter
+                            les icônes trop techniques ou corporate.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
@@ -1932,28 +1798,14 @@ letter-spacing: 0.05em;</code></pre>
 
                 <h5 class="font-semibold mb-4 mt-6">Usage avec les couleurs</h5>
                 <p class="text-gray-700 mb-4">
-                    Les icônes Lucide peuvent être colorées avec les 4 couleurs de
+                    Les icônes Lucide peuvent être colorées avec les 3 couleurs de
                     la marque pour renforcer le sens :
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
                     <div class="border border-gray-200 rounded-xl p-6 text-center">
                         <div class="flex justify-center mb-3">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="48"
-                                height="48"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#f5004f"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <path
-                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                                />
-                            </svg>
+                            <i data-lucide="heart" class="w-12 h-12" style="color: #f5004f; stroke-width: 2"></i>
                         </div>
                         <p class="text-sm font-medium">Pourpre #f5004f</p>
                         <p class="text-xs text-gray-500 mt-1">
@@ -1963,78 +1815,20 @@ letter-spacing: 0.05em;</code></pre>
 
                     <div class="border border-gray-200 rounded-xl p-6 text-center">
                         <div class="flex justify-center mb-3">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="48"
-                                height="48"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#ffaf00"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M12 16v-4" />
-                                <path d="M12 8h.01" />
-                            </svg>
+                            <i data-lucide="smile" class="w-12 h-12" style="color: #ffaf00; stroke-width: 2"></i>
                         </div>
                         <p class="text-sm font-medium">Orange #ffaf00</p>
                         <p class="text-xs text-gray-500 mt-1">
-                            Information, action
+                            Bienveillance, connexion
                         </p>
                     </div>
 
                     <div class="border border-gray-200 rounded-xl p-6 text-center">
                         <div class="flex justify-center mb-3">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="48"
-                                height="48"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#7b01fe"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <path
-                                    d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"
-                                />
-                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                                <line x1="12" x2="12" y1="19" y2="22" />
-                            </svg>
+                            <i data-lucide="shield" class="w-12 h-12" style="color: #130077; stroke-width: 2"></i>
                         </div>
-                        <p class="text-sm font-medium">Mauve #7b01fe</p>
-                        <p class="text-xs text-gray-500 mt-1">Écoute, voix</p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-xl p-6 text-center">
-                        <div class="flex justify-center mb-3">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="48"
-                                height="48"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#12a19d"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <rect
-                                    width="18"
-                                    height="11"
-                                    x="3"
-                                    y="11"
-                                    rx="2"
-                                    ry="2"
-                                />
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                            </svg>
-                        </div>
-                        <p class="text-sm font-medium">Cyan #12a19d</p>
-                        <p class="text-xs text-gray-500 mt-1">Limites, refus</p>
+                        <p class="text-sm font-medium">Indigo #130077</p>
+                        <p class="text-xs text-gray-500 mt-1">Limites, protection</p>
                     </div>
                 </div>
 
@@ -2065,7 +1859,7 @@ letter-spacing: 0.05em;</code></pre>
                     </ul>
                 </div>
 
-                <div class="rounded-xl p-6 my-6" style="background: #f3e6ff">
+                <div class="rounded-xl p-6 my-6" style="background: #e6e6ff">
                     <h4 class="text-lg font-semibold mb-3">
                         Principe de hiérarchie visuelle
                     </h4>
@@ -2150,7 +1944,10 @@ letter-spacing: 0.05em;</code></pre>
                 </div>
 
                 <div class="rounded-xl p-6 my-6" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">💡 Principe clé</h4>
+                    <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5" style="color: #ffaf00"></i>
+                        Principe clé
+                    </h4>
                     <p class="text-gray-700">
                         Tous nos visuels doivent être
                         <strong>consentis</strong>. Avant d'utiliser une photo
@@ -2176,8 +1973,9 @@ letter-spacing: 0.05em;</code></pre>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
                     <div>
-                        <h3 class="text-2xl font-bold mb-4 text-green-600">
-                            ✅ À faire
+                        <h3 class="text-2xl font-bold mb-4 text-green-600 flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            À faire
                         </h3>
 
                         <h4 class="font-semibold mt-6 mb-2 text-gray-900">
@@ -2190,7 +1988,7 @@ letter-spacing: 0.05em;</code></pre>
                             </li>
                             <li>
                                 Respecter les couleurs exactes (#F5004F,
-                                #FFAF00, #7B01FE, #12A19D)
+                                #FFAF00, #130077, #12A19D)
                             </li>
                             <li>
                                 Privilégier les bordures simples aux ombres
@@ -2238,8 +2036,9 @@ letter-spacing: 0.05em;</code></pre>
                     </div>
 
                     <div>
-                        <h3 class="text-2xl font-bold mb-4 text-red-600">
-                            ❌ À éviter
+                        <h3 class="text-2xl font-bold mb-4 text-red-600 flex items-center gap-2">
+                            <i data-lucide="x-circle" class="w-6 h-6"></i>
+                            À éviter
                         </h3>
 
                         <h4 class="font-semibold mt-6 mb-2 text-gray-900">
@@ -2285,8 +2084,9 @@ letter-spacing: 0.05em;</code></pre>
                 </div>
 
                 <div class="rounded-xl p-6 mt-8" style="background: #fff8e6">
-                    <h4 class="text-lg font-semibold mb-3">
-                        💡 En cas de doute
+                    <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5" style="color: #ffaf00"></i>
+                        En cas de doute
                     </h4>
                     <p class="text-gray-700">
                         Demande-toi : est-ce que ce choix reflète nos valeurs
@@ -2301,12 +2101,12 @@ letter-spacing: 0.05em;</code></pre>
             <section class="bg-transparent shadow-none rounded-none p-0 mb-12">
                 <div class="text-center py-12">
                     <img
-                        src="./assets/logo-v1.svg"
+                        src="./assets/logo-v2.svg"
                         alt="Logo"
                         class="h-24 mx-auto mb-6"
                     />
                     <p class="text-gray-500">
-                        Charte Graphique v1.0 • Octobre 2025<br />
+                        Charte Graphique v2.0 • Octobre 2025<br />
                         <a
                             href="https://mercipourtonnon.fr"
                             class="transition-colors"
@@ -2375,6 +2175,9 @@ letter-spacing: 0.05em;</code></pre>
             sections.forEach((section) => {
                 observer.observe(section);
             });
+        </script>
+        <script>
+            lucide.createIcons();
         </script>
     </body>
 </html>
