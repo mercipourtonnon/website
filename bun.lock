@@ -4,9 +4,9 @@
     "": {
       "name": "mercipourtonnon",
       "devDependencies": {
-        "@tailwindcss/cli": "^4.1.13",
+        "@tailwindcss/cli": "^4.1.14",
         "@types/bun": "latest",
-        "tailwindcss": "^4.1.13",
+        "tailwindcss": "^4.1.14",
       },
       "peerDependencies": {
         "typescript": "^5.9.2",
