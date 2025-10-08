@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charte Graphique - Merci pour ton non</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Couleurs principales */
+            --orange-500: #F97316;
+            --orange-600: #EA580C;
+            --orange-50: #FFF7ED;
+            --purple-600: #9333EA;
+            --purple-50: #FAF5FF;
+            --pink-500: #EC4899;
+            --pink-50: #FDF2F8;
+            --teal-500: #26A69A;
+
+            /* Gris */
+            --gray-900: #111827;
+            --gray-700: #4B5563;
+            --gray-500: #6B7280;
+            --gray-200: #E5E7EB;
+            --gray-100: #F3F4F6;
+
+            /* Polices */
+            --font-display: "Bebas Neue", cursive;
+            --font-body: "Inter", sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: linear-gradient(to bottom right, var(--orange-50), var(--purple-50));
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 32px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 48px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+
+        .logo .merci { color: #E91E63; }
+        .logo .pour { color: #FFA726; }
+        .logo .ton { color: #9C27B0; }
+        .logo .non { color: var(--teal-500); }
+
+        .version {
+            background: var(--orange-50);
+            color: var(--orange-600);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 48px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--orange-500);
+        }
+
+        /* Sections */
+        section {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 48px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 64px;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            color: var(--orange-500);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+            color: var(--gray-900);
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--gray-700);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--gray-700);
+        }
+
+        /* Grille couleurs */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .color-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .color-swatch {
+            height: 120px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 16px;
+        }
+
+        .color-name {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            color: var(--gray-500);
+            font-size: 14px;
+        }
+
+        .color-usage {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 8px;
+        }
+
+        /* Typographie */
+        .typo-example {
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+        }
+
+        .display-text {
+            font-family: var(--font-display);
+            font-size: 72px;
+            letter-spacing: 0.05em;
+            line-height: 1.1;
+        }
+
+        .title-xl { font-size: 48px; }
+        .title-lg { font-size: 36px; }
+        .title-md { font-size: 24px; }
+
+        /* Boutons */
+        .button-showcase {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-primary {
+            background: var(--orange-500);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--purple-600);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--orange-500);
+            color: var(--orange-500);
+        }
+
+        /* Cartes */
+        .card-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .card {
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .card-border {
+            border: 1px solid var(--gray-200);
+            background: white;
+        }
+
+        .card-orange {
+            background: var(--orange-50);
+            border: 1px solid var(--gray-200);
+        }
+
+        .card-purple {
+            background: var(--purple-50);
+            border: 1px solid var(--gray-200);
+        }
+
+        .card h4 {
+            margin-top: 0;
+        }
+
+        /* Exemples supports */
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+            margin: 32px 0;
+        }
+
+        .support-example {
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .support-preview {
+            position: relative;
+            padding: 48px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flyer-preview {
+            background: linear-gradient(135deg, var(--orange-50) 0%, var(--purple-50) 100%);
+        }
+
+        .social-preview {
+            background: linear-gradient(to right, var(--orange-600), var(--purple-600));
+        }
+
+        .affiche-preview {
+            background: white;
+            border: 8px solid var(--orange-500);
+        }
+
+        .support-info {
+            padding: 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .support-title {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .support-specs {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin: 8px 0;
+        }
+
+        /* Logo showcase */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .logo-example {
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .logo-bg-white { background: white; }
+        .logo-bg-orange { background: var(--orange-50); }
+        .logo-bg-dark { background: var(--gray-900); }
+
+        /* Gradient examples */
+        .gradient-showcase {
+            display: grid;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .gradient-box {
+            height: 200px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(to bottom right, var(--orange-50), var(--purple-50));
+            color: var(--gray-900);
+        }
+
+        .gradient-banner {
+            background: linear-gradient(to right, var(--orange-600), var(--purple-600));
+        }
+
+        .gradient-text-demo {
+            background: linear-gradient(135deg, var(--orange-500) 0%, #DC2626 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: var(--font-display);
+            font-size: 64px;
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        /* Code blocks */
+        code {
+            background: var(--gray-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: monospace;
+        }
+
+        pre {
+            background: var(--gray-900);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        pre code {
+            background: transparent;
+            color: white;
+            padding: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            h2 {
+                font-size: 36px;
+            }
+
+            .display-text {
+                font-size: 48px;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                font-size: 32px;
+            }
+
+            nav ul {
+                gap: 16px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 48px 24px;
+            color: var(--gray-500);
+        }
+
+        /* Mockup flyer */
+        .mockup-flyer {
+            background: white;
+            border-radius: 8px;
+            padding: 32px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+
+        .mockup-flyer h3 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            letter-spacing: 0.05em;
+            margin: 0 0 16px 0;
+            text-align: center;
+        }
+
+        .mockup-flyer .merci { color: #E91E63; }
+        .mockup-flyer .pour { color: #FFA726; }
+        .mockup-flyer .ton { color: #9C27B0; }
+        .mockup-flyer .non { color: var(--teal-500); }
+
+        .mockup-flyer h4 {
+            font-size: 16px;
+            color: var(--orange-500);
+            text-align: center;
+            margin: 8px 0;
+            font-weight: 600;
+        }
+
+        .mockup-flyer .info {
+            background: var(--orange-50);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            font-size: 12px;
+        }
+
+        .mockup-flyer .info strong {
+            display: block;
+            color: var(--orange-600);
+            margin-bottom: 4px;
+        }
+
+        /* Mockup social */
+        .mockup-social {
+            background: linear-gradient(to right, var(--orange-600), var(--purple-600));
+            border-radius: 8px;
+            padding: 48px 32px;
+            text-align: center;
+            color: white;
+            max-width: 400px;
+        }
+
+        .mockup-social h3 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            margin: 0 0 16px 0;
+            color: white;
+        }
+
+        .mockup-social p {
+            color: white;
+            font-size: 18px;
+            margin: 16px 0;
+        }
+
+        /* Mockup affiche */
+        .mockup-affiche {
+            background: white;
+            border: 4px solid var(--orange-500);
+            border-radius: 8px;
+            padding: 32px;
+            text-align: center;
+            max-width: 350px;
+        }
+
+        .mockup-affiche h3 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            margin: 0 0 24px 0;
+        }
+
+        .mockup-affiche .title-line {
+            display: block;
+        }
+
+        .mockup-affiche .atelier { color: var(--orange-500); }
+        .mockup-affiche .consentement { color: var(--purple-600); }
+        .mockup-affiche .strasbourg { color: var(--gray-900); }
+
+        .mockup-affiche .info-box {
+            background: var(--orange-50);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            text-align: left;
+        }
+
+        .mockup-affiche .date {
+            font-weight: 700;
+            color: var(--orange-600);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--orange-50);
+            color: var(--orange-600);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="merci">merci</span>
+                    <span class="pour">pour</span>
+                    <span class="ton">ton</span>
+                    <span class="non">non</span>
+                </div>
+                <div class="version">Version 1.0</div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#couleurs">Couleurs</a></li>
+                <li><a href="#typographie">Typographie</a></li>
+                <li><a href="#logo">Logo</a></li>
+                <li><a href="#boutons">Boutons</a></li>
+                <li><a href="#cartes">Cartes</a></li>
+                <li><a href="#gradients">Dégradés</a></li>
+                <li><a href="#supports">Supports Visuels</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Intro -->
+        <section>
+            <h1>Charte Graphique</h1>
+            <p style="font-size: 20px; color: var(--gray-700);">
+                Guide complet de l'identité visuelle de <strong>Merci pour ton non</strong>,
+                association d'ateliers de consentement à prix libre.
+            </p>
+            <p>
+                Cette charte définit les règles d'usage des couleurs, typographies, et éléments visuels
+                pour maintenir une cohérence sur tous les supports : site web, réseaux sociaux, flyers, affiches.
+            </p>
+        </section>
+
+        <!-- Couleurs -->
+        <section id="couleurs">
+            <h2>Palette de Couleurs</h2>
+            <p>Les couleurs reflètent nos valeurs : chaleur (orange), empowerment (violet), et bienveillance (rose).</p>
+
+            <h3>Couleurs Principales</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F97316;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Orange Principal</div>
+                        <div class="color-hex">#F97316</div>
+                        <div class="color-usage">CTAs, liens actifs, accents</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #9333EA;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Violet Principal</div>
+                        <div class="color-hex">#9333EA</div>
+                        <div class="color-usage">Titres secondaires, accents</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #EC4899;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Rose Secondaire</div>
+                        <div class="color-hex">#EC4899</div>
+                        <div class="color-usage">Accents complémentaires</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #26A69A;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Turquoise (Logo)</div>
+                        <div class="color-hex">#26A69A</div>
+                        <div class="color-usage">Logo "non"</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Couleurs Neutres</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #111827;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Foncé</div>
+                        <div class="color-hex">#111827</div>
+                        <div class="color-usage">Texte principal</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #4B5563;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Moyen</div>
+                        <div class="color-hex">#4B5563</div>
+                        <div class="color-usage">Texte secondaire</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E5E7EB;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Clair</div>
+                        <div class="color-hex">#E5E7EB</div>
+                        <div class="color-usage">Bordures, séparateurs</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E5E7EB;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blanc</div>
+                        <div class="color-hex">#FFFFFF</div>
+                        <div class="color-usage">Fond, cartes</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typographie -->
+        <section id="typographie">
+            <h2>Typographie</h2>
+
+            <h3>Bebas Neue - Police Display</h3>
+            <p>Utilisée pour tous les titres principaux, le logo, et les éléments à fort impact.</p>
+            <div class="typo-example">
+                <div class="display-text" style="color: var(--orange-500);">ATELIER DE CONSENTEMENT</div>
+            </div>
+            <pre><code>font-family: "Bebas Neue", cursive;
+letter-spacing: 0.05em;</code></pre>
+
+            <h3>Hiérarchie des Titres</h3>
+            <div class="typo-example">
+                <div style="font-family: var(--font-display); font-size: 72px; letter-spacing: 0.05em; margin-bottom: 16px;">
+                    Titre H1 - 72px
+                </div>
+                <div style="font-family: var(--font-display); font-size: 48px; letter-spacing: 0.05em; margin-bottom: 16px;">
+                    Titre H2 - 48px
+                </div>
+                <div style="font-family: var(--font-display); font-size: 36px; letter-spacing: 0.05em; margin-bottom: 16px;">
+                    Titre H3 - 36px
+                </div>
+            </div>
+
+            <h3>Inter - Police Corps</h3>
+            <p>Utilisée pour tout le corps de texte, navigation, et éléments UI.</p>
+            <div class="typo-example">
+                <p style="font-size: 18px; font-weight: 400;">
+                    Corps de texte régulier - 16-18px, Inter Regular (400)
+                </p>
+                <p style="font-size: 16px; font-weight: 500;">
+                    Navigation et labels - 14-16px, Inter Medium (500)
+                </p>
+                <p style="font-size: 16px; font-weight: 700;">
+                    Emphase et boutons - 16px, Inter Bold (700)
+                </p>
+            </div>
+        </section>
+
+        <!-- Logo -->
+        <section id="logo">
+            <h2>Logo & Identité</h2>
+
+            <h3>Construction du Logo</h3>
+            <p>Le logo utilise trois couleurs distinctes pour chaque mot, créant une identité visuelle unique et mémorable.</p>
+
+            <div class="logo-showcase">
+                <div class="logo-example logo-bg-white">
+                    <div class="logo">
+                        <span class="merci">merci</span><br>
+                        <span class="pour">pour</span>
+                        <span class="ton">ton</span><br>
+                        <span class="non">non</span>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 14px; color: var(--gray-500);">Fond blanc</p>
+                </div>
+
+                <div class="logo-example logo-bg-orange">
+                    <div class="logo">
+                        <span class="merci">merci</span><br>
+                        <span class="pour">pour</span>
+                        <span class="ton">ton</span><br>
+                        <span class="non">non</span>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 14px; color: var(--gray-500);">Fond coloré clair</p>
+                </div>
+
+                <div class="logo-example logo-bg-dark">
+                    <div class="logo" style="filter: brightness(1.2);">
+                        <span class="merci">merci</span><br>
+                        <span class="pour">pour</span>
+                        <span class="ton">ton</span><br>
+                        <span class="non">non</span>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 14px; color: white;">Fond sombre</p>
+                </div>
+            </div>
+
+            <h3>Couleurs du Logo</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px 0;"><strong style="color: #E91E63;">"merci"</strong> - Rose/Rouge #E91E63</li>
+                <li style="padding: 8px 0;"><strong style="color: #FFA726;">"pour ton"</strong> - Orange/Violet dégradé (#FFA726 → #9C27B0)</li>
+                <li style="padding: 8px 0;"><strong style="color: #26A69A;">"non"</strong> - Turquoise #26A69A</li>
+            </ul>
+        </section>
+
+        <!-- Boutons -->
+        <section id="boutons">
+            <h2>Boutons & CTAs</h2>
+
+            <h3>Styles de Boutons</h3>
+            <div class="button-showcase">
+                <button class="btn btn-primary">Je m'inscris</button>
+                <button class="btn btn-secondary">En savoir plus</button>
+                <button class="btn btn-outline">Télécharger</button>
+            </div>
+
+            <h3>Code HTML/CSS</h3>
+            <pre><code>.btn-primary {
+    background: #F97316;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}</code></pre>
+
+            <h3>États & Interactions</h3>
+            <div class="button-showcase">
+                <button class="btn btn-primary">État normal</button>
+                <button class="btn btn-primary" style="transform: scale(1.05);">État hover</button>
+                <button class="btn btn-primary" style="opacity: 0.5; cursor: not-allowed;">État désactivé</button>
+            </div>
+        </section>
+
+        <!-- Cartes -->
+        <section id="cartes">
+            <h2>Cartes & Conteneurs</h2>
+
+            <h3>Variations de Cartes</h3>
+            <div class="card-showcase">
+                <div class="card card-border">
+                    <h4>Carte Standard</h4>
+                    <p>Fond blanc avec bordure grise subtile. Utilisée pour le contenu principal.</p>
+                    <code>border: 1px solid #E5E7EB</code>
+                </div>
+
+                <div class="card card-orange">
+                    <h4>Carte Orange</h4>
+                    <p>Fond orange clair pour mettre en avant des informations importantes ou chaleureuses.</p>
+                    <code>background: #FFF7ED</code>
+                </div>
+
+                <div class="card card-purple">
+                    <h4>Carte Violette</h4>
+                    <p>Fond violet clair pour des sections alternatives ou complémentaires.</p>
+                    <code>background: #FAF5FF</code>
+                </div>
+            </div>
+
+            <h3>Principe de Design</h3>
+            <p>Les cartes utilisent des bordures simples plutôt que des ombres lourdes pour un design épuré et associatif, éloigné de l'aspect "startup".</p>
+        </section>
+
+        <!-- Dégradés -->
+        <section id="gradients">
+            <h2>Dégradés</h2>
+
+            <h3>Dégradés de Fond</h3>
+            <div class="gradient-showcase">
+                <div class="gradient-box gradient-hero">
+                    Dégradé Hero (Orange → Violet)
+                </div>
+                <div class="gradient-box gradient-banner">
+                    Dégradé Banner (Orange foncé → Violet)
+                </div>
+            </div>
+
+            <h3>Dégradé de Texte</h3>
+            <div class="gradient-text-demo">
+                TITRE EN DÉGRADÉ
+            </div>
+            <pre><code>background: linear-gradient(135deg, #F97316 0%, #DC2626 100%);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;</code></pre>
+        </section>
+
+        <!-- Supports Visuels -->
+        <section id="supports">
+            <h2>Supports Visuels</h2>
+            <p>Exemples d'application de la charte graphique sur différents supports de communication.</p>
+
+            <h3>Flyers & Impression</h3>
+            <div class="support-grid">
+                <div class="support-example">
+                    <div class="support-preview flyer-preview">
+                        <div class="mockup-flyer">
+                            <h3>
+                                <span class="merci">merci</span><br>
+                                <span class="pour">pour</span>
+                                <span class="ton">ton</span><br>
+                                <span class="non">non</span>
+                            </h3>
+                            <h4>Atelier de Consentement</h4>
+                            <div class="info">
+                                <strong>📅 21 Septembre 2025</strong>
+                                10h-13h • Strasbourg
+                            </div>
+                            <div class="info">
+                                <strong>💰 Prix libre</strong>
+                                Personne n'est refusé·e
+                            </div>
+                            <div class="info">
+                                <strong>👥 6 à 15 personnes</strong>
+                                Places limitées
+                            </div>
+                            <p style="text-align: center; font-size: 11px; margin-top: 16px; color: var(--gray-500);">
+                                mercipourtonnon.fr
+                            </p>
+                        </div>
+                    </div>
+                    <div class="support-info">
+                        <div class="support-title">Flyer A6</div>
+                        <div class="support-specs">📐 Format : 10,5 x 14,8 cm</div>
+                        <div class="support-specs">🎨 Fond dégradé orange-violet</div>
+                        <div class="support-specs">✏️ Logo coloré + infos pratiques</div>
+                        <p style="margin-top: 12px; font-size: 14px;">
+                            Design simple et chaleureux pour distribution en main propre ou dépôt en lieux publics.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="support-example">
+                    <div class="support-preview affiche-preview">
+                        <div class="mockup-affiche">
+                            <h3>
+                                <span class="title-line atelier">ATELIER DE</span>
+                                <span class="title-line consentement">CONSENTEMENT</span>
+                                <span class="title-line strasbourg">STRASBOURG</span>
+                            </h3>
+                            <div class="info-box">
+                                <div class="date">21 Septembre 2025</div>
+                                <p style="margin: 0; font-size: 14px;">10h00 - 13h00</p>
+                                <p style="margin: 4px 0 0 0; font-size: 14px;">6 à 15 participants</p>
+                            </div>
+                            <div style="margin: 16px 0;">
+                                <span class="tag">Prix libre</span>
+                                <span class="tag">Accessible</span>
+                            </div>
+                            <p style="font-size: 12px; color: var(--gray-500); margin-top: 16px;">
+                                Inscription sur mercipourtonnon.fr
+                            </p>
+                        </div>
+                    </div>
+                    <div class="support-info">
+                        <div class="support-title">Affiche A3</div>
+                        <div class="support-specs">📐 Format : 29,7 x 42 cm</div>
+                        <div class="support-specs">🎨 Fond blanc + bordure orange</div>
+                        <div class="support-specs">✏️ Typographie Bebas Neue en grand</div>
+                        <p style="margin-top: 12px; font-size: 14px;">
+                            Affichage mural pour cafés associatifs, universités, centres culturels. Lisible à distance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Réseaux Sociaux</h3>
+            <div class="support-grid">
+                <div class="support-example">
+                    <div class="support-preview social-preview">
+                        <div class="mockup-social">
+                            <h3>ATELIER<br>CONSENTEMENT</h3>
+                            <p>Apprends à dire non et<br>pose tes limites</p>
+                            <div style="margin-top: 24px;">
+                                <span style="font-size: 24px; font-weight: 700;">21 SEPT • 10h-13h</span>
+                            </div>
+                            <p style="font-size: 14px; margin-top: 16px;">Prix libre • Strasbourg</p>
+                        </div>
+                    </div>
+                    <div class="support-info">
+                        <div class="support-title">Post Instagram</div>
+                        <div class="support-specs">📐 Format : 1080 x 1080 px (carré)</div>
+                        <div class="support-specs">🎨 Dégradé orange-violet vif</div>
+                        <div class="support-specs">✏️ Texte blanc en Bebas Neue</div>
+                        <p style="margin-top: 12px; font-size: 14px;">
+                            Design impactant pour capter l'attention dans le feed. Contraste élevé pour lisibilité mobile.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="support-example">
+                    <div class="support-preview" style="background: var(--orange-50);">
+                        <div style="max-width: 500px; text-align: left; padding: 24px;">
+                            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                                <div style="width: 48px; height: 48px; background: var(--orange-500); border-radius: 50%;"></div>
+                                <div>
+                                    <div style="font-weight: 700; font-size: 16px;">Merci pour ton non</div>
+                                    <div style="font-size: 12px; color: var(--gray-500);">@mercipourtonnon</div>
+                                </div>
+                            </div>
+                            <p style="font-size: 15px; line-height: 1.5; margin-bottom: 12px;">
+                                🔥 Places ouvertes pour notre prochain atelier de consentement !
+                            </p>
+                            <p style="font-size: 15px; line-height: 1.5; margin-bottom: 12px;">
+                                📅 21 septembre, 10h-13h<br>
+                                💰 Prix libre<br>
+                                📍 Strasbourg
+                            </p>
+                            <p style="font-size: 15px; line-height: 1.5;">
+                                Lien dans la bio 🔗
+                            </p>
+                        </div>
+                    </div>
+                    <div class="support-info">
+                        <div class="support-title">Story Instagram / Facebook</div>
+                        <div class="support-specs">📐 Format : 1080 x 1920 px (9:16)</div>
+                        <div class="support-specs">🎨 Fond orange clair + texte foncé</div>
+                        <div class="support-specs">✏️ Style post texte avec émojis</div>
+                        <p style="margin-top: 12px; font-size: 14px;">
+                            Format story pour annonces rapides et engagement communauté. Ton chaleureux et accessible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Supports Numériques</h3>
+            <div style="border: 1px solid var(--gray-200); border-radius: 12px; padding: 32px; margin: 24px 0;">
+                <h4>Bannière Email</h4>
+                <div style="background: linear-gradient(to right, var(--orange-600), var(--purple-600)); padding: 48px; border-radius: 8px; text-align: center; color: white;">
+                    <div style="font-family: var(--font-display); font-size: 48px; letter-spacing: 0.05em; margin-bottom: 16px;">
+                        ATELIER DE CONSENTEMENT
+                    </div>
+                    <div style="font-size: 20px; font-weight: 600;">
+                        Inscris-toi maintenant • Prix libre
+                    </div>
+                </div>
+                <div style="margin-top: 16px; color: var(--gray-500); font-size: 14px;">
+                    <strong>Usage :</strong> Header d'email, bannière site web<br>
+                    <strong>Format :</strong> 600-800px de large<br>
+                    <strong>Style :</strong> Dégradé vif, texte blanc, message clair
+                </div>
+            </div>
+        </section>
+
+        <!-- Principes -->
+        <section>
+            <h2>Principes de Design</h2>
+
+            <div class="card-showcase">
+                <div class="card card-orange">
+                    <h4>🎯 Clarté</h4>
+                    <p>Hiérarchie visuelle claire, contrastes élevés pour l'accessibilité, espaces généreux.</p>
+                </div>
+
+                <div class="card card-purple">
+                    <h4>✨ Simplicité</h4>
+                    <p>Design épuré sans surcharge visuelle. Borders subtils plutôt que shadows lourdes.</p>
+                </div>
+
+                <div class="card card-border">
+                    <h4>🤝 Chaleur</h4>
+                    <p>Palette orange/violet chaleureuse, ton inclusif et rassurant, accessibilité mise en avant.</p>
+                </div>
+
+                <div class="card card-border">
+                    <h4>📈 Conversion</h4>
+                    <p>CTAs visibles et contrastés, navigation intuitive, smooth scroll, témoignages mis en valeur.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Do's & Don'ts -->
+        <section>
+            <h2>À Faire & À Éviter</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0;">
+                <div>
+                    <h3 style="color: #059669;">✅ À Faire</h3>
+                    <ul style="line-height: 2;">
+                        <li>Utiliser Bebas Neue pour les titres</li>
+                        <li>Respecter les couleurs exactes (#F97316, #9333EA)</li>
+                        <li>Privilégier les bordures aux ombres lourdes</li>
+                        <li>Maintenir un ton chaleureux et inclusif</li>
+                        <li>Utiliser le tutoiement</li>
+                        <li>Mettre en avant le prix libre</li>
+                        <li>Garder des espaces généreux</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="color: #DC2626;">❌ À Éviter</h3>
+                    <ul style="line-height: 2;">
+                        <li>Mélanger trop de polices différentes</li>
+                        <li>Utiliser des couleurs non référencées</li>
+                        <li>Surcharger avec des ombres portées</li>
+                        <li>Ton trop commercial ou agressif</li>
+                        <li>Vouvoiement ou langage corporate</li>
+                        <li>Design trop "startup" ou SaaS</li>
+                        <li>Éléments visuels trop chargés</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section style="background: transparent; box-shadow: none;">
+            <div style="text-align: center; padding: 48px 0;">
+                <div class="logo" style="margin-bottom: 24px;">
+                    <span class="merci">merci</span>
+                    <span class="pour">pour</span>
+                    <span class="ton">ton</span>
+                    <span class="non">non</span>
+                </div>
+                <p style="color: var(--gray-500);">
+                    Charte Graphique v1.0 • Janvier 2025<br>
+                    <a href="https://mercipourtonnon.fr" style="color: var(--orange-500); text-decoration: none;">
+                        mercipourtonnon.fr
+                    </a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scroll pour la navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
