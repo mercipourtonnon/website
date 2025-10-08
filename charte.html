@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charte Graphique - Merci pour ton non</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+        /* Custom Fonts */
+        @font-face {
+            font-family: 'Bely Display';
+            src: url('./assets/fonts/Bely Display.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Neue Machina';
+            src: url('./assets/fonts/Neue Machina /NeueMachina-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Neue Machina';
+            src: url('./assets/fonts/Neue Machina /NeueMachina-Light.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Neue Machina';
+            src: url('./assets/fonts/Neue Machina /NeueMachina-Ultrabold.otf') format('opentype');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
 
         * {
             margin: 0;
@@ -33,8 +63,8 @@
             --gray-100: #F3F4F6;
 
             /* Polices */
-            --font-display: "Bebas Neue", cursive;
-            --font-body: "Inter", sans-serif;
+            --font-display: "Bely Display", cursive;
+            --font-body: "Neue Machina", sans-serif;
         }
 
         body {
@@ -595,12 +625,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <span class="merci">merci</span>
-                    <span class="pour">pour</span>
-                    <span class="ton">ton</span>
-                    <span class="non">non</span>
-                </div>
+                <img src="./assets/logo.svg" alt="Merci pour ton non" style="height: 80px; width: auto;">
                 <div class="version">Version 1.0</div>
             </div>
         </div>
@@ -722,12 +747,12 @@
         <section id="typographie">
             <h2>Typographie</h2>
 
-            <h3>Bebas Neue - Police Display</h3>
+            <h3>Bely Display - Police Display</h3>
             <p>Utilisée pour tous les titres principaux, le logo, et les éléments à fort impact.</p>
             <div class="typo-example">
                 <div class="display-text" style="color: var(--orange-500);">ATELIER DE CONSENTEMENT</div>
             </div>
-            <pre><code>font-family: "Bebas Neue", cursive;
+            <pre><code>font-family: "Bely Display", cursive;
 letter-spacing: 0.05em;</code></pre>
 
             <h3>Hiérarchie des Titres</h3>
@@ -743,17 +768,17 @@ letter-spacing: 0.05em;</code></pre>
                 </div>
             </div>
 
-            <h3>Inter - Police Corps</h3>
+            <h3>Neue Machina - Police Corps</h3>
             <p>Utilisée pour tout le corps de texte, navigation, et éléments UI.</p>
             <div class="typo-example">
                 <p style="font-size: 18px; font-weight: 400;">
-                    Corps de texte régulier - 16-18px, Inter Regular (400)
+                    Corps de texte régulier - 16-18px, Neue Machina Regular (400)
                 </p>
-                <p style="font-size: 16px; font-weight: 500;">
-                    Navigation et labels - 14-16px, Inter Medium (500)
+                <p style="font-size: 16px; font-weight: 300;">
+                    Texte léger - 14-16px, Neue Machina Light (300)
                 </p>
-                <p style="font-size: 16px; font-weight: 700;">
-                    Emphase et boutons - 16px, Inter Bold (700)
+                <p style="font-size: 16px; font-weight: 800;">
+                    Emphase et boutons - 16px, Neue Machina Ultrabold (800)
                 </p>
             </div>
         </section>
@@ -962,7 +987,7 @@ background-clip: text;
                         <div class="support-title">Affiche A3</div>
                         <div class="support-specs">📐 Format : 29,7 x 42 cm</div>
                         <div class="support-specs">🎨 Fond blanc + bordure orange</div>
-                        <div class="support-specs">✏️ Typographie Bebas Neue en grand</div>
+                        <div class="support-specs">✏️ Typographie Bely Display en grand</div>
                         <p style="margin-top: 12px; font-size: 14px;">
                             Affichage mural pour cafés associatifs, universités, centres culturels. Lisible à distance.
                         </p>
@@ -987,7 +1012,7 @@ background-clip: text;
                         <div class="support-title">Post Instagram</div>
                         <div class="support-specs">📐 Format : 1080 x 1080 px (carré)</div>
                         <div class="support-specs">🎨 Dégradé orange-violet vif</div>
-                        <div class="support-specs">✏️ Texte blanc en Bebas Neue</div>
+                        <div class="support-specs">✏️ Texte blanc en Bely Display</div>
                         <p style="margin-top: 12px; font-size: 14px;">
                             Design impactant pour capter l'attention dans le feed. Contraste élevé pour lisibilité mobile.
                         </p>
@@ -1083,7 +1108,7 @@ background-clip: text;
                 <div>
                     <h3 style="color: #059669;">✅ À Faire</h3>
                     <ul style="line-height: 2;">
-                        <li>Utiliser Bebas Neue pour les titres</li>
+                        <li>Utiliser Bely Display pour les titres</li>
                         <li>Respecter les couleurs exactes (#F97316, #9333EA)</li>
                         <li>Privilégier les bordures aux ombres lourdes</li>
                         <li>Maintenir un ton chaleureux et inclusif</li>
