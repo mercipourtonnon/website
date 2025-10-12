@@ -3,7 +3,7 @@
 /* Custom Fonts */
 @font-face {
     font-family: "Bely Display";
-    src: url("./assets/fonts/BelyDisplay.ttf") format("truetype");
+    src: url("./public/fonts/BelyDisplay.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: "Neue Machina";
-    src: url("./assets/fonts/NeueMachina/NeueMachina-Regular.otf")
+    src: url("./public/fonts/NeueMachina/NeueMachina-Regular.otf")
         format("opentype");
     font-weight: 400;
     font-style: normal;
@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: "Neue Machina";
-    src: url("./assets/fonts/NeueMachina/NeueMachina-Light.otf")
+    src: url("./public/fonts/NeueMachina/NeueMachina-Light.otf")
         format("opentype");
     font-weight: 300;
     font-style: normal;
@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: "Neue Machina";
-    src: url("./assets/fonts/NeueMachina/NeueMachina-Ultrabold.otf")
+    src: url("./public/fonts/NeueMachina/NeueMachina-Ultrabold.otf")
         format("opentype");
     font-weight: 800;
     font-style: normal;

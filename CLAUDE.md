@@ -31,7 +31,7 @@ bun start
 - `index.html` - Single-page website (1500+ lines) containing all content
 - `input.css` - Tailwind entry point (just imports Tailwind)
 - `output.css` - Compiled Tailwind CSS output (generated, not manually edited)
-- `assets/` - Images, favicons, team pictures
+- `public/` - Images, favicons, team pictures
 - `robots.txt` & `sitemap.xml` - SEO files
 
 ### Key Features in index.html
@@ -91,7 +91,7 @@ Extensive meta tags for SEO and social sharing (lines 13-123):
 
 ### Updating Team Members
 Team section starts at line 1091. Each member has:
-- Profile image in `assets/pictures/`
+- Profile image in `public/pictures/`
 - Name and role
 - Fallback handling with `onerror="this.style.display='none'"`
 

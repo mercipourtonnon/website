@@ -7,7 +7,6 @@
 
     <!-- Preload Critical Resources -->
     <link rel="preload" href="./output.css?v=629611d" as="style">
-    <link rel="preload" href="./assets/atelier_consentement.jpg" as="image">
 
     <!-- Standard Meta Tags -->
     <meta
@@ -35,7 +34,7 @@
     <meta property="og:url" content="https://mercipourtonnon.fr" />
     <meta
       property="og:image"
-      content="https://mercipourtonnon.fr/assets/atelier_consentement.jpg"
+      content="https://mercipourtonnon.fr/public/logo.svg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -54,7 +53,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://mercipourtonnon.fr/assets/atelier_consentement.jpg"
+      content="https://mercipourtonnon.fr/public/atelier_consentement.jpg"
     />
     <meta
       name="twitter:image:alt"
@@ -75,7 +74,7 @@
         "name": "Merci pour ton non",
         "description": "Organisation d'ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.",
         "url": "https://mercipourtonnon.fr",
-        "logo": "https://mercipourtonnon.fr/assets/atelier_consentement.jpg",
+        "logo": "https://mercipourtonnon.fr/public/logo.svg",
         "sameAs": [
           "https://www.instagram.com/mercipourtonnon/",
           "https://www.facebook.com/mercipourtonnon",
@@ -134,21 +133,21 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
+      href="./public/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
+      href="./public/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
+      href="./public/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="manifest" href="./public/favicon/site.webmanifest" />
     <style>
       /* Brand Typography - Following charte.html */
       @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap');
@@ -298,7 +297,7 @@
           <div class="flex justify-between items-center">
             <a href="#" class="flex items-center">
               <img
-                src="./assets/logo-without-marging.svg"
+                src="./public/logo-without-marging.svg"
                 alt="Merci pour ton non"
                 class="h-12 sm:h-14 lg:h-16 w-auto"
               />
@@ -440,7 +439,7 @@
         >
           <div class="flex items-center justify-between p-4">
             <img
-              src="./assets/logo.svg"
+              src="./public/logo.svg"
               alt="Merci pour ton non"
               class="h-10 w-auto"
             />
@@ -594,7 +593,7 @@
         <div class="max-w-5xl mx-auto text-center">
           <!-- Main title with multi-color emphasis -->
           <h1
-            class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-8 title-font leading-tight"
+            class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-8 leading-none"
           >
             <span class="title-font text-orange">atelier de</span><br />
             <span class="title-font text-mauve">consentement</span><br />
@@ -650,7 +649,7 @@
       </section>
 
       <!-- Pour qui ? -->
-      <section id="pour-qui" class="relative z-10 px-6 py-16 bg-white">
+      <section id="pour-qui" class="relative z-10 px-6 py-16 bg-white" style="background-image: repeating-radial-gradient(circle at 0 0, transparent 0, rgba(255, 175, 0, 0.03) 50px, transparent 100px);">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">
@@ -748,7 +747,7 @@
       <!-- Workshop Details (MOVED UP) -->
       <section
         id="atelier"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-yellow-50 to-orange-50"
+        class="relative z-10 px-6 py-16 bg-orange-light"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
@@ -846,7 +845,7 @@
       </section>
 
       <!-- Practical Information -->
-      <section id="infos-pratiques" class="relative z-10 px-6 py-16 bg-gradient-to-br from-purple-50 to-orange-50">
+      <section id="infos-pratiques" class="relative z-10 px-6 py-16 bg-white">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">
@@ -908,33 +907,6 @@
             </div>
           </div>
 
-          <!-- Additional info -->
-          <div class="mt-12 max-w-4xl mx-auto">
-            <div class="bg-white rounded-lg p-8 border border-gray-200">
-              <h3 class="text-2xl title-font text-center text-gray-900 mb-6">
-                📋 comment s'inscrire ?
-              </h3>
-              <div class="space-y-4 text-gray-700">
-                <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">1</span>
-                  <p><strong>Clique sur "Je m'inscris"</strong> et choisis ta date</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">2</span>
-                  <p><strong>Remplis le formulaire</strong> (nom, email, commentaires éventuels)</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">3</span>
-                  <p><strong>Reçois ta confirmation</strong> par email avec l'adresse exacte</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">4</span>
-                  <p><strong>Viens le jour J</strong> — et apporte ta contribution libre en fin d'atelier si tu le souhaites</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Important notes -->
           <div class="mt-8 max-w-4xl mx-auto">
             <div class="bg-orange-light rounded-xl p-6 border-l-4 border-orange">
@@ -964,7 +936,7 @@
       </section>
 
       <!-- Testimonials (MOVED UP) -->
-      <section id="temoignages" class="relative z-10 px-6 py-16">
+      <section id="temoignages" class="relative z-10 px-6 py-16 bg-mauve-light">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">
@@ -1015,7 +987,8 @@
       <!-- Mission & Approach -->
       <section
         id="mission"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-purple-50 to-orange-50"
+        class="relative z-10 px-6 py-16 bg-white"
+        style="background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(123, 1, 254, 0.03) 40px, rgba(123, 1, 254, 0.03) 42px);"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
@@ -1150,7 +1123,7 @@
       </section>
 
       <!-- Our Values -->
-      <section id="valeurs" class="relative z-10 px-6 py-16">
+      <section id="valeurs" class="relative z-10 px-6 py-16 bg-pourpre-light">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">
@@ -1249,7 +1222,7 @@
       <!-- Team -->
       <section
         id="equipe"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-orange-50 to-purple-50"
+        class="relative z-10 px-6 py-16 bg-white"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
@@ -1268,7 +1241,7 @@
                 class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
-                  src="./assets/pictures/dilara.jpg"
+                  src="./public/pictures/dilara.jpg"
                   alt="Dilara Simsek Araiz - Facilitatrice bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   width="128"
@@ -1290,7 +1263,7 @@
                 class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
-                  src="./assets/pictures/morgane.jpg"
+                  src="./public/pictures/morgane.jpg"
                   alt="Morgane Bourgeais - Facilitatrice bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   width="128"
@@ -1312,7 +1285,7 @@
                 class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
-                  src="./assets/pictures/mathilde.jpg"
+                  src="./public/pictures/mathilde.jpg"
                   alt="Mathilde Brière - Facilitatrice bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   width="128"
@@ -1334,7 +1307,7 @@
                 class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
-                  src="./assets/pictures/thomas.jpg"
+                  src="./public/pictures/thomas.jpg"
                   alt="Thomas Jeanneau - Facilitateur bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   width="128"
@@ -1357,7 +1330,7 @@
                 class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
-                  src="./assets/pictures/elisa.jpg"
+                  src="./public/pictures/elisa.jpg"
                   alt="Elisa Garcia - Chargée de Communication bénévole chez Merci pour ton non"
                   class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   width="128"
@@ -1376,7 +1349,7 @@
       </section>
 
       <!-- Workshop Program Timeline -->
-      <section id="programme" class="relative z-10 px-6 py-16 bg-white">
+      <section id="programme" class="relative z-10 px-6 py-16 bg-cyan-light">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">
@@ -1665,7 +1638,7 @@
       </section>
 
       <!-- FAQ (Unified Section) -->
-      <section id="faq" class="relative z-10 px-6 py-16">
+      <section id="faq" class="relative z-10 px-6 py-16 bg-white" style="background-image: repeating-radial-gradient(circle at 100% 100%, transparent 0, rgba(245, 0, 79, 0.03) 50px, transparent 100px);">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">
@@ -1826,7 +1799,7 @@
       <!-- Events Registration -->
       <section
         id="events"
-        class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
+        class="relative z-10 px-6 py-16 bg-orange-lighter"
       >
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-12">
@@ -1857,11 +1830,11 @@
       </section>
 
       <!-- Footer with Vision integrated -->
-      <footer class="relative z-10 bg-gray-900 text-white py-12 mt-16">
+      <footer class="relative z-10 bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-8">
             <img
-              src="./assets/logo.svg"
+              src="./public/logo.svg"
               alt="Merci pour ton non"
               class="h-24 md:h-32 w-auto mx-auto mb-4"
             />
@@ -2131,8 +2104,6 @@
     <script>
       // Workshop dates
       const workshopDates = [
-        { date: new Date('2025-09-21T10:00:00') },
-        { date: new Date('2025-10-12T10:00:00') },
         { date: new Date('2025-11-16T10:00:00') },
         { date: new Date('2025-12-14T10:00:00') },
         { date: new Date('2026-01-18T10:00:00') },
@@ -2157,16 +2128,16 @@
         const nextWorkshop = getNextWorkshop();
         const formattedDate = formatDate(nextWorkshop.date);
 
-        // Update banner
-        const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
+        // Update banner (urgency banner at top)
+        const bannerText = document.querySelector('.text-white.font-semibold');
         if (bannerText) {
           bannerText.textContent = `Prochaine session le ${formattedDate} — 6 à 15 participants`;
         }
 
         // Update hero section date
-        const heroDate = document.querySelector('.text-sm.text-gray-500.mt-4');
-        if (heroDate) {
-          heroDate.textContent = `Prochaine session le ${formattedDate}`;
+        const heroDateStrong = document.querySelector('.text-sm.text-gray-600 strong');
+        if (heroDateStrong) {
+          heroDateStrong.textContent = formattedDate;
         }
 
         // Smooth scroll for all navigation links

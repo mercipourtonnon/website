@@ -104,6 +104,7 @@
     --color-orange: #ffaf00;
     --color-orange-hover: #e69e00;
     --color-orange-light: #fff8e6;
+    --color-orange-lighter: #fff0d1;
     --color-mauve: #7b01fe;
     --color-mauve-light: #f3e6ff;
     --color-mauve-lighter: #e6d1ff;
@@ -591,14 +592,8 @@
   .items-center {
     align-items: center;
   }
-  .items-end {
-    align-items: flex-end;
-  }
   .items-start {
     align-items: flex-start;
-  }
-  .justify-around {
-    justify-content: space-around;
   }
   .justify-between {
     justify-content: space-between;
@@ -849,6 +844,9 @@
   .bg-orange-light {
     background-color: var(--color-orange-light);
   }
+  .bg-orange-lighter {
+    background-color: var(--color-orange-lighter);
+  }
   .bg-pourpre-light {
     background-color: var(--color-pourpre-light);
   }
@@ -992,6 +990,9 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pt-24 {
     padding-top: calc(var(--spacing) * 24);
   }
@@ -1059,6 +1060,10 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
   }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
@@ -1526,9 +1531,19 @@
       padding-block: calc(var(--spacing) * 20);
     }
   }
+  .sm\:pt-20 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 20);
+    }
+  }
   .sm\:pt-32 {
     @media (width >= 40rem) {
       padding-top: calc(var(--spacing) * 32);
+    }
+  }
+  .sm\:pb-16 {
+    @media (width >= 40rem) {
+      padding-bottom: calc(var(--spacing) * 16);
     }
   }
   .sm\:pb-24 {
@@ -1595,6 +1610,11 @@
   .md\:py-32 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 32);
+    }
+  }
+  .md\:pb-20 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 20);
     }
   }
   .md\:pb-28 {
@@ -1703,28 +1723,28 @@
 }
 @font-face {
   font-family: "Bely Display";
-  src: url("./assets/fonts/BelyDisplay.ttf") format("truetype");
+  src: url("./public/fonts/BelyDisplay.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Machina";
-  src: url("./assets/fonts/NeueMachina/NeueMachina-Regular.otf") format("opentype");
+  src: url("./public/fonts/NeueMachina/NeueMachina-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Machina";
-  src: url("./assets/fonts/NeueMachina/NeueMachina-Light.otf") format("opentype");
+  src: url("./public/fonts/NeueMachina/NeueMachina-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Machina";
-  src: url("./assets/fonts/NeueMachina/NeueMachina-Ultrabold.otf") format("opentype");
+  src: url("./public/fonts/NeueMachina/NeueMachina-Ultrabold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
