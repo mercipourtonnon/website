@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>LinkedIn Banner - Atelier de Consentement</title>
-        <link rel="stylesheet" href="../../output.css" />
+        <link rel="stylesheet" href="../../output.css?v=4" />
+        <script src="https://unpkg.com/lucide@latest"></script>
         <style>
             .bely-display {
                 font-family: "Bely Display", cursive;
@@ -16,39 +17,29 @@
         <div
             class="relative w-[1584px] h-[396px] overflow-hidden flex flex-row items-center justify-center px-20 py-10 gap-16"
             style="
-                background: linear-gradient(135deg, #ffffff 0%, #f3e6ff 100%);
+                background: linear-gradient(135deg, #ffffff 0%, #fff8e6 100%);
             "
         >
             <!-- Decorative circles -->
             <div
-                class="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full opacity-30 blur-3xl"
-                style="background: #7b01fe"
+                class="absolute -top-20 left-20 w-[300px] h-[300px] rounded-full opacity-30 blur-3xl"
+                style="background: #ffaf00"
             ></div>
             <div
                 class="absolute -bottom-24 -right-24 w-[350px] h-[350px] rounded-full opacity-30 blur-3xl"
-                style="background: #12a19d"
+                style="background: #f5004f"
             ></div>
             <div
                 class="absolute top-12 right-48 w-64 h-64 rounded-full opacity-30 blur-3xl"
-                style="background: #f5004f"
+                style="background: #7b01fe"
             ></div>
 
-            <!-- Left Content -->
-            <div class="relative z-10 text-left flex-1">
-                <h1 class="bely-display text-[58px] leading-none mb-6">
-                    <span class="text-orange">atelier de</span><br />
-                    <span style="color: #f5004f">consentement</span><br />
+            <div class="relative z-10 flex flex-col justify-center gap-4 pl-86">
+                <h1 class="bely-display text-[42px] leading-none mb-6">
+                    <span class="text-orange">atelier de</span>
+                    <span style="color: #f5004f">consentement</span>
                     <span class="text-gray-800">à strasbourg</span>
                 </h1>
-
-                <p class="text-base text-gray-600 font-semibold">
-                    Prochaine session le
-                    <span class="text-gray-900">16 novembre</span>
-                </p>
-            </div>
-
-            <!-- Right Content -->
-            <div class="relative z-10 flex flex-col justify-center gap-4">
                 <p
                     class="text-[22px] text-gray-700 leading-tight font-normal mb-3"
                 >
@@ -59,25 +50,36 @@
                     <span
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border-2 bg-pourpre-light text-pourpre border-pourpre"
                     >
-                        👥 6-15 pers.
+                        <i data-lucide="users" class="w-4 h-4 -mt-0.5"></i>
+                        6 à 15 pers.
                     </span>
                     <span
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border-2 bg-orange-light text-orange border-orange"
                     >
-                        ⏰ 3h
+                        <i data-lucide="clock" class="w-4 h-4 -mt-0.5"></i>
+                        3 heures
                     </span>
                     <span
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border-2 bg-mauve-light text-mauve border-mauve"
                     >
-                        ❤️ Prix libre
+                        <i data-lucide="heart" class="w-4 h-4 -mt-0.5"></i>
+                        Prix libre
                     </span>
                     <span
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border-2 bg-cyan-light text-cyan border-cyan"
                     >
-                        📍 Strasbourg
+                        <i data-lucide="map-pin" class="w-4 h-4 -mt-0.5"></i>
+                        Strasbourg
                     </span>
                 </div>
+                <p class="text-base text-gray-600 font-semibold">
+                    Prochaine session le
+                    <span class="text-gray-900">16 novembre</span>
+                </p>
             </div>
         </div>
+        <script>
+            lucide.createIcons();
+        </script>
     </body>
 </html>

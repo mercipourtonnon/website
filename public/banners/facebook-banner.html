@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Facebook Banner - Atelier de Consentement</title>
         <link rel="stylesheet" href="../../output.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
         <style>
             .bely-display {
                 font-family: "Bely Display", cursive;
@@ -51,22 +52,26 @@
                     <span
                         class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-pourpre-light text-pourpre border-pourpre"
                     >
-                        👥 6-15 pers.
+                        <i data-lucide="users" class="w-3 h-3" style="stroke-width: 2"></i>
+                        6-15 pers.
                     </span>
                     <span
                         class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-orange-light text-orange border-orange"
                     >
-                        ⏰ 3h
+                        <i data-lucide="clock" class="w-3 h-3" style="stroke-width: 2"></i>
+                        3h
                     </span>
                     <span
                         class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-mauve-light text-mauve border-mauve"
                     >
-                        ❤️ Prix libre
+                        <i data-lucide="heart" class="w-3 h-3" style="stroke-width: 2"></i>
+                        Prix libre
                     </span>
                     <span
                         class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-cyan-light text-cyan border-cyan"
                     >
-                        📍 Strasbourg
+                        <i data-lucide="map-pin" class="w-3 h-3" style="stroke-width: 2"></i>
+                        Strasbourg
                     </span>
                 </div>
 
@@ -76,5 +81,8 @@
                 </p>
             </div>
         </div>
+        <script>
+            lucide.createIcons();
+        </script>
     </body>
 </html>
