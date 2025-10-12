@@ -15,6 +15,7 @@
     <link rel="preload" href="./output.css?v=6e6dc5f" as="style">
     <link rel="preload" href="./public/fonts/NeueMachina/NeueMachina-Regular.otf" as="font" type="font/otf" crossorigin>
     <link rel="preload" href="./public/fonts/BelyDisplay.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./public/social.png" as="image">
 
     <!-- Standard Meta Tags -->
     <meta
@@ -42,9 +43,8 @@
     <meta property="og:url" content="https://mercipourtonnon.fr" />
     <meta
       property="og:image"
-      content="https://mercipourtonnon.fr/public/logo.svg"
+      content="https://mercipourtonnon.fr/public/social.png"
     />
-    <!-- TODO: Create optimized og-image.jpg (1200x630px) for better social sharing -->
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Merci pour ton non" />
@@ -62,7 +62,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://mercipourtonnon.fr/public/logo.svg"
+      content="https://mercipourtonnon.fr/public/social.png"
     />
     <meta
       name="twitter:image:alt"
@@ -277,7 +277,7 @@
                   "name": "Merci pour ton non",
                   "url": "https://mercipourtonnon.fr"
                 },
-                "image": "https://mercipourtonnon.fr/public/logo.svg",
+                "image": "https://mercipourtonnon.fr/public/social.png",
                 "offers": {
                   "@type": "Offer",
                   "price": "0",
@@ -357,6 +357,7 @@
 
       .hero-title {
         animation: fadeInUp 0.8s ease-out;
+        line-height: 0.85;
       }
 
       .fade-in {
@@ -441,7 +442,7 @@
     </script>
 
     <!-- Lucide Icons (Brand guideline: use icons instead of emojis) -->
-    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script  src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <!-- Urgency Banner -->
@@ -2331,11 +2332,23 @@
       });
     </script>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Initialize Lucide Icons after defer load -->
     <script>
-      // Initialize all Lucide icons on the page
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+      // Initialize all Lucide icons after the library is loaded
+      function initLucideIcons() {
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        } else {
+          // Retry after a short delay if lucide isn't loaded yet
+          setTimeout(initLucideIcons, 50);
+        }
+      }
+
+      // Wait for DOM to be ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLucideIcons);
+      } else {
+        initLucideIcons();
       }
     </script>
 
