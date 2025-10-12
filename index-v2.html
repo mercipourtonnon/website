@@ -590,55 +590,63 @@
       </div>
 
       <!-- Hero Section -->
-      <section class="relative z-10 px-4 pt-24 sm:pt-28 pb-12 sm:px-6 sm:pb-20 md:pb-32">
-        <div class="max-w-7xl mx-auto">
-          <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div class="text-center lg:text-left">
-              <h1
-                class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 title-font"
-              >
-                <span class="title-font text-orange text-3xl sm:text-4xl md:text-5xl lg:text-7xl">atelier de</span><br />
-                <span class="title-font text-mauve text-3xl sm:text-4xl md:text-5xl lg:text-7xl">consentement</span><br />
-                <span class="title-font text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">à strasbourg</span>
-              </h1>
-              <p
-                class="text-base sm:text-xl md:text-2xl text-gray-700 max-w-2xl leading-relaxed fade-in mb-6 sm:mb-8 px-2 sm:px-0"
-              >
-                Rejoins-nous pour 3 heures d'atelier : apprendre à dire non et faire évoluer tes relations
-              </p>
-              <a
-                href="#events"
-                class="inline-flex items-center gap-2 bg-orange text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg"
-              >
-                <span>Je réserve ma place (prix libre)</span>
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
-              </a>
-              <p class="text-sm text-gray-500 mt-4">
-                Prochaine session le 12 octobre
-              </p>
-            </div>
-            <div class="relative mt-8 lg:mt-0">
-              <div
-                class="rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-sm sm:shadow-md max-w-md sm:max-w-lg lg:max-w-none mx-auto bg-orange-light"
-              >
-                <img
-                  src="./assets/atelier_consentement.jpg"
-                  alt="Atelier sur le consentement - Groupe de personnes discutant"
-                  class="w-full h-auto rounded-xl sm:rounded-2xl object-cover"
-                  width="1200"
-                  height="800"
-                  loading="eager"
-                />
-              </div>
-              <div
-                class="absolute -top-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-yellow-300 rounded-full opacity-50 blur-xl hidden sm:block"
-              ></div>
-              <div
-                class="absolute -bottom-4 -left-4 w-20 sm:w-32 h-20 sm:h-32 bg-purple-300 rounded-full opacity-50 blur-xl hidden sm:block"
-              ></div>
-            </div>
+      <section class="relative z-10 px-4 pt-24 sm:pt-32 pb-16 sm:pb-24 md:pb-28">
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- Main title with multi-color emphasis -->
+          <h1
+            class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-8 title-font leading-tight"
+          >
+            <span class="title-font text-orange">atelier de</span><br />
+            <span class="title-font text-mauve">consentement</span><br />
+            <span class="title-font text-gray-900">à strasbourg</span>
+          </h1>
+
+          <!-- Value proposition -->
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10"
+          >
+            Rejoins-nous pour 3 heures d'atelier : apprendre à dire non et faire évoluer tes relations
+          </p>
+
+          <!-- Key features with brand colors -->
+          <div class="flex flex-wrap justify-center gap-3 mb-10 max-w-3xl mx-auto">
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-pourpre-light text-pourpre border border-pourpre">
+              <i data-lucide="users" class="w-4 h-4"></i>
+              6 à 15 personnes
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-orange-light text-orange border border-orange">
+              <i data-lucide="clock" class="w-4 h-4"></i>
+              3 heures
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-mauve-light text-mauve border border-mauve">
+              <i data-lucide="heart" class="w-4 h-4"></i>
+              Prix libre
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-cyan-light text-cyan border border-cyan">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              Strasbourg
+            </span>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="#events"
+              class="inline-flex items-center gap-2 bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span>Je réserve ma place</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <p class="text-sm text-gray-600">
+              Prochaine session le <strong class="text-gray-900">12 octobre</strong>
+            </p>
           </div>
         </div>
+
+        <!-- Decorative colored circles (abstract, minimal) -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-orange-light rounded-full opacity-40 blur-3xl -z-10"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-mauve-light rounded-full opacity-40 blur-3xl -z-10"></div>
+        <div class="absolute top-40 right-20 w-24 h-24 bg-pourpre-light rounded-full opacity-30 blur-2xl -z-10"></div>
       </section>
 
       <!-- Pour qui ? -->
@@ -858,7 +866,7 @@
                 </svg>
               </div>
               <h3 class="title-font text-gray-900 mb-2">horaires</h3>
-              <p class="text-gray-700 font-semibold">10h - 13h</p>
+              <p class="text-gray-700 font-semibold">10h à 13h le dimanche</p>
               <p class="text-sm text-gray-500 mt-1">3 heures avec pause</p>
             </div>
 
@@ -1413,7 +1421,7 @@
 
             <!-- Les acronymes RÈGLES -->
             <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve-light0 rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve rounded-full flex items-center justify-center text-white font-bold">
                 2
               </div>
               <div class="bg-mauve-light rounded-lg p-6">
@@ -1495,7 +1503,7 @@
 
             <!-- Le gagnant/gagnant -->
             <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve-light0 rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve rounded-full flex items-center justify-center text-white font-bold">
                 4
               </div>
               <div class="bg-mauve-light rounded-lg p-6">
@@ -1555,7 +1563,7 @@
 
             <!-- Le libre & La résistance -->
             <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve-light0 rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve rounded-full flex items-center justify-center text-white font-bold">
                 6
               </div>
               <div class="bg-mauve-light rounded-lg p-6">
