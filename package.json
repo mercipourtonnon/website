@@ -11,6 +11,6 @@
   },
   "scripts": {
     "start": "bun index.html charte.html",
-    "build": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
+    "build": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch --minify"
   }
 }
