@@ -7,7 +7,6 @@
 
     <!-- Preload Critical Resources -->
     <link rel="preload" href="./output.css?v=629611d" as="style">
-    <link rel="preload" href="./public/atelier_consentement.jpg" as="image">
 
     <!-- Standard Meta Tags -->
     <meta
@@ -35,7 +34,7 @@
     <meta property="og:url" content="https://mercipourtonnon.fr" />
     <meta
       property="og:image"
-      content="https://mercipourtonnon.fr/public/atelier_consentement.jpg"
+      content="https://mercipourtonnon.fr/public/logo.svg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -75,7 +74,7 @@
         "name": "Merci pour ton non",
         "description": "Organisation d'ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.",
         "url": "https://mercipourtonnon.fr",
-        "logo": "https://mercipourtonnon.fr/public/atelier_consentement.jpg",
+        "logo": "https://mercipourtonnon.fr/public/logo.svg",
         "sameAs": [
           "https://www.instagram.com/mercipourtonnon/",
           "https://www.facebook.com/mercipourtonnon",
@@ -123,9 +122,9 @@
     </script>
 
     <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#F97316" />
-    <meta name="msapplication-navbutton-color" content="#F97316" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#F97316" />
+    <meta name="theme-color" content="#FFAF00" />
+    <meta name="msapplication-navbutton-color" content="#FFAF00" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFAF00" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mercipourtonnon.fr" />
@@ -150,16 +149,35 @@
     />
     <link rel="manifest" href="./public/favicon/site.webmanifest" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+      /* Brand Typography - Following charte.html */
+      @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap');
+
+      /* Note: Using Archivo Black as fallback for Bely Display (similar bold display font) */
+      /* Note: Using Space Grotesk as fallback for Neue Machina (similar geometric sans-serif) */
 
       * {
-        font-family: "Inter", sans-serif;
+        font-family: "Neue Machina", "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
       .title-font {
-        font-family: "Bebas Neue", cursive;
+        font-family: "Bely Display", "Archivo Black", cursive;
         letter-spacing: 0.05em;
+        text-transform: lowercase;
+      }
+
+      /* Brand Colors - referencing Tailwind custom theme */
+      :root {
+        --brand-orange: var(--color-orange);
+        --brand-pourpre: var(--color-pourpre);
+        --brand-mauve: var(--color-mauve);
+        --brand-cyan: var(--color-cyan);
+        --brand-orange-light: var(--color-orange-light);
+        --brand-pourpre-light: var(--color-pourpre-light);
+        --brand-mauve-light: var(--color-mauve-light);
+        --brand-cyan-light: var(--color-cyan-light);
+        --brand-gray-dark: #111827;
+        --brand-gray-medium: #4B5563;
+        --brand-gray-light: #E5E7EB;
       }
 
       .hero-title {
@@ -190,35 +208,11 @@
         }
       }
 
-      .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .hover-lift:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      }
-
       .gradient-text {
-        background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+        background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-pourpre) 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
-
-      .pill-header {
-        background: #f97316;
-        border-radius: 50px;
-        padding: 0.75rem 2rem;
-        display: inline-block;
-        color: white;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-
-      .pill-purple {
-        background: #a855f7;
       }
 
       .blob {
@@ -243,7 +237,7 @@
       }
 
       .transition-text {
-        background: linear-gradient(135deg, #f97316 0%, #a855f7 100%);
+        background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-mauve) 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -251,6 +245,16 @@
         font-size: 1.125rem;
         margin: 2rem 0;
         text-align: center;
+      }
+
+      /* Body text accessibility */
+      body {
+        line-height: 1.7;
+        color: var(--brand-gray-dark);
+      }
+
+      p {
+        line-height: 1.7;
       }
     </style>
 
@@ -262,66 +266,84 @@
       gtag('js', new Date());
       gtag('config', 'G-KPTGNRZSP6');
     </script>
+
+    <!-- Lucide Icons (Brand guideline: use icons instead of emojis) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <!-- Urgency Banner -->
     <div
-      class="bg-gradient-to-r from-orange-600 to-purple-600 text-white py-2 text-center relative"
+      class="py-3 text-center relative"
+      style="background: linear-gradient(90deg, #FFAF00 0%, #7B01FE 100%);"
     >
-      <p class="text-sm font-semibold">
-        🔥 Prochaine session le 21 septembre !
-        <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>
+      <p class="text-sm sm:text-base font-semibold text-white">
+        Prochaine session le 21 septembre — 6 à 15 participants
       </p>
     </div>
 
     <div
-      class="min-h-screen bg-gradient-to-br from-orange-50 to-purple-50 relative overflow-hidden"
+      class="min-h-screen relative overflow-hidden"
+      style="background: linear-gradient(135deg, #FFF8E6 0%, #F3E6FF 100%);"
     >
       <!-- Animated background blobs -->
-      <div class="blob w-96 h-96 bg-orange-300 top-0 left-0"></div>
-      <div class="blob w-80 h-80 bg-purple-300 bottom-0 right-0"></div>
+      <div class="blob w-96 h-96 top-0 left-0 bg-orange"></div>
+      <div class="blob w-80 h-80 bottom-0 right-0 bg-mauve"></div>
 
       <!-- Navigation -->
       <nav
-        class="relative z-10 bg-white bg-opacity-90 backdrop-blur-sm sticky top-0 shadow-lg"
+        class="fixed top-0 left-0 right-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-lg"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div class="flex justify-between items-center">
-            <div class="text-lg sm:text-xl lg:text-2xl font-black text-orange-500 title-font">
-              Merci pour ton non
-            </div>
+            <a href="#" class="flex items-center">
+              <img
+                src="./public/logo-without-marging.svg"
+                alt="Merci pour ton non"
+                class="h-12 sm:h-14 lg:h-16 w-auto"
+              />
+            </a>
 
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center gap-8">
               <div class="flex space-x-6 items-center">
                 <a
                   href="#atelier"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >L'atelier</a
                 >
                 <a
+                  href="#infos-pratiques"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
+                  >Infos pratiques</a
+                >
+                <a
                   href="#temoignages"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >Témoignages</a
                 >
                 <a
                   href="#mission"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Notre mission</a
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
+                  >Mission</a
                 >
                 <a
                   href="#valeurs"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Nos valeurs</a
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
+                  >Valeurs</a
                 >
                 <a
                   href="#equipe"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >L'équipe</a
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
+                  >Équipe</a
+                >
+                <a
+                  href="#programme"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
+                  >Programme</a
                 >
                 <a
                   href="#faq"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >FAQ</a
                 >
               </div>
@@ -329,69 +351,11 @@
               <!-- CTA in Desktop Navigation -->
               <a
                 href="#events"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300"
+                class="inline-flex items-center gap-2 bg-orange text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-orange-hover transition-colors duration-300"
               >
-                <span>S'inscrire</span>
+                <span>Je m'inscris</span>
               </a>
 
-              <!-- Social Media Icons in Desktop Header -->
-              <div class="flex items-center space-x-3">
-                <a
-                  href="https://www.instagram.com/mercipourtonnon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition"
-                  aria-label="Instagram"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.facebook.com/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-600 transition"
-                  aria-label="Facebook"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/merci-pour-ton-non"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-700 transition"
-                  aria-label="LinkedIn"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.billetweb.fr/pro/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition"
-                  aria-label="Billetterie"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
-                    />
-                  </svg>
-                </a>
-              </div>
             </div>
 
             <!-- Mobile/Tablet Menu Button -->
@@ -426,9 +390,11 @@
           class="fixed left-0 top-0 h-screen w-80 max-w-[85%] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 flex flex-col"
         >
           <div class="flex items-center justify-between p-4">
-            <div class="text-xl font-black text-orange-500 title-font">
-              Merci pour ton non
-            </div>
+            <img
+              src="./public/logo.svg"
+              alt="Merci pour ton non"
+              class="h-10 w-auto"
+            />
             <button
               id="close-menu-button"
               class="p-2 rounded-lg hover:bg-gray-100 transition"
@@ -445,7 +411,7 @@
               <li>
                 <a
                   href="#atelier"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   L'atelier
@@ -453,8 +419,17 @@
               </li>
               <li>
                 <a
+                  href="#infos-pratiques"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
+                  onclick="closeMobileMenu()"
+                >
+                  Infos pratiques
+                </a>
+              </li>
+              <li>
+                <a
                   href="#temoignages"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   Témoignages
@@ -463,34 +438,43 @@
               <li>
                 <a
                   href="#mission"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
-                  Notre mission
+                  Mission
                 </a>
               </li>
               <li>
                 <a
                   href="#valeurs"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
-                  Nos valeurs
+                  Valeurs
                 </a>
               </li>
               <li>
                 <a
                   href="#equipe"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
-                  L'équipe
+                  Équipe
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#programme"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
+                  onclick="closeMobileMenu()"
+                >
+                  Programme
                 </a>
               </li>
               <li>
                 <a
                   href="#faq"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   FAQ
@@ -502,138 +486,168 @@
             <div class="mt-8">
               <a
                 href="#events"
-                class="block w-full text-center bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
+                class="block w-full text-center bg-orange text-white px-6 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg"
                 onclick="closeMobileMenu()"
               >
                 Je réserve ma place
               </a>
-            </div>
-
-            <!-- Social Media Links in Mobile Menu -->
-            <div class="mt-8 pb-4">
-              <p class="text-center text-sm text-gray-500 mb-4">Suivez-nous</p>
-              <div class="flex justify-center space-x-6">
-                <a
-                  href="https://www.instagram.com/mercipourtonnon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition p-2"
-                  aria-label="Instagram"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.facebook.com/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-600 transition p-2"
-                  aria-label="Facebook"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/merci-pour-ton-non"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-blue-700 transition p-2"
-                  aria-label="LinkedIn"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.billetweb.fr/pro/mercipourtonnon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-orange-500 transition p-2"
-                  aria-label="Billetterie"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"
-                    />
-                  </svg>
-                </a>
-              </div>
             </div>
           </nav>
         </div>
       </div>
 
       <!-- Hero Section -->
-      <section class="relative z-10 px-4 py-12 sm:px-6 sm:py-20 md:py-32">
+      <section class="relative z-10 px-4 pt-24 sm:pt-32 pb-16 sm:pb-24 md:pb-28">
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- Main title with multi-color emphasis -->
+          <h1
+            class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-8 leading-none"
+          >
+            <span class="title-font text-orange">atelier de</span><br />
+            <span class="title-font text-pourpre">consentement</span><br />
+            <span class="title-font text-gray-900">à strasbourg</span>
+          </h1>
+
+          <!-- Value proposition -->
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10"
+          >
+            Rejoins-nous pour 3 heures d'atelier : apprendre à dire non et faire évoluer tes relations
+          </p>
+
+          <!-- Key features with brand colors -->
+          <div class="flex flex-wrap justify-center gap-3 mb-10 max-w-3xl mx-auto">
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-pourpre-light text-pourpre border border-pourpre">
+              <i data-lucide="users" class="w-4 h-4"></i>
+              6 à 15 personnes
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-orange-light text-orange border border-orange">
+              <i data-lucide="clock" class="w-4 h-4"></i>
+              3 heures
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-mauve-light text-mauve border border-mauve">
+              <i data-lucide="heart" class="w-4 h-4"></i>
+              Prix libre
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-cyan-light text-cyan border border-cyan">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              Strasbourg
+            </span>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="#events"
+              class="inline-flex items-center gap-2 bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span>Je réserve ma place</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <p class="text-sm text-gray-600">
+              Prochaine session le <strong class="text-gray-900">12 octobre</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- Decorative colored circles (abstract, minimal) -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-orange-light rounded-full opacity-40 blur-3xl -z-10"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-mauve-light rounded-full opacity-40 blur-3xl -z-10"></div>
+        <div class="absolute top-40 right-20 w-24 h-24 bg-pourpre-light rounded-full opacity-30 blur-2xl -z-10"></div>
+      </section>
+
+      <!-- Pour qui ? -->
+      <section id="pour-qui" class="relative z-10 px-6 py-16 bg-white">
         <div class="max-w-7xl mx-auto">
-          <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div class="text-center lg:text-left">
-              <h1
-                class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 title-font"
-              >
-                <span class="text-orange-500 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">Atelier de</span><br />
-                <span class="text-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">Consentement</span><br />
-                <span class="text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">à Strasbourg</span>
-              </h1>
-              <p
-                class="text-base sm:text-xl md:text-2xl text-gray-700 max-w-2xl leading-relaxed fade-in mb-6 sm:mb-8 px-2 sm:px-0"
-              >
-                3 heures pour apprendre à dire non et transformer tes relations
-              </p>
-              <a
-                href="#events"
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-              >
-                <span>Je réserve ma place (prix libre)</span>
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </a>
-              <p class="text-sm text-gray-500 mt-4">
-                Prochaine session le 12 octobre
-              </p>
-            </div>
-            <div class="relative mt-8 lg:mt-0">
-              <div
-                class="bg-gradient-to-br from-orange-100 to-purple-100 rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-xl sm:shadow-2xl hover-lift max-w-md sm:max-w-lg lg:max-w-none mx-auto"
-              >
-                <img
-                  src="./public/atelier_consentement.jpg"
-                  alt="Atelier sur le consentement - Groupe de personnes discutant"
-                  class="w-full h-auto rounded-xl sm:rounded-2xl object-cover"
-                  width="1200"
-                  height="800"
-                  loading="eager"
-                />
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl title-font">
+              cet atelier est pour toi si...
+            </h2>
+            <p class="text-xl text-gray-600 mt-6">
+              Le consentement concerne tout le monde, dans tous les aspects de la vie
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Parents -->
+            <div class="bg-orange-light rounded-lg p-6">
+              <div class="mb-4">
+                <i data-lucide="users" class="w-10 h-10 text-orange"></i>
               </div>
-              <div
-                class="absolute -top-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-yellow-300 rounded-full opacity-50 blur-xl hidden sm:block"
-              ></div>
-              <div
-                class="absolute -bottom-4 -left-4 w-20 sm:w-32 h-20 sm:h-32 bg-purple-300 rounded-full opacity-50 blur-xl hidden sm:block"
-              ></div>
+              <h3 class="text-xl title-font text-gray-900 mb-3">tu es parent</h3>
+              <p class="text-gray-700">
+                Tu souhaites améliorer la communication avec tes enfants, respecter leurs limites et leur apprendre à poser les leurs dès le plus jeune âge.
+              </p>
             </div>
+
+            <!-- Professionnels -->
+            <div class="bg-mauve-light rounded-lg p-6">
+              <div class="mb-4">
+                <i data-lucide="briefcase" class="w-10 h-10 text-mauve"></i>
+              </div>
+              <h3 class="text-xl title-font text-gray-900 mb-3">tu es professionnel·le</h3>
+              <p class="text-gray-700">
+                Tu cherches à mieux gérer les relations au travail, poser tes limites professionnelles et créer des interactions plus saines avec collègues et clients.
+              </p>
+            </div>
+
+            <!-- Couples -->
+            <div class="bg-pourpre-light rounded-lg p-6">
+              <div class="mb-4">
+                <i data-lucide="heart" class="w-10 h-10 text-pourpre"></i>
+              </div>
+              <h3 class="text-xl title-font text-gray-900 mb-3">tu es en couple</h3>
+              <p class="text-gray-700">
+                Tu souhaites renforcer ta relation, mieux communiquer tes besoins et désirs, et construire une relation plus équilibrée et authentique.
+              </p>
+            </div>
+
+            <!-- Jeunes adultes -->
+            <div class="bg-cyan-light rounded-lg p-6">
+              <div class="mb-4">
+                <i data-lucide="graduation-cap" class="w-10 h-10 text-cyan"></i>
+              </div>
+              <h3 class="text-xl title-font text-gray-900 mb-3">tu es étudiant·e ou jeune actif·ve</h3>
+              <p class="text-gray-700">
+                Tu construis tes relations amicales, amoureuses et professionnelles, et ça te parle d'explorer des pistes pour naviguer ces interactions en respectant tes limites.
+              </p>
+            </div>
+
+            <!-- Difficultés à dire non -->
+            <div class="bg-orange-light rounded-lg p-6">
+              <div class="mb-4">
+                <i data-lucide="hand" class="w-10 h-10 text-orange"></i>
+              </div>
+              <h3 class="text-xl title-font text-gray-900 mb-3">tu as du mal à dire non</h3>
+              <p class="text-gray-700">
+                Tu te sens souvent obligé·e d'accepter des choses qui ne te conviennent pas, et tu cherches à apprendre à t'affirmer sans culpabilité.
+              </p>
+            </div>
+
+            <!-- Curiosité -->
+            <div class="bg-mauve-light rounded-lg p-6">
+              <div class="mb-4">
+                <i data-lucide="help-circle" class="w-10 h-10 text-mauve"></i>
+              </div>
+              <h3 class="text-xl title-font text-gray-900 mb-3">tu es simplement curieux·se</h3>
+              <p class="text-gray-700">
+                Tu souhaites mieux comprendre le consentement au-delà du contexte sexuel et découvrir comment il s'applique dans toutes tes relations quotidiennes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Universality message -->
+          <div class="mt-12 max-w-3xl mx-auto bg-orange-light rounded-lg p-8 text-center">
+            <h3 class="text-2xl title-font text-gray-900 mb-4">
+              quel que soit ton profil...
+            </h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Homme, femme, non-binaire • Jeune ou moins jeune • Seul·e ou en couple • Avec ou sans enfants •
+              En questionnement ou déjà sensibilisé·e — <strong class="text-mauve">cet atelier est fait pour toi.</strong>
+            </p>
+            <p class="text-gray-600 mt-4">
+              Le consentement est une compétence relationnelle universelle qui nous concerne tou·te·s.
+            </p>
           </div>
         </div>
       </section>
@@ -641,13 +655,16 @@
       <!-- Workshop Details (MOVED UP) -->
       <section
         id="atelier"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-yellow-50 to-orange-50"
+        class="relative z-10 px-6 py-16 bg-orange-light"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">
-              UN ATELIER DE CONSENTEMENT QUI CHANGE TOUT
-            </h2><br>
+            <h2 class="text-3xl md:text-4xl title-font">
+              un atelier de consentement qui fait sens
+            </h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+              Cet atelier t'invite à explorer le consentement dans un cadre bienveillant et participatif.
+            </p>
             <div
               class="mt-6 inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full font-semibold"
             >
@@ -661,66 +678,34 @@
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white rounded-3xl p-8 shadow-lg">
-              <h3 class="text-2xl font-bold text-orange-500 mb-6">
-                Ce que tu vas vivre
+            <div class="bg-white rounded-lg p-8 border border-gray-200">
+              <h3 class="text-2xl title-font text-orange mb-6">
+                ce qu'on explore ensemble
               </h3>
               <ul class="space-y-4">
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Exercices pratiques et ludiques pour incarner les notions
                     clés</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Jeux de rôle bienveillants pour t'entraîner à dire
                     non</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Mises en situation pour comprendre ce qui influence tes
                     décisions</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-green-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                    />
-                  </svg>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Moments de partage dans un cadre sécurisant</span
                   >
@@ -729,65 +714,33 @@
             </div>
 
             <div
-              class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-lg"
+              class="rounded-lg p-8 bg-mauve-light"
             >
-              <h3 class="text-2xl font-bold text-purple-600 mb-6">
-                Tu repartiras avec
+              <h3 class="text-2xl title-font text-mauve mb-6">
+                tu pourras emporter
               </h3>
               <ul class="space-y-4">
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Une définition claire et mémorisable du consentement</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Des clés concrètes pour repérer les situations
                     problématiques</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Plus de confiance pour poser tes limites</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-purple-500 flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                    />
-                  </svg>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Des outils pour des relations plus authentiques</span
                   >
@@ -795,47 +748,114 @@
               </ul>
             </div>
           </div>
+          </div>
+        </div>
+      </section>
 
-          <div class="text-center mt-8">
-            <a
-              href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span>Rejoindre le prochain atelier</span>
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </a>
+      <!-- Practical Information -->
+      <section id="infos-pratiques" class="relative z-10 px-6 py-16 bg-pourpre-light">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl title-font">
+              infos pratiques
+            </h2>
+            <p class="text-xl text-gray-600 mt-6">
+              Tout ce qu'il faut savoir avant de s'inscrire
+            </p>
           </div>
 
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <!-- Horaires -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-orange-light">
+                <svg class="w-8 h-8 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="title-font text-gray-900 mb-2">horaires</h3>
+              <p class="text-gray-700 font-semibold">10h à 13h le dimanche</p>
+              <p class="text-sm text-gray-500 mt-1">3 heures avec pause</p>
+            </div>
 
+            <!-- Lieu -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-mauve-light">
+                <svg class="w-8 h-8 text-mauve" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <h3 class="title-font text-gray-900 mb-2">lieu</h3>
+              <p class="text-gray-700 font-semibold">Strasbourg</p>
+              <p class="text-sm text-gray-500 mt-1">Adresse communiquée aux inscrits</p>
+            </div>
+
+            <!-- Participants -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-orange-light">
+                <svg class="w-8 h-8 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <h3 class="title-font text-gray-900 mb-2">groupe</h3>
+              <p class="text-gray-700 font-semibold">6 à 15 personnes</p>
+              <p class="text-sm text-gray-500 mt-1">Intimité préservée</p>
+            </div>
+
+            <!-- Prix -->
+            <div class="rounded-lg p-6 text-center bg-mauve-light">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-mauve-lighter">
+                <svg class="w-8 h-8 text-mauve" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="title-font text-gray-900 mb-2">prix libre</h3>
+              <p class="text-gray-700 font-semibold">À partir de 0€</p>
+              <p class="text-sm text-gray-500 mt-1">Tu donnes ce que tu veux/peux</p>
+            </div>
+          </div>
+
+          <!-- Important notes -->
+          <div class="mt-8 max-w-4xl mx-auto">
+            <div class="bg-orange-light rounded-xl p-6 border-l-4 border-orange">
+              <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-orange" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                </svg>
+                Bon à savoir
+              </h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-orange font-bold">•</span>
+                  <span><strong>Annulation possible</strong> à tout moment (merci de nous prévenir pour libérer ta place)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-orange font-bold">•</span>
+                  <span><strong>Participation aux exercices libre</strong> — tu peux juste observer si tu préfères</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-orange font-bold">•</span>
+                  <span><strong>Cadre bienveillant et confidentiel</strong> — ce qui se dit en atelier reste en atelier</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Testimonials (MOVED UP) -->
-      <section id="temoignages" class="relative z-10 px-6 py-16">
+      <section id="temoignages" class="relative z-10 px-6 py-16 bg-white">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              ILS ONT PARTICIPÉ À L'ATELIER DE CONSENTEMENT
+            <h2 class="text-3xl md:text-4xl title-font">
+              ils ont participé à l'<span class="title-font text-pourpre">atelier</span> de <span class="title-font text-orange">consentement</span>
             </h2>
           </div>
 
           <div class="grid md:grid-cols-2 gap-6">
             <!-- Testimonial 1 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-purple-500"
+              class="bg-pourpre-light rounded-lg p-6 border border-gray-200 border-l-4 border-l-pourpre"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
@@ -844,7 +864,7 @@
 
             <!-- Testimonial 2 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-yellow-500"
+              class="bg-mauve-light rounded-lg p-6 border border-gray-200 border-l-4 border-l-mauve"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
@@ -853,7 +873,7 @@
 
             <!-- Testimonial 3 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-green-500"
+              class="bg-orange-light rounded-lg p-6 border border-gray-200 border-l-4 border-l-orange"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
@@ -862,34 +882,12 @@
 
             <!-- Testimonial 4 -->
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-l-4 border-blue-500"
+              class="bg-cyan-light rounded-lg p-6 border border-gray-200 border-l-4 border-l-cyan"
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
               </p>
             </div>
-          </div>
-
-          <div class="text-center mt-8">
-            <a
-              href="#events"
-              class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span>Rejoindre le prochain atelier</span>
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </a>
           </div>
         </div>
       </section>
@@ -897,52 +895,52 @@
       <!-- Mission & Approach -->
       <section
         id="mission"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-purple-50 to-orange-50"
+        class="relative z-10 px-6 py-16 bg-orange-light"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">
-              NOTRE MISSION
+            <h2 class="text-3xl md:text-4xl title-font">
+              <span class="title-font text-pourpre">notre</span> <span class="title-font text-orange">mission</span>
             </h2>
           </div>
 
           <!-- Mission principale simplifiée -->
-          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-12 text-center">
+          <div class="bg-white rounded-lg p-8 md:p-12 border border-gray-200 mb-12 text-center">
             <p class="text-2xl text-gray-900 font-bold mb-6 leading-relaxed">
-              Diffuser une culture du consentement pour transformer nos relations
+              Diffuser une culture du consentement pour faire évoluer nos relations
             </p>
             <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              On crée des espaces sûrs où chacun·e peut apprendre à dire non, poser ses limites et construire des relations plus authentiques — dans tous les contextes de vie.
+              On crée des <strong class="text-cyan">espaces sûrs</strong> où chacun·e peut apprendre à <strong class="text-orange">dire non</strong>, <strong class="text-orange">poser ses limites</strong> et construire des <strong class="text-pourpre">relations plus authentiques</strong> — dans tous les contextes de vie.
             </p>
           </div>
 
           <!-- 3 piliers principaux -->
           <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎯</span>
+            <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div class="bg-orange-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="target" class="w-8 h-8 text-orange"></i>
               </div>
-              <h3 class="font-bold text-gray-900 mb-3">Apprendre à dire non</h3>
+              <h3 class="title-font text-gray-900 mb-3">apprendre à dire non</h3>
               <p class="text-gray-600">
                 Écouter ses ressentis, poser ses limites et accueillir le "non" de l'autre avec bienveillance
               </p>
             </div>
 
-            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 shadow-lg text-center">
-              <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🌍</span>
+            <div class="bg-mauve-light rounded-lg p-6 text-center">
+              <div class="bg-mauve-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="globe" class="w-8 h-8 text-mauve"></i>
               </div>
-              <h3 class="font-bold text-gray-900 mb-3">Pour tous les contextes</h3>
+              <h3 class="title-font text-gray-900 mb-3">pour tous les contextes</h3>
               <p class="text-gray-600">
                 Relations amicales, familiales, professionnelles, intimes — le consentement est partout
               </p>
             </div>
 
-            <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">✊</span>
+            <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div class="bg-pourpre-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="shield" class="w-8 h-8 text-pourpre"></i>
               </div>
-              <h3 class="font-bold text-gray-900 mb-3">Un enjeu collectif</h3>
+              <h3 class="title-font text-gray-900 mb-3">un enjeu collectif</h3>
               <p class="text-gray-600">
                 Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
               </p>
@@ -951,29 +949,80 @@
 
           <!-- Notre approche -->
           <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              NOTRE APPROCHE
+            <h2 class="text-3xl md:text-4xl title-font">
+              notre approche
             </h2>
           </div>
 
-          <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+          <div class="bg-white rounded-lg p-8 md:p-12 border border-gray-200">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 class="text-2xl font-bold text-purple-600 mb-4">
-                  Association à but non lucratif
+                <h3 class="text-2xl title-font text-mauve mb-4">
+                  association à but non lucratif
                 </h3>
                 <p class="text-gray-700 leading-relaxed">
-                  Nos ateliers sont à <strong>prix libre</strong> — personne n'est refusé·e par manque d'argent. On croit que le consentement doit être accessible à tou·te·s.
+                  Nos ateliers sont à <strong class="text-orange">prix libre</strong> — personne n'est refusé·e par manque d'argent. On croit que le consentement doit être <strong class="text-cyan">accessible</strong> à tou·te·s.
                 </p>
               </div>
 
               <div>
-                <h3 class="text-2xl font-bold text-orange-500 mb-4">
-                  Inclusif et accessible
+                <h3 class="text-2xl title-font text-orange mb-4">
+                  inclusif et accessible
                 </h3>
                 <p class="text-gray-700 leading-relaxed">
-                  On accueille tous les publics dans leur diversité. Nos espaces sont bienveillants et adaptés aux différents vécus et capacités.
+                  On accueille tous les publics dans leur <strong class="text-mauve">diversité</strong>. Nos espaces sont <strong class="text-pourpre">bienveillants</strong> et adaptés aux différents vécus et capacités.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notre engagement -->
+          <div class="mb-12 text-center mt-12">
+            <h2 class="text-3xl md:text-4xl title-font">
+              pourquoi nous faire confiance ?
+            </h2>
+          </div>
+
+          <div class="max-w-4xl mx-auto bg-orange-light rounded-lg p-8 md:p-12">
+            <h3 class="text-2xl title-font text-center text-gray-900 mb-8">
+              une équipe formée et engagée
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                <p>Formé·es aux pédagogies actives et à la facilitation</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 flex-shrink-0 mt-1 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                <p>Expertise en violences sexistes et sexuelles</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                <p>Bénévoles passionné·es et engagé·es</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 flex-shrink-0 mt-1 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                <p>Association à but non lucratif reconnue</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                <p>Ateliers testés et améliorés en continu</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 flex-shrink-0 mt-1 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                <p>Cadre sécurisant et bienveillant garanti</p>
               </div>
             </div>
           </div>
@@ -981,20 +1030,22 @@
       </section>
 
       <!-- Our Values -->
-      <section id="valeurs" class="relative z-10 px-6 py-16">
+      <section id="valeurs" class="relative z-10 px-6 py-16 bg-white">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">NOS VALEURS</h2>
+            <h2 class="text-3xl md:text-4xl title-font">
+              <span class="title-font text-mauve">nos</span> <span class="title-font text-cyan">valeurs</span>
+            </h2>
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-orange-500"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-orange"
             >
               <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">💎</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Intégrité et clarté
+                <i data-lucide="gem" class="w-6 h-6 text-orange"></i>
+                <h3 class="text-xl title-font text-gray-900">
+                  intégrité et clarté
                 </h3>
               </div>
               <p class="text-gray-600">
@@ -1003,12 +1054,12 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-purple-500"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-mauve"
             >
               <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🌿</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Culture du consentement
+                <i data-lucide="sprout" class="w-6 h-6 text-mauve"></i>
+                <h3 class="text-xl title-font text-gray-900">
+                  culture du consentement
                 </h3>
               </div>
               <p class="text-gray-600">
@@ -1017,12 +1068,12 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-yellow-500"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-cyan"
             >
               <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🤔</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Réflexivité et doute
+                <i data-lucide="search" class="w-6 h-6 text-cyan"></i>
+                <h3 class="text-xl title-font text-gray-900">
+                  réflexivité et doute
                 </h3>
               </div>
               <p class="text-gray-600">
@@ -1031,12 +1082,12 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-green-500"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-pourpre"
             >
               <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">✨</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Accessibilité et inclusion
+                <i data-lucide="sparkles" class="w-6 h-6 text-pourpre"></i>
+                <h3 class="text-xl title-font text-gray-900">
+                  accessibilité et inclusion
                 </h3>
               </div>
               <p class="text-gray-600">
@@ -1045,12 +1096,12 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-blue-500"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-orange"
             >
               <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🤝</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Responsabilité collective et individuelle
+                <i data-lucide="users" class="w-6 h-6 text-orange"></i>
+                <h3 class="text-xl title-font text-gray-900">
+                  responsabilité collective et individuelle
                 </h3>
               </div>
               <p class="text-gray-600">
@@ -1059,12 +1110,12 @@
             </div>
 
             <div
-              class="bg-white rounded-2xl p-6 shadow-lg hover-lift border-t-4 border-pink-500"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-mauve"
             >
               <div class="flex items-center gap-2 mb-3">
-                <span class="text-2xl">🌈</span>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Gouvernance démocratique
+                <i data-lucide="palette" class="w-6 h-6 text-mauve"></i>
+                <h3 class="text-xl title-font text-gray-900">
+                  gouvernance démocratique
                 </h3>
               </div>
               <p class="text-gray-600">
@@ -1078,23 +1129,112 @@
       <!-- Team -->
       <section
         id="equipe"
-        class="relative z-10 px-6 py-16 bg-gradient-to-br from-orange-50 to-purple-50"
+        class="relative z-10 px-6 py-16 bg-mauve-light"
       >
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header text-3xl md:text-4xl">L'ÉQUIPE</h2>
-            <p class="text-xl text-purple-600 font-bold mt-6">
-              Des bénévoles engagé·es pour toi
+            <h2 class="text-3xl md:text-4xl title-font">l'équipe</h2>
+            <p class="text-xl text-mauve font-bold mt-6">
+              Rencontre les facilitateur·ices et l'équipe bénévole
             </p>
           </div>
 
           <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <!-- Team members simplified -->
+            <!-- Facilitateurs -->
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
               <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
+                class="h-48 flex items-center justify-center bg-orange-light"
+              >
+                <img
+                  src="./public/pictures/dilara.jpg"
+                  alt="Dilara Simsek Araiz - Facilitatrice bénévole chez Merci pour ton non"
+                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg title-font text-gray-900">dilara simsek araiz</h3>
+                <p class="text-mauve font-semibold">Facilitatrice</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+              <div
+                class="h-48 flex items-center justify-center bg-orange-light"
+              >
+                <img
+                  src="./public/pictures/morgane.jpg"
+                  alt="Morgane Bourgeais - Facilitatrice bénévole chez Merci pour ton non"
+                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg title-font text-gray-900">morgane bourgeais</h3>
+                <p class="text-mauve font-semibold">Facilitatrice</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+              <div
+                class="h-48 flex items-center justify-center bg-orange-light"
+              >
+                <img
+                  src="./public/pictures/mathilde.jpg"
+                  alt="Mathilde Brière - Facilitatrice bénévole chez Merci pour ton non"
+                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg title-font text-gray-900">mathilde brière</h3>
+                <p class="text-mauve font-semibold">Facilitatrice</p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+              <div
+                class="h-48 flex items-center justify-center bg-orange-light"
+              >
+                <img
+                  src="./public/pictures/thomas.jpg"
+                  alt="Thomas Jeanneau - Facilitateur bénévole chez Merci pour ton non"
+                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-lg title-font text-gray-900">thomas jeanneau</h3>
+                <p class="text-mauve font-semibold">Facilitateur</p>
+              </div>
+            </div>
+
+            <!-- Communication -->
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+              <div
+                class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
                   src="./public/pictures/elisa.jpg"
@@ -1107,185 +1247,525 @@
                 />
               </div>
               <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Elisa Garcia</h3>
-                <p class="text-orange-500 font-semibold">Chargée de communication</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./public/pictures/dilara.jpg"
-                  alt="Dilara Simsek Araiz - Animatrice bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Dilara Simsek Araiz</h3>
-                <p class="text-orange-500 font-semibold">Chargée de projets solidaires</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./public/pictures/morgane.jpg"
-                  alt="Morgane Bourgeais - Formatrice bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Morgane Bourgeais</h3>
-                <p class="text-orange-500 font-semibold">Formatrice VHSS</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./public/pictures/mathilde.jpg"
-                  alt="Mathilde Brière - Psychologue bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Mathilde Brière</h3>
-                <p class="text-orange-500 font-semibold">Psychologue sociale</p>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
-            >
-              <div
-                class="h-48 bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center"
-              >
-                <img
-                  src="./public/pictures/thomas.jpg"
-                  alt="Thomas Jeanneau - Fondateur bénévole chez Merci pour ton non"
-                  class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                  width="128"
-                  height="128"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h3 class="text-lg font-bold text-gray-900">Thomas Jeanneau</h3>
-                <p class="text-orange-500 font-semibold">Développeur produit</p>
+                <h3 class="text-lg title-font text-gray-900">elisa garcia</h3>
+                <p class="text-orange font-semibold">Communication</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FAQ (Moved before registration) -->
-      <section id="faq" class="relative z-10 px-6 py-16">
-        <div class="max-w-4xl mx-auto">
+      <!-- Workshop Program Timeline -->
+      <section id="programme" class="relative z-10 px-6 py-16 bg-white">
+        <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <h2 class="pill-header pill-purple text-3xl md:text-4xl">
-              TES QUESTIONS
+            <h2 class="text-3xl md:text-4xl title-font">
+              <span class="title-font text-orange">programme</span> de l'<span class="title-font text-mauve">atelier</span> (3h)
+            </h2>
+            <p class="text-xl text-gray-600 mt-6">
+              Un parcours progressif pour explorer toutes les dimensions du consentement
+            </p>
+          </div>
+
+          <!-- Timeline -->
+          <div class="max-w-4xl mx-auto">
+            <!-- 10h - Accueil -->
+            <div class="relative pl-8 pb-12 border-l-4 border-orange-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white font-bold">
+                1
+              </div>
+              <div class="bg-orange-light rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-orange-600">accueil & cadre</h3>
+                  <span class="text-sm font-semibold text-orange">10h00 - 10h25 (25 min)</span>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Présentation de l'équipe, des objectifs et création d'un cadre sécurisant pour l'atelier
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Règles de bienveillance et de confidentialité</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Ice-breaker ludique et tour de table</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Les acronymes RÈGLES -->
+            <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve rounded-full flex items-center justify-center text-white font-bold">
+                2
+              </div>
+              <div class="bg-mauve-light rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-mauve">les règles du consentement</h3>
+                  <span class="text-sm font-semibold text-mauve">10h25 - 10h55 (30 min)</span>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Découvrir et mémoriser l'acronyme RÈGLES pour comprendre toutes les dimensions du consentement
+                </p>
+                <div class="bg-white rounded-lg p-4 mb-3">
+                  <p class="font-bold text-mauve mb-2">L'acronyme RÈGLES :</p>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                    <li><strong class="text-mauve">R</strong>évocable</li>
+                    <li><strong class="text-mauve">É</strong>clairé</li>
+                    <li><strong class="text-mauve">G</strong>agnant-Gagnant</li>
+                    <li><strong class="text-mauve">L</strong>ibre</li>
+                    <li><strong class="text-mauve">E</strong>xplicite</li>
+                    <li><strong class="text-mauve">S</strong>pécifique</li>
+                  </ul>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Réflexion individuelle puis en petits groupes</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Partage en plénière et présentation de l'acronyme</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Le remerciement & Le repérage -->
+            <div class="relative pl-8 pb-12 border-l-4 border-orange-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white font-bold">
+                3
+              </div>
+              <div class="bg-orange-light rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-orange-600">dire non & repérer les bris</h3>
+                  <span class="text-sm font-semibold text-orange">10h55 - 11h20 (25 min)</span>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  S'entraîner à poser un "non" franc et reconnaître les situations problématiques
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span><strong>Jeux de rôle par 2 :</strong> pratiquer le refus et remercier pour le "non"</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span><strong>Scénarios théâtralisés :</strong> identifier défaut et bris de consentement</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Pause -->
+            <div class="relative pl-8 pb-12 border-l-4 border-gray-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-white">
+                <i data-lucide="coffee" class="w-4 h-4"></i>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-6 text-center">
+                <h3 class="text-lg title-font text-gray-600">pause</h3>
+                <span class="text-sm text-gray-500">11h20 - 11h35 (15 min)</span>
+              </div>
+            </div>
+
+            <!-- Le gagnant/gagnant -->
+            <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve rounded-full flex items-center justify-center text-white font-bold">
+                4
+              </div>
+              <div class="bg-mauve-light rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-mauve">la négociation gagnant-gagnant</h3>
+                  <span class="text-sm font-semibold text-mauve">11h35 - 11h50 (15 min)</span>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Explorer le spectre entre OUI et NON, et négocier pour trouver un accord juste
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span><strong>Cartes "Propositions" :</strong> exercices de négociation par 2</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Découvrir les nuances : "OUI MAIS", "NON MAIS", "Je te dis plus tard"</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Le révocable -->
+            <div class="relative pl-8 pb-12 border-l-4 border-orange-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white font-bold">
+                5
+              </div>
+              <div class="bg-orange-light rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-orange-600">changer d'avis (révocable)</h3>
+                  <span class="text-sm font-semibold text-orange">11h50 - 12h10 (20 min)</span>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Pratiquer le retrait du consentement et accueillir le changement d'avis de l'autre
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span><strong>Propositions réalisables :</strong> commencer une action puis retirer son oui</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span>Normaliser le changement d'avis sans culpabilité</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Le libre & La résistance -->
+            <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve rounded-full flex items-center justify-center text-white font-bold">
+                6
+              </div>
+              <div class="bg-mauve-light rounded-lg p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-mauve">biais & résistance</h3>
+                  <span class="text-sm font-semibold text-mauve">12h10 - 12h45 (35 min)</span>
+                </div>
+                <p class="text-gray-700 mb-3">
+                  Identifier les biais qui influencent nos choix et muscler sa capacité à tenir un "non"
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span><strong>Cartes "Biais" :</strong> partage de vécus sur les pressions sociales, affectives</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <span><strong>Jeu de rôle :</strong> tenir face à l'insistance avec des techniques concrètes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Clôture -->
+            <div class="relative pl-8">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-cyan rounded-full flex items-center justify-center text-white font-bold">
+                <i data-lucide="check-circle" class="w-5 h-5"></i>
+              </div>
+              <div class="bg-cyan-light rounded-xl p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-xl title-font text-cyan">cercle de clôture</h3>
+                  <span class="text-sm font-semibold text-cyan">12h45 - 13h00 (15 min)</span>
+                </div>
+                <p class="text-gray-700">
+                  Partage des apprentissages et distribution des ressources à emporter
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Takeaways -->
+          <div class="mt-12 bg-orange-light rounded-lg p-8">
+            <h3 class="text-2xl title-font text-center text-gray-900 mb-6 flex items-center justify-center gap-3">
+              <i data-lucide="target" class="w-8 h-8 text-orange"></i>
+              les outils concrets que tu repartiras avec
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg p-6 text-center">
+                <div class="mb-3">
+                  <i data-lucide="file-text" class="w-10 h-10 mx-auto text-mauve"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">L'acronyme RÈGLES</h4>
+                <p class="text-sm text-gray-600">Mémorisable pour toutes les situations</p>
+              </div>
+              <div class="bg-white rounded-lg p-6 text-center">
+                <div class="mb-3">
+                  <i data-lucide="shield-check" class="w-10 h-10 mx-auto text-pourpre"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">Techniques de résistance</h4>
+                <p class="text-sm text-gray-600">Disque rayé, nommer la pression, couper court</p>
+              </div>
+              <div class="bg-white rounded-lg p-6 text-center">
+                <div class="mb-3">
+                  <i data-lucide="search" class="w-10 h-10 mx-auto text-cyan"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-2">Grille de repérage</h4>
+                <p class="text-sm text-gray-600">Identifier biais, bris et défauts de consentement</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA after program -->
+          <div class="text-center mt-12">
+            <a
+              href="#events"
+              class="inline-flex items-center gap-2 bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg"
+            >
+              <span>Je réserve ma place</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ (Unified Section) -->
+      <section id="faq" class="relative z-10 px-6 py-16 bg-pourpre-light">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl title-font">
+                encore des doutes ?
             </h2>
           </div>
 
-          <div class="space-y-4">
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Comment fonctionne le prix libre ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Le prix libre signifie que tu donnes ce que tu veux et peux.
-                Tu peux participer sans rien payer si c'est difficile pour toi.
-                Si tu veux et peux soutenir l'association, ta contribution est bienvenue
-                mais jamais obligatoire. Chacun·e participe selon ses moyens.
-              </p>
-            </details>
+          <!-- Subsection 1: Objections -->
+          <div class="mb-16">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <!-- Objection 1 -->
+              <div class="bg-white rounded-lg p-8 border border-gray-200">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-pourpre-light rounded-full flex items-center justify-center">
+                    <i data-lucide="message-circle" class="w-6 h-6 text-pourpre"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">"Je connais déjà le consentement"</h4>
+                    <p class="text-gray-700">
+                      Super ! Cet atelier va au-delà de la théorie : tu vas <strong>pratiquer concrètement</strong> avec des exercices, identifier les <strong>biais subtils</strong> qui influencent tes choix, et muscler ta capacité à dire "non" dans des situations réelles.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                C'est uniquement sur le consentement sexuel ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Non ! L'atelier explore le consentement dans toutes les
-                dimensions : amicales, familiales, professionnelles... Le
-                consentement concerne tous nos rapports humains.
-              </p>
-            </details>
+              <!-- Objection 2 -->
+              <div class="bg-white rounded-lg p-8 border border-gray-200">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-orange-light rounded-full flex items-center justify-center">
+                    <i data-lucide="clock" class="w-6 h-6 text-orange"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">"Je n'ai pas le temps"</h4>
+                    <p class="text-gray-700">
+                      3 heures, c'est l'équivalent d'un long film. Mais contrairement à un film, tu repars avec des <strong>outils pratiques</strong> que tu utiliseras toute ta vie pour améliorer toutes tes relations. Un investissement qui vaut le coup !
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Je suis timide, vais-je devoir parler ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Tu restes souverain·e ! Tu peux choisir de ne pas participer à
-                certains exercices, juste observer, ou partir quand tu veux.
-                Tout dans la bienveillance.
-              </p>
-            </details>
+              <!-- Objection 3 -->
+              <div class="bg-white rounded-lg p-8 border border-gray-200">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-mauve-light rounded-full flex items-center justify-center">
+                    <i data-lucide="alert-circle" class="w-6 h-6 text-mauve"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">"J'ai peur que ce soit trop intense"</h4>
+                    <p class="text-gray-700">
+                      Le cadre est <strong>ultra sécurisant</strong> : tu n'es jamais obligé·e de partager ton vécu personnel, tu peux juste observer, et tout reste confidentiel. C'est ludique, bienveillant, et 100% respectueux de tes limites.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Je peux venir seul·e ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Bien sûr ! La plupart viennent seul·es. C'est même plus
-                enrichissant pour rencontrer de nouvelles personnes dans un
-                cadre bienveillant.
-              </p>
-            </details>
+              <!-- Objection 4 -->
+              <div class="bg-white rounded-lg p-8 border border-gray-200">
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-cyan-light rounded-full flex items-center justify-center">
+                    <i data-lucide="coins" class="w-6 h-6 text-cyan"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">"Je ne peux pas me le permettre"</h4>
+                    <p class="text-gray-700">
+                      <strong>Prix libre = 0€ si nécessaire.</strong> Aucune justification demandée, aucun jugement. L'argent ne doit jamais être un obstacle à ta participation. Viens, point.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <details
-              class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-            >
-              <summary class="font-bold text-lg cursor-pointer text-gray-900">
-                Je peux annuler ?
-              </summary>
-              <p class="mt-4 text-gray-700">
-                Oui, tu peux annuler à tout moment ! Préviens-nous juste pour
-                libérer ta place (6 à 15 personnes maximum).
-              </p>
-            </details>
+          <!-- Subsection 2: Practical Questions -->
+          <div>
+            <h3 class="text-2xl md:text-3xl title-font text-center mb-8 text-gray-900">
+              questions pratiques
+            </h3>
+            <div class="space-y-4 max-w-4xl mx-auto">
+              <details
+                class="bg-white rounded-lg p-6 border border-gray-200"
+              >
+                <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                  Comment fonctionne le prix libre ?
+                </summary>
+                <p class="mt-4 text-gray-700">
+                  Le prix libre signifie que tu donnes ce que tu veux et peux.
+                  Tu peux participer sans rien payer si c'est difficile pour toi.
+                  Si tu veux et peux soutenir l'association, ta contribution est bienvenue
+                  mais jamais obligatoire. Chacun·e participe selon ses moyens.
+                </p>
+              </details>
+
+              <details
+                class="bg-white rounded-lg p-6 border border-gray-200"
+              >
+                <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                  C'est uniquement sur le consentement sexuel ?
+                </summary>
+                <p class="mt-4 text-gray-700">
+                  Non ! L'atelier explore le consentement dans toutes les
+                  dimensions : amicales, familiales, professionnelles... Le
+                  consentement concerne tous nos rapports humains.
+                </p>
+              </details>
+
+              <details
+                class="bg-white rounded-lg p-6 border border-gray-200"
+              >
+                <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                  Je suis timide, vais-je devoir parler ?
+                </summary>
+                <p class="mt-4 text-gray-700">
+                  Tu restes souverain·e ! Tu peux choisir de ne pas participer à
+                  certains exercices, juste observer, ou partir quand tu veux.
+                  Tout dans la bienveillance.
+                </p>
+              </details>
+
+              <details
+                class="bg-white rounded-lg p-6 border border-gray-200"
+              >
+                <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                  Je peux venir seul·e ?
+                </summary>
+                <p class="mt-4 text-gray-700">
+                  Bien sûr ! La plupart viennent seul·es. C'est même plus
+                  enrichissant pour rencontrer de nouvelles personnes dans un
+                  cadre bienveillant.
+                </p>
+              </details>
+
+              <details
+                class="bg-white rounded-lg p-6 border border-gray-200"
+              >
+                <summary class="font-bold text-lg cursor-pointer text-gray-900">
+                  Je peux annuler ?
+                </summary>
+                <p class="mt-4 text-gray-700">
+                  Oui, tu peux annuler à tout moment ! Préviens-nous juste pour
+                  libérer ta place (6 à 15 personnes maximum).
+                </p>
+              </details>
+            </div>
           </div>
 
           <div class="text-center mt-10">
             <p class="text-gray-700 mb-4">Une autre question ?</p>
             <a
               href="mailto:contact@mercipourtonnon.fr"
-              class="text-orange-500 font-semibold hover:text-purple-600 transition"
+              class="text-orange font-semibold hover:text-mauve transition"
             >
               Écris-nous : mercipourtonnon@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Follow Us Section -->
+      <section id="suivez-nous" class="relative z-10 px-6 py-16 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl title-font text-gray-900 mb-4">
+            <span class="title-font text-pourpre">suivez</span>-<span class="title-font text-orange">nous</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-10">
+            Rejoins notre communauté pour suivre nos actualités, événements et partages sur le consentement
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-6">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/mercipourtonnon/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center gap-3 text-white px-6 py-4 rounded-full font-semibold transition-colors duration-300"
+              style="background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%)"
+              onmouseover="this.style.background='linear-gradient(135deg, #7c2cc4 0%, #d1347d 100%)'"
+              onmouseout="this.style.background='linear-gradient(135deg, #9333ea 0%, #ec4899 100%)'"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12c0 3.403 2.759 6.162 6.162 6.162s6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162-6.162 2.759-6.162 6.162zm8.162 0c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2zm4.207-6.374c0 .794-.645 1.44-1.44 1.44s-1.44-.646-1.44-1.44.646-1.439 1.44-1.439 1.44.645 1.44 1.439z"
+                />
+              </svg>
+              <span>Instagram</span>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/mercipourtonnon"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center gap-3 text-white px-6 py-4 rounded-full font-semibold transition-colors duration-300"
+              style="background: #2563eb"
+              onmouseover="this.style.background='#1d4ed8'"
+              onmouseout="this.style.background='#2563eb'"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+              <span>Facebook</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/company/merci-pour-ton-non"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center gap-3 text-white px-6 py-4 rounded-full font-semibold transition-colors duration-300"
+              style="background: #1e40af"
+              onmouseover="this.style.background='#1e3a8a'"
+              onmouseout="this.style.background='#1e40af'"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
@@ -1294,44 +1774,45 @@
       <!-- Events Registration -->
       <section
         id="events"
-        class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
+        class="relative z-10 px-6 py-16 bg-orange-lighter"
       >
         <div class="max-w-7xl mx-auto">
-          <div
-            class="bg-gradient-to-br from-orange-500 to-purple-600 rounded-3xl p-8 md:p-12 shadow-2xl text-center"
-          >
-            <h2
-              class="text-4xl md:text-5xl font-black text-white mb-8 title-font"
-            >
-              RÉSERVE TA PLACE MAINTENANT
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl title-font text-gray-900 mb-4">
+              réserve ta place maintenant
             </h2>
-            <p class="text-white text-xl mb-8">
-              ⏰ Prochaine session bientôt !
+            <p class="text-xl text-gray-600 flex items-center justify-center gap-2">
+              <i data-lucide="clock" class="w-6 h-6"></i>
+              Prochaine session bientôt !
             </p>
-            <div class="bg-white rounded-2xl p-6 max-w-4xl mx-auto">
-              <a
-                title="Réservation en ligne"
-                href="https://www.billetweb.fr/multi_event.php?multi=43090"
-                class="shop_frame"
-                target="_blank"
-                data-src="https://www.billetweb.fr/multi_event.php?multi=43090"
-                data-max-width="100%"
-                data-initial-height="600"
-                data-scrolling="no"
-                data-id="43090"
-                data-resize="1"
-                >Réservation en ligne</a
-              >
-            </div>
+          </div>
+          <div class="bg-white rounded-lg p-6 border border-gray-200 max-w-4xl mx-auto">
+            <a
+              title="Réservation en ligne"
+              href="https://www.billetweb.fr/multi_event.php?multi=43090"
+              class="shop_frame"
+              target="_blank"
+              data-src="https://www.billetweb.fr/multi_event.php?multi=43090"
+              data-max-width="100%"
+              data-initial-height="600"
+              data-scrolling="no"
+              data-id="43090"
+              data-resize="1"
+              >Réservation en ligne</a
+            >
           </div>
         </div>
       </section>
 
       <!-- Footer with Vision integrated -->
-      <footer class="relative z-10 bg-gray-900 text-white py-12 mt-16">
+      <footer class="relative z-10 bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-8">
-            <p class="text-2xl font-bold mb-4">MERCI POUR TON NON</p>
+            <img
+              src="./public/logo.svg"
+              alt="Merci pour ton non"
+              class="h-24 md:h-32 w-auto mx-auto mb-4"
+            />
             <p class="text-gray-400">
               Pour des relations humaines authentiques et respectueuses
             </p>
@@ -1347,7 +1828,7 @@
               aria-label="Instagram"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-purple-600 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-purple-600"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1369,7 +1850,7 @@
               aria-label="Facebook"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-600 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-600"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1391,7 +1872,7 @@
               aria-label="LinkedIn"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-700"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1413,7 +1894,7 @@
               aria-label="Billetweb"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-orange-500 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-orange"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1437,25 +1918,27 @@
 
     <!-- Floating CTA Button -->
     <div id="floating-cta" class="fixed bottom-8 right-8 z-50 hidden">
-      <a
-        href="#events"
-        class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300"
-      >
-        <span>S'inscrire</span>
-        <svg
-          class="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <div class="relative">
+        <a
+          href="#events"
+          class="flex items-center gap-2 bg-orange text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-hover transition-colors duration-300"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M13 7l5 5m0 0l-5 5m5-5H6"
-          />
-        </svg>
-      </a>
+          <span>Je m'inscris</span>
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
 
     <script>
@@ -1513,6 +1996,86 @@
           floatingCta.classList.add("hidden");
         }
       });
+
+      // Scroll-spy functionality
+      function initScrollSpy() {
+        const sections = [
+          { id: 'atelier', href: '#atelier' },
+          { id: 'infos-pratiques', href: '#infos-pratiques' },
+          { id: 'temoignages', href: '#temoignages' },
+          { id: 'mission', href: '#mission' },
+          { id: 'valeurs', href: '#valeurs' },
+          { id: 'equipe', href: '#equipe' },
+          { id: 'programme', href: '#programme' },
+          { id: 'faq', href: '#faq' }
+        ];
+
+        const navHeight = document.querySelector('nav').offsetHeight;
+
+        function updateActiveNav() {
+          const scrollPosition = window.scrollY + navHeight + 100; // Offset for better detection
+
+          let currentSection = '';
+
+          // Find which section is currently in view
+          sections.forEach(section => {
+            const element = document.getElementById(section.id);
+            if (element) {
+              const offsetTop = element.offsetTop;
+              const offsetHeight = element.offsetHeight;
+
+              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                currentSection = section.href;
+              }
+            }
+          });
+
+          // Update desktop navigation links
+          const desktopNavLinks = document.querySelectorAll('.hidden.lg\\:flex a[href^="#"]:not([href="#events"])');
+          desktopNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentSection) {
+              link.classList.add('!text-orange', 'border-b-2', 'border-orange');
+              link.classList.remove('text-gray-700');
+            } else {
+              link.classList.remove('!text-orange', 'border-b-2', 'border-orange');
+              link.classList.add('text-gray-700');
+            }
+          });
+
+          // Update mobile navigation links
+          const mobileNavLinks = document.querySelectorAll('#mobile-menu nav ul li a[href^="#"]:not([href="#events"])');
+          mobileNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentSection) {
+              link.classList.add('!text-orange', '!bg-orange-light', 'border-l-4', 'border-orange');
+            } else {
+              link.classList.remove('!text-orange', '!bg-orange-light', 'border-l-4', 'border-orange');
+            }
+          });
+        }
+
+        // Initial call
+        updateActiveNav();
+
+        // Update on scroll with throttling for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+          if (scrollTimeout) {
+            window.cancelAnimationFrame(scrollTimeout);
+          }
+          scrollTimeout = window.requestAnimationFrame(() => {
+            updateActiveNav();
+          });
+        });
+      }
+
+      // Initialize scroll-spy when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollSpy);
+      } else {
+        initScrollSpy();
+      }
     </script>
 
     <script>
@@ -1542,19 +2105,62 @@
         const nextWorkshop = getNextWorkshop();
         const formattedDate = formatDate(nextWorkshop.date);
 
-        // Update urgency banner
-        const bannerText = document.querySelector('.bg-gradient-to-r.from-orange-600 p');
+        // Update banner (urgency banner at top)
+        const bannerText = document.querySelector('.text-white.font-semibold');
         if (bannerText) {
-          bannerText.innerHTML = `🔥 Prochaine session le ${formattedDate} !
-            <a href="#events" class="underline font-bold ml-2">Je m'inscris →</a>`;
+          bannerText.textContent = `Prochaine session le ${formattedDate} — 6 à 15 participants`;
         }
 
         // Update hero section date
-        const heroDate = document.querySelector('.text-sm.text-gray-500.mt-4');
-        if (heroDate) {
-          heroDate.textContent = `Prochaine session le ${formattedDate}`;
+        const heroDateStrong = document.querySelector('.text-sm.text-gray-600 strong');
+        if (heroDateStrong) {
+          heroDateStrong.textContent = formattedDate;
         }
+
+        // Smooth scroll for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Skip if it's just "#" or empty
+            if (!href || href === '#') return;
+
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              e.preventDefault();
+
+              // Calculate offset for sticky navigation
+              const navHeight = document.querySelector('nav').offsetHeight;
+              const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = targetPosition - navHeight;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+
+              // Close mobile menu if open
+              const mobileMenu = document.getElementById('mobile-menu');
+              if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+              }
+
+              // Update URL hash without jumping
+              history.pushState(null, null, href);
+            }
+          });
+        });
       });
+    </script>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+      // Initialize all Lucide icons on the page
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
     </script>
 
     <script

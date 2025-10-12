@@ -10,7 +10,7 @@
     "typescript": "^5.9.2"
   },
   "scripts": {
-    "start": "bun index-v2.html charte.html",
+    "start": "bun index.html charte.html",
     "build": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   }
 }
