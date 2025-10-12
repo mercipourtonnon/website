@@ -275,7 +275,7 @@
       style="background: linear-gradient(90deg, #FFAF00 0%, #7B01FE 100%);"
     >
       <p class="text-sm sm:text-base font-semibold text-white">
-        Prochaine session le 21 septembre — 6 à 15 participants
+        Prochaine session le <span id="urgency-banner-date">16 novembre</span> — 6 à 15 participants
       </p>
     </div>
 
@@ -543,7 +543,7 @@
               <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
             <p class="text-sm text-gray-600">
-              Prochaine session le <strong class="text-gray-900">12 octobre</strong>
+              Prochaine session le <strong class="text-gray-900" id="hero-next-date">16 novembre</strong>
             </p>
           </div>
         </div>
@@ -841,6 +841,104 @@
         </div>
       </section>
 
+      <!-- Infos Pratiques Section -->
+      <section id="infos-pratiques" class="relative z-10 px-6 py-16 bg-cyan-light">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl title-font">
+              infos pratiques
+            </h2>
+            <p class="text-lg text-gray-600 mt-4">
+              Tout ce que tu dois savoir avant de venir
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Lieu -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="map-pin" class="w-6 h-6 text-cyan"></i>
+                <h3 class="text-xl title-font text-gray-900">où ?</h3>
+              </div>
+              <p class="text-gray-700 mb-2">
+                <strong>La Ressourcerie du Spectacle</strong>
+              </p>
+              <p class="text-gray-600 text-sm mb-3">
+                15 rue de Hoerdt, 67200 Strasbourg
+              </p>
+              <p class="text-gray-600 text-sm">
+                <strong>Accès :</strong> Tram B/F arrêt "Bohlen" + 5min à pied<br/>
+                <strong>Parking :</strong> Gratuit à proximité
+              </p>
+            </div>
+
+            <!-- Horaires -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="clock" class="w-6 h-6 text-orange"></i>
+                <h3 class="text-xl title-font text-gray-900">quand ?</h3>
+              </div>
+              <p class="text-gray-700 mb-2">
+                <strong>Dimanche 10h-13h</strong>
+              </p>
+              <p class="text-gray-600 text-sm">
+                Arrivée entre 9h50 et 10h pour un démarrage à l'heure.<br/>
+                <strong>Pause :</strong> 15 min au milieu de l'atelier
+              </p>
+            </div>
+
+            <!-- À apporter -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="backpack" class="w-6 h-6 text-mauve"></i>
+                <h3 class="text-xl title-font text-gray-900">à apporter ?</h3>
+              </div>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-cyan mt-0.5 flex-shrink-0"></i>
+                  <span>Ta bonne humeur et ta curiosité !</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-cyan mt-0.5 flex-shrink-0"></i>
+                  <span>De l'eau si tu veux (tisane fournie)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-cyan mt-0.5 flex-shrink-0"></i>
+                  <span>Un bloc-notes si tu aimes prendre des notes</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Accessibilité -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="accessibility" class="w-6 h-6 text-pourpre"></i>
+                <h3 class="text-xl title-font text-gray-900">accessibilité</h3>
+              </div>
+              <p class="text-gray-700 text-sm mb-3">
+                Le lieu est accessible aux personnes à mobilité réduite. Si tu as des besoins spécifiques, contacte-nous avant l'atelier.
+              </p>
+              <p class="text-gray-600 text-sm">
+                <a href="mailto:contact@mercipourtonnon.fr" class="text-orange hover:text-orange-hover font-medium">
+                  contact@mercipourtonnon.fr
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Important note -->
+          <div class="mt-8 max-w-4xl mx-auto bg-white rounded-lg p-6 border-l-4 border-orange">
+            <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <i data-lucide="info" class="w-5 h-5 text-orange"></i>
+              Si tu ne peux plus venir
+            </h4>
+            <p class="text-gray-700 text-sm">
+              Préviens-nous par mail ou Instagram pour libérer ta place. Aucun jugement, on comprend que les imprévus arrivent ! Cela permet à quelqu'un d'autre de participer.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Testimonials (MOVED UP) -->
       <section id="temoignages" class="relative z-10 px-6 py-16 bg-white">
         <div class="max-w-7xl mx-auto">
@@ -858,6 +956,9 @@
               <p class="text-gray-700 leading-relaxed italic">
                 "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
               </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Sébastien, novembre 2024
+              </p>
             </div>
 
             <!-- Testimonial 2 -->
@@ -866,6 +967,9 @@
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+              </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Filin, novembre 2024
               </p>
             </div>
 
@@ -876,6 +980,9 @@
               <p class="text-gray-700 leading-relaxed italic">
                 "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
               </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Elisa, novembre 2024
+              </p>
             </div>
 
             <!-- Testimonial 4 -->
@@ -884,6 +991,9 @@
             >
               <p class="text-gray-700 leading-relaxed italic">
                 "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
+              </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Morgane, janvier 2025
               </p>
             </div>
           </div>
@@ -1781,7 +1891,7 @@
             </h2>
             <p class="text-xl text-gray-600 flex items-center justify-center gap-2">
               <i data-lucide="clock" class="w-6 h-6"></i>
-              Prochaine session bientôt !
+              Prochaine session le <strong id="registration-date">16 novembre 2025</strong>
             </p>
           </div>
           <div class="bg-white rounded-lg p-6 border border-gray-200 max-w-4xl mx-auto">
@@ -1798,6 +1908,35 @@
               data-resize="1"
               >Réservation en ligne</a
             >
+          </div>
+
+          <!-- Contact option for questions -->
+          <div class="text-center mt-8 max-w-2xl mx-auto bg-white rounded-lg p-6 border border-gray-200">
+            <h3 class="text-xl title-font text-gray-900 mb-3">
+              tu as des questions ?
+            </h3>
+            <p class="text-gray-700 mb-4">
+              On est là pour échanger avec toi avant que tu t'inscrives. Aucune question n'est bête, on répond avec plaisir !
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="mailto:contact@mercipourtonnon.fr"
+                class="inline-flex items-center gap-2 text-orange hover:text-orange-hover font-semibold transition-colors"
+              >
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                contact@mercipourtonnon.fr
+              </a>
+              <span class="text-gray-400 hidden sm:inline">•</span>
+              <a
+                href="https://www.instagram.com/mercipourtonnon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-orange hover:text-orange-hover font-semibold transition-colors"
+              >
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+                Instagram
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1914,31 +2053,6 @@
       </footer>
     </div>
 
-    <!-- Floating CTA Button -->
-    <div id="floating-cta" class="fixed bottom-8 right-8 z-50 hidden">
-      <div class="relative">
-        <a
-          href="#events"
-          class="flex items-center gap-2 bg-orange text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-hover transition-colors duration-300"
-        >
-          <span>Je m'inscris</span>
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
-
     <script>
       // Mobile menu functionality
       const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -1979,19 +2093,6 @@
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
           closeMobileMenu();
-        }
-      });
-
-      // Show floating CTA after scrolling past hero section
-      window.addEventListener("scroll", function () {
-        const floatingCta = document.getElementById("floating-cta");
-        const scrollPosition = window.scrollY;
-        const heroHeight = document.querySelector("section").offsetHeight;
-
-        if (scrollPosition > heroHeight) {
-          floatingCta.classList.remove("hidden");
-        } else {
-          floatingCta.classList.add("hidden");
         }
       });
 
@@ -2092,9 +2193,15 @@
         return nextWorkshop || workshopDates[0]; // Fallback to first date if all passed
       }
 
-      // Format date for display
+      // Format date for display (short: "16 novembre")
       function formatDate(date) {
         const options = { day: 'numeric', month: 'long' };
+        return date.toLocaleDateString('fr-FR', options);
+      }
+
+      // Format date with year (long: "16 novembre 2025")
+      function formatDateWithYear(date) {
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
         return date.toLocaleDateString('fr-FR', options);
       }
 
@@ -2102,17 +2209,24 @@
       document.addEventListener('DOMContentLoaded', function() {
         const nextWorkshop = getNextWorkshop();
         const formattedDate = formatDate(nextWorkshop.date);
+        const formattedDateLong = formatDateWithYear(nextWorkshop.date);
 
         // Update banner (urgency banner at top)
-        const bannerText = document.querySelector('.text-white.font-semibold');
-        if (bannerText) {
-          bannerText.textContent = `Prochaine session le ${formattedDate} — 6 à 15 participants`;
+        const bannerDate = document.getElementById('urgency-banner-date');
+        if (bannerDate) {
+          bannerDate.textContent = formattedDate;
         }
 
         // Update hero section date
-        const heroDateStrong = document.querySelector('.text-sm.text-gray-600 strong');
-        if (heroDateStrong) {
-          heroDateStrong.textContent = formattedDate;
+        const heroDate = document.getElementById('hero-next-date');
+        if (heroDate) {
+          heroDate.textContent = formattedDate;
+        }
+
+        // Update registration section date
+        const registrationDate = document.getElementById('registration-date');
+        if (registrationDate) {
+          registrationDate.textContent = formattedDateLong;
         }
 
         // Smooth scroll for all navigation links

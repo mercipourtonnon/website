@@ -261,6 +261,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -1417,6 +1420,13 @@
       }
     }
   }
+  .hover\:text-orange-hover {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-orange-hover);
+      }
+    }
+  }
   .hover\:text-purple-600 {
     &:hover {
       @media (hover: hover) {
@@ -1455,6 +1465,11 @@
   .sm\:block {
     @media (width >= 40rem) {
       display: block;
+    }
+  }
+  .sm\:inline {
+    @media (width >= 40rem) {
+      display: inline;
     }
   }
   .sm\:h-14 {
