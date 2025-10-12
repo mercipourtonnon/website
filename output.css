@@ -732,17 +732,17 @@
   .border-t-pourpre {
     border-top-color: var(--color-pourpre);
   }
-  .border-l-blue-500 {
-    border-left-color: var(--color-blue-500);
+  .border-l-cyan {
+    border-left-color: var(--color-cyan);
   }
-  .border-l-green-500 {
-    border-left-color: var(--color-green-500);
+  .border-l-mauve {
+    border-left-color: var(--color-mauve);
   }
-  .border-l-purple-500 {
-    border-left-color: var(--color-purple-500);
+  .border-l-orange {
+    border-left-color: var(--color-orange);
   }
-  .border-l-yellow-500 {
-    border-left-color: var(--color-yellow-500);
+  .border-l-pourpre {
+    border-left-color: var(--color-pourpre);
   }
   .\!bg-orange-light {
     background-color: var(--color-orange-light) !important;
@@ -1045,10 +1045,6 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .tracking-wide {
-    --tw-tracking: var(--tracking-wide);
-    letter-spacing: var(--tracking-wide);
-  }
   .\!text-orange {
     color: var(--color-orange) !important;
   }
@@ -1111,9 +1107,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .uppercase {
-    text-transform: uppercase;
   }
   .italic {
     font-style: italic;
@@ -1764,10 +1757,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-tracking {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -1966,7 +1955,6 @@
       --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
