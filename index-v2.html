@@ -262,9 +262,9 @@
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div class="flex justify-between items-center">
-            <div class="text-lg sm:text-xl lg:text-2xl font-black text-orange-500 title-font">
+            <a href="#" class="text-lg sm:text-xl lg:text-2xl font-black text-orange-500 title-font">
               Merci pour ton non
-            </div>
+            </a>
 
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center gap-8">
@@ -280,11 +280,6 @@
                   >Infos pratiques</a
                 >
                 <a
-                  href="#programme"
-                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
-                  >Programme</a
-                >
-                <a
                   href="#temoignages"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
                   >Témoignages</a
@@ -293,6 +288,11 @@
                   href="#mission"
                   class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
                   >À propos</a
+                >
+                <a
+                  href="#programme"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition text-sm"
+                  >Programme</a
                 >
                 <a
                   href="#faq"
@@ -437,15 +437,6 @@
               </li>
               <li>
                 <a
-                  href="#programme"
-                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
-                  onclick="closeMobileMenu()"
-                >
-                  Programme
-                </a>
-              </li>
-              <li>
-                <a
                   href="#temoignages"
                   class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
@@ -460,6 +451,15 @@
                   onclick="closeMobileMenu()"
                 >
                   À propos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#programme"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition py-3 px-4"
+                  onclick="closeMobileMenu()"
+                >
+                  Programme
                 </a>
               </li>
               <li>
@@ -2058,6 +2058,84 @@
           floatingCta.classList.add("hidden");
         }
       });
+
+      // Scroll-spy functionality
+      function initScrollSpy() {
+        const sections = [
+          { id: 'atelier', href: '#atelier' },
+          { id: 'infos-pratiques', href: '#infos-pratiques' },
+          { id: 'temoignages', href: '#temoignages' },
+          { id: 'mission', href: '#mission' },
+          { id: 'programme', href: '#programme' },
+          { id: 'faq', href: '#faq' }
+        ];
+
+        const navHeight = document.querySelector('nav').offsetHeight;
+
+        function updateActiveNav() {
+          const scrollPosition = window.scrollY + navHeight + 100; // Offset for better detection
+
+          let currentSection = '';
+
+          // Find which section is currently in view
+          sections.forEach(section => {
+            const element = document.getElementById(section.id);
+            if (element) {
+              const offsetTop = element.offsetTop;
+              const offsetHeight = element.offsetHeight;
+
+              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                currentSection = section.href;
+              }
+            }
+          });
+
+          // Update desktop navigation links
+          const desktopNavLinks = document.querySelectorAll('.hidden.lg\\:flex a[href^="#"]:not([href="#events"])');
+          desktopNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentSection) {
+              link.classList.add('!text-orange-500', 'border-b-2', 'border-orange-500');
+              link.classList.remove('text-gray-700');
+            } else {
+              link.classList.remove('!text-orange-500', 'border-b-2', 'border-orange-500');
+              link.classList.add('text-gray-700');
+            }
+          });
+
+          // Update mobile navigation links
+          const mobileNavLinks = document.querySelectorAll('#mobile-menu nav ul li a[href^="#"]:not([href="#events"])');
+          mobileNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentSection) {
+              link.classList.add('!text-orange-500', '!bg-orange-50', 'border-l-4', 'border-orange-500');
+            } else {
+              link.classList.remove('!text-orange-500', '!bg-orange-50', 'border-l-4', 'border-orange-500');
+            }
+          });
+        }
+
+        // Initial call
+        updateActiveNav();
+
+        // Update on scroll with throttling for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+          if (scrollTimeout) {
+            window.cancelAnimationFrame(scrollTimeout);
+          }
+          scrollTimeout = window.requestAnimationFrame(() => {
+            updateActiveNav();
+          });
+        });
+      }
+
+      // Initialize scroll-spy when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollSpy);
+      } else {
+        initScrollSpy();
+      }
     </script>
 
     <script>
@@ -2118,7 +2196,7 @@
               // Calculate offset for sticky navigation
               const navHeight = document.querySelector('nav').offsetHeight;
               const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-              const offsetPosition = targetPosition - navHeight - 20; // 20px extra padding
+              const offsetPosition = targetPosition - navHeight;
 
               window.scrollTo({
                 top: offsetPosition,
