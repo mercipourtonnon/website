@@ -23,55 +23,111 @@ bun start
 
 ### Technology Stack
 - **Runtime**: Bun (JavaScript runtime)
-- **CSS Framework**: Tailwind CSS v4.1.13 (using @tailwindcss/cli)
+- **CSS Framework**: Tailwind CSS v4.1.13 (using @tailwindcss/cli with custom theme)
 - **No build framework**: Pure HTML/CSS/JS - no React, Vue, or similar
 - **Deployment**: Static site hosted via GitHub Pages (CNAME file points to mercipourtonnon.fr)
 
 ### File Structure
-- `index.html` - Single-page website (1500+ lines) containing all content
-- `input.css` - Tailwind entry point (just imports Tailwind)
+- `index.html` - Single-page website containing all content
+- `charte.html` - Brand guidelines and visual identity documentation
+- `input.css` - Tailwind entry point with custom fonts (@font-face) and theme colors
 - `output.css` - Compiled Tailwind CSS output (generated, not manually edited)
-- `public/` - Images, favicons, team pictures
+- `public/` - Images, favicons, team pictures, logo assets
+- `public/fonts/` - Custom fonts (Bely Display, Neue Machina)
 - `robots.txt` & `sitemap.xml` - SEO files
 
 ### Key Features in index.html
 
 1. **Responsive Navigation**: Desktop menu + mobile/tablet sidebar menu with overlay
-2. **Dynamic Date Updates**: JavaScript automatically updates workshop dates based on hardcoded schedule (lines 1518-1560)
-3. **Billetweb Integration**: Event registration embedded via external script (line 1562-1565)
-4. **Mobile Menu**: Custom JavaScript implementation (lines 1462-1502)
-5. **Floating CTA**: Sticky button appears after scrolling past hero (lines 1439-1459, 1505-1515)
+2. **Dynamic Date Updates**: JavaScript automatically updates workshop dates based on hardcoded schedule
+3. **Billetweb Integration**: Event registration embedded via external script
+4. **Mobile Menu**: Custom JavaScript implementation with overlay
+5. **Scroll-Spy Navigation**: Active nav link highlighting based on scroll position
 
-### Custom Styling
-- Uses Google Fonts: Inter (body) and Bebas Neue (titles)
-- Custom CSS classes defined in `<style>` tag (lines 152-255):
-  - `.title-font` - Bebas Neue font for headers
-  - `.pill-header` / `.pill-purple` - Colored pill-shaped section headers
-  - `.gradient-text` - Orange-to-red gradient text
-  - `.hover-lift` - Elevation effect on hover
+### Brand Typography & Custom Styling
+- **Bely Display**: Display font for all titles (via `.title-font` class)
+  - Always lowercase (`text-transform: lowercase`)
+  - Letter-spacing: 0.05em
+  - Fallback: Archivo Black (Google Fonts)
+- **Neue Machina**: Body font for all text
+  - Weights: Light (300), Regular (400), Ultrabold (800)
+  - Fallback: Space Grotesk (Google Fonts)
+- **Custom CSS classes** defined in `<style>` tag:
+  - `.title-font` - Bely Display font for headers (lowercase)
+  - `.hero-title` - Hero title with fadeInUp animation
+  - `.gradient-text` - Orange-to-pourpre gradient text
   - Animation keyframes: `fadeInUp`, `fadeIn`, `float`
+
+## Brand Guidelines (charte.html)
+
+### Four Brand Colors
+The brand uses four semantic colors from the logo:
+
+1. **Pourpre** (#F5004F)
+   - Energy: Émotion, authenticité, découverte
+   - Usage: Testimonials, emotional sections, authentic moments
+   - Light variant: #FFF0F5
+
+2. **Orange** (#FFAF00)
+   - Energy: Action, engagement, chaleur
+   - Usage: CTAs, registration buttons, important information
+   - Light variant: #FFF8E6
+
+3. **Mauve** (#7B01FE)
+   - Energy: Exploration, apprentissage, créativité
+   - Usage: Educational sections, exploratory content
+   - Light variant: #F3E6FF
+
+4. **Cyan** (#12A19D)
+   - Energy: Validation, calme, ressources
+   - Usage: Confirmations, downloadable resources, factual info
+   - Light variant: #E6F9F8
+
+### Color Usage Rules
+- **NEVER use saturated colors** (#FFAF00, #F5004F, etc.) as section backgrounds
+- **ALWAYS use light variants** (#FFF8E6, #FFF0F5, etc.) for section backgrounds
+- **Alternate white and colored backgrounds** between sections for visual rhythm
+- Use colors semantically based on their energy and meaning
+
+### Button Styling
+- **Rounded-full**: All buttons use fully rounded corners
+- **Color-only hover**: Buttons only darken color on hover (NO scale or shadow effects)
+- **Transition-colors**: Use `transition-colors` for smooth color changes
+- Four color variants available for different intentions
+
+### Tone of Voice
+- **Tutoiement**: Always use "tu/ton/te/tes" (informal "you")
+- **Inclusive writing**: Use ·e and ·es (participant·e, tou·te·s)
+- **No corporate jargon**: Avoid "solution", "optimisation", "performance", "ROI"
+- **No marketing hyperbole**: Avoid "révolutionnaire", "unique", "certifiant"
 
 ## Content Sections (in order)
 
-1. Hero with workshop image
-2. Workshop details (#atelier)
-3. Testimonials (#temoignages)
-4. Mission & Approach (#mission)
-5. Values (#valeurs)
-6. Team (#equipe)
-7. FAQ (#faq)
-8. Event Registration (#events)
+1. Hero with multi-color title
+2. "Pour qui?" - Target audience cards (#pour-qui)
+3. Workshop details (#atelier)
+4. Practical information (#infos-pratiques)
+5. Testimonials (#temoignages)
+6. Mission & Approach (#mission)
+7. Values (#valeurs)
+8. Team (#equipe)
+9. Programme (#programme)
+10. FAQ (#faq)
+11. Follow Us (social media links) (#suivez-nous)
+12. Event Registration (#events)
 
 ## Important Notes
 
 ### Workshop Dates
-Workshop dates are hardcoded in JavaScript (lines 1520-1527). To update:
-1. Edit the `workshopDates` array in the script
+Workshop dates are hardcoded in JavaScript at the end of index.html. To update:
+1. Edit the `workshopDates` array in the script section
 2. Format: `new Date('YYYY-MM-DDTHH:mm:ss')`
-3. The script automatically selects the next future date
+3. The script automatically selects the next future date and updates two locations:
+   - Banner: `.text-white.font-semibold`
+   - Hero: `.text-sm.text-gray-600 strong`
 
 ### SEO & Meta Tags
-Extensive meta tags for SEO and social sharing (lines 13-123):
+Extensive meta tags for SEO and social sharing in `<head>`:
 - Open Graph (Facebook, LinkedIn, WhatsApp)
 - Twitter Cards
 - Schema.org structured data for events
@@ -80,31 +136,47 @@ Extensive meta tags for SEO and social sharing (lines 13-123):
 ### Responsive Design
 - Uses Tailwind's responsive prefixes (sm:, md:, lg:)
 - Mobile menu activates below lg: breakpoint
-- Images use responsive sizing and lazy loading
+- Desktop nav has Mission, Valeurs, Équipe as separate links (not grouped under "À propos")
 
 ### External Dependencies
-- Google Fonts (Inter, Bebas Neue)
+- Google Fonts (Archivo Black, Space Grotesk) - fallbacks for custom fonts
+- Lucide Icons (https://unpkg.com/lucide@latest) - preferred over emojis per brand guidelines
 - Billetweb ticketing widget
-- Google Analytics (G-KPTGNRZSP6)
+- Plausible Analytics (privacy-friendly analytics)
 
 ## Common Tasks
 
 ### Updating Team Members
-Team section starts at line 1091. Each member has:
+Team section (`#equipe`). Each member has:
 - Profile image in `public/pictures/`
 - Name and role
 - Fallback handling with `onerror="this.style.display='none'"`
 
 ### Modifying Colors
-Brand colors:
-- Primary: Orange-500 (#f97316)
-- Secondary: Purple-600 (#9333ea)
-- Gradients: orange-to-purple throughout
+**IMPORTANT**: Always follow charte.html guidelines:
+- Use semantic color meanings (see Brand Guidelines section above)
+- Only use light variants for section backgrounds
+- Never use saturated colors as backgrounds
+- Alternate white and colored backgrounds between sections
 
 ### Editing Content
 All content is in `index.html`. No separate content management system. Edit HTML directly for text changes.
 
+**Tone of voice checklist**:
+- [ ] Use tutoiement (tu/ton/tes)
+- [ ] Use inclusive writing (·e, ·es)
+- [ ] Avoid corporate jargon
+- [ ] Keep titles in lowercase when using `.title-font`
+
 ### CSS Changes
-1. Edit Tailwind classes directly in HTML
-2. For custom styles, add to `<style>` tag (lines 152-255) or use Tailwind utilities
-3. Run `bun run build` to regenerate output.css if using Tailwind utilities
+1. Edit Tailwind classes directly in HTML (preferred)
+2. For custom fonts or brand colors, edit `input.css` and run `bun run build`
+3. Custom theme colors are defined in `input.css` under `@theme` directive
+4. DO NOT manually edit `output.css` (auto-generated)
+
+### Adding New Icons
+Use Lucide icons instead of emojis:
+```html
+<i data-lucide="icon-name" class="w-5 h-5 text-orange"></i>
+```
+Preferred icons: heart, ear, hand, users, shield (human-focused, not technical)
