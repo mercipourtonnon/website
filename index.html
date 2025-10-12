@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atelier de Consentement Strasbourg - Merci pour ton non</title>
 
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DNS Prefetch & Preconnect for External Resources -->
+    <link rel="dns-prefetch" href="https://www.billetweb.fr">
+    <link rel="dns-prefetch" href="https://plausible.io">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
     <!-- Preload Critical Resources -->
     <link rel="preload" href="./output.css?v=6e6dc5f" as="style">
+    <link rel="preload" href="./public/fonts/NeueMachina/NeueMachina-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="./public/fonts/BelyDisplay.ttf" as="font" type="font/ttf" crossorigin>
 
     <!-- Standard Meta Tags -->
     <meta
@@ -40,6 +44,7 @@
       property="og:image"
       content="https://mercipourtonnon.fr/public/logo.svg"
     />
+    <!-- TODO: Create optimized og-image.jpg (1200x630px) for better social sharing -->
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Merci pour ton non" />
@@ -57,7 +62,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://mercipourtonnon.fr/public/atelier_consentement.jpg"
+      content="https://mercipourtonnon.fr/public/logo.svg"
     />
     <meta
       name="twitter:image:alt"
@@ -272,7 +277,7 @@
                   "name": "Merci pour ton non",
                   "url": "https://mercipourtonnon.fr"
                 },
-                "image": "https://mercipourtonnon.fr/public/og-image.jpg",
+                "image": "https://mercipourtonnon.fr/public/logo.svg",
                 "offers": {
                   "@type": "Offer",
                   "price": "0",
@@ -436,7 +441,7 @@
     </script>
 
     <!-- Lucide Icons (Brand guideline: use icons instead of emojis) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <!-- Urgency Banner -->
@@ -1330,6 +1335,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1352,6 +1358,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1374,6 +1381,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1396,6 +1404,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1419,6 +1428,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
