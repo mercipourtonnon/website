@@ -4,208 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook Banner - Atelier de Consentement</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../output.css">
     <style>
-        @font-face {
-            font-family: "Bely Display";
-            src: url("./public/fonts/BelyDisplay.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .banner-container {
-            width: 1200px;
-            height: 630px;
-            background: linear-gradient(135deg, #ffffff 0%, #fff8e6 100%);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 80px;
-        }
-
-        /* Decorative circles */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.3;
-            filter: blur(60px);
-        }
-
-        .circle-1 {
-            top: -100px;
-            left: -100px;
-            width: 400px;
-            height: 400px;
-            background: #ffaf00;
-        }
-
-        .circle-2 {
-            bottom: -150px;
-            right: -150px;
-            width: 500px;
-            height: 500px;
-            background: #f5004f;
-        }
-
-        .circle-3 {
-            top: 100px;
-            right: 150px;
-            width: 300px;
-            height: 300px;
-            background: #7b01fe;
-        }
-
-        /* Content */
-        .content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-        }
-
-        .title {
-            font-family: 'Bely Display', serif;
-            font-size: 90px;
-            line-height: 0.95;
-            margin-bottom: 30px;
-            font-weight: normal;
-        }
-
-        .title-orange {
-            color: #ffaf00;
-        }
-
-        .title-pourpre {
-            color: #f5004f;
-        }
-
-        .title-gray {
-            color: #1f2937;
-        }
-
-        .subtitle {
-            font-size: 28px;
-            color: #374151;
-            line-height: 1.4;
-            margin-bottom: 35px;
-            max-width: 900px;
-            font-weight: 400;
-        }
-
-        .badges {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 35px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            border: 2px solid;
-        }
-
-        .badge-pourpre {
-            background: #fff0f5;
-            color: #f5004f;
-            border-color: #f5004f;
-        }
-
-        .badge-orange {
-            background: #fff8e6;
-            color: #ffaf00;
-            border-color: #ffaf00;
-        }
-
-        .badge-mauve {
-            background: #f3e6ff;
-            color: #7b01fe;
-            border-color: #7b01fe;
-        }
-
-        .badge-cyan {
-            background: #e6f9f8;
-            color: #12a19d;
-            border-color: #12a19d;
-        }
-
-        .cta {
-            background: #ffaf00;
-            color: white;
-            padding: 18px 48px;
-            border-radius: 50px;
-            font-size: 22px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 10px 30px rgba(255, 175, 0, 0.3);
-        }
-
-        .website {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #6b7280;
-            font-weight: 600;
+        .bely-display {
+            font-family: "Bely Display", cursive;
+            letter-spacing: 0.05em;
         }
     </style>
 </head>
-<body>
-    <div class="banner-container">
+<body class="bg-white flex items-center justify-center min-h-screen p-8">
+    <div class="relative w-[1200px] h-[630px] overflow-hidden flex flex-col items-center justify-center p-16"
+         style="background: linear-gradient(135deg, #ffffff 0%, #fff8e6 100%);">
+
         <!-- Decorative circles -->
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
+        <div class="absolute -top-[100px] -left-[100px] w-[400px] h-[400px] rounded-full opacity-30 blur-3xl"
+             style="background: #ffaf00;"></div>
+        <div class="absolute -bottom-[150px] -right-[150px] w-[500px] h-[500px] rounded-full opacity-30 blur-3xl"
+             style="background: #f5004f;"></div>
+        <div class="absolute top-[100px] right-[150px] w-[300px] h-[300px] rounded-full opacity-30 blur-3xl"
+             style="background: #7b01fe;"></div>
 
         <!-- Content -->
-        <div class="content">
-            <h1 class="title">
-                <span class="title-orange">atelier de</span><br>
-                <span class="title-pourpre">consentement</span><br>
-                <span class="title-gray">à strasbourg</span>
+        <div class="relative z-10 text-center">
+            <h1 class="bely-display text-[90px] leading-none mb-8">
+                <span class="text-orange">atelier de</span><br>
+                <span style="color: #f5004f;">consentement</span><br>
+                <span class="text-gray-800">à strasbourg</span>
             </h1>
 
-            <p class="subtitle">
+            <p class="text-[28px] text-gray-700 leading-relaxed mb-8 max-w-[900px] font-normal">
                 3 heures pour apprendre à dire non et faire évoluer tes relations
             </p>
 
-            <div class="badges">
-                <span class="badge badge-pourpre">6 à 15 personnes</span>
-                <span class="badge badge-orange">3 heures</span>
-                <span class="badge badge-mauve">Prix libre</span>
+            <div class="flex gap-4 justify-center flex-wrap mb-8">
+                <span class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-bold border-2 bg-pourpre-light text-pourpre border-pourpre">
+                    6 à 15 personnes
+                </span>
+                <span class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-bold border-2 bg-orange-light text-orange border-orange">
+                    3 heures
+                </span>
+                <span class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-bold border-2 bg-mauve-light text-mauve border-mauve">
+                    Prix libre
+                </span>
             </div>
 
-            <a href="https://mercipourtonnon.fr" class="cta">
+            <a href="https://mercipourtonnon.fr"
+               class="inline-block bg-orange text-white px-12 py-4 rounded-full text-[22px] font-bold shadow-xl hover:bg-orange-hover transition-colors"
+               style="box-shadow: 0 10px 30px rgba(255, 175, 0, 0.3);">
                 Je réserve ma place
             </a>
 
-            <p class="website">mercipourtonnon.fr</p>
+            <p class="mt-6 text-lg text-gray-500 font-semibold">
+                mercipourtonnon.fr
+            </p>
         </div>
     </div>
 </body>

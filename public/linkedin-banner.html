@@ -1,249 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Banner - Atelier de Consentement</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: "Bely Display";
-            src: url("../fonts/BelyDisplay.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LinkedIn Banner - Atelier de Consentement</title>
+        <link rel="stylesheet" href="../output.css" />
+        <style>
+            .bely-display {
+                font-family: "Bely Display", cursive;
+                letter-spacing: 0.05em;
+            }
+        </style>
+    </head>
+    <body class="bg-white flex items-center justify-center min-h-screen p-8">
+        <div
+            class="relative w-[1584px] h-[396px] overflow-hidden flex flex-row items-center justify-center px-20 py-10 gap-16"
+            style="
+                background: linear-gradient(135deg, #ffffff 0%, #f3e6ff 100%);
+            "
+        >
+            <!-- Decorative circles -->
+            <div
+                class="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full opacity-30 blur-3xl"
+                style="background: #7b01fe"
+            ></div>
+            <div
+                class="absolute -bottom-24 -right-24 w-[350px] h-[350px] rounded-full opacity-30 blur-3xl"
+                style="background: #12a19d"
+            ></div>
+            <div
+                class="absolute top-12 right-48 w-64 h-64 rounded-full opacity-30 blur-3xl"
+                style="background: #f5004f"
+            ></div>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .banner-container {
-            width: 1584px;
-            height: 396px;
-            background: linear-gradient(135deg, #ffffff 0%, #f3e6ff 100%);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 80px;
-            gap: 60px;
-        }
-
-        /* Decorative circles */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.3;
-            filter: blur(60px);
-        }
-
-        .circle-1 {
-            top: -80px;
-            left: -80px;
-            width: 300px;
-            height: 300px;
-            background: #7b01fe;
-        }
-
-        .circle-2 {
-            bottom: -100px;
-            right: -100px;
-            width: 350px;
-            height: 350px;
-            background: #12a19d;
-        }
-
-        .circle-3 {
-            top: 50px;
-            right: 200px;
-            width: 250px;
-            height: 250px;
-            background: #f5004f;
-        }
-
-        /* Content */
-        .content {
-            position: relative;
-            z-index: 10;
-            text-align: left;
-            flex: 1;
-        }
-
-        .logo-area {
-            margin-bottom: 15px;
-        }
-
-        .logo-text {
-            font-size: 16px;
-            color: #6b7280;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .title {
-            font-family: 'Bely Display', cursive;
-            font-size: 58px;
-            line-height: 0.95;
-            margin-bottom: 0;
-            font-weight: normal;
-            letter-spacing: 0.05em;
-        }
-
-        .title-orange {
-            color: #ffaf00;
-        }
-
-        .title-pourpre {
-            color: #f5004f;
-        }
-
-        .title-gray {
-            color: #1f2937;
-        }
-
-        .subtitle {
-            font-size: 26px;
-            color: #374151;
-            line-height: 1.4;
-            margin-bottom: 32px;
-            max-width: 900px;
-            font-weight: 400;
-        }
-
-        .badges {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            border: 2px solid;
-        }
-
-        .badge-pourpre {
-            background: #fff0f5;
-            color: #f5004f;
-            border-color: #f5004f;
-        }
-
-        .badge-orange {
-            background: #fff8e6;
-            color: #ffaf00;
-            border-color: #ffaf00;
-        }
-
-        .badge-cyan {
-            background: #e6f9f8;
-            color: #12a19d;
-            border-color: #12a19d;
-        }
-
-        .info-bar {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 15px;
-            color: #1f2937;
-            font-weight: 600;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .info-icon {
-            width: 20px;
-            height: 20px;
-            background: #12a19d;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        .website {
-            font-size: 16px;
-            color: #12a19d;
-            font-weight: 700;
-            margin-top: 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="banner-container">
-        <!-- Decorative circles -->
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-
-        <!-- Content -->
-        <div class="content">
-            <div class="logo-area">
-                <p class="logo-text">Merci pour ton non</p>
+            <!-- Left Content -->
+            <div class="relative z-10 text-left flex-1">
+                <h1 class="bely-display text-[58px] leading-none">
+                    <span class="text-orange">atelier de</span><br />
+                    <span style="color: #f5004f">consentement</span><br />
+                    <span class="text-gray-800">à strasbourg</span>
+                </h1>
             </div>
 
-            <h1 class="title">
-                <span class="title-orange">atelier de</span><br>
-                <span class="title-pourpre">consentement</span><br>
-                <span class="title-gray">à strasbourg</span>
-            </h1>
-        </div>
+            <!-- Right Content -->
+            <div class="relative z-10">
+                <p
+                    class="text-[26px] text-gray-700 leading-relaxed mb-8 max-w-[900px] font-normal"
+                >
+                    Formation pratique pour apprendre à dire non et créer des
+                    relations plus saines
+                </p>
 
-        <div class="right-content">
-            <p class="subtitle">
-                Formation pratique pour apprendre à dire non et créer des relations plus saines
-            </p>
-
-            <div class="badges">
-                <span class="badge badge-pourpre">6 à 15 personnes</span>
-                <span class="badge badge-orange">3 heures</span>
-                <span class="badge badge-cyan">Prix libre</span>
-            </div>
-
-            <div class="info-bar">
-                <div class="info-item">
-                    <span class="info-icon">📍</span>
-                    <span>Strasbourg</span>
+                <div class="flex gap-4 justify-center flex-wrap mb-8">
+                    <span
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-bold border-2 bg-pourpre-light text-pourpre border-pourpre"
+                    >
+                        6 à 15 personnes
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-bold border-2 bg-orange-light text-orange border-orange"
+                    >
+                        3 heures
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-bold border-2 bg-cyan-light text-cyan border-cyan"
+                    >
+                        Prix libre
+                    </span>
                 </div>
-                <div class="info-item">
-                    <span class="info-icon">⏰</span>
-                    <span>16 novembre</span>
+
+                <div
+                    class="flex items-center gap-6 text-[15px] text-gray-800 font-semibold"
+                >
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="w-5 h-5 bg-cyan rounded-full flex items-center justify-center text-white text-xs font-bold"
+                        >
+                            📍
+                        </span>
+                        <span>Strasbourg</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span
+                            class="w-5 h-5 bg-cyan rounded-full flex items-center justify-center text-white text-xs font-bold"
+                        >
+                            ⏰
+                        </span>
+                        <span>16 novembre</span>
+                    </div>
+                    <span class="text-base text-cyan font-bold"
+                        >mercipourtonnon.fr</span
+                    >
                 </div>
-                <span class="website">mercipourtonnon.fr</span>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
