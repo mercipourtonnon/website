@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atelier de Consentement Strasbourg - Merci pour ton non</title>
 
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Preload Critical Resources -->
     <link rel="preload" href="./output.css?v=6e6dc5f" as="style">
 
@@ -117,6 +121,144 @@
           },
           "maximumAttendeeCapacity": 15,
           "minimumAttendeeCapacity": 6
+        }
+      }
+    </script>
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Je connais déjà le consentement",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Super ! Cet atelier va au-delà de la théorie : tu vas pratiquer concrètement avec des exercices, identifier les biais subtils qui influencent tes choix, et muscler ta capacité à dire \"non\" dans des situations réelles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je n'ai pas le temps",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "3 heures, c'est l'équivalent d'un long film. Mais contrairement à un film, tu repars avec des outils pratiques que tu utiliseras toute ta vie pour améliorer toutes tes relations. Un investissement qui vaut le coup !"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "J'ai peur que ce soit trop intense",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le cadre est ultra sécurisant : tu n'es jamais obligé·e de partager ton vécu personnel, tu peux juste observer, et tout reste confidentiel. C'est ludique, bienveillant, et 100% respectueux de tes limites."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je ne peux pas me le permettre",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prix libre = 0€ si nécessaire. Aucune justification demandée, aucun jugement. L'argent ne doit jamais être un obstacle à ta participation. Viens, point."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment fonctionne le prix libre ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le prix libre signifie que tu donnes ce que tu veux et peux. Tu peux participer sans rien payer si c'est difficile pour toi. Si tu veux et peux soutenir l'association, ta contribution est bienvenue mais jamais obligatoire. Chacun·e participe selon ses moyens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "C'est uniquement sur le consentement sexuel ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non ! L'atelier explore le consentement dans toutes les dimensions : amicales, familiales, professionnelles... Le consentement concerne tous nos rapports humains."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je suis timide, vais-je devoir parler ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tu restes souverain·e ! Tu peux choisir de ne pas participer à certains exercices, juste observer, ou partir quand tu veux. Tout dans la bienveillance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je peux venir seul·e ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bien sûr ! La plupart viennent seul·es. C'est même plus enrichissant pour rencontrer de nouvelles personnes dans un cadre bienveillant."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je peux annuler ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, tu peux annuler à tout moment ! Préviens-nous juste pour libérer ta place (6 à 15 personnes maximum)."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Merci pour ton non",
+        "description": "Ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.",
+        "url": "https://mercipourtonnon.fr",
+        "logo": "https://mercipourtonnon.fr/public/logo.svg",
+        "email": "contact@mercipourtonnon.fr",
+        "priceRange": "Prix libre (0€ - participation libre)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Strasbourg",
+          "addressRegion": "Grand Est",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.5734",
+          "longitude": "7.7521"
+        },
+        "sameAs": [
+          "https://www.instagram.com/mercipourtonnon/",
+          "https://www.facebook.com/mercipourtonnon",
+          "https://www.linkedin.com/company/merci-pour-ton-non"
+        ],
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.5734",
+            "longitude": "7.7521"
+          },
+          "geoRadius": "50000"
+        },
+        "serviceType": "Atelier de consentement",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Ateliers",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "EducationEvent",
+                "name": "Atelier découverte : Le consentement dans toutes ses dimensions"
+              },
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
         }
       }
     </script>
@@ -529,7 +671,7 @@
             </span>
             <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-cyan-light text-cyan border border-cyan">
               <i data-lucide="map-pin" class="w-4 h-4"></i>
-              Strasbourg
+              Strasbourg, Alsace
             </span>
           </div>
 
@@ -917,7 +1059,7 @@
           <!-- Mission principale simplifiée -->
           <div class="bg-white rounded-lg p-8 md:p-12 border border-gray-200 mb-12 text-center">
             <p class="text-2xl text-gray-900 font-bold mb-6 leading-relaxed">
-              Diffuser une culture du consentement pour faire évoluer nos relations
+              Diffuser une culture du consentement à Strasbourg et dans le Grand Est
             </p>
             <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
               On crée des <strong class="text-cyan">espaces sûrs</strong> où chacun·e peut apprendre à <strong class="text-orange">dire non</strong>, <strong class="text-orange">poser ses limites</strong> et construire des <strong class="text-pourpre">relations plus authentiques</strong> — dans tous les contextes de vie.
@@ -1934,6 +2076,9 @@
           </div>
 
           <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <p class="mb-2">
+              <a href="mailto:mercipourtonnon@gmail.com" class="hover:text-orange transition-colors">mercipourtonnon@gmail.com</a>
+            </p>
             <p>&copy; 2025 Merci pour ton non. Tous droits réservés.</p>
           </div>
         </div>
