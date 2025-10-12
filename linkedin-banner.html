@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Banner - Atelier de Consentement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Bely Display";
+            src: url("./public/fonts/BelyDisplay.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .banner-container {
+            width: 1200px;
+            height: 627px;
+            background: linear-gradient(135deg, #ffffff 0%, #f3e6ff 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 80px;
+        }
+
+        /* Decorative circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            filter: blur(60px);
+        }
+
+        .circle-1 {
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: #7b01fe;
+        }
+
+        .circle-2 {
+            bottom: -150px;
+            right: -150px;
+            width: 500px;
+            height: 500px;
+            background: #12a19d;
+        }
+
+        .circle-3 {
+            top: 100px;
+            right: 150px;
+            width: 300px;
+            height: 300px;
+            background: #f5004f;
+        }
+
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .logo-area {
+            margin-bottom: 25px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .title {
+            font-family: 'Bely Display', serif;
+            font-size: 85px;
+            line-height: 0.95;
+            margin-bottom: 28px;
+            font-weight: normal;
+        }
+
+        .title-orange {
+            color: #ffaf00;
+        }
+
+        .title-pourpre {
+            color: #f5004f;
+        }
+
+        .title-gray {
+            color: #1f2937;
+        }
+
+        .subtitle {
+            font-size: 26px;
+            color: #374151;
+            line-height: 1.4;
+            margin-bottom: 32px;
+            max-width: 900px;
+            font-weight: 400;
+        }
+
+        .badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid;
+        }
+
+        .badge-pourpre {
+            background: #fff0f5;
+            color: #f5004f;
+            border-color: #f5004f;
+        }
+
+        .badge-orange {
+            background: #fff8e6;
+            color: #ffaf00;
+            border-color: #ffaf00;
+        }
+
+        .badge-cyan {
+            background: #e6f9f8;
+            color: #12a19d;
+            border-color: #12a19d;
+        }
+
+        .info-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            background: #12a19d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .website {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #12a19d;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <!-- Decorative circles -->
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="logo-area">
+                <p class="logo-text">Merci pour ton non</p>
+            </div>
+
+            <h1 class="title">
+                <span class="title-orange">atelier de</span><br>
+                <span class="title-pourpre">consentement</span><br>
+                <span class="title-gray">à strasbourg</span>
+            </h1>
+
+            <p class="subtitle">
+                Formation pratique pour apprendre à dire non et créer des relations plus saines
+            </p>
+
+            <div class="badges">
+                <span class="badge badge-pourpre">6 à 15 personnes</span>
+                <span class="badge badge-orange">3 heures</span>
+                <span class="badge badge-cyan">Prix libre</span>
+            </div>
+
+            <div class="info-bar">
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <span>Strasbourg</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⏰</span>
+                    <span>Prochaine session : 16 novembre</span>
+                </div>
+            </div>
+
+            <p class="website">mercipourtonnon.fr</p>
+        </div>
+    </div>
+</body>
+</html>
