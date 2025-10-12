@@ -275,7 +275,7 @@
       style="background: linear-gradient(90deg, #FFAF00 0%, #7B01FE 100%);"
     >
       <p class="text-sm sm:text-base font-semibold text-white">
-        Prochaine session le <span id="urgency-banner-date">16 novembre</span> — 6 à 15 participants
+        Prochaine session le 16 novembre — 6 à 15 participants
       </p>
     </div>
 
@@ -991,15 +991,8 @@
             <h2 class="text-3xl md:text-4xl title-font">
               pourquoi nous faire confiance ?
             </h2>
-            <p class="text-lg text-gray-600 mt-4">
-              Une équipe engagée et formée pour t'accompagner
-            </p>
           </div>
-
           <div class="max-w-4xl mx-auto bg-orange-light rounded-lg p-8 md:p-12">
-            <h3 class="text-2xl title-font text-center text-gray-900 mb-8">
-              une équipe formée et engagée
-            </h3>
             <div class="grid md:grid-cols-2 gap-6 text-gray-700">
               <div class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
@@ -2104,12 +2097,6 @@
         const nextWorkshop = getNextWorkshop();
         const formattedDate = formatDate(nextWorkshop.date);
         const formattedDateLong = formatDateWithYear(nextWorkshop.date);
-
-        // Update banner (urgency banner at top)
-        const bannerDate = document.getElementById('urgency-banner-date');
-        if (bannerDate) {
-          bannerDate.textContent = formattedDate;
-        }
 
         // Update hero section date
         const heroDate = document.getElementById('hero-next-date');
