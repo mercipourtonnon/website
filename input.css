@@ -41,3 +41,26 @@
         font-family: "Neue Machina", sans-serif;
     }
 }
+
+@theme {
+    /* Brand Colors - from charte.html */
+    --color-pourpre: #f5004f;
+    --color-pourpre-hover: #d10042;
+    --color-pourpre-light: #fff0f5;
+    --color-pourpre-lighter: #ffe0ea;
+
+    --color-orange: #ffaf00;
+    --color-orange-hover: #e69e00;
+    --color-orange-light: #fff8e6;
+    --color-orange-lighter: #fff0d1;
+
+    --color-mauve: #7b01fe;
+    --color-mauve-hover: #6a01db;
+    --color-mauve-light: #f3e6ff;
+    --color-mauve-lighter: #e6d1ff;
+
+    --color-cyan: #12a19d;
+    --color-cyan-hover: #0f8a87;
+    --color-cyan-light: #e6f9f8;
+    --color-cyan-lighter: #d1f2f0;
+}

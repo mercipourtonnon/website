@@ -166,16 +166,16 @@
         text-transform: lowercase;
       }
 
-      /* Brand Colors */
+      /* Brand Colors - referencing Tailwind custom theme */
       :root {
-        --brand-orange: #FFAF00;
-        --brand-pourpre: #F5004F;
-        --brand-mauve: #7B01FE;
-        --brand-cyan: #12A19D;
-        --brand-orange-light: #FFF8E6;
-        --brand-pourpre-light: #FFF0F5;
-        --brand-mauve-light: #F3E6FF;
-        --brand-cyan-light: #E6F9F8;
+        --brand-orange: var(--color-orange);
+        --brand-pourpre: var(--color-pourpre);
+        --brand-mauve: var(--color-mauve);
+        --brand-cyan: var(--color-cyan);
+        --brand-orange-light: var(--color-orange-light);
+        --brand-pourpre-light: var(--color-pourpre-light);
+        --brand-mauve-light: var(--color-mauve-light);
+        --brand-cyan-light: var(--color-cyan-light);
         --brand-gray-dark: #111827;
         --brand-gray-medium: #4B5563;
         --brand-gray-light: #E5E7EB;
@@ -287,8 +287,8 @@
       style="background: linear-gradient(135deg, #FFF8E6 0%, #F3E6FF 100%);"
     >
       <!-- Animated background blobs -->
-      <div class="blob w-96 h-96 top-0 left-0" style="background: #FFAF00;"></div>
-      <div class="blob w-80 h-80 bottom-0 right-0" style="background: #7B01FE;"></div>
+      <div class="blob w-96 h-96 top-0 left-0 bg-orange"></div>
+      <div class="blob w-80 h-80 bottom-0 right-0 bg-mauve"></div>
 
       <!-- Navigation -->
       <nav
@@ -309,32 +309,32 @@
               <div class="flex space-x-6 items-center">
                 <a
                   href="#atelier"
-                  class="text-gray-700 hover:text-[#FFAF00] font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >L'atelier</a
                 >
                 <a
                   href="#infos-pratiques"
-                  class="text-gray-700 hover:text-[#FFAF00] font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >Infos pratiques</a
                 >
                 <a
                   href="#temoignages"
-                  class="text-gray-700 hover:text-[#FFAF00] font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >Témoignages</a
                 >
                 <a
                   href="#mission"
-                  class="text-gray-700 hover:text-[#FFAF00] font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >À propos</a
                 >
                 <a
                   href="#programme"
-                  class="text-gray-700 hover:text-[#FFAF00] font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >Programme</a
                 >
                 <a
                   href="#faq"
-                  class="text-gray-700 hover:text-[#FFAF00] font-medium transition text-sm"
+                  class="text-gray-700 hover:text-orange font-medium transition text-sm"
                   >FAQ</a
                 >
               </div>
@@ -342,7 +342,7 @@
               <!-- CTA in Desktop Navigation -->
               <a
                 href="#events"
-                class="inline-flex items-center gap-2 bg-[#FFAF00] text-white px-4 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300"
+                class="inline-flex items-center gap-2 bg-orange text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-orange-hover transition-colors duration-300"
               >
                 <span>S'inscrire</span>
               </a>
@@ -353,7 +353,7 @@
                   href="https://www.instagram.com/mercipourtonnon/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-[#FFAF00] transition"
+                  class="text-gray-600 hover:text-orange transition"
                   aria-label="Instagram"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -395,7 +395,7 @@
                   href="https://www.billetweb.fr/pro/mercipourtonnon"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-[#FFAF00] transition"
+                  class="text-gray-600 hover:text-orange transition"
                   aria-label="Billetterie"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -460,7 +460,7 @@
               <li>
                 <a
                   href="#atelier"
-                  class="block text-lg font-medium text-gray-700 hover:text-[#FFAF00] hover:bg-[#FFF8E6] rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   L'atelier
@@ -469,7 +469,7 @@
               <li>
                 <a
                   href="#infos-pratiques"
-                  class="block text-lg font-medium text-gray-700 hover:text-[#FFAF00] hover:bg-[#FFF8E6] rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   Infos pratiques
@@ -478,7 +478,7 @@
               <li>
                 <a
                   href="#temoignages"
-                  class="block text-lg font-medium text-gray-700 hover:text-[#FFAF00] hover:bg-[#FFF8E6] rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   Témoignages
@@ -487,7 +487,7 @@
               <li>
                 <a
                   href="#mission"
-                  class="block text-lg font-medium text-gray-700 hover:text-[#FFAF00] hover:bg-[#FFF8E6] rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   À propos
@@ -496,7 +496,7 @@
               <li>
                 <a
                   href="#programme"
-                  class="block text-lg font-medium text-gray-700 hover:text-[#FFAF00] hover:bg-[#FFF8E6] rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   Programme
@@ -505,7 +505,7 @@
               <li>
                 <a
                   href="#faq"
-                  class="block text-lg font-medium text-gray-700 hover:text-[#FFAF00] hover:bg-[#FFF8E6] rounded-lg transition py-3 px-4"
+                  class="block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4"
                   onclick="closeMobileMenu()"
                 >
                   FAQ
@@ -517,7 +517,7 @@
             <div class="mt-8">
               <a
                 href="#events"
-                class="block w-full text-center bg-[#FFAF00] text-white px-6 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
+                class="block w-full text-center bg-orange text-white px-6 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg"
                 onclick="closeMobileMenu()"
               >
                 Je réserve ma place
@@ -532,7 +532,7 @@
                   href="https://www.instagram.com/mercipourtonnon/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-[#FFAF00] transition p-2"
+                  class="text-gray-600 hover:text-orange transition p-2"
                   aria-label="Instagram"
                 >
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -574,7 +574,7 @@
                   href="https://www.billetweb.fr/pro/mercipourtonnon"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-gray-600 hover:text-[#FFAF00] transition p-2"
+                  class="text-gray-600 hover:text-orange transition p-2"
                   aria-label="Billetterie"
                 >
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -597,8 +597,8 @@
               <h1
                 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 title-font"
               >
-                <span class="text-[#FFAF00] text-3xl sm:text-4xl md:text-5xl lg:text-7xl">atelier de</span><br />
-                <span class="text-[#7B01FE] text-3xl sm:text-4xl md:text-5xl lg:text-7xl">consentement</span><br />
+                <span class="text-orange text-3xl sm:text-4xl md:text-5xl lg:text-7xl">atelier de</span><br />
+                <span class="text-mauve text-3xl sm:text-4xl md:text-5xl lg:text-7xl">consentement</span><br />
                 <span class="text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-7xl">à strasbourg</span>
               </h1>
               <p
@@ -608,7 +608,7 @@
               </p>
               <a
                 href="#events"
-                class="inline-flex items-center gap-2 bg-[#FFAF00] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
+                class="inline-flex items-center gap-2 bg-orange text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg"
               >
                 <span>Je réserve ma place (prix libre)</span>
                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -619,8 +619,7 @@
             </div>
             <div class="relative mt-8 lg:mt-0">
               <div
-                class="rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-sm sm:shadow-md max-w-md sm:max-w-lg lg:max-w-none mx-auto"
-                style="background: #fff8e6;"
+                class="rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-sm sm:shadow-md max-w-md sm:max-w-lg lg:max-w-none mx-auto bg-orange-light"
               >
                 <img
                   src="./assets/atelier_consentement.jpg"
@@ -646,7 +645,6 @@
       <section id="pour-qui" class="relative z-10 px-6 py-16 bg-white">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <p class="text-sm font-bold uppercase tracking-wide text-[#7B01FE] mb-2">Pour qui ?</p>
             <h2 class="text-3xl md:text-4xl title-font">
               cet atelier est pour toi si...
             </h2>
@@ -657,9 +655,9 @@
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <!-- Parents -->
-            <div class="bg-[#FFF8E6] rounded-lg p-6">
+            <div class="bg-orange-light rounded-lg p-6">
               <div class="mb-4">
-                <i data-lucide="users" class="w-10 h-10" style="color: #FFAF00;"></i>
+                <i data-lucide="users" class="w-10 h-10 text-orange"></i>
               </div>
               <h3 class="text-xl title-font text-gray-900 mb-3">tu es parent</h3>
               <p class="text-gray-700">
@@ -668,9 +666,9 @@
             </div>
 
             <!-- Professionnels -->
-            <div class="bg-[#F3E6FF] rounded-lg p-6">
+            <div class="bg-mauve-light rounded-lg p-6">
               <div class="mb-4">
-                <i data-lucide="briefcase" class="w-10 h-10" style="color: #7B01FE;"></i>
+                <i data-lucide="briefcase" class="w-10 h-10 text-mauve"></i>
               </div>
               <h3 class="text-xl title-font text-gray-900 mb-3">tu es professionnel·le</h3>
               <p class="text-gray-700">
@@ -679,9 +677,9 @@
             </div>
 
             <!-- Couples -->
-            <div class="bg-[#FFF0F5] rounded-lg p-6">
+            <div class="bg-pourpre-light rounded-lg p-6">
               <div class="mb-4">
-                <i data-lucide="heart" class="w-10 h-10" style="color: #F5004F;"></i>
+                <i data-lucide="heart" class="w-10 h-10 text-pourpre"></i>
               </div>
               <h3 class="text-xl title-font text-gray-900 mb-3">tu es en couple</h3>
               <p class="text-gray-700">
@@ -690,9 +688,9 @@
             </div>
 
             <!-- Jeunes adultes -->
-            <div class="bg-[#E6F9F8] rounded-lg p-6">
+            <div class="bg-cyan-light rounded-lg p-6">
               <div class="mb-4">
-                <i data-lucide="graduation-cap" class="w-10 h-10" style="color: #12A19D;"></i>
+                <i data-lucide="graduation-cap" class="w-10 h-10 text-cyan"></i>
               </div>
               <h3 class="text-xl title-font text-gray-900 mb-3">tu es étudiant·e ou jeune actif·ve</h3>
               <p class="text-gray-700">
@@ -701,9 +699,9 @@
             </div>
 
             <!-- Difficultés à dire non -->
-            <div class="bg-[#FFF8E6] rounded-lg p-6">
+            <div class="bg-orange-light rounded-lg p-6">
               <div class="mb-4">
-                <i data-lucide="hand" class="w-10 h-10" style="color: #FFAF00;"></i>
+                <i data-lucide="hand" class="w-10 h-10 text-orange"></i>
               </div>
               <h3 class="text-xl title-font text-gray-900 mb-3">tu as du mal à dire non</h3>
               <p class="text-gray-700">
@@ -712,9 +710,9 @@
             </div>
 
             <!-- Curiosité -->
-            <div class="bg-[#F3E6FF] rounded-lg p-6">
+            <div class="bg-mauve-light rounded-lg p-6">
               <div class="mb-4">
-                <i data-lucide="help-circle" class="w-10 h-10" style="color: #7B01FE;"></i>
+                <i data-lucide="help-circle" class="w-10 h-10 text-mauve"></i>
               </div>
               <h3 class="text-xl title-font text-gray-900 mb-3">tu es simplement curieux·se</h3>
               <p class="text-gray-700">
@@ -724,13 +722,13 @@
           </div>
 
           <!-- Universality message -->
-          <div class="mt-12 max-w-3xl mx-auto bg-[#FFF8E6] rounded-lg p-8 text-center">
+          <div class="mt-12 max-w-3xl mx-auto bg-orange-light rounded-lg p-8 text-center">
             <h3 class="text-2xl title-font text-gray-900 mb-4">
               quel que soit ton profil...
             </h3>
             <p class="text-lg text-gray-700 leading-relaxed">
               Homme, femme, non-binaire • Jeune ou moins jeune • Seul·e ou en couple • Avec ou sans enfants •
-              En questionnement ou déjà sensibilisé·e — <strong class="text-[#7B01FE]">cet atelier est fait pour toi.</strong>
+              En questionnement ou déjà sensibilisé·e — <strong class="text-mauve">cet atelier est fait pour toi.</strong>
             </p>
             <p class="text-gray-600 mt-4">
               Le consentement est une compétence relationnelle universelle qui nous concerne tou·te·s.
@@ -763,33 +761,33 @@
 
           <div class="grid md:grid-cols-2 gap-8 mb-12">
             <div class="bg-white rounded-lg p-8 border border-gray-200">
-              <h3 class="text-2xl title-font text-[#FFAF00] mb-6">
+              <h3 class="text-2xl title-font text-orange mb-6">
                 ce que tu vas vivre
               </h3>
               <ul class="space-y-4">
                 <li class="flex items-start gap-3">
-                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #12a19d;"></i>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Exercices pratiques et ludiques pour incarner les notions
                     clés</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #12a19d;"></i>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Jeux de rôle bienveillants pour t'entraîner à dire
                     non</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #12a19d;"></i>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Mises en situation pour comprendre ce qui influence tes
                     décisions</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #12a19d;"></i>
+                  <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1 text-cyan"></i>
                   <span class="text-gray-700"
                     >Moments de partage dans un cadre sécurisant</span
                   >
@@ -798,34 +796,33 @@
             </div>
 
             <div
-              class="rounded-lg p-8"
-              style="background: #f3e6ff;"
+              class="rounded-lg p-8 bg-mauve-light"
             >
-              <h3 class="text-2xl title-font text-[#7B01FE] mb-6">
+              <h3 class="text-2xl title-font text-mauve mb-6">
                 tu repartiras avec
               </h3>
               <ul class="space-y-4">
                 <li class="flex items-start gap-3">
-                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #7b01fe;"></i>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Une définition claire et mémorisable du consentement</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #7b01fe;"></i>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Des clés concrètes pour repérer les situations
                     problématiques</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #7b01fe;"></i>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Plus de confiance pour poser tes limites</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
-                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1" style="color: #7b01fe;"></i>
+                  <i data-lucide="star" class="w-6 h-6 flex-shrink-0 mt-1 text-mauve"></i>
                   <span class="text-gray-700"
                     >Des outils pour des relations plus authentiques</span
                   >
@@ -852,8 +849,8 @@
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <!-- Horaires -->
             <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="background: #fff8e6;">
-                <svg class="w-8 h-8 text-[#FFAF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-orange-light">
+                <svg class="w-8 h-8 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
@@ -864,8 +861,8 @@
 
             <!-- Lieu -->
             <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="background: #f3e6ff;">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #7b01fe;">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-mauve-light">
+                <svg class="w-8 h-8 text-mauve" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
@@ -877,8 +874,8 @@
 
             <!-- Participants -->
             <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="background: #fff8e6;">
-                <svg class="w-8 h-8 text-[#FFAF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-orange-light">
+                <svg class="w-8 h-8 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
               </div>
@@ -888,9 +885,9 @@
             </div>
 
             <!-- Prix -->
-            <div class="rounded-lg p-6 text-center" style="background: #f3e6ff;">
-              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style="background: #e6d1ff;">
-                <svg class="w-8 h-8 text-[#7B01FE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="rounded-lg p-6 text-center bg-mauve-light">
+              <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-mauve-lighter">
+                <svg class="w-8 h-8 text-mauve" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
@@ -908,19 +905,19 @@
               </h3>
               <div class="space-y-4 text-gray-700">
                 <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold" style="background: #fff8e6; color: #ffaf00;">1</span>
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">1</span>
                   <p><strong>Clique sur "Je m'inscris"</strong> et choisis ta date</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold" style="background: #fff8e6; color: #ffaf00;">2</span>
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">2</span>
                   <p><strong>Remplis le formulaire</strong> (nom, email, commentaires éventuels)</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold" style="background: #fff8e6; color: #ffaf00;">3</span>
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">3</span>
                   <p><strong>Reçois ta confirmation</strong> par email avec l'adresse exacte</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold" style="background: #fff8e6; color: #ffaf00;">4</span>
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-orange-light text-orange">4</span>
                   <p><strong>Viens le jour J</strong> — et apporte ta contribution libre en fin d'atelier si tu le souhaites</p>
                 </div>
               </div>
@@ -929,24 +926,24 @@
 
           <!-- Important notes -->
           <div class="mt-8 max-w-4xl mx-auto">
-            <div class="bg-[#FFF8E6] rounded-xl p-6 border-l-4 border-[#FFAF00]">
+            <div class="bg-orange-light rounded-xl p-6 border-l-4 border-orange">
               <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                <svg class="w-5 h-5 text-[#FFAF00]" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-5 h-5 text-orange" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
                 </svg>
                 Bon à savoir
               </h4>
               <ul class="space-y-2 text-sm text-gray-700">
                 <li class="flex items-start gap-2">
-                  <span class="text-[#FFAF00] font-bold">•</span>
+                  <span class="text-orange font-bold">•</span>
                   <span><strong>Annulation possible</strong> à tout moment (merci de nous prévenir pour libérer ta place)</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-[#FFAF00] font-bold">•</span>
+                  <span class="text-orange font-bold">•</span>
                   <span><strong>Participation aux exercices libre</strong> — tu peux juste observer si tu préfères</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-[#FFAF00] font-bold">•</span>
+                  <span class="text-orange font-bold">•</span>
                   <span><strong>Cadre bienveillant et confidentiel</strong> — ce qui se dit en atelier reste en atelier</span>
                 </li>
               </ul>
@@ -959,7 +956,7 @@
       <section id="temoignages" class="relative z-10 px-6 py-16">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <p class="text-sm font-bold uppercase tracking-wide text-[#7B01FE] mb-2">Témoignages</p>
+            <p class="text-sm font-bold uppercase tracking-wide text-mauve mb-2">Témoignages</p>
             <h2 class="text-3xl md:text-4xl title-font">
               ils ont participé à l'atelier de consentement
             </h2>
@@ -1030,8 +1027,8 @@
           <!-- 3 piliers principaux -->
           <div class="grid md:grid-cols-3 gap-6 mb-12">
             <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div class="bg-[#FFF8E6] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="target" class="w-8 h-8" style="color: #FFAF00;"></i>
+              <div class="bg-orange-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="target" class="w-8 h-8 text-orange"></i>
               </div>
               <h3 class="title-font text-gray-900 mb-3">apprendre à dire non</h3>
               <p class="text-gray-600">
@@ -1039,9 +1036,9 @@
               </p>
             </div>
 
-            <div class="bg-[#F3E6FF] rounded-lg p-6 text-center">
-              <div class="bg-[#F3E6FF] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="globe" class="w-8 h-8" style="color: #7B01FE;"></i>
+            <div class="bg-mauve-light rounded-lg p-6 text-center">
+              <div class="bg-mauve-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="globe" class="w-8 h-8 text-mauve"></i>
               </div>
               <h3 class="title-font text-gray-900 mb-3">pour tous les contextes</h3>
               <p class="text-gray-600">
@@ -1050,8 +1047,8 @@
             </div>
 
             <div class="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div class="bg-[#FFF0F5] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="shield" class="w-8 h-8" style="color: #F5004F;"></i>
+              <div class="bg-pourpre-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="shield" class="w-8 h-8 text-pourpre"></i>
               </div>
               <h3 class="title-font text-gray-900 mb-3">un enjeu collectif</h3>
               <p class="text-gray-600">
@@ -1070,7 +1067,7 @@
           <div class="bg-white rounded-lg p-8 md:p-12 border border-gray-200">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 class="text-2xl title-font text-[#7B01FE] mb-4">
+                <h3 class="text-2xl title-font text-mauve mb-4">
                   association à but non lucratif
                 </h3>
                 <p class="text-gray-700 leading-relaxed">
@@ -1079,7 +1076,7 @@
               </div>
 
               <div>
-                <h3 class="text-2xl title-font text-[#FFAF00] mb-4">
+                <h3 class="text-2xl title-font text-orange mb-4">
                   inclusif et accessible
                 </h3>
                 <p class="text-gray-700 leading-relaxed">
@@ -1097,43 +1094,43 @@
             </h2>
           </div>
 
-          <div class="max-w-4xl mx-auto bg-[#FFF8E6] rounded-lg p-8 md:p-12">
+          <div class="max-w-4xl mx-auto bg-orange-light rounded-lg p-8 md:p-12">
             <h3 class="text-2xl title-font text-center text-gray-900 mb-8">
               une équipe formée et engagée
             </h3>
             <div class="grid md:grid-cols-2 gap-6 text-gray-700">
               <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-[#FFAF00] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                 </svg>
                 <p>Formé·es aux pédagogies actives et à la facilitation</p>
               </div>
               <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                <svg class="w-6 h-6 flex-shrink-0 mt-1 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                 </svg>
                 <p>Expertise en violences sexistes et sexuelles</p>
               </div>
               <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-[#FFAF00] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                 </svg>
                 <p>Bénévoles passionné·es et engagé·es</p>
               </div>
               <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                <svg class="w-6 h-6 flex-shrink-0 mt-1 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                 </svg>
                 <p>Association à but non lucratif reconnue</p>
               </div>
               <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-[#FFAF00] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-6 h-6 text-orange flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                 </svg>
                 <p>Ateliers testés et améliorés en continu</p>
               </div>
               <div class="flex items-start gap-3">
-                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                <svg class="w-6 h-6 flex-shrink-0 mt-1 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                 </svg>
                 <p>Cadre sécurisant et bienveillant garanti</p>
@@ -1152,10 +1149,10 @@
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div
-              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-[#FFAF00]"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-orange"
             >
               <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="gem" class="w-6 h-6" style="color: #FFAF00;"></i>
+                <i data-lucide="gem" class="w-6 h-6 text-orange"></i>
                 <h3 class="text-xl title-font text-gray-900">
                   intégrité et clarté
                 </h3>
@@ -1166,10 +1163,10 @@
             </div>
 
             <div
-              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-[#7B01FE]"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-mauve"
             >
               <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="sprout" class="w-6 h-6" style="color: #7B01FE;"></i>
+                <i data-lucide="sprout" class="w-6 h-6 text-mauve"></i>
                 <h3 class="text-xl title-font text-gray-900">
                   culture du consentement
                 </h3>
@@ -1180,10 +1177,10 @@
             </div>
 
             <div
-              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-[#12A19D]"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-cyan"
             >
               <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="search" class="w-6 h-6" style="color: #12A19D;"></i>
+                <i data-lucide="search" class="w-6 h-6 text-cyan"></i>
                 <h3 class="text-xl title-font text-gray-900">
                   réflexivité et doute
                 </h3>
@@ -1194,10 +1191,10 @@
             </div>
 
             <div
-              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-[#F5004F]"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-pourpre"
             >
               <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="sparkles" class="w-6 h-6" style="color: #F5004F;"></i>
+                <i data-lucide="sparkles" class="w-6 h-6 text-pourpre"></i>
                 <h3 class="text-xl title-font text-gray-900">
                   accessibilité et inclusion
                 </h3>
@@ -1208,10 +1205,10 @@
             </div>
 
             <div
-              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-[#FFAF00]"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-orange"
             >
               <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="users" class="w-6 h-6" style="color: #FFAF00;"></i>
+                <i data-lucide="users" class="w-6 h-6 text-orange"></i>
                 <h3 class="text-xl title-font text-gray-900">
                   responsabilité collective et individuelle
                 </h3>
@@ -1222,10 +1219,10 @@
             </div>
 
             <div
-              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-[#7B01FE]"
+              class="bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-mauve"
             >
               <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="palette" class="w-6 h-6" style="color: #7B01FE;"></i>
+                <i data-lucide="palette" class="w-6 h-6 text-mauve"></i>
                 <h3 class="text-xl title-font text-gray-900">
                   gouvernance démocratique
                 </h3>
@@ -1246,7 +1243,7 @@
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
             <h2 class="text-3xl md:text-4xl title-font">l'équipe</h2>
-            <p class="text-xl text-[#7B01FE] font-bold mt-6">
+            <p class="text-xl text-mauve font-bold mt-6">
               Rencontre les facilitateur·ices et l'équipe bénévole
             </p>
           </div>
@@ -1257,8 +1254,7 @@
               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
               <div
-                class="h-48 flex items-center justify-center"
-                style="background: #fff8e6;"
+                class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
                   src="./assets/pictures/dilara.jpg"
@@ -1272,7 +1268,7 @@
               </div>
               <div class="p-4 text-center">
                 <h3 class="text-lg title-font text-gray-900">dilara simsek araiz</h3>
-                <p class="text-[#7B01FE] font-semibold">Facilitatrice</p>
+                <p class="text-mauve font-semibold">Facilitatrice</p>
               </div>
             </div>
 
@@ -1280,8 +1276,7 @@
               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
               <div
-                class="h-48 flex items-center justify-center"
-                style="background: #fff8e6;"
+                class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
                   src="./assets/pictures/morgane.jpg"
@@ -1295,7 +1290,7 @@
               </div>
               <div class="p-4 text-center">
                 <h3 class="text-lg title-font text-gray-900">morgane bourgeais</h3>
-                <p class="text-[#7B01FE] font-semibold">Facilitatrice</p>
+                <p class="text-mauve font-semibold">Facilitatrice</p>
               </div>
             </div>
 
@@ -1303,8 +1298,7 @@
               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
               <div
-                class="h-48 flex items-center justify-center"
-                style="background: #fff8e6;"
+                class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
                   src="./assets/pictures/mathilde.jpg"
@@ -1318,7 +1312,7 @@
               </div>
               <div class="p-4 text-center">
                 <h3 class="text-lg title-font text-gray-900">mathilde brière</h3>
-                <p class="text-[#7B01FE] font-semibold">Facilitatrice</p>
+                <p class="text-mauve font-semibold">Facilitatrice</p>
               </div>
             </div>
 
@@ -1326,8 +1320,7 @@
               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
               <div
-                class="h-48 flex items-center justify-center"
-                style="background: #fff8e6;"
+                class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
                   src="./assets/pictures/thomas.jpg"
@@ -1341,7 +1334,7 @@
               </div>
               <div class="p-4 text-center">
                 <h3 class="text-lg title-font text-gray-900">thomas jeanneau</h3>
-                <p class="text-[#7B01FE] font-semibold">Facilitateur</p>
+                <p class="text-mauve font-semibold">Facilitateur</p>
               </div>
             </div>
 
@@ -1350,8 +1343,7 @@
               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
               <div
-                class="h-48 flex items-center justify-center"
-                style="background: #fff8e6;"
+                class="h-48 flex items-center justify-center bg-orange-light"
               >
                 <img
                   src="./assets/pictures/elisa.jpg"
@@ -1365,7 +1357,7 @@
               </div>
               <div class="p-4 text-center">
                 <h3 class="text-lg title-font text-gray-900">elisa garcia</h3>
-                <p class="text-[#FFAF00] font-semibold">Communication</p>
+                <p class="text-orange font-semibold">Communication</p>
               </div>
             </div>
           </div>
@@ -1388,26 +1380,26 @@
           <div class="max-w-4xl mx-auto">
             <!-- 10h - Accueil -->
             <div class="relative pl-8 pb-12 border-l-4 border-orange-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#FFAF00] rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white font-bold">
                 1
               </div>
-              <div class="bg-[#FFF8E6] rounded-lg p-6">
+              <div class="bg-orange-light rounded-lg p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                   <h3 class="text-xl title-font text-orange-600">accueil & cadre</h3>
-                  <span class="text-sm font-semibold text-[#FFAF00]">10h00 - 10h25 (25 min)</span>
+                  <span class="text-sm font-semibold text-orange">10h00 - 10h25 (25 min)</span>
                 </div>
                 <p class="text-gray-700 mb-3">
                   Présentation de l'équipe, des objectifs et création d'un cadre sécurisant pour l'atelier
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-[#FFAF00] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span>Règles de bienveillance et de confidentialité</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-[#FFAF00] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span>Ice-breaker ludique et tour de table</span>
@@ -1418,37 +1410,37 @@
 
             <!-- Les acronymes RÈGLES -->
             <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#F3E6FF]0 rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve-light0 rounded-full flex items-center justify-center text-white font-bold">
                 2
               </div>
-              <div class="bg-[#F3E6FF] rounded-lg p-6">
+              <div class="bg-mauve-light rounded-lg p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 class="text-xl title-font text-[#7B01FE]">les règles du consentement</h3>
-                  <span class="text-sm font-semibold" style="color: #7b01fe;">10h25 - 10h55 (30 min)</span>
+                  <h3 class="text-xl title-font text-mauve">les règles du consentement</h3>
+                  <span class="text-sm font-semibold text-mauve">10h25 - 10h55 (30 min)</span>
                 </div>
                 <p class="text-gray-700 mb-3">
                   Découvrir et mémoriser l'acronyme RÈGLES pour comprendre toutes les dimensions du consentement
                 </p>
                 <div class="bg-white rounded-lg p-4 mb-3">
-                  <p class="font-bold text-[#7B01FE] mb-2">L'acronyme RÈGLES :</p>
+                  <p class="font-bold text-mauve mb-2">L'acronyme RÈGLES :</p>
                   <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                    <li><strong class="text-[#7B01FE]">R</strong>évocable</li>
-                    <li><strong class="text-[#7B01FE]">É</strong>clairé</li>
-                    <li><strong class="text-[#7B01FE]">G</strong>agnant-Gagnant</li>
-                    <li><strong class="text-[#7B01FE]">L</strong>ibre</li>
-                    <li><strong class="text-[#7B01FE]">E</strong>xplicite</li>
-                    <li><strong class="text-[#7B01FE]">S</strong>pécifique</li>
+                    <li><strong class="text-mauve">R</strong>évocable</li>
+                    <li><strong class="text-mauve">É</strong>clairé</li>
+                    <li><strong class="text-mauve">G</strong>agnant-Gagnant</li>
+                    <li><strong class="text-mauve">L</strong>ibre</li>
+                    <li><strong class="text-mauve">E</strong>xplicite</li>
+                    <li><strong class="text-mauve">S</strong>pécifique</li>
                   </ul>
                 </div>
                 <ul class="space-y-2 text-sm text-gray-600">
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span>Réflexion individuelle puis en petits groupes</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span>Partage en plénière et présentation de l'acronyme</span>
@@ -1459,26 +1451,26 @@
 
             <!-- Le remerciement & Le repérage -->
             <div class="relative pl-8 pb-12 border-l-4 border-orange-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#FFAF00] rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white font-bold">
                 3
               </div>
-              <div class="bg-[#FFF8E6] rounded-lg p-6">
+              <div class="bg-orange-light rounded-lg p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                   <h3 class="text-xl title-font text-orange-600">dire non & repérer les bris</h3>
-                  <span class="text-sm font-semibold text-[#FFAF00]">10h55 - 11h20 (25 min)</span>
+                  <span class="text-sm font-semibold text-orange">10h55 - 11h20 (25 min)</span>
                 </div>
                 <p class="text-gray-700 mb-3">
                   S'entraîner à poser un "non" franc et reconnaître les situations problématiques
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-[#FFAF00] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span><strong>Jeux de rôle par 2 :</strong> pratiquer le refus et remercier pour le "non"</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-[#FFAF00] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span><strong>Scénarios théâtralisés :</strong> identifier défaut et bris de consentement</span>
@@ -1500,26 +1492,26 @@
 
             <!-- Le gagnant/gagnant -->
             <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#F3E6FF]0 rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve-light0 rounded-full flex items-center justify-center text-white font-bold">
                 4
               </div>
-              <div class="bg-[#F3E6FF] rounded-lg p-6">
+              <div class="bg-mauve-light rounded-lg p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 class="text-xl title-font text-[#7B01FE]">la négociation gagnant-gagnant</h3>
-                  <span class="text-sm font-semibold" style="color: #7b01fe;">11h35 - 11h50 (15 min)</span>
+                  <h3 class="text-xl title-font text-mauve">la négociation gagnant-gagnant</h3>
+                  <span class="text-sm font-semibold text-mauve">11h35 - 11h50 (15 min)</span>
                 </div>
                 <p class="text-gray-700 mb-3">
                   Explorer le spectre entre OUI et NON, et négocier pour trouver un accord juste
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span><strong>Cartes "Propositions" :</strong> exercices de négociation par 2</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span>Découvrir les nuances : "OUI MAIS", "NON MAIS", "Je te dis plus tard"</span>
@@ -1530,26 +1522,26 @@
 
             <!-- Le révocable -->
             <div class="relative pl-8 pb-12 border-l-4 border-orange-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#FFAF00] rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white font-bold">
                 5
               </div>
-              <div class="bg-[#FFF8E6] rounded-lg p-6">
+              <div class="bg-orange-light rounded-lg p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                   <h3 class="text-xl title-font text-orange-600">changer d'avis (révocable)</h3>
-                  <span class="text-sm font-semibold text-[#FFAF00]">11h50 - 12h10 (20 min)</span>
+                  <span class="text-sm font-semibold text-orange">11h50 - 12h10 (20 min)</span>
                 </div>
                 <p class="text-gray-700 mb-3">
                   Pratiquer le retrait du consentement et accueillir le changement d'avis de l'autre
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-[#FFAF00] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span><strong>Propositions réalisables :</strong> commencer une action puis retirer son oui</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 text-[#FFAF00] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5 text-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span>Normaliser le changement d'avis sans culpabilité</span>
@@ -1560,26 +1552,26 @@
 
             <!-- Le libre & La résistance -->
             <div class="relative pl-8 pb-12 border-l-4 border-purple-300">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#F3E6FF]0 rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-mauve-light0 rounded-full flex items-center justify-center text-white font-bold">
                 6
               </div>
-              <div class="bg-[#F3E6FF] rounded-lg p-6">
+              <div class="bg-mauve-light rounded-lg p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 class="text-xl title-font text-[#7B01FE]">biais & résistance</h3>
-                  <span class="text-sm font-semibold" style="color: #7b01fe;">12h10 - 12h45 (35 min)</span>
+                  <h3 class="text-xl title-font text-mauve">biais & résistance</h3>
+                  <span class="text-sm font-semibold text-mauve">12h10 - 12h45 (35 min)</span>
                 </div>
                 <p class="text-gray-700 mb-3">
                   Identifier les biais qui influencent nos choix et muscler sa capacité à tenir un "non"
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span><strong>Cartes "Biais" :</strong> partage de vécus sur les pressions sociales, affectives</span>
                   </li>
                   <li class="flex items-start gap-2">
-                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #7b01fe;">
+                    <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-mauve" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                     </svg>
                     <span><strong>Jeu de rôle :</strong> tenir face à l'insistance avec des techniques concrètes</span>
@@ -1590,13 +1582,13 @@
 
             <!-- Clôture -->
             <div class="relative pl-8">
-              <div class="absolute -left-4 top-0 w-8 h-8 bg-[#12A19D] rounded-full flex items-center justify-center text-white font-bold">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-cyan rounded-full flex items-center justify-center text-white font-bold">
                 <i data-lucide="check-circle" class="w-5 h-5"></i>
               </div>
-              <div class="bg-[#E6F9F8] rounded-xl p-6">
+              <div class="bg-cyan-light rounded-xl p-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 class="text-xl title-font text-[#12A19D]">cercle de clôture</h3>
-                  <span class="text-sm font-semibold text-[#12A19D]">12h45 - 13h00 (15 min)</span>
+                  <h3 class="text-xl title-font text-cyan">cercle de clôture</h3>
+                  <span class="text-sm font-semibold text-cyan">12h45 - 13h00 (15 min)</span>
                 </div>
                 <p class="text-gray-700">
                   Partage des apprentissages et distribution des ressources à emporter
@@ -1606,29 +1598,29 @@
           </div>
 
           <!-- Key Takeaways -->
-          <div class="mt-12 bg-[#FFF8E6] rounded-lg p-8">
+          <div class="mt-12 bg-orange-light rounded-lg p-8">
             <h3 class="text-2xl title-font text-center text-gray-900 mb-6 flex items-center justify-center gap-3">
-              <i data-lucide="target" class="w-8 h-8" style="color: #FFAF00;"></i>
+              <i data-lucide="target" class="w-8 h-8 text-orange"></i>
               les outils concrets que tu repartiras avec
             </h3>
             <div class="grid md:grid-cols-3 gap-6">
               <div class="bg-white rounded-lg p-6 text-center">
                 <div class="mb-3">
-                  <i data-lucide="file-text" class="w-10 h-10 mx-auto" style="color: #7B01FE;"></i>
+                  <i data-lucide="file-text" class="w-10 h-10 mx-auto text-mauve"></i>
                 </div>
                 <h4 class="font-bold text-gray-900 mb-2">L'acronyme RÈGLES</h4>
                 <p class="text-sm text-gray-600">Mémorisable pour toutes les situations</p>
               </div>
               <div class="bg-white rounded-lg p-6 text-center">
                 <div class="mb-3">
-                  <i data-lucide="shield-check" class="w-10 h-10 mx-auto" style="color: #F5004F;"></i>
+                  <i data-lucide="shield-check" class="w-10 h-10 mx-auto text-pourpre"></i>
                 </div>
                 <h4 class="font-bold text-gray-900 mb-2">Techniques de résistance</h4>
                 <p class="text-sm text-gray-600">Disque rayé, nommer la pression, couper court</p>
               </div>
               <div class="bg-white rounded-lg p-6 text-center">
                 <div class="mb-3">
-                  <i data-lucide="search" class="w-10 h-10 mx-auto" style="color: #12A19D;"></i>
+                  <i data-lucide="search" class="w-10 h-10 mx-auto text-cyan"></i>
                 </div>
                 <h4 class="font-bold text-gray-900 mb-2">Grille de repérage</h4>
                 <p class="text-sm text-gray-600">Identifier biais, bris et défauts de consentement</p>
@@ -1640,7 +1632,7 @@
           <div class="text-center mt-12">
             <a
               href="#events"
-              class="inline-flex items-center gap-2 bg-[#FFAF00] text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg"
+              class="inline-flex items-center gap-2 bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg"
             >
               <span>Je réserve ma place</span>
               <svg
@@ -1665,7 +1657,7 @@
       <section id="faq" class="relative z-10 px-6 py-16">
         <div class="max-w-7xl mx-auto">
           <div class="mb-12 text-center">
-            <p class="text-sm font-bold uppercase tracking-wide text-[#7B01FE] mb-2">Questions fréquentes</p>
+            <p class="text-sm font-bold uppercase tracking-wide text-mauve mb-2">Questions fréquentes</p>
             <h2 class="text-3xl md:text-4xl title-font">
               tes questions
             </h2>
@@ -1680,8 +1672,8 @@
               <!-- Objection 1 -->
               <div class="bg-white rounded-lg p-8 border border-gray-200">
                 <div class="flex items-start gap-4 mb-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-[#FFF0F5] rounded-full flex items-center justify-center">
-                    <i data-lucide="message-circle" class="w-6 h-6" style="color: #F5004F;"></i>
+                  <div class="flex-shrink-0 w-12 h-12 bg-pourpre-light rounded-full flex items-center justify-center">
+                    <i data-lucide="message-circle" class="w-6 h-6 text-pourpre"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold text-gray-900 mb-2">"Je connais déjà le consentement"</h4>
@@ -1695,8 +1687,8 @@
               <!-- Objection 2 -->
               <div class="bg-white rounded-lg p-8 border border-gray-200">
                 <div class="flex items-start gap-4 mb-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-[#FFF8E6] rounded-full flex items-center justify-center">
-                    <i data-lucide="clock" class="w-6 h-6" style="color: #FFAF00;"></i>
+                  <div class="flex-shrink-0 w-12 h-12 bg-orange-light rounded-full flex items-center justify-center">
+                    <i data-lucide="clock" class="w-6 h-6 text-orange"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold text-gray-900 mb-2">"Je n'ai pas le temps"</h4>
@@ -1710,8 +1702,8 @@
               <!-- Objection 3 -->
               <div class="bg-white rounded-lg p-8 border border-gray-200">
                 <div class="flex items-start gap-4 mb-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-[#F3E6FF] rounded-full flex items-center justify-center">
-                    <i data-lucide="alert-circle" class="w-6 h-6" style="color: #7B01FE;"></i>
+                  <div class="flex-shrink-0 w-12 h-12 bg-mauve-light rounded-full flex items-center justify-center">
+                    <i data-lucide="alert-circle" class="w-6 h-6 text-mauve"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold text-gray-900 mb-2">"J'ai peur que ce soit trop intense"</h4>
@@ -1725,8 +1717,8 @@
               <!-- Objection 4 -->
               <div class="bg-white rounded-lg p-8 border border-gray-200">
                 <div class="flex items-start gap-4 mb-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-[#E6F9F8] rounded-full flex items-center justify-center">
-                    <i data-lucide="coins" class="w-6 h-6" style="color: #12A19D;"></i>
+                  <div class="flex-shrink-0 w-12 h-12 bg-cyan-light rounded-full flex items-center justify-center">
+                    <i data-lucide="coins" class="w-6 h-6 text-cyan"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-bold text-gray-900 mb-2">"Je ne peux pas me le permettre"</h4>
@@ -1816,7 +1808,7 @@
             <p class="text-gray-700 mb-4">Une autre question ?</p>
             <a
               href="mailto:contact@mercipourtonnon.fr"
-              class="text-[#FFAF00] font-semibold hover:text-[#7B01FE] transition"
+              class="text-orange font-semibold hover:text-mauve transition"
             >
               Écris-nous : mercipourtonnon@gmail.com
             </a>
@@ -1830,33 +1822,29 @@
         class="relative z-10 px-6 py-16 bg-white bg-opacity-50"
       >
         <div class="max-w-7xl mx-auto">
-          <div
-            class="bg-[#7B01FE] rounded-lg p-8 md:p-12 text-center"
-          >
-            <h2
-              class="text-4xl md:text-5xl font-black text-white mb-8 title-font"
-            >
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl title-font text-gray-900 mb-4">
               réserve ta place maintenant
             </h2>
-            <p class="text-white text-xl mb-8 flex items-center justify-center gap-2">
+            <p class="text-xl text-gray-600 flex items-center justify-center gap-2">
               <i data-lucide="clock" class="w-6 h-6"></i>
               Prochaine session bientôt !
             </p>
-            <div class="bg-white rounded-lg p-6 max-w-4xl mx-auto">
-              <a
-                title="Réservation en ligne"
-                href="https://www.billetweb.fr/multi_event.php?multi=43090"
-                class="shop_frame"
-                target="_blank"
-                data-src="https://www.billetweb.fr/multi_event.php?multi=43090"
-                data-max-width="100%"
-                data-initial-height="600"
-                data-scrolling="no"
-                data-id="43090"
-                data-resize="1"
-                >Réservation en ligne</a
-              >
-            </div>
+          </div>
+          <div class="bg-white rounded-lg p-6 border border-gray-200 max-w-4xl mx-auto">
+            <a
+              title="Réservation en ligne"
+              href="https://www.billetweb.fr/multi_event.php?multi=43090"
+              class="shop_frame"
+              target="_blank"
+              data-src="https://www.billetweb.fr/multi_event.php?multi=43090"
+              data-max-width="100%"
+              data-initial-height="600"
+              data-scrolling="no"
+              data-id="43090"
+              data-resize="1"
+              >Réservation en ligne</a
+            >
           </div>
         </div>
       </section>
@@ -1865,7 +1853,11 @@
       <footer class="relative z-10 bg-gray-900 text-white py-12 mt-16">
         <div class="max-w-7xl mx-auto px-6">
           <div class="text-center mb-8">
-            <p class="text-2xl font-bold mb-4">MERCI POUR TON NON</p>
+            <img
+              src="./assets/logo.svg"
+              alt="Merci pour ton non"
+              class="h-24 md:h-32 w-auto mx-auto mb-4"
+            />
             <p class="text-gray-400">
               Pour des relations humaines authentiques et respectueuses
             </p>
@@ -1881,7 +1873,7 @@
               aria-label="Instagram"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-purple-600 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-purple-600"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1903,7 +1895,7 @@
               aria-label="Facebook"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-600 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-600"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1925,7 +1917,7 @@
               aria-label="LinkedIn"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-blue-700"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1947,7 +1939,7 @@
               aria-label="Billetweb"
             >
               <div
-                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-[#FFAF00] group-hover:scale-110"
+                class="bg-gray-800 p-3 rounded-full transition-all duration-300 group-hover:bg-orange"
               >
                 <svg
                   class="w-6 h-6 text-white"
@@ -1974,7 +1966,7 @@
       <div class="relative">
         <a
           href="#events"
-          class="flex items-center gap-2 bg-[#FFAF00] text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-300"
+          class="flex items-center gap-2 bg-orange text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-hover transition-colors duration-300"
         >
           <span>S'inscrire</span>
           <svg
@@ -2086,10 +2078,10 @@
           desktopNavLinks.forEach(link => {
             const href = link.getAttribute('href');
             if (href === currentSection) {
-              link.classList.add('!text-[#FFAF00]', 'border-b-2', 'border-[#FFAF00]');
+              link.classList.add('!text-orange', 'border-b-2', 'border-orange');
               link.classList.remove('text-gray-700');
             } else {
-              link.classList.remove('!text-[#FFAF00]', 'border-b-2', 'border-[#FFAF00]');
+              link.classList.remove('!text-orange', 'border-b-2', 'border-orange');
               link.classList.add('text-gray-700');
             }
           });
@@ -2099,9 +2091,9 @@
           mobileNavLinks.forEach(link => {
             const href = link.getAttribute('href');
             if (href === currentSection) {
-              link.classList.add('!text-[#FFAF00]', '!bg-[#FFF8E6]', 'border-l-4', 'border-[#FFAF00]');
+              link.classList.add('!text-orange', '!bg-orange-light', 'border-l-4', 'border-orange');
             } else {
-              link.classList.remove('!text-[#FFAF00]', '!bg-[#FFF8E6]', 'border-l-4', 'border-[#FFAF00]');
+              link.classList.remove('!text-orange', '!bg-orange-light', 'border-l-4', 'border-orange');
             }
           });
         }
