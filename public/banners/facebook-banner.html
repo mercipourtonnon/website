@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Facebook Banner - Atelier de Consentement</title>
+        <link rel="stylesheet" href="../../output.css" />
+        <style>
+            .bely-display {
+                font-family: "Bely Display", cursive;
+                letter-spacing: 0.05em;
+            }
+        </style>
+    </head>
+    <body class="bg-white flex items-center justify-center min-h-screen p-8">
+        <div
+            class="relative w-[851px] h-[315px] overflow-hidden flex flex-col items-center justify-center py-8 px-12"
+            style="
+                background: linear-gradient(135deg, #ffffff 0%, #fff8e6 100%);
+            "
+        >
+            <!-- Decorative circles -->
+            <div
+                class="absolute -top-[70px] -left-[70px] w-[280px] h-[280px] rounded-full opacity-30 blur-3xl"
+                style="background: #ffaf00"
+            ></div>
+            <div
+                class="absolute -bottom-[105px] -right-[105px] w-[350px] h-[350px] rounded-full opacity-30 blur-3xl"
+                style="background: #f5004f"
+            ></div>
+            <div
+                class="absolute top-[70px] right-[105px] w-[210px] h-[210px] rounded-full opacity-30 blur-3xl"
+                style="background: #7b01fe"
+            ></div>
+
+            <!-- Content -->
+            <div class="relative z-10 text-center">
+                <h1 class="bely-display text-[52px] leading-none mb-3">
+                    <span class="text-orange">atelier de</span><br />
+                    <span style="color: #f5004f">consentement</span><br />
+                    <span class="text-gray-800">à strasbourg</span>
+                </h1>
+
+                <p
+                    class="text-[18px] text-gray-700 leading-tight mb-3 max-w-[700px] font-normal"
+                >
+                    Apprendre à dire non et créer des relations plus saines
+                </p>
+
+                <div class="flex gap-2 justify-center flex-wrap mb-2">
+                    <span
+                        class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-pourpre-light text-pourpre border-pourpre"
+                    >
+                        👥 6-15 pers.
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-orange-light text-orange border-orange"
+                    >
+                        ⏰ 3h
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-mauve-light text-mauve border-mauve"
+                    >
+                        ❤️ Prix libre
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border bg-cyan-light text-cyan border-cyan"
+                    >
+                        📍 Strasbourg
+                    </span>
+                </div>
+
+                <p class="text-[13px] text-gray-600 font-semibold">
+                    Prochaine session le
+                    <span class="text-gray-900">16 novembre</span>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

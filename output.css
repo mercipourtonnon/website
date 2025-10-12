@@ -283,6 +283,9 @@
   .-top-20 {
     top: calc(var(--spacing) * -20);
   }
+  .-top-\[70px\] {
+    top: calc(70px * -1);
+  }
   .-top-\[100px\] {
     top: calc(100px * -1);
   }
@@ -301,6 +304,9 @@
   .top-40 {
     top: calc(var(--spacing) * 40);
   }
+  .top-\[70px\] {
+    top: 70px;
+  }
   .top-\[100px\] {
     top: 100px;
   }
@@ -309,6 +315,9 @@
   }
   .-right-24 {
     right: calc(var(--spacing) * -24);
+  }
+  .-right-\[105px\] {
+    right: calc(105px * -1);
   }
   .-right-\[150px\] {
     right: calc(150px * -1);
@@ -328,6 +337,9 @@
   .right-48 {
     right: calc(var(--spacing) * 48);
   }
+  .right-\[105px\] {
+    right: 105px;
+  }
   .right-\[150px\] {
     right: 150px;
   }
@@ -336,6 +348,9 @@
   }
   .-bottom-24 {
     bottom: calc(var(--spacing) * -24);
+  }
+  .-bottom-\[105px\] {
+    bottom: calc(105px * -1);
   }
   .-bottom-\[150px\] {
     bottom: calc(150px * -1);
@@ -354,6 +369,9 @@
   }
   .-left-20 {
     left: calc(var(--spacing) * -20);
+  }
+  .-left-\[70px\] {
+    left: calc(70px * -1);
   }
   .-left-\[100px\] {
     left: calc(100px * -1);
@@ -517,8 +535,17 @@
   .h-96 {
     height: calc(var(--spacing) * 96);
   }
+  .h-\[210px\] {
+    height: 210px;
+  }
+  .h-\[280px\] {
+    height: 280px;
+  }
   .h-\[300px\] {
     height: 300px;
+  }
+  .h-\[315px\] {
+    height: 315px;
   }
   .h-\[350px\] {
     height: 350px;
@@ -592,6 +619,12 @@
   .w-96 {
     width: calc(var(--spacing) * 96);
   }
+  .w-\[210px\] {
+    width: 210px;
+  }
+  .w-\[280px\] {
+    width: 280px;
+  }
   .w-\[300px\] {
     width: 300px;
   }
@@ -612,6 +645,9 @@
   }
   .w-\[800px\] {
     width: 800px;
+  }
+  .w-\[851px\] {
+    width: 851px;
   }
   .w-\[1200px\] {
     width: 1200px;
@@ -648,6 +684,9 @@
   }
   .max-w-\[85\%\] {
     max-width: 85%;
+  }
+  .max-w-\[700px\] {
+    max-width: 700px;
   }
   .max-w-\[900px\] {
     max-width: 900px;
@@ -706,6 +745,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -1015,6 +1057,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
@@ -1092,8 +1137,17 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
   .text-\[15px\] {
     font-size: 15px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
   }
   .text-\[22px\] {
     font-size: 22px;
@@ -1115,6 +1169,9 @@
   }
   .text-\[50px\] {
     font-size: 50px;
+  }
+  .text-\[52px\] {
+    font-size: 52px;
   }
   .text-\[58px\] {
     font-size: 58px;
