@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atelier de Consentement Strasbourg - Merci pour ton non</title>
 
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DNS Prefetch & Preconnect for External Resources -->
+    <link rel="dns-prefetch" href="https://www.billetweb.fr">
+    <link rel="dns-prefetch" href="https://plausible.io">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="./output.css?v=6e6dc5f" as="style">
+    <link rel="preload" href="./output.css?v=306168" as="style">
+    <link rel="preload" href="./public/fonts/NeueMachina/NeueMachina-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="./public/fonts/BelyDisplay.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./public/social.png" as="image">
 
     <!-- Standard Meta Tags -->
     <meta
@@ -38,7 +43,7 @@
     <meta property="og:url" content="https://mercipourtonnon.fr" />
     <meta
       property="og:image"
-      content="https://mercipourtonnon.fr/public/logo.svg"
+      content="https://mercipourtonnon.fr/public/social.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -57,7 +62,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://mercipourtonnon.fr/public/atelier_consentement.jpg"
+      content="https://mercipourtonnon.fr/public/social.png"
     />
     <meta
       name="twitter:image:alt"
@@ -93,8 +98,8 @@
           "@type": "EducationEvent",
           "name": "Atelier découverte : Le consentement dans toutes ses dimensions",
           "description": "Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement",
-          "startDate": "2025-09-21T10:00:00+02:00",
-          "endDate": "2025-09-21T13:00:00+02:00",
+          "startDate": "2025-11-16T10:00:00+01:00",
+          "endDate": "2025-11-16T13:00:00+01:00",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
@@ -252,7 +257,35 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "EducationEvent",
-                "name": "Atelier découverte : Le consentement dans toutes ses dimensions"
+                "name": "Atelier découverte : Le consentement dans toutes ses dimensions",
+                "description": "Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement",
+                "startDate": "2025-11-16T10:00:00+01:00",
+                "endDate": "2025-11-16T13:00:00+01:00",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Strasbourg",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Strasbourg",
+                    "addressCountry": "FR"
+                  }
+                },
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Merci pour ton non",
+                  "url": "https://mercipourtonnon.fr"
+                },
+                "image": "https://mercipourtonnon.fr/public/social.png",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://www.billetweb.fr/multi_event.php?multi=43090",
+                  "validFrom": "2025-01-01T00:00:00+02:00"
+                }
               },
               "price": "0",
               "priceCurrency": "EUR",
@@ -324,6 +357,7 @@
 
       .hero-title {
         animation: fadeInUp 0.8s ease-out;
+        line-height: 0.85;
       }
 
       .fade-in {
@@ -408,7 +442,7 @@
     </script>
 
     <!-- Lucide Icons (Brand guideline: use icons instead of emojis) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <!-- Urgency Banner -->
@@ -1302,6 +1336,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1324,6 +1359,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1346,6 +1382,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1368,6 +1405,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -1391,6 +1429,7 @@
                   width="128"
                   height="128"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               </div>
@@ -2293,11 +2332,23 @@
       });
     </script>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Initialize Lucide Icons after defer load -->
     <script>
-      // Initialize all Lucide icons on the page
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+      // Initialize all Lucide icons after the library is loaded
+      function initLucideIcons() {
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        } else {
+          // Retry after a short delay if lucide isn't loaded yet
+          setTimeout(initLucideIcons, 50);
+        }
+      }
+
+      // Wait for DOM to be ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLucideIcons);
+      } else {
+        initLucideIcons();
       }
     </script>
 
