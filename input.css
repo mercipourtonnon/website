@@ -53,6 +53,8 @@
     --color-orange-hover: #e69e00;
     --color-orange-light: #fff8e6;
     --color-orange-lighter: #fff0d1;
+    --color-orange-vif: #ff7000;
+    --color-orange-vif-light: #fff4e6;
 
     --color-mauve: #7b01fe;
     --color-mauve-hover: #6a01db;
@@ -63,4 +65,8 @@
     --color-cyan-hover: #0f8a87;
     --color-cyan-light: #e6f9f8;
     --color-cyan-lighter: #d1f2f0;
+
+    /* Bleu foncé - remplace le noir pour plus de cohérence avec la palette */
+    --color-bleu-fonce: #130077;
+    --color-bleu-fonce-light: #e6e0ff;
 }
