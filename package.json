@@ -1,5 +1,6 @@
 {
   "name": "mercipourtonnon",
+  "type": "module",
   "private": true,
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.16",
@@ -11,6 +12,14 @@
   },
   "scripts": {
     "start": "bun index.html charte.html",
-    "build": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch --minify"
+    "render": "bun run generated/render.js",
+    "css": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --minify",
+    "css:watch": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "build": "bun run render && bun run css",
+    "dev": "bun run render && bun run css:watch"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }
