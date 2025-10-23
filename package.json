@@ -2,9 +2,9 @@
   "name": "mercipourtonnon",
   "private": true,
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.14",
+    "@tailwindcss/cli": "^4.1.16",
     "@types/bun": "latest",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.16"
   },
   "peerDependencies": {
     "typescript": "^5.9.2"

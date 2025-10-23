@@ -3,7 +3,11 @@
 /* Custom Fonts */
 @font-face {
     font-family: "Bely Display";
-    src: url("./public/fonts/BelyDisplay.ttf") format("truetype");
+    src: url("./public/fonts/BelyDisplay/BelyDisplay-Regular.eot");
+    src: url("./public/fonts/BelyDisplay/BelyDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+         url("./public/fonts/BelyDisplay/BelyDisplay-Regular.woff2") format("woff2"),
+         url("./public/fonts/BelyDisplay/BelyDisplay-Regular.woff") format("woff"),
+         url("./public/fonts/BelyDisplay/BelyDisplay-Regular.svg#BelyDisplay") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
