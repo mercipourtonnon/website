@@ -25,7 +25,7 @@ export const Head = ({ meta, theme }) => {
     preload,
     dnsPrefetch,
     analytics,
-    lang,
+    lang = "en",
     customElements = [], // NEW: Custom head elements
   } = meta;
 
@@ -171,7 +171,7 @@ export const Head = ({ meta, theme }) => {
   };
 
   return (
-    <head>
+    <head lang={lang}>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>{title}</title>
@@ -304,19 +304,21 @@ export const Head = ({ meta, theme }) => {
       )}
 
       {/* Analytics Scripts - Rendered after custom elements per original HTML */}
-      {enabledProviders.length > 0 && enabledProviders[0].name === 'plausible' && (
-        <React.Fragment>
-          <script
-            async
-            src="https://plausible.io/js/pa-uDEF1f-3lcur3O_VhvsaB.js"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();"
-            }}
-          />
-        </React.Fragment>
-      )}
+      {enabledProviders.length > 0 &&
+        enabledProviders[0].name === "plausible" && (
+          <React.Fragment>
+            <script
+              async
+              src="https://plausible.io/js/pa-uDEF1f-3lcur3O_VhvsaB.js"
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html:
+                  "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();",
+              }}
+            />
+          </React.Fragment>
+        )}
 
       {/* Lucide Icons (Brand guideline: use icons instead of emojis) */}
       <script defer src="https://unpkg.com/lucide@latest" />
@@ -506,7 +508,13 @@ export const Scripts = ({ scripts }) => {
 /**
  * Section - Generic section wrapper
  */
-export const Section = ({ id, className = "", style = {}, children, tag = "section" }) => {
+export const Section = ({
+  id,
+  className = "",
+  style = {},
+  children,
+  tag = "section",
+}) => {
   const Tag = tag;
   return (
     <Tag id={id} className={className} style={style}>
@@ -722,13 +730,17 @@ export const Card = ({
 }) => {
   const baseClasses = "rounded-lg";
 
+  // Check if className already contains a background color
+  const hasBackgroundInClassName = className.includes("bg-");
+
   const variantClasses = {
-    default: "bg-white",
+    // Only add bg-white for default variant if no background is provided in className
+    default: hasBackgroundInClassName ? "" : "bg-white",
     colored: color ? `bg-${color}-light` : "bg-white",
-    bordered: `bg-white border border-gray-200`,
+    bordered: hasBackgroundInClassName ? "border border-gray-200" : "bg-white border border-gray-200",
     borderTop: color
-      ? `bg-white border-t-4 border-t-${color} border border-gray-200`
-      : "bg-white border",
+      ? `${hasBackgroundInClassName ? "" : "bg-white"} border-t-4 border-t-${color} border border-gray-200`
+      : hasBackgroundInClassName ? "border" : "bg-white border",
   };
 
   const paddingClass = `p-${padding}`;
@@ -811,7 +823,7 @@ export const TimelineItem = ({
  */
 export const AccordionItem = ({ question, answer }) => {
   // Check if answer contains HTML tags
-  const isHTML = typeof answer === 'string' && /<[^>]+>/.test(answer);
+  const isHTML = typeof answer === "string" && /<[^>]+>/.test(answer);
 
   return (
     <details className="bg-white rounded-lg p-6">
@@ -824,9 +836,7 @@ export const AccordionItem = ({ question, answer }) => {
           dangerouslySetInnerHTML={{ __html: answer }}
         />
       ) : (
-        <div className="mt-4 text-gray-700">
-          {answer}
-        </div>
+        <div className="mt-4 text-gray-700">{answer}</div>
       )}
     </details>
   );

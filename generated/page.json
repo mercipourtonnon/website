@@ -1015,7 +1015,7 @@
                 {
                   "$ref": "testimonial-card",
                   "vars": {
-                    "color": "orange",
+                    "color": "mauve",
                     "quote": "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant.",
                     "attribution": "Alex"
                   }
@@ -1023,7 +1023,7 @@
                 {
                   "$ref": "testimonial-card",
                   "vars": {
-                    "color": "mauve",
+                    "color": "orange",
                     "quote": "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non.",
                     "attribution": "Lou"
                   }
