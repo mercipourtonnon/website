@@ -1808,7 +1808,8 @@
                   "props": {
                     "name": "dilara simsek araiz",
                     "role": "Facilitatrice",
-                    "roleColor": "pourpre",
+                    "roleColor": "mauve",
+                    "backColor": "mauve",
                     "image": "./public/pictures/dilara.jpg",
                     "bio": "Diplômée en droit international et action humanitaire, je développe mon expertise dans la gestion de projets associatifs, la formation et le partenariat. Je suis particulièrement sensible à toutes les questions liées au genre, la migration et les droits humains. M'engager au sein de Merci pour ton non est l'opportunité pour moi de mettre mes compétences au service d'une cause qui me tient à coeur et en cohérence avec mes valeurs."
                   }
@@ -1818,7 +1819,8 @@
                   "props": {
                     "name": "morgane bourgeais",
                     "role": "Facilitatrice",
-                    "roleColor": "orange",
+                    "roleColor": "mauve",
+                    "backColor": "mauve",
                     "image": "./public/pictures/morgane.jpg",
                     "bio": "Juriste en droits humains de formation, puis formatrice et animatrice de prévention en santé sexuelle et prévention des violences de genre, également conseillère conjugale et familiale… Bref j'ai plusieurs casquettes mais une même ligne motrice : accompagner et offrir des espaces communs et collectifs d'échanges pour améliorer nos relations intimes, individuelles et collectives et nous permettre de lutter efficacement contre les violences et les discriminations. Facilitatrice pour Merci pour ton non, j'ai rejoint l'asso pour travailler la question du consentement en profondeur et pour partager de beaux moments de réflexion avec l'espoir de faire bouger quelques lignes."
                   }
@@ -1829,6 +1831,7 @@
                     "name": "mathilde brière",
                     "role": "Facilitatrice",
                     "roleColor": "mauve",
+                    "backColor": "mauve",
                     "image": "./public/pictures/mathilde.jpg",
                     "bio": "Psychologue sociale depuis 10 ans, je suis passionnée par les dynamiques de groupe. J'ai co-fondé l'association et je facilite ces ateliers car je crois profondément qu'essaimer une culture plus soucieuse du consentement transforme positivement nos relations et nos manières de faire société."
                   }
@@ -1838,7 +1841,8 @@
                   "props": {
                     "name": "thomas jeanneau",
                     "role": "Facilitateur",
-                    "roleColor": "cyan",
+                    "roleColor": "mauve",
+                    "backColor": "mauve",
                     "image": "./public/pictures/thomas.jpg",
                     "bio": "En tant que personne ayant un vécu d'homme cisgenre hétéro dans une société patriarcale, j'ai été confronté à mon manque d'éducation au consentement dans mes relations. Co-fondateur de l'association, formé à la facilitation et au consentement par Zohra de Love Experience, je souhaite contribuer à une éducation populaire pour construire des relations plus apaisées dans notre société. Je met mon expérience en entrepreneuriat et en informatique au service des actions de Merci pour ton non."
                   }
@@ -1849,6 +1853,7 @@
                     "name": "isabelle filin",
                     "role": "Pédagogie",
                     "roleColor": "cyan",
+                    "backColor": "cyan",
                     "image": "./public/pictures/isabelle.jpg",
                     "bio": "Travailleuse sociale spécialisée enfance et familles, je suis entrée dans l'association par la porte de la lutte contre les violences sexuelles et sexistes. Comprendre ses besoins, ses limites, et mieux les communiquer sont pour moi des compétences utiles à acquérir dès le plus jeune âge, et tout au long de la vie."
                   }
@@ -1859,6 +1864,7 @@
                     "name": "elisa garcia",
                     "role": "Communication",
                     "roleColor": "orange",
+                    "backColor": "orange",
                     "image": "./public/pictures/elisa.jpg",
                     "bio": "Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément."
                   }

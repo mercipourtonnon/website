@@ -139,6 +139,31 @@ export const Head = ({ meta, theme }) => {
     p {
       line-height: 1.7;
     }
+
+    /* Team Card Flip Animation */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+
+    .team-card.flipped .team-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .team-card:hover .team-card-inner {
+      transform: rotateY(180deg);
+    }
   `;
 
   // Get enabled analytics providers
@@ -854,42 +879,42 @@ export const CustomHTML = ({ html, className = "" }) => {
 /**
  * TeamCard - Team member flip card with photo and bio (using saturated colors)
  */
-export const TeamCard = ({ name, role, roleColor, image, bio }) => {
+export const TeamCard = ({ name, role, roleColor, image, bio, backColor }) => {
+  // Use backColor for the back of the card, default to mauve if not specified
+  const cardBackColor = backColor || "mauve";
+
   return (
-    <div className="team-card h-96 perspective cursor-pointer group">
-      <div className="relative w-full h-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180">
+    <div className="team-card h-96 perspective-1000 cursor-pointer">
+      <div className="team-card-inner relative w-full h-full transition-transform duration-500 preserve-3d">
         {/* Front of card */}
-        <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden shadow-lg">
-          <div className="h-full flex flex-col">
-            <div
-              className={`flex-1 bg-${roleColor} flex items-center justify-center p-6`}
-            >
-              <img
-                src={image}
-                alt={name}
-                className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg"
-                onError={(e) => {
-                  e.target.style.display = "none";
-                }}
-              />
-            </div>
-            <div className="bg-white p-6 text-center">
-              <h3 className="title-font text-xl text-bleu-fonce mb-1">
-                {name}
-              </h3>
-              <p className={`text-${roleColor} font-semibold`}>{role}</p>
-            </div>
+        <div className="team-card-front absolute w-full h-full backface-hidden bg-white rounded-lg overflow-hidden flex flex-col">
+          <div className="flex-1 flex items-center justify-center bg-orange-light">
+            <img
+              src={image}
+              alt={name}
+              className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg"
+              width="192"
+              height="192"
+              loading="lazy"
+              onError={(e) => {
+                e.target.style.display = "none";
+              }}
+            />
+          </div>
+          <div className="p-4 text-center">
+            <h3 className="text-lg title-font text-gray-900">
+              {name}
+            </h3>
+            <p className={`text-${roleColor || "mauve"} font-semibold`}>{role}</p>
           </div>
         </div>
         {/* Back of card */}
         <div
-          className={`absolute w-full h-full backface-hidden bg-${roleColor} rounded-lg overflow-hidden shadow-lg rotate-y-180`}
+          className={`team-card-back absolute w-full h-full backface-hidden bg-${cardBackColor} text-white rounded-lg p-6 overflow-y-auto rotate-y-180`}
         >
-          <div className="h-full flex flex-col p-6 overflow-y-auto">
-            <h3 className="title-font text-xl text-white mb-2">{name}</h3>
-            <p className="text-white font-semibold mb-4 opacity-90">{role}</p>
-            <p className="text-white text-sm leading-relaxed">{bio}</p>
-          </div>
+          <h3 className="text-lg title-font mb-2">{name}</h3>
+          <p className="text-sm mb-4 opacity-90">{role}</p>
+          <p className="text-sm leading-relaxed">{bio}</p>
         </div>
       </div>
     </div>
