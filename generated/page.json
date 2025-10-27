@@ -436,7 +436,7 @@
       "props": {
         "variant": "default",
         "padding": 6,
-        "className": "bg-$color-light text-center hover:shadow-lg transition-shadow duration-300"
+        "className": "bg-$color-light text-center"
       },
       "children": [
         {
@@ -472,7 +472,7 @@
       "props": {
         "variant": "default",
         "padding": 6,
-        "className": "bg-white text-center hover:shadow-lg transition-shadow duration-300"
+        "className": "bg-white text-center"
       },
       "children": [
         {
@@ -515,7 +515,7 @@
       "props": {
         "variant": "default",
         "padding": 6,
-        "className": "bg-white border-t-4 border-t-$borderColor hover:shadow-lg transition-shadow duration-300"
+        "className": "bg-white border border-gray-200 border-t-4 border-t-$borderColor"
       },
       "children": [
         {
@@ -546,7 +546,7 @@
       "props": {
         "variant": "default",
         "padding": 6,
-        "className": "bg-white hover:shadow-lg transition-shadow duration-300"
+        "className": "bg-white"
       },
       "children": [
         {
@@ -611,7 +611,7 @@
       "type": "card",
       "props": {
         "variant": "default",
-        "className": "team-card bg-white hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+        "className": "team-card bg-white cursor-pointer"
       },
       "children": [
         {
@@ -677,7 +677,7 @@
         ]
       },
       "cta": {
-        "text": "Je réserve ma place",
+        "text": "Je m'inscris",
         "href": "#events",
         "color": "orange"
       }
@@ -691,7 +691,7 @@
       "type": "section",
       "props": {
         "id": "hero",
-        "className": "min-h-screen relative overflow-hidden",
+        "className": "min-h-screen relative overflow-hidden z-10 px-6 pt-24 sm:pt-32 pb-16 sm:pb-24 md:pb-28",
         "style": {
           "background": "linear-gradient(135deg, #FFF8E6 0%, #F3E6FF 100%)"
         }
@@ -703,12 +703,6 @@
             "html": "<div class=\"blob w-96 h-96 top-0 left-0 bg-orange\"></div><div class=\"blob w-80 h-80 bottom-0 right-0 bg-mauve\"></div>"
           }
         },
-        {
-          "type": "section",
-          "props": {
-            "className": "relative z-10 px-4 pt-24 sm:pt-32 pb-16 sm:pb-24 md:pb-28"
-          },
-          "children": [
             {
               "type": "container",
               "props": { "maxWidth": "max-w-5xl" },
@@ -784,8 +778,8 @@
                       "type": "button",
                       "props": {
                         "href": "#events",
-                        "size": "lg",
-                        "className": "inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
+                        "size": "sm",
+                        "className": "inline-flex items-center gap-2"
                       },
                       "children": [
                         {
@@ -827,9 +821,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
+            },
         {
           "type": "customHTML",
           "props": {
@@ -842,7 +834,7 @@
       "type": "section",
       "props": {
         "id": "atelier",
-        "className": "py-16 sm:py-20 bg-orange-light"
+        "className": "relative z-10 px-6 py-16 bg-orange-light"
       },
       "children": [
         {
@@ -981,7 +973,7 @@
       "type": "section",
       "props": {
         "id": "temoignages",
-        "className": "py-16 sm:py-20 bg-white"
+        "className": "relative z-10 px-6 py-16 bg-white"
       },
       "children": [
         {
@@ -1054,7 +1046,7 @@
       "type": "section",
       "props": {
         "id": "pour-qui",
-        "className": "py-16 sm:py-20 bg-white"
+        "className": "relative z-10 px-6 py-16 bg-white"
       },
       "children": [
         {
@@ -1193,7 +1185,7 @@
       "type": "section",
       "props": {
         "id": "programme",
-        "className": "py-16 sm:py-20 bg-white"
+        "className": "relative z-10 px-6 py-16 bg-white"
       },
       "children": [
         {
@@ -1341,7 +1333,7 @@
       "type": "section",
       "props": {
         "id": "infos-pratiques",
-        "className": "py-16 sm:py-20 bg-cyan-light"
+        "className": "relative z-10 px-6 py-16 bg-cyan-light"
       },
       "children": [
         {
@@ -1473,7 +1465,7 @@
       "type": "section",
       "props": {
         "id": "mission",
-        "className": "py-16 sm:py-20 bg-orange-light"
+        "className": "relative z-10 px-6 py-16 bg-orange-light"
       },
       "children": [
         {
@@ -1689,7 +1681,7 @@
       "type": "section",
       "props": {
         "id": "valeurs",
-        "className": "py-16 sm:py-20 bg-white"
+        "className": "relative z-10 px-6 py-16 bg-white"
       },
       "children": [
         {
@@ -1788,7 +1780,7 @@
       "type": "section",
       "props": {
         "id": "equipe",
-        "className": "py-16 sm:py-20 bg-mauve-light"
+        "className": "relative z-10 px-6 py-16 bg-mauve-light"
       },
       "children": [
         {
@@ -1881,7 +1873,7 @@
       "type": "section",
       "props": {
         "id": "faq",
-        "className": "py-16 sm:py-20 bg-pourpre-light"
+        "className": "relative z-10 px-6 py-16 bg-pourpre-light"
       },
       "children": [
         {
@@ -1973,7 +1965,7 @@
       "type": "section",
       "props": {
         "id": "suis-nous",
-        "className": "py-16 bg-pourpre-light"
+        "className": "relative z-10 px-6 py-16 bg-pourpre-light"
       },
       "children": [
         {
@@ -2010,7 +2002,7 @@
                   "props": {
                     "href": "https://www.instagram.com/mercipourtonnon/",
                     "target": "_blank",
-                    "className": "flex items-center gap-3 bg-white px-6 py-3 rounded-full hover:shadow-lg transition-shadow"
+                    "className": "flex items-center gap-3 bg-white px-6 py-3 rounded-full"
                   },
                   "children": [
                     {
@@ -2036,7 +2028,7 @@
                   "props": {
                     "href": "https://www.facebook.com/mercipourtonnon",
                     "target": "_blank",
-                    "className": "flex items-center gap-3 bg-white px-6 py-3 rounded-full hover:shadow-lg transition-shadow"
+                    "className": "flex items-center gap-3 bg-white px-6 py-3 rounded-full"
                   },
                   "children": [
                     {
@@ -2062,7 +2054,7 @@
                   "props": {
                     "href": "https://www.linkedin.com/company/merci-pour-ton-non",
                     "target": "_blank",
-                    "className": "flex items-center gap-3 bg-white px-6 py-3 rounded-full hover:shadow-lg transition-shadow"
+                    "className": "flex items-center gap-3 bg-white px-6 py-3 rounded-full"
                   },
                   "children": [
                     {
@@ -2093,7 +2085,7 @@
       "type": "section",
       "props": {
         "id": "events",
-        "className": "py-16 sm:py-20 bg-orange-light"
+        "className": "relative z-10 px-6 py-16 bg-orange-light"
       },
       "children": [
         {
