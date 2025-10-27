@@ -202,7 +202,52 @@
           "https://www.instagram.com/mercipourtonnon/",
           "https://www.facebook.com/mercipourtonnon",
           "https://www.linkedin.com/company/merci-pour-ton-non"
-        ]
+        ],
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.5734",
+            "longitude": "7.7521"
+          },
+          "geoRadius": "50000"
+        },
+        "serviceType": "Atelier de consentement",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Ateliers",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "EducationEvent",
+                "name": "Atelier découverte : Le consentement dans toutes ses dimensions",
+                "description": "Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement",
+                "startDate": "2025-11-16T10:00:00+01:00",
+                "endDate": "2025-11-16T13:00:00+01:00",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Strasbourg",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Strasbourg",
+                    "addressRegion": "Grand Est",
+                    "addressCountry": "FR"
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://mercipourtonnon.fr"
+                }
+              }
+            }
+          ]
+        }
       }
     },
     "preload": [

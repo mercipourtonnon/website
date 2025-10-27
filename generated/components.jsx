@@ -142,10 +142,9 @@ export const Head = ({ meta, theme }) => {
       <title>{title}</title>
 
       {/* DNS Prefetch & Preconnect for External Resources */}
-      {dnsPrefetch.map((url, index) => (
-        <link key={index} rel="dns-prefetch" href={url} />
-      ))}
-      {/* DNS Prefetch for enabled analytics providers */}
+      {/* Render first DNS prefetch item (billetweb) */}
+      {dnsPrefetch[0] && <link rel="dns-prefetch" href={dnsPrefetch[0]} />}
+      {/* DNS Prefetch for enabled analytics providers (plausible) */}
       {enabledProviders.map(
         (provider, index) =>
           provider.dnsPrefetch && (
@@ -156,6 +155,10 @@ export const Head = ({ meta, theme }) => {
             />
           ),
       )}
+      {/* Render remaining DNS prefetch items (unpkg) */}
+      {dnsPrefetch.slice(1).map((url, index) => (
+        <link key={`dns-${index + 1}`} rel="dns-prefetch" href={url} />
+      ))}
       <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
 
       {/* Preload Critical Resources */}
