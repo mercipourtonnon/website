@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // ============================================================================
 // HEAD COMPONENT with customElements support
@@ -16,7 +16,7 @@ export const Head = ({ meta, theme }) => {
     canonical,
     favicon,
     favicons = [],
-    stylesheet = './output.css?v=306168', // Default stylesheet path
+    stylesheet = "./output.css?v=306168", // Default stylesheet path
     googleFonts,
     socialImage,
     openGraph,
@@ -32,7 +32,7 @@ export const Head = ({ meta, theme }) => {
   // Custom styles with theme colors injected (Google Fonts import + animations)
   const customStyles = `
     /* Brand Typography - Following charte.html */
-    ${googleFonts ? `@import url('${googleFonts}');` : ''}
+    ${googleFonts ? `@import url('${googleFonts}');` : ""}
 
     /* Title font styling */
     .title-font {
@@ -106,11 +106,8 @@ export const Head = ({ meta, theme }) => {
     }
   `;
 
-  // Plausible analytics script
-  const analyticsScript = analytics.plausible.enabled ? `
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
-  ` : '';
+  // Get enabled analytics providers
+  const enabledProviders = analytics?.providers?.filter((p) => p.enabled) || [];
 
   // Render custom elements
   const renderCustomElement = (element, index) => {
@@ -118,11 +115,19 @@ export const Head = ({ meta, theme }) => {
     const Tag = type;
 
     if (content) {
-      return <Tag key={index} {...attrs} dangerouslySetInnerHTML={{ __html: content }} />;
+      return (
+        <Tag
+          key={index}
+          {...attrs}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      );
     } else if (children) {
       return (
         <Tag key={index} {...attrs}>
-          {typeof children === 'string' ? children : children.map((child, i) => renderCustomElement(child, i))}
+          {typeof children === "string"
+            ? children
+            : children.map((child, i) => renderCustomElement(child, i))}
         </Tag>
       );
     } else {
@@ -140,6 +145,17 @@ export const Head = ({ meta, theme }) => {
       {dnsPrefetch.map((url, index) => (
         <link key={index} rel="dns-prefetch" href={url} />
       ))}
+      {/* DNS Prefetch for enabled analytics providers */}
+      {enabledProviders.map(
+        (provider, index) =>
+          provider.dnsPrefetch && (
+            <link
+              key={`analytics-dns-${index}`}
+              rel="dns-prefetch"
+              href={provider.dnsPrefetch}
+            />
+          ),
+      )}
       <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
 
       {/* Preload Critical Resources */}
@@ -181,7 +197,10 @@ export const Head = ({ meta, theme }) => {
       <meta name="twitter:title" content={twitter.title} />
       <meta name="twitter:description" content={twitter.description} />
       <meta name="twitter:image" content={socialImage} />
-      <meta name="twitter:image:alt" content="Atelier sur le consentement - Merci pour ton non" />
+      <meta
+        name="twitter:image:alt"
+        content="Atelier sur le consentement - Merci pour ton non"
+      />
       <meta name="twitter:site" content={twitter.site} />
       <meta name="twitter:creator" content={twitter.creator} />
 
@@ -211,7 +230,7 @@ export const Head = ({ meta, theme }) => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema.organization, null, 2)
+          __html: JSON.stringify(schema.organization, null, 2),
         }}
       />
 
@@ -220,7 +239,7 @@ export const Head = ({ meta, theme }) => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema.faqPage, null, 2)
+            __html: JSON.stringify(schema.faqPage, null, 2),
           }}
         />
       )}
@@ -230,7 +249,7 @@ export const Head = ({ meta, theme }) => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema.localBusiness, null, 2)
+            __html: JSON.stringify(schema.localBusiness, null, 2),
           }}
         />
       )}
@@ -242,15 +261,29 @@ export const Head = ({ meta, theme }) => {
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
       {/* Custom Head Elements */}
-      {customElements.map((element, index) => renderCustomElement(element, index))}
-
-      {/* Privacy-friendly analytics by Plausible */}
-      {analytics.plausible.enabled && (
-        <>
-          <script async src={analytics.plausible.script} />
-          <script dangerouslySetInnerHTML={{ __html: analyticsScript }} />
-        </>
+      {customElements.map((element, index) =>
+        renderCustomElement(element, index),
       )}
+
+      {/* Analytics Scripts - Generic support for any analytics provider */}
+      {enabledProviders.map((provider, index) => (
+        <React.Fragment key={`analytics-${provider.name}-${index}`}>
+          {/* External scripts for this provider */}
+          {provider.scripts?.map((script, scriptIndex) => (
+            <script
+              key={`${provider.name}-script-${scriptIndex}`}
+              src={script.src}
+              async={script.async}
+              defer={script.defer}
+              type={script.type}
+            />
+          ))}
+          {/* Initialization script for this provider */}
+          {provider.initScript && (
+            <script dangerouslySetInnerHTML={{ __html: provider.initScript }} />
+          )}
+        </React.Fragment>
+      ))}
 
       {/* Lucide Icons (Brand guideline: use icons instead of emojis) */}
       <script defer src="https://unpkg.com/lucide@latest" />
@@ -269,7 +302,8 @@ export const Scripts = ({ scripts }) => {
   const { workshopDates, features, externalScripts } = scripts;
 
   // Mobile menu functionality
-  const mobileMenuScript = features.mobileMenu ? `
+  const mobileMenuScript = features.mobileMenu
+    ? `
     // Mobile menu functionality
     document.addEventListener('DOMContentLoaded', function() {
       const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -301,10 +335,13 @@ export const Scripts = ({ scripts }) => {
         link.addEventListener('click', closeMenu);
       });
     });
-  ` : '';
+  `
+    : "";
 
   // Workshop dates update script
-  const workshopDatesScript = workshopDates && workshopDates.length > 0 ? `
+  const workshopDatesScript =
+    workshopDates && workshopDates.length > 0
+      ? `
     // Update workshop dates
     document.addEventListener('DOMContentLoaded', function() {
       const workshopDates = ${JSON.stringify(workshopDates)}.map(d => new Date(d));
@@ -322,10 +359,12 @@ export const Scripts = ({ scripts }) => {
         if (registrationDateElement) registrationDateElement.textContent = dateStr;
       }
     });
-  ` : '';
+  `
+      : "";
 
   // Team card flip functionality
-  const teamCardFlipScript = features.teamCardFlip ? `
+  const teamCardFlipScript = features.teamCardFlip
+    ? `
     // Team card flip functionality
     document.addEventListener('DOMContentLoaded', function() {
       const teamCards = document.querySelectorAll('.team-card');
@@ -336,20 +375,24 @@ export const Scripts = ({ scripts }) => {
         });
       });
     });
-  ` : '';
+  `
+    : "";
 
   // Lucide icons initialization
-  const lucideScript = features.lucideIcons ? `
+  const lucideScript = features.lucideIcons
+    ? `
     // Initialize Lucide icons
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
     });
-  ` : '';
+  `
+    : "";
 
   // Scroll-spy for active navigation highlighting
-  const scrollSpyScript = features.scrollSpy ? `
+  const scrollSpyScript = features.scrollSpy
+    ? `
     // Scroll-spy for active navigation links
     document.addEventListener('DOMContentLoaded', function() {
       const sections = ['atelier', 'temoignages', 'pour-qui', 'programme', 'infos-pratiques', 'mission', 'valeurs', 'equipe', 'faq'];
@@ -383,37 +426,19 @@ export const Scripts = ({ scripts }) => {
       window.addEventListener('scroll', updateActiveLink);
       updateActiveLink();
     });
-  ` : '';
+  `
+    : "";
 
-  // Billetweb widget configuration
-  const billetwebScript = `
-    // Billetweb widget initialization
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof Billetweb !== 'undefined') {
-        Billetweb.exportMultiEvents('billetweb-events', {
-          multiEventId: 43090,
-          cssUrl: 'https://www.billetweb.fr/css/export/full.css',
-          locale: 'fr',
-          display: {
-            showTitle: true,
-            showLocation: true,
-            showDate: true,
-            showPrice: true
-          }
-        });
-      }
-    });
-  `;
-
-  // Combine all scripts
+  // Combine all scripts (Billetweb uses shop_frame declarative approach, no JS init needed)
   const allScripts = [
     mobileMenuScript,
     workshopDatesScript,
     teamCardFlipScript,
     lucideScript,
     scrollSpyScript,
-    billetwebScript,
-  ].filter(Boolean).join('\n\n');
+  ]
+    .filter(Boolean)
+    .join("\n\n");
 
   return (
     <>
@@ -423,19 +448,20 @@ export const Scripts = ({ scripts }) => {
       )}
 
       {/* External scripts */}
-      {externalScripts && externalScripts.map((script, index) => {
-        const { src, defer, async, type, ...rest } = script;
-        return (
-          <script
-            key={index}
-            src={src}
-            defer={defer}
-            async={async}
-            type={type}
-            {...rest}
-          />
-        );
-      })}
+      {externalScripts &&
+        externalScripts.map((script, index) => {
+          const { src, defer, async, type, ...rest } = script;
+          return (
+            <script
+              key={index}
+              src={src}
+              defer={defer}
+              async={async}
+              type={type}
+              {...rest}
+            />
+          );
+        })}
     </>
   );
 };
@@ -447,18 +473,23 @@ export const Scripts = ({ scripts }) => {
 /**
  * Section - Generic section wrapper
  */
-export const Section = ({ id, className = '', style = {}, children }) => {
+export const Section = ({ id, className = "", style = {}, children, tag = "section" }) => {
+  const Tag = tag;
   return (
-    <section id={id} className={className} style={style}>
+    <Tag id={id} className={className} style={style}>
       {children}
-    </section>
+    </Tag>
   );
 };
 
 /**
  * Container - Max-width container with padding
  */
-export const Container = ({ maxWidth = 'max-w-7xl', className = '', children }) => {
+export const Container = ({
+  maxWidth = "max-w-7xl",
+  className = "",
+  children,
+}) => {
   return (
     <div className={`${maxWidth} mx-auto px-4 sm:px-6 ${className}`}>
       {children}
@@ -474,16 +505,18 @@ export const Grid = ({
   colsMd = null,
   colsLg = null,
   gap = 6,
-  className = '',
-  children
+  className = "",
+  children,
 }) => {
   const gridCols = `grid-cols-${cols}`;
-  const gridColsMd = colsMd ? `md:grid-cols-${colsMd}` : '';
-  const gridColsLg = colsLg ? `lg:grid-cols-${colsLg}` : '';
+  const gridColsMd = colsMd ? `md:grid-cols-${colsMd}` : "";
+  const gridColsLg = colsLg ? `lg:grid-cols-${colsLg}` : "";
   const gridGap = `gap-${gap}`;
 
   return (
-    <div className={`grid ${gridCols} ${gridColsMd} ${gridColsLg} ${gridGap} ${className}`}>
+    <div
+      className={`grid ${gridCols} ${gridColsMd} ${gridColsLg} ${gridGap} ${className}`}
+    >
       {children}
     </div>
   );
@@ -493,22 +526,24 @@ export const Grid = ({
  * Flex - Flexbox layout
  */
 export const Flex = ({
-  direction = 'row',
-  align = 'start',
-  justify = 'start',
+  direction = "row",
+  align = "start",
+  justify = "start",
   gap = 4,
   wrap = false,
-  className = '',
-  children
+  className = "",
+  children,
 }) => {
-  const flexDirection = direction === 'col' ? 'flex-col' : 'flex-row';
+  const flexDirection = direction === "col" ? "flex-col" : "flex-row";
   const alignItems = `items-${align}`;
   const justifyContent = `justify-${justify}`;
   const flexGap = `gap-${gap}`;
-  const flexWrap = wrap ? 'flex-wrap' : '';
+  const flexWrap = wrap ? "flex-wrap" : "";
 
   return (
-    <div className={`flex ${flexDirection} ${alignItems} ${justifyContent} ${flexGap} ${flexWrap} ${className}`}>
+    <div
+      className={`flex ${flexDirection} ${alignItems} ${justifyContent} ${flexGap} ${flexWrap} ${className}`}
+    >
       {children}
     </div>
   );
@@ -518,22 +553,24 @@ export const Flex = ({
  * Text - Typography component (no default classes to avoid redundancy)
  */
 export const Text = ({
-  level = 'p',
+  level = "p",
   color,
   size,
   weight,
   align,
-  className = '',
-  children
+  className = "",
+  children,
 }) => {
   const Tag = level;
-  const textColor = color ? `text-${color}` : '';
-  const textSize = size ? `text-${size}` : '';
-  const textWeight = weight ? `font-${weight}` : '';
-  const textAlign = align ? `text-${align}` : '';
+  const textColor = color ? `text-${color}` : "";
+  const textSize = size ? `text-${size}` : "";
+  const textWeight = weight ? `font-${weight}` : "";
+  const textAlign = align ? `text-${align}` : "";
 
   return (
-    <Tag className={`${textColor} ${textSize} ${textWeight} ${textAlign} ${className}`.trim()}>
+    <Tag
+      className={`${textColor} ${textSize} ${textWeight} ${textAlign} ${className}`.trim()}
+    >
       {children}
     </Tag>
   );
@@ -544,11 +581,11 @@ export const Text = ({
  */
 export const Image = ({
   src,
-  alt = '',
+  alt = "",
   width,
   height,
-  loading = 'lazy',
-  className = ''
+  loading = "lazy",
+  className = "",
 }) => {
   return (
     <img
@@ -565,13 +602,10 @@ export const Image = ({
 /**
  * Link - Internal/external link
  */
-export const Link = ({
-  href,
-  external = false,
-  className = '',
-  children
-}) => {
-  const attrs = external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+export const Link = ({ href, external = false, className = "", children }) => {
+  const attrs = external
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
 
   return (
     <a href={href} className={className} {...attrs}>
@@ -585,23 +619,24 @@ export const Link = ({
  */
 export const Button = ({
   href,
-  variant = 'primary',
-  size = 'md',
-  className = '',
-  children
+  variant = "primary",
+  size = "md",
+  className = "",
+  children,
 }) => {
-  const baseClasses = 'rounded-full font-bold transition-colors duration-300';
+  const baseClasses = "rounded-full font-bold transition-colors duration-300";
 
   const variantClasses = {
-    primary: 'bg-orange text-white hover:bg-orange-hover',
-    secondary: 'bg-mauve text-white hover:bg-mauve-hover',
-    outline: 'border-2 border-orange text-orange hover:bg-orange hover:text-white',
+    primary: "bg-orange text-white hover:bg-orange-hover",
+    secondary: "bg-mauve text-white hover:bg-mauve-hover",
+    outline:
+      "border-2 border-orange text-orange hover:bg-orange hover:text-white",
   };
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: "px-4 py-2 text-sm",
+    md: "px-6 py-3 text-base",
+    lg: "px-8 py-4 text-lg",
   };
 
   return (
@@ -617,19 +652,26 @@ export const Button = ({
 /**
  * Icon - Lucide icon wrapper
  */
-export const Icon = ({ name, size = 5, color, className = '' }) => {
+export const Icon = ({ name, size = 5, color, className = "" }) => {
   const iconSize = `w-${size} h-${size}`;
-  const iconColor = color ? `text-${color}` : '';
+  const iconColor = color ? `text-${color}` : "";
 
-  return <i data-lucide={name} className={`${iconSize} ${iconColor} ${className}`}></i>;
+  return (
+    <i
+      data-lucide={name}
+      className={`${iconSize} ${iconColor} ${className}`}
+    ></i>
+  );
 };
 
 /**
  * Badge - Inline badge
  */
-export const Badge = ({ color = 'orange', className = '', children }) => {
+export const Badge = ({ color = "orange", className = "", children }) => {
   return (
-    <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-${color}-light text-${color} border border-${color} ${className}`}>
+    <span
+      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-${color}-light text-${color} border border-${color} ${className}`}
+    >
       {children}
     </span>
   );
@@ -639,25 +681,29 @@ export const Badge = ({ color = 'orange', className = '', children }) => {
  * Card - Generic card component
  */
 export const Card = ({
-  variant = 'default',
+  variant = "default",
   color,
   padding = 6,
-  className = '',
-  children
+  className = "",
+  children,
 }) => {
-  const baseClasses = 'rounded-lg';
+  const baseClasses = "rounded-lg";
 
   const variantClasses = {
-    default: 'bg-white',
-    colored: color ? `bg-${color}-light` : 'bg-white',
+    default: "bg-white",
+    colored: color ? `bg-${color}-light` : "bg-white",
     bordered: `bg-white border border-gray-200`,
-    borderTop: color ? `bg-white border-t-4 border-t-${color} border border-gray-200` : 'bg-white border',
+    borderTop: color
+      ? `bg-white border-t-4 border-t-${color} border border-gray-200`
+      : "bg-white border",
   };
 
   const paddingClass = `p-${padding}`;
 
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${paddingClass} ${className}`}>
+    <div
+      className={`${baseClasses} ${variantClasses[variant]} ${paddingClass} ${className}`}
+    >
       {children}
     </div>
   );
@@ -666,14 +712,27 @@ export const Card = ({
 /**
  * List - Unordered/ordered list with icons
  */
-export const List = ({ items, icon, iconColor, ordered = false, className = '' }) => {
-  const Tag = ordered ? 'ol' : 'ul';
+export const List = ({
+  items,
+  icon,
+  iconColor,
+  ordered = false,
+  className = "",
+}) => {
+  const Tag = ordered ? "ol" : "ul";
 
   return (
     <Tag className={`space-y-4 ${className}`}>
       {items.map((item, index) => (
         <li key={index} className="flex items-start gap-3">
-          {icon && <Icon name={icon} size={6} color={iconColor} className="flex-shrink-0 mt-1" />}
+          {icon && (
+            <Icon
+              name={icon}
+              size={6}
+              color={iconColor}
+              className="flex-shrink-0 mt-1"
+            />
+          )}
           <span className="text-gray-700">{item}</span>
         </li>
       ))}
@@ -684,14 +743,31 @@ export const List = ({ items, icon, iconColor, ordered = false, className = '' }
 /**
  * Timeline - Timeline item with pause support
  */
-export const TimelineItem = ({ title, description, color, time, isLast = false, isPause = false }) => {
+export const TimelineItem = ({
+  title,
+  description,
+  color,
+  time,
+  isLast = false,
+  isPause = false,
+}) => {
   return (
-    <div className={`relative pl-10 ${!isLast ? 'pb-8 border-l-2 border-gray-200' : 'pb-8'}`}>
-      <div className={`absolute -left-3 top-0 w-6 h-6 rounded-full ${isPause ? 'bg-gray-200 border-4 border-white' : `bg-${color}`}`}></div>
+    <div
+      className={`relative pl-10 ${!isLast ? "pb-8 border-l-2 border-gray-200" : "pb-8"}`}
+    >
+      <div
+        className={`absolute -left-3 top-0 w-6 h-6 rounded-full ${isPause ? "bg-gray-200 border-4 border-white" : `bg-${color}`}`}
+      ></div>
       <div className="flex-1">
-        <h3 className={`title-font ${isPause ? 'text-gray-600' : `text-${color}`} text-lg mb-1`}>{title}</h3>
+        <h3
+          className={`title-font ${isPause ? "text-gray-600" : `text-${color}`} text-lg mb-1`}
+        >
+          {title}
+        </h3>
         <p className="text-gray-600 text-sm">{description}</p>
-        {time && <span className="text-sm text-gray-500 mt-1 block">{time}</span>}
+        {time && (
+          <span className="text-sm text-gray-500 mt-1 block">{time}</span>
+        )}
       </div>
     </div>
   );
@@ -706,7 +782,10 @@ export const AccordionItem = ({ question, answer }) => {
       <summary className="font-bold text-lg cursor-pointer text-bleu-fonce list-none">
         {question}
       </summary>
-      <div className="mt-4 text-gray-700" dangerouslySetInnerHTML={{ __html: answer }} />
+      <div
+        className="mt-4 text-gray-700"
+        dangerouslySetInnerHTML={{ __html: answer }}
+      />
     </details>
   );
 };
@@ -714,8 +793,10 @@ export const AccordionItem = ({ question, answer }) => {
 /**
  * CustomHTML - Render custom HTML safely
  */
-export const CustomHTML = ({ html, className = '' }) => {
-  return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
+export const CustomHTML = ({ html, className = "" }) => {
+  return (
+    <div className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  );
 };
 
 /**
@@ -728,22 +809,30 @@ export const TeamCard = ({ name, role, roleColor, image, bio }) => {
         {/* Front of card */}
         <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden shadow-lg">
           <div className="h-full flex flex-col">
-            <div className={`flex-1 bg-${roleColor} flex items-center justify-center p-6`}>
+            <div
+              className={`flex-1 bg-${roleColor} flex items-center justify-center p-6`}
+            >
               <img
                 src={image}
                 alt={name}
                 className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg"
-                onError={(e) => { e.target.style.display = 'none'; }}
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
               />
             </div>
             <div className="bg-white p-6 text-center">
-              <h3 className="title-font text-xl text-bleu-fonce mb-1">{name}</h3>
+              <h3 className="title-font text-xl text-bleu-fonce mb-1">
+                {name}
+              </h3>
               <p className={`text-${roleColor} font-semibold`}>{role}</p>
             </div>
           </div>
         </div>
         {/* Back of card */}
-        <div className={`absolute w-full h-full backface-hidden bg-${roleColor} rounded-lg overflow-hidden shadow-lg rotate-y-180`}>
+        <div
+          className={`absolute w-full h-full backface-hidden bg-${roleColor} rounded-lg overflow-hidden shadow-lg rotate-y-180`}
+        >
           <div className="h-full flex flex-col p-6 overflow-y-auto">
             <h3 className="title-font text-xl text-white mb-2">{name}</h3>
             <p className="text-white font-semibold mb-4 opacity-90">{role}</p>
@@ -769,7 +858,7 @@ export const Render = ({ element, blocs = [] }) => {
   // Handle $ref (bloc reference with variable substitution)
   if (element.$ref) {
     const blocName = element.$ref;
-    const bloc = blocs.find(b => b.name === blocName);
+    const bloc = blocs.find((b) => b.name === blocName);
 
     if (!bloc) {
       console.warn(`Bloc not found: ${blocName}`);
@@ -782,14 +871,16 @@ export const Render = ({ element, blocs = [] }) => {
     // Replace variables if vars provided
     if (element.vars) {
       const replaceVariables = (obj) => {
-        if (typeof obj === 'string') {
+        if (typeof obj === "string") {
           // Replace all $variable occurrences
           return obj.replace(/\$(\w+)/g, (match, varName) => {
-            return element.vars[varName] !== undefined ? element.vars[varName] : match;
+            return element.vars[varName] !== undefined
+              ? element.vars[varName]
+              : match;
           });
         } else if (Array.isArray(obj)) {
-          return obj.map(item => replaceVariables(item));
-        } else if (obj && typeof obj === 'object') {
+          return obj.map((item) => replaceVariables(item));
+        } else if (obj && typeof obj === "object") {
           const result = {};
           for (const [key, value] of Object.entries(obj)) {
             result[key] = replaceVariables(value);
@@ -826,6 +917,12 @@ export const Render = ({ element, blocs = [] }) => {
     accordion: AccordionItem,
     customHTML: CustomHTML,
     teamCard: TeamCard,
+    // Basic HTML elements (pass-through)
+    div: "div",
+    img: "img",
+    p: "p",
+    span: "span",
+    a: "a",
   };
 
   const Component = components[type];
@@ -883,7 +980,12 @@ export const Navigation = ({ logo, logoAlt, links, cta, mobileLinks }) => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <a href="#" className="flex items-center">
-              <img src={logo} alt={logoAlt} className="h-12 sm:h-14 lg:h-16 w-auto" loading="eager" />
+              <img
+                src={logo}
+                alt={logoAlt}
+                className="h-12 sm:h-14 lg:h-16 w-auto"
+                loading="eager"
+              />
             </a>
 
             {/* Desktop Navigation */}
@@ -913,8 +1015,18 @@ export const Navigation = ({ logo, logoAlt, links, cta, mobileLinks }) => {
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
               aria-label="Ouvrir le menu"
             >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -923,17 +1035,38 @@ export const Navigation = ({ logo, logoAlt, links, cta, mobileLinks }) => {
 
       {/* Mobile Menu Overlay */}
       <div id="mobile-menu" className="fixed inset-0 z-50 hidden">
-        <div id="menu-overlay" className="fixed inset-0 bg-bleu-fonce/50 backdrop-blur-sm transition-opacity"></div>
-        <div id="menu-sidebar" className="fixed left-0 top-0 h-screen w-80 max-w-[85%] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 flex flex-col">
+        <div
+          id="menu-overlay"
+          className="fixed inset-0 bg-bleu-fonce/50 backdrop-blur-sm transition-opacity"
+        ></div>
+        <div
+          id="menu-sidebar"
+          className="fixed left-0 top-0 h-screen w-80 max-w-[85%] bg-white shadow-xl transform -translate-x-full transition-transform duration-300 flex flex-col"
+        >
           <div className="flex items-center justify-between p-4">
-            <img src={logo} alt={logoAlt} className="h-10 w-auto" loading="lazy" />
+            <img
+              src={logo}
+              alt={logoAlt}
+              className="h-10 w-auto"
+              loading="lazy"
+            />
             <button
               id="close-menu-button"
               className="p-2 rounded-lg hover:bg-gray-100 transition"
               aria-label="Fermer le menu"
             >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

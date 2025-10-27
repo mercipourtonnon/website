@@ -11,7 +11,7 @@
     "typescript": "^5.9.2"
   },
   "scripts": {
-    "start": "bun index.html charte.html",
+    "start": "bun index.html charte.html new-index.html",
     "render": "bun run generated/render.js",
     "css": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --minify",
     "css:watch": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
