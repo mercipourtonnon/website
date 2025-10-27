@@ -164,6 +164,11 @@ export const Head = ({ meta, theme }) => {
     .team-card:hover .team-card-inner {
       transform: rotateY(180deg);
     }
+
+    /* FAQ Accordion Caret Animation */
+    details[open] .chevron-icon {
+      transform: rotate(180deg);
+    }
   `;
 
   // Get enabled analytics providers
@@ -852,8 +857,12 @@ export const AccordionItem = ({ question, answer }) => {
 
   return (
     <details className="bg-white rounded-lg p-6">
-      <summary className="font-bold text-lg cursor-pointer text-bleu-fonce list-none">
-        {question}
+      <summary className="font-bold text-lg cursor-pointer text-bleu-fonce list-none flex items-center justify-between">
+        <span>{question}</span>
+        <i
+          data-lucide="chevron-down"
+          className="chevron-icon w-5 h-5 text-bleu-fonce transition-transform duration-200"
+        ></i>
       </summary>
       {isHTML ? (
         <div
