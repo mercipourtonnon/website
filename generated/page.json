@@ -1423,14 +1423,14 @@
                   "props": {
                     "variant": "default",
                     "padding": 8,
-                    "className": "bg-cyan-light border-l-4 border-l-cyan"
+                    "className": "bg-orange-light border-l-4 border-l-orange"
                   },
                   "children": [
                     {
                       "type": "text",
                       "props": {
                         "level": "h3",
-                        "className": "title-font text-cyan text-2xl mb-6"
+                        "className": "title-font text-orange text-2xl mb-6"
                       },
                       "content": "Bon à savoir"
                     },
@@ -1441,21 +1441,21 @@
                         {
                           "$ref": "trust-item",
                           "vars": {
-                            "color": "cyan",
+                            "color": "orange",
                             "text": "Annulation possible à tout moment (merci de nous prévenir par email pour libérer ta place)"
                           }
                         },
                         {
                           "$ref": "trust-item",
                           "vars": {
-                            "color": "cyan",
+                            "color": "orange",
                             "text": "Participation aux exercices libre — tu peux juste observer si tu préfères"
                           }
                         },
                         {
                           "$ref": "trust-item",
                           "vars": {
-                            "color": "cyan",
+                            "color": "orange",
                             "text": "Cadre bienveillant et confidentiel — ce qui se dit en atelier reste en atelier"
                           }
                         }
