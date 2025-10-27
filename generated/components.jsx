@@ -34,16 +34,37 @@ export const Head = ({ meta, theme }) => {
     /* Brand Typography - Following charte.html */
     ${googleFonts ? `@import url('${googleFonts}');` : ""}
 
+    /* CSS Variables */
+    :root {
+      --brand-orange: ${theme.colors.orange};
+      --brand-pourpre: ${theme.colors.pourpre};
+      --brand-mauve: ${theme.colors.mauve};
+      --brand-cyan: ${theme.colors.cyan};
+      --brand-orange-light: ${theme.colors["orange-light"]};
+      --brand-pourpre-light: ${theme.colors["pourpre-light"]};
+      --brand-mauve-light: ${theme.colors["mauve-light"]};
+      --brand-cyan-light: ${theme.colors["cyan-light"]};
+      --brand-gray-dark: #111827;
+      --brand-gray-medium: #4B5563;
+      --brand-gray-light: #E5E7EB;
+    }
+
+    /* Universal font selector */
+    * {
+      font-family: "Neue Machina", "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     /* Title font styling */
     .title-font {
-      font-family: "Bely Display", "Archivo Black", sans-serif;
+      font-family: "Bely Display", "Archivo Black", cursive;
       text-transform: lowercase;
       letter-spacing: 0.05em;
     }
 
     /* Hero animations */
     .hero-title {
-      animation: fadeInUp 1s ease-out;
+      animation: fadeInUp 0.8s ease-out;
+      line-height: 0.85;
     }
 
     @keyframes fadeInUp {
@@ -78,27 +99,41 @@ export const Head = ({ meta, theme }) => {
       }
     }
 
+    /* Fade-in animation */
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
     /* Gradient text */
     .gradient-text {
-      background: linear-gradient(135deg, ${theme.colors.orange} 0%, ${theme.colors.mauve} 100%);
+      background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-pourpre) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    /* Transition text */
+    .transition-text {
+      background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-mauve) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
     }
 
     /* Background blobs */
     .blob {
       position: absolute;
       border-radius: 50%;
-      filter: blur(60px);
+      filter: blur(40px);
       opacity: 0.3;
-      animation: float 20s ease-in-out infinite;
+      animation: float 20s infinite;
     }
 
     /* Body text accessibility */
     body {
       line-height: 1.7;
-      color: #374151;
+      color: var(--brand-gray-dark);
     }
 
     p {
@@ -268,25 +303,20 @@ export const Head = ({ meta, theme }) => {
         renderCustomElement(element, index),
       )}
 
-      {/* Analytics Scripts - Generic support for any analytics provider */}
-      {enabledProviders.map((provider, index) => (
-        <React.Fragment key={`analytics-${provider.name}-${index}`}>
-          {/* External scripts for this provider */}
-          {provider.scripts?.map((script, scriptIndex) => (
-            <script
-              key={`${provider.name}-script-${scriptIndex}`}
-              src={script.src}
-              async={script.async}
-              defer={script.defer}
-              type={script.type}
-            />
-          ))}
-          {/* Initialization script for this provider */}
-          {provider.initScript && (
-            <script dangerouslySetInnerHTML={{ __html: provider.initScript }} />
-          )}
+      {/* Analytics Scripts - Rendered after custom elements per original HTML */}
+      {enabledProviders.length > 0 && enabledProviders[0].name === 'plausible' && (
+        <React.Fragment>
+          <script
+            async
+            src="https://plausible.io/js/pa-uDEF1f-3lcur3O_VhvsaB.js"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();"
+            }}
+          />
         </React.Fragment>
-      ))}
+      )}
 
       {/* Lucide Icons (Brand guideline: use icons instead of emojis) */}
       <script defer src="https://unpkg.com/lucide@latest" />
@@ -780,15 +810,24 @@ export const TimelineItem = ({
  * Accordion - Collapsible content (FAQ item) using native <details>/<summary>
  */
 export const AccordionItem = ({ question, answer }) => {
+  // Check if answer contains HTML tags
+  const isHTML = typeof answer === 'string' && /<[^>]+>/.test(answer);
+
   return (
     <details className="bg-white rounded-lg p-6">
       <summary className="font-bold text-lg cursor-pointer text-bleu-fonce list-none">
         {question}
       </summary>
-      <div
-        className="mt-4 text-gray-700"
-        dangerouslySetInnerHTML={{ __html: answer }}
-      />
+      {isHTML ? (
+        <div
+          className="mt-4 text-gray-700"
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
+      ) : (
+        <div className="mt-4 text-gray-700">
+          {answer}
+        </div>
+      )}
     </details>
   );
 };
@@ -987,7 +1026,6 @@ export const Navigation = ({ logo, logoAlt, links, cta, mobileLinks }) => {
                 src={logo}
                 alt={logoAlt}
                 className="h-12 sm:h-14 lg:h-16 w-auto"
-                loading="eager"
               />
             </a>
 

@@ -287,7 +287,7 @@
               "async": true
             }
           ],
-          "initScript": "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();",
+          "initScript": "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()",
           "dnsPrefetch": "https://plausible.io"
         }
       ]
@@ -714,48 +714,10 @@
               "props": { "maxWidth": "max-w-5xl" },
               "children": [
                 {
-                  "type": "text",
+                  "type": "customHTML",
                   "props": {
-                    "level": "h1",
-                    "className": "hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-8 leading-none text-center"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "props": {
-                        "level": "span",
-                        "className": "title-font text-pourpre block"
-                      },
-                      "content": "atelier"
-                    },
-                    { "type": "customHTML", "props": { "html": "<br/>" } },
-                    {
-                      "type": "text",
-                      "props": {
-                        "level": "span",
-                        "className": "title-font text-orange block"
-                      },
-                      "content": "de"
-                    },
-                    { "type": "customHTML", "props": { "html": "<br/>" } },
-                    {
-                      "type": "text",
-                      "props": {
-                        "level": "span",
-                        "className": "title-font text-mauve block"
-                      },
-                      "content": "consentement"
-                    },
-                    { "type": "customHTML", "props": { "html": "<br/>" } },
-                    {
-                      "type": "text",
-                      "props": {
-                        "level": "span",
-                        "className": "title-font text-cyan block"
-                      },
-                      "content": "à strasbourg"
-                    }
-                  ]
+                    "html": "<h1 class=\"hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-8 text-center\"><span class=\"title-font text-pourpre\">atelier</span> <span class=\"title-font text-orange\">de</span><br/><span class=\"title-font text-mauve\">consentement</span><br/><span class=\"title-font text-cyan\">à strasbourg</span></h1>"
+                  }
                 },
                 {
                   "type": "text",
