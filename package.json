@@ -3,23 +3,20 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/cli": "^4.1.18",
     "@types/bun": "latest",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.18"
   },
   "peerDependencies": {
     "typescript": "^5.9.2"
   },
   "scripts": {
-    "start": "bun index.html charte.html new-index.html",
-    "render": "bun run generated/render.js",
+    "start": "bun index.html charte.html",
     "css": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --minify",
-    "css:watch": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
-    "build": "bun run render && bun run css",
-    "dev": "bun run render && bun run css:watch"
+    "css:watch": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   }
 }
