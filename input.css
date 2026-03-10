@@ -95,3 +95,43 @@
 .team-card.flipped .team-card-inner {
     transform: rotateY(180deg);
 }
+
+/* Wall of Love - Masonry Layout */
+.wall-of-love {
+    columns: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .wall-of-love {
+        columns: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wall-of-love {
+        columns: 3;
+    }
+}
+
+/* Testimonial Cards - Scroll Reveal Animation */
+.testimonial-card {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .testimonial-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
