@@ -445,15 +445,17 @@
     <script defer src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Urgency Banner -->
-    <div
-      class="py-3 text-center relative"
-      style="background: linear-gradient(90deg, #FFAF00 0%, #7B01FE 100%);"
+    <!-- Social Cup Banner -->
+    <a
+      id="social-cup-banner"
+      href="./socialcup"
+      class="block py-3 text-center fixed top-0 left-0 right-0 z-60 transition-opacity hover:opacity-90"
+      style="background: linear-gradient(90deg, #F5004F 0%, #7B01FE 100%);"
     >
-      <p class="text-sm sm:text-base font-semibold text-white">
-        Prochaine session le 16 novembre — 6 à 15 participants
+      <p class="text-sm sm:text-base font-semibold text-white px-4">
+        On est finaliste de la Social Cup ! Vote pour nous <span class="underline">ici</span>
       </p>
-    </div>
+    </a>
 
     <div
       class="min-h-screen relative overflow-hidden"
@@ -910,6 +912,54 @@
               </p>
               <p class="text-sm text-gray-600 mt-4 font-medium">
                 — Juliette
+              </p>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div
+              class="bg-mauve-light rounded-lg p-6 border-l-4 border-l-mauve"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Atelier riche d'expériences et de questionnements, en douceur et bienveillance."
+              </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Céline
+              </p>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div
+              class="bg-orange-light rounded-lg p-6 border-l-4 border-l-orange"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J'en ressors avec de la force et de la bonne humeur."
+              </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Anonyme
+              </p>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div
+              class="bg-cyan-light rounded-lg p-6 border-l-4 border-l-cyan"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Une formation éclairante pour toutes les générations sans oublier les hommes cis."
+              </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Elodie
+              </p>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div
+              class="bg-pourpre-light rounded-lg p-6 border-l-4 border-l-pourpre"
+            >
+              <p class="text-gray-700 leading-relaxed italic">
+                "Merci pour cet atelier passionnant, ludique et bienveillant. J'ai beaucoup appris. Je recommande !"
+              </p>
+              <p class="text-sm text-gray-600 mt-4 font-medium">
+                — Laetitia
               </p>
             </div>
           </div>
@@ -2272,6 +2322,23 @@
       } else {
         initLucideIcons();
       }
+
+      // Offset nav and body for Social Cup banner
+      function adjustForBanner() {
+        var banner = document.getElementById('social-cup-banner');
+        var nav = document.querySelector('nav.fixed');
+        if (banner && nav) {
+          var h = banner.offsetHeight;
+          nav.style.top = h + 'px';
+          document.body.style.paddingTop = h + 'px';
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', adjustForBanner);
+      } else {
+        adjustForBanner();
+      }
+      window.addEventListener('resize', adjustForBanner);
     </script>
 
     <script

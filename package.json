@@ -3,20 +3,20 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/cli": "^4.2.1",
     "@types/bun": "latest",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.1"
   },
   "peerDependencies": {
     "typescript": "^5.9.2"
   },
   "scripts": {
-    "start": "bun index.html charte.html mentions-legales.html",
+    "start": "bun index.html charte.html mentions-legales.html socialcup.html",
     "css": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --minify",
     "css:watch": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   },
   "dependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
