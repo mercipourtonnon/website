@@ -2043,6 +2043,42 @@
     </div>
 
     <script>
+      // Smooth scroll with offset for fixed banner + nav
+      (function() {
+        function getTotalOffset() {
+          var banner = document.getElementById('social-cup-banner');
+          var nav = document.querySelector('nav');
+          var bannerH = banner ? banner.offsetHeight : 0;
+          var navH = nav ? nav.offsetHeight : 0;
+          return bannerH + navH;
+        }
+
+        // Set CSS scroll-padding-top for browser-native anchor scroll
+        function updateScrollPadding() {
+          document.documentElement.style.scrollPaddingTop = getTotalOffset() + 'px';
+        }
+        updateScrollPadding();
+        window.addEventListener('resize', updateScrollPadding);
+
+        // Enable smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Intercept anchor clicks for precise offset
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a[href^="#"]');
+          if (!link) return;
+          var id = link.getAttribute('href').slice(1);
+          if (!id) return;
+          var target = document.getElementById(id);
+          if (!target) return;
+          e.preventDefault();
+          var top = target.getBoundingClientRect().top + window.scrollY - getTotalOffset();
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+      })();
+    </script>
+
+    <script>
       // Mobile menu functionality
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const closeMenuButton = document.getElementById('close-menu-button');
@@ -2099,10 +2135,12 @@
           { id: 'faq', href: '#faq' }
         ];
 
-        const navHeight = document.querySelector('nav').offsetHeight;
+        const banner = document.getElementById('social-cup-banner');
+        const nav = document.querySelector('nav');
+        const totalOffset = (banner ? banner.offsetHeight : 0) + (nav ? nav.offsetHeight : 0);
 
         function updateActiveNav() {
-          const scrollPosition = window.scrollY + navHeight + 100; // Offset for better detection
+          const scrollPosition = window.scrollY + totalOffset + 100; // Offset for better detection
 
           let currentSection = '';
 
