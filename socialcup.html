@@ -172,6 +172,10 @@
                 opacity: 0.2;
             }
 
+            .flex-1 .testimonial-card {
+                margin-bottom: 0;
+            }
+
             .video-container {
                 border-radius: 1rem;
                 overflow: hidden;
@@ -475,63 +479,121 @@
                     nous.
                 </p>
 
-                <div class="wall-of-love max-w-5xl mx-auto">
+                <div class="hidden lg:flex gap-6 max-w-5xl mx-auto items-start">
+                    <!-- Column 1 -->
+                    <div class="flex-1 flex flex-col gap-6">
+                        <blockquote class="testimonial-card bg-pourpre-light rounded-2xl p-6 border-l-4 border-l-pourpre">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
+                            </p>
+                            <footer class="font-bold text-pourpre text-sm">— Camille</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-card bg-orange-light rounded-2xl p-6 border-l-4 border-l-orange">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Atelier riche d'expériences et de questionnements, en douceur et bienveillance."
+                            </p>
+                            <footer class="font-bold text-orange text-sm">— Céline</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-card bg-mauve-light rounded-2xl p-6 border-l-4 border-l-mauve">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Merci pour cet atelier passionnant, ludique et bienveillant. J'ai beaucoup appris. Je recommande !"
+                            </p>
+                            <footer class="font-bold text-mauve text-sm">— Laetitia</footer>
+                        </blockquote>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="flex-1 flex flex-col gap-6">
+                        <blockquote class="testimonial-card bg-cyan-light rounded-2xl p-6 border-l-4 border-l-cyan">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
+                            </p>
+                            <footer class="font-bold text-cyan text-sm">— Sam</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-card bg-pourpre-light rounded-2xl p-6 border-l-4 border-l-pourpre">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J'ai hâte de pouvoir pratiquer toute la théorie."
+                            </p>
+                            <footer class="font-bold text-pourpre text-sm">— Juliette</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-card bg-orange-light rounded-2xl p-6 border-l-4 border-l-orange">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Une formation éclairante pour toutes les générations sans oublier les hommes cis."
+                            </p>
+                            <footer class="font-bold text-orange text-sm">— Elodie</footer>
+                        </blockquote>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="flex-1 flex flex-col gap-6">
+                        <blockquote class="testimonial-card bg-mauve-light rounded-2xl p-6 border-l-4 border-l-mauve">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
+                            </p>
+                            <footer class="font-bold text-mauve text-sm">— Lou</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-card bg-orange-light rounded-2xl p-6 border-l-4 border-l-orange">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+                            </p>
+                            <footer class="font-bold text-orange text-sm">— Alex</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-card bg-mauve-light rounded-2xl p-6 border-l-4 border-l-mauve">
+                            <p class="text-gray-700 leading-relaxed italic mb-4">
+                                "Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J'en ressors avec de la force et de la bonne humeur."
+                            </p>
+                            <footer class="font-bold text-mauve text-sm">— Anonyme</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Mobile/tablet: single column or 2 columns -->
+                <div class="lg:hidden wall-of-love max-w-5xl mx-auto">
                     <blockquote class="testimonial-card bg-pourpre-light rounded-2xl p-6 border-l-4 border-l-pourpre">
                         <p class="text-gray-700 leading-relaxed italic mb-4">
                             "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
                         </p>
                         <footer class="font-bold text-pourpre text-sm">— Camille</footer>
                     </blockquote>
-
-                    <blockquote class="testimonial-card bg-orange-light rounded-2xl p-6 border-l-4 border-l-orange">
-                        <p class="text-gray-700 leading-relaxed italic mb-4">
-                            "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
-                        </p>
-                        <footer class="font-bold text-orange text-sm">— Alex</footer>
-                    </blockquote>
-
-                    <blockquote class="testimonial-card bg-mauve-light rounded-2xl p-6 border-l-4 border-l-mauve">
-                        <p class="text-gray-700 leading-relaxed italic mb-4">
-                            "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
-                        </p>
-                        <footer class="font-bold text-mauve text-sm">— Lou</footer>
-                    </blockquote>
-
-                    <blockquote class="testimonial-card bg-cyan-light rounded-2xl p-6 border-l-4 border-l-cyan">
-                        <p class="text-gray-700 leading-relaxed italic mb-4">
-                            "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
-                        </p>
-                        <footer class="font-bold text-cyan text-sm">— Sam</footer>
-                    </blockquote>
-
-                    <blockquote class="testimonial-card bg-pourpre-light rounded-2xl p-6 border-l-4 border-l-pourpre">
-                        <p class="text-gray-700 leading-relaxed italic mb-4">
-                            "Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J'ai hâte de pouvoir pratiquer toute la théorie."
-                        </p>
-                        <footer class="font-bold text-pourpre text-sm">— Juliette</footer>
-                    </blockquote>
-
                     <blockquote class="testimonial-card bg-orange-light rounded-2xl p-6 border-l-4 border-l-orange">
                         <p class="text-gray-700 leading-relaxed italic mb-4">
                             "Atelier riche d'expériences et de questionnements, en douceur et bienveillance."
                         </p>
                         <footer class="font-bold text-orange text-sm">— Céline</footer>
                     </blockquote>
-
+                    <blockquote class="testimonial-card bg-cyan-light rounded-2xl p-6 border-l-4 border-l-cyan">
+                        <p class="text-gray-700 leading-relaxed italic mb-4">
+                            "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
+                        </p>
+                        <footer class="font-bold text-cyan text-sm">— Sam</footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card bg-mauve-light rounded-2xl p-6 border-l-4 border-l-mauve">
+                        <p class="text-gray-700 leading-relaxed italic mb-4">
+                            "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
+                        </p>
+                        <footer class="font-bold text-mauve text-sm">— Lou</footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card bg-pourpre-light rounded-2xl p-6 border-l-4 border-l-pourpre">
+                        <p class="text-gray-700 leading-relaxed italic mb-4">
+                            "Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J'ai hâte de pouvoir pratiquer toute la théorie."
+                        </p>
+                        <footer class="font-bold text-pourpre text-sm">— Juliette</footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card bg-orange-light rounded-2xl p-6 border-l-4 border-l-orange">
+                        <p class="text-gray-700 leading-relaxed italic mb-4">
+                            "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+                        </p>
+                        <footer class="font-bold text-orange text-sm">— Alex</footer>
+                    </blockquote>
                     <blockquote class="testimonial-card bg-mauve-light rounded-2xl p-6 border-l-4 border-l-mauve">
                         <p class="text-gray-700 leading-relaxed italic mb-4">
                             "Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J'en ressors avec de la force et de la bonne humeur."
                         </p>
                         <footer class="font-bold text-mauve text-sm">— Anonyme</footer>
                     </blockquote>
-
                     <blockquote class="testimonial-card bg-cyan-light rounded-2xl p-6 border-l-4 border-l-cyan">
                         <p class="text-gray-700 leading-relaxed italic mb-4">
                             "Une formation éclairante pour toutes les générations sans oublier les hommes cis."
                         </p>
                         <footer class="font-bold text-cyan text-sm">— Elodie</footer>
                     </blockquote>
-
                     <blockquote class="testimonial-card bg-pourpre-light rounded-2xl p-6 border-l-4 border-l-pourpre">
                         <p class="text-gray-700 leading-relaxed italic mb-4">
                             "Merci pour cet atelier passionnant, ludique et bienveillant. J'ai beaucoup appris. Je recommande !"
