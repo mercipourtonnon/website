@@ -522,18 +522,6 @@
     <script defer src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Social Cup Banner -->
-    <a
-      id="social-cup-banner"
-      href="./socialcup"
-      class="block py-3 text-center fixed top-0 left-0 right-0 z-60"
-      style="background: linear-gradient(90deg, #F5004F 0%, #7B01FE 100%);"
-    >
-      <p class="text-sm sm:text-base font-semibold text-white px-4">
-        On est finaliste de la Social Cup ! Vote pour nous <span class="underline">ici</span>
-      </p>
-    </a>
-
     <div
       class="min-h-screen relative overflow-hidden"
       style="background: linear-gradient(135deg, #FFF8E6 0%, #F3E6FF 100%);"
@@ -2211,11 +2199,9 @@
       // Smooth scroll with offset for fixed banner + nav
       (function() {
         function getTotalOffset() {
-          var banner = document.getElementById('social-cup-banner');
           var nav = document.querySelector('nav');
-          var bannerH = banner ? banner.offsetHeight : 0;
           var navH = nav ? nav.offsetHeight : 0;
-          return bannerH + navH;
+          return navH;
         }
 
         // Set CSS scroll-padding-top for browser-native anchor scroll
@@ -2301,9 +2287,8 @@
           { id: 'newsletter', href: '#newsletter' }
         ];
 
-        const banner = document.getElementById('social-cup-banner');
         const nav = document.querySelector('nav');
-        const totalOffset = (banner ? banner.offsetHeight : 0) + (nav ? nav.offsetHeight : 0);
+        const totalOffset = (nav ? nav.offsetHeight : 0);
 
         function updateActiveNav() {
           const scrollPosition = window.scrollY + totalOffset + 100; // Offset for better detection
@@ -2512,22 +2497,6 @@
         initLucideIcons();
       }
 
-      // Offset nav and body for Social Cup banner
-      function adjustForBanner() {
-        var banner = document.getElementById('social-cup-banner');
-        var nav = document.querySelector('nav.fixed');
-        if (banner && nav) {
-          var h = banner.offsetHeight;
-          nav.style.top = h + 'px';
-          document.body.style.paddingTop = h + 'px';
-        }
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', adjustForBanner);
-      } else {
-        adjustForBanner();
-      }
-      window.addEventListener('resize', adjustForBanner);
     </script>
 
     <script
