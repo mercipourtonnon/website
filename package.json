@@ -16,7 +16,7 @@
     "css:watch": "bunx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
   },
   "dependencies": {
-    "react": "^19.2.4",
+    "react": "^19.2.5",
     "react-dom": "^19.2.4"
   }
 }
