@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Carousel - Merci Pour Ton Non</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          sans-serif;
+        background: #f0f0f0;
+        padding: 40px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .slides-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .slide {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide-wrapper {
+        transform: scale(0.37);
+        transform-origin: top left;
+        margin-bottom: 40px;
+      }
+
+      .title-font {
+        font-family: "Bebas Neue", cursive;
+        letter-spacing: 0.05em;
+      }
+
+      /* Animated blobs */
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(40px);
+        opacity: 0.3;
+        animation: float 20s infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(30px, -30px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+      }
+
+      /* Slide 1 - Website Announcement */
+      .slide-1 {
+        background: linear-gradient(to br, #fff7ed, #faf5ff);
+        position: relative;
+        padding: 120px;
+        text-align: center;
+      }
+
+      .slide-1 .blob-1 {
+        width: 400px;
+        height: 400px;
+        background: #fb923c;
+        top: -200px;
+        left: -200px;
+      }
+
+      .slide-1 .blob-2 {
+        width: 350px;
+        height: 350px;
+        background: #c084fc;
+        bottom: -150px;
+        right: -150px;
+      }
+
+      .slide-1 .content {
+        position: relative;
+        z-index: 10;
+      }
+
+      .slide-1 .sparkles {
+        font-size: 90px;
+        margin-bottom: 40px;
+      }
+
+      .slide-1 .main-title {
+        font-size: 110px;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 60px;
+        color: #ea580c;
+      }
+
+      .slide-1 .main-title span {
+        display: block;
+      }
+
+      .slide-1 .main-title .line-2 {
+        color: #9333ea;
+      }
+
+      .slide-1 .main-title .line-3 {
+        color: #111827;
+      }
+
+      .slide-1 .website-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #ea580c 0%, #9333ea 100%);
+        color: white;
+        padding: 40px 80px;
+        border-radius: 60px;
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        box-shadow: 0 20px 40px rgba(234, 88, 12, 0.3);
+      }
+
+      .slide-1 .purple-heart {
+        font-size: 100px;
+        margin-bottom: 40px;
+      }
+
+      .slide-1 .tagline {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 35px 60px;
+        border-radius: 60px;
+        font-size: 38px;
+        font-weight: 700;
+        color: #1f2937;
+        letter-spacing: 1px;
+      }
+
+      /* Slide 2 - Workshop Information */
+      .slide-2 {
+        background: linear-gradient(to br, #fff7ed, #fef3c7);
+        position: relative;
+        padding: 100px;
+      }
+
+      .slide-2 .header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .slide-2 .pill-header {
+        background: #ea580c;
+        border-radius: 50px;
+        padding: 20px 60px;
+        display: inline-block;
+        color: white;
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+      }
+
+      .slide-2 .workshop-title {
+        font-size: 72px;
+        font-weight: 900;
+        color: #9333ea;
+        margin-bottom: 20px;
+        line-height: 1.1;
+      }
+
+      .slide-2 .subtitle {
+        font-size: 44px;
+        font-weight: 600;
+        color: #1f2937;
+      }
+
+      .slide-2 .info-container {
+        margin-top: 80px;
+      }
+
+      .slide-2 .info-card {
+        background: white;
+        border-radius: 40px;
+        padding: 50px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .slide-2 .info-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .slide-2 .info-emoji {
+        font-size: 70px;
+      }
+
+      .slide-2 .info-text {
+        font-size: 46px;
+        font-weight: 700;
+        color: #1f2937;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .slide-2 .register-cta {
+        text-align: center;
+        margin-top: 80px;
+        font-size: 44px;
+        font-weight: 700;
+        color: #ea580c;
+      }
+
+      /* Slide 3 - What you'll learn */
+      .slide-3 {
+        background: linear-gradient(to br, #fff7ed, #faf5ff);
+        position: relative;
+        padding: 100px;
+      }
+
+      .slide-3 .header {
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .slide-3 .pill-header {
+        background: #a855f7;
+        border-radius: 50px;
+        padding: 20px 60px;
+        display: inline-block;
+        color: white;
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+      }
+
+      .slide-3 .title {
+        font-size: 60px;
+        font-weight: 800;
+        color: #1f2937;
+        line-height: 1.2;
+      }
+
+      .slide-3 .learning-container {
+        margin-top: 60px;
+      }
+
+      .slide-3 .learning-card {
+        background: white;
+        border-radius: 40px;
+        padding: 50px 60px;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-left: 6px solid;
+        transition: transform 0.3s ease;
+      }
+
+      .slide-3 .learning-card:nth-child(1) {
+        border-color: #ea580c;
+      }
+
+      .slide-3 .learning-card:nth-child(2) {
+        border-color: #a855f7;
+      }
+
+      .slide-3 .learning-card:nth-child(3) {
+        border-color: #10b981;
+      }
+
+      .slide-3 .learning-card:hover {
+        transform: translateX(10px);
+      }
+
+      .slide-3 .bullet {
+        font-size: 54px;
+        flex-shrink: 0;
+      }
+
+      .slide-3 .learning-text {
+        font-size: 42px;
+        font-weight: 600;
+        color: #1f2937;
+        line-height: 1.3;
+      }
+
+      .slide-3 .footer-tagline {
+        text-align: center;
+        margin-top: 80px;
+        padding: 35px;
+        background: linear-gradient(135deg, #ea580c 0%, #a855f7 100%);
+        border-radius: 50px;
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      /* Slide 4 - Call to Action */
+      .slide-4 {
+        background: linear-gradient(135deg, #ea580c 0%, #9333ea 100%);
+        position: relative;
+        padding: 120px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .slide-4::before,
+      .slide-4::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .slide-4::before {
+        width: 500px;
+        height: 500px;
+        top: -250px;
+        left: -250px;
+      }
+
+      .slide-4::after {
+        width: 400px;
+        height: 400px;
+        bottom: -200px;
+        right: -200px;
+      }
+
+      .slide-4 .content {
+        position: relative;
+        z-index: 10;
+      }
+
+      .slide-4 .cta-title {
+        font-size: 90px;
+        font-weight: 900;
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 80px;
+        letter-spacing: 2px;
+      }
+
+      .slide-4 .pointer {
+        font-size: 120px;
+        margin-bottom: 60px;
+      }
+
+      .slide-4 .website-button {
+        background: white;
+        color: #ea580c;
+        padding: 40px 80px;
+        border-radius: 60px;
+        font-size: 56px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 60px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .slide-4 .website-button:hover {
+        transform: scale(1.05);
+      }
+
+      .slide-4 .link-bio {
+        font-size: 46px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 60px;
+        opacity: 0.95;
+      }
+
+      .slide-4 .limited-badge {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 30px 60px;
+        border-radius: 50px;
+        display: inline-block;
+        font-size: 42px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .instructions {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .instructions h3 {
+        color: #ea580c;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .instructions ol {
+        text-align: left;
+        color: #4b5563;
+        font-size: 18px;
+        line-height: 1.8;
+      }
+
+      .instructions ol li {
+        margin-bottom: 10px;
+      }
+
+      .caption-box {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .caption-box h3 {
+        color: #ea580c;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .caption-box pre {
+        white-space: pre-wrap;
+        color: #4b5563;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="instructions">
+        <h3>📸 Instructions pour créer le carousel Instagram</h3>
+        <ol>
+          <li>
+            Prends une capture d'écran de chaque slide ci-dessous (1080x1350px -
+            format portrait Instagram)
+          </li>
+          <li>
+            Sur Mac : Cmd + Shift + 4, puis Espace pour capturer une fenêtre
+          </li>
+          <li>
+            Upload les 4 slides dans l'ordre sur Instagram comme un carousel
+          </li>
+          <li>Copie la caption ci-dessous pour le post</li>
+        </ol>
+      </div>
+
+      <div class="slides-grid">
+        <!-- Slide 1 - Website Announcement -->
+        <div class="slide-wrapper">
+          <div class="slide slide-1">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="content">
+              <div class="sparkles">✨</div>
+              <h1 class="main-title title-font">
+                <span>NOTRE NOUVEAU</span>
+                <span class="line-2">SITE EST</span>
+                <span class="line-3">EN LIGNE !</span>
+              </h1>
+              <div class="website-badge">mercipourtonnon.fr</div>
+              <div class="purple-heart">💜</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 - Workshop Information & Registration -->
+        <div class="slide-wrapper">
+          <div class="slide slide-2">
+            <div class="header">
+              <div class="pill-header">PROCHAIN ATELIER DE CONSENTEMENT</div>
+            </div>
+            <div class="info-container">
+              <div class="info-card">
+                <span class="info-emoji">📍</span>
+                <span class="info-text">Strasbourg</span>
+              </div>
+              <div class="info-card">
+                <span class="info-emoji">📅</span>
+                <span class="info-text">12 Octobre</span>
+              </div>
+              <div class="info-card">
+                <span class="info-emoji">💫</span>
+                <span class="info-text">Prix Libre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 - What you'll learn -->
+        <div class="slide-wrapper">
+          <div class="slide slide-3">
+            <div class="header">
+              <div class="pill-header">CE QUE TU VAS APPRENDRE</div>
+            </div>
+            <div class="learning-container">
+              <div class="learning-card">
+                <span class="bullet">🎯</span>
+                <span class="learning-text"
+                  >Dire non sans<br />culpabiliser</span
+                >
+              </div>
+              <div class="learning-card">
+                <span class="bullet">💜</span>
+                <span class="learning-text"
+                  >Transformer<br />tes relations</span
+                >
+              </div>
+              <div class="learning-card">
+                <span class="bullet">✨</span>
+                <span class="learning-text"
+                  >Poser tes limites<br />avec bienveillance</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 - Call to Action -->
+        <div class="slide-wrapper">
+          <div class="slide slide-4">
+            <div class="content">
+              <h2 class="cta-title title-font">RÉSERVE<br />TA PLACE !</h2>
+              <div class="pointer">👇</div>
+              <div class="website-button">mercipourtonnon.fr</div>
+              <div class="limited-badge">Places limitées 🏃‍♀️</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="caption-box">
+        <h3>📝 Caption Instagram (à copier)</h3>
+        <pre>✨ Notre nouveau site est en ligne ! ✨
+
+Direction mercipourtonnon.fr pour t'inscrire à notre Atelier de Consentement à Strasbourg 💜
+
+CONSENT = ASK • LISTEN • RESPECT
+
+3h pour apprendre à :
+🎯 Dire non sans culpabiliser
+💜 Transformer tes relations
+✨ Poser tes limites avec bienveillance
+
+📍 Strasbourg
+📅 12 octobre
+💫 Prix libre
+
+Link in bio pour réserver ta place ! Places limitées 🏃‍♀️
+
+#mercipourtonnon #consentement #strasbourg #atelierconsentement #direnon #relationssaines #developpementpersonnel #bienetre #respectmutuel #communication #empowerment #prixlibre</pre
+        >
+      </div>
+    </div>
+  </body>
+</html>

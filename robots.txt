@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /charte
+Sitemap: https://mercipourtonnon.fr/sitemap.xml
