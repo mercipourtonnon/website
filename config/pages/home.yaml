@@ -51,10 +51,10 @@ meta:
         addressCountry: FR
       event:
         '@type': EducationEvent
-        name: 'Atelier découverte : Le consentement dans toutes ses dimensions'
+        name: 'Atelier de consentement - Niveau 1 - Tout public'
         description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
-        startDate: '2025-11-16T10:00:00+01:00'
-        endDate: '2025-11-16T13:00:00+01:00'
+        startDate: '2026-07-16T18:30:00+02:00'
+        endDate: '2026-07-16T21:30:00+02:00'
         eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
         eventStatus: https://schema.org/EventScheduled
         location:
@@ -73,7 +73,7 @@ meta:
           price: '0'
           priceCurrency: EUR
           availability: https://schema.org/InStock
-          url: https://www.billetweb.fr/multi_event.php?multi=43090
+          url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
           description: Prix libre - Personne n'est refusé·e par manque d'argent
         maximumAttendeeCapacity: 15
         minimumAttendeeCapacity: 6
@@ -163,10 +163,10 @@ meta:
           - '@type': Offer
             itemOffered:
               '@type': EducationEvent
-              name: 'Atelier découverte : Le consentement dans toutes ses dimensions'
+              name: 'Atelier de consentement - Niveau 1 - Tout public'
               description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
-              startDate: '2025-11-16T10:00:00+01:00'
-              endDate: '2025-11-16T13:00:00+01:00'
+              startDate: '2026-07-16T18:30:00+02:00'
+              endDate: '2026-07-16T21:30:00+02:00'
               eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
               eventStatus: https://schema.org/EventScheduled
               location:
@@ -186,7 +186,7 @@ meta:
                 price: '0'
                 priceCurrency: EUR
                 availability: https://schema.org/InStock
-                url: https://www.billetweb.fr/multi_event.php?multi=43090
+                url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
                 validFrom: '2025-01-01T00:00:00+02:00'
             price: '0'
             priceCurrency: EUR
@@ -212,7 +212,7 @@ meta:
       crossorigin: anonymous
 
   dnsPrefetch:
-    - https://www.billetweb.fr
+    - https://www.helloasso.com
     - https://sibforms.com
 
   customElements:
@@ -272,12 +272,6 @@ scripts:
       position: body-end
     # Injectors must run (defer, document order) before the vendor scripts scan the DOM
     - src: /assets/brevo-embed.js
-      defer: true
-      position: body-end
-    - src: /assets/billetweb-embed.js
-      defer: true
-      position: body-end
-    - src: https://www.billetweb.fr/js/export.js
       defer: true
       position: body-end
     - src: https://sibforms.com/forms/end-form/build/main.js
@@ -597,7 +591,7 @@ components:
                         props:
                           id: hero-next-date
                           className: font-bold text-bleu-fonce
-                        content: 16 novembre
+                        content: 16 juillet 2026
           # Decorative colored circles
           - type: container
             props:
@@ -1854,23 +1848,23 @@ components:
                   className: space-y-4 max-w-4xl mx-auto
                 children:
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-1' } }
                         children:
                           - type: text
                             element: span
                             content: Pourquoi participer si je connais déjà le consentement ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-1, style: { display: none } }
+                        props: { id: faq-a-1, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             children:
                               - type: text
                                 element: span
@@ -1890,23 +1884,23 @@ components:
                                 element: span
                                 content: ' qui influencent tes choix, et muscler ta capacité à dire "non" dans des situations réelles.'
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-2' } }
                         children:
                           - type: text
                             element: span
                             content: Est-ce que 3 heures, c'est vraiment utile ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-2, style: { display: none } }
+                        props: { id: faq-a-2, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             children:
                               - type: text
                                 element: span
@@ -1919,23 +1913,23 @@ components:
                                 element: span
                                 content: ' que tu utiliseras toute ta vie pour améliorer toutes tes relations. Un investissement qui vaut le coup !'
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-3' } }
                         children:
                           - type: text
                             element: span
                             content: Est-ce que l'atelier peut être trop intense émotionnellement ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-3, style: { display: none } }
+                        props: { id: faq-a-3, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             children:
                               - type: text
                                 element: span
@@ -1962,23 +1956,23 @@ components:
                                 element: span
                                 content: ', mais des facilitateur·ices formé·es à la pédagogie du consentement.'
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-4' } }
                         children:
                           - type: text
                             element: span
                             content: Comment fonctionne le prix libre ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-4, style: { display: none } }
+                        props: { id: faq-a-4, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             children:
                               - type: text
                                 element: span
@@ -1991,80 +1985,80 @@ components:
                                 element: span
                                 content: ' Chacun·e participe selon ses moyens.'
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-5' } }
                         children:
                           - type: text
                             element: span
                             content: C'est uniquement sur le consentement sexuel ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-5, style: { display: none } }
+                        props: { id: faq-a-5, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             content: 'Non ! L''atelier explore le consentement dans toutes les dimensions : amicales, familiales, professionnelles... Le consentement concerne tous nos rapports humains.'
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-6' } }
                         children:
                           - type: text
                             element: span
                             content: Je suis timide, vais-je devoir parler ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-6, style: { display: none } }
+                        props: { id: faq-a-6, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             content: Tu restes souverain·e ! Tu peux choisir de ne pas participer à certains exercices, juste observer, ou partir quand tu veux. Tout dans la bienveillance.
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-7' } }
                         children:
                           - type: text
                             element: span
                             content: Je peux venir seul·e ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-7, style: { display: none } }
+                        props: { id: faq-a-7, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             content: Bien sûr ! La plupart viennent seul·es. C'est même plus enrichissant pour rencontrer de nouvelles personnes dans un cadre bienveillant.
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 }
+                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
                     children:
                       - type: button
-                        props: { className: 'font-bold text-lg cursor-pointer text-bleu-fonce w-full text-left flex items-center justify-between gap-4 bg-transparent' }
+                        props: { className: faq-q }
                         interactions: { click: { toggleElement: '#faq-a-8' } }
                         children:
                           - type: text
                             element: span
                             content: Je peux annuler ma réservation ?
                           - type: icon
-                            props: { name: chevron-down, className: w-5 h-5 shrink-0 }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
                       - type: container
-                        props: { id: faq-a-8, style: { display: none } }
+                        props: { id: faq-a-8, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: mt-4 text-gray-700 }
+                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
                             content: Oui, tu peux annuler à tout moment ! Préviens-nous juste pour libérer ta place (6 à 15 personnes maximum).
 
       # Section: Suis-nous (#suis-nous)
@@ -2154,7 +2148,8 @@ components:
                 props:
                   id: newsletter-embed
 
-      # Section: Events / Réservation (#events) — Billetweb widget injected by /assets/billetweb-embed.js
+      # Section: Events / Réservation (#events) — custom list of HelloAsso workshops.
+      # Each workshop is an `event-card` instance linking to its registration page.
       - type: container
         element: section
         props:
@@ -2177,30 +2172,30 @@ components:
                   - type: text
                     element: p
                     props:
-                      className: text-base text-gray-600 flex items-center justify-center gap-2
-                    children:
-                      - type: icon
-                        props: { name: clock, className: w-6 h-6 -mt-0.5 }
-                      - type: text
-                        element: span
-                        content: 'Prochaine session le '
-                      - type: text
-                        element: span
-                        props:
-                          id: registration-date
-                          className: font-bold text-bleu-fonce
-                        content: 16 novembre 2025
+                      className: text-base text-gray-600
+                    content: Choisis l'atelier qui te convient — inscription en ligne, prix libre.
+              # Workshop list
               - type: container
                 props:
-                  className: bg-white rounded-lg p-8 max-w-4xl mx-auto
+                  className: grid gap-8 md:grid-cols-2 max-w-4xl mx-auto
                 children:
-                  - type: container
-                    props:
-                      id: billetweb-embed
+                  - component: event-card
+                    vars:
+                      title: 'Atelier de consentement - Niveau 1 - Tout public'
+                      date: 16 juillet 2026
+                      time: 18h30 – 21h30
+                      location: Strasbourg
+                      capacity: 15 places
+                      price: prix libre
+                      url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
+              - type: container
+                props:
+                  className: bg-white rounded-lg p-8 max-w-4xl mx-auto mt-12
+                children:
                   # Contact option for questions
                   - type: container
                     props:
-                      className: text-center mt-10 pt-10 border-t border-gray-200
+                      className: text-center
                     children:
                       - type: text
                         element: h3

@@ -9,6 +9,7 @@ theme:
 
 components:
   - $ref: ./config/components/site-footer.yaml
+  - $ref: ./config/components/event-card.yaml
   - $ref: ./config/components/testimonial-card.yaml
   - $ref: ./config/components/audience-card.yaml
   - $ref: ./config/components/value-card.yaml

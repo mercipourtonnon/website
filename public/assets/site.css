@@ -289,3 +289,44 @@ p {
 .entry_errored .entry__error--primary {
   display: block;
 }
+
+/* FAQ accordion — Sovrium's `type: button` ships a full design-system style
+   (border, fixed height, centered content, shadow). The page YAML can't
+   reliably override it (utility classes coexist rather than merge, and
+   `!`-important utilities aren't emitted by the scanner), so reset the
+   question trigger here and keep each question + answer as one coherent card. */
+.faq-q {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  padding: 1.25rem !important;
+  border: 0 !important;
+  height: auto !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  border-radius: 0 !important;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #130077; /* bleu-fonce */
+  cursor: pointer;
+}
+.faq-q:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.faq-chevron {
+  color: #f5004f; /* pourpre */
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+/* The toggle clears the answer's inline `display:none` when open, so an open
+   card is one whose `.faq-answer` no longer carries a `display:none` style. */
+.faq-card:has(.faq-answer:not([style*="none"])) .faq-chevron {
+  transform: rotate(180deg);
+}

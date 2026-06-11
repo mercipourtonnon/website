@@ -1,0 +1,81 @@
+# Event card — one upcoming workshop, links out to its HelloAsso registration page.
+# Vars: $title, $date ("16 juillet 2026"), $time ("18h30 – 21h30"),
+# $location ("Strasbourg"), $capacity ("15 places"), $price ("prix libre"),
+# $url (HelloAsso registration URL). Full class tokens only.
+name: event-card
+type: container
+props:
+  className: bg-white rounded-lg p-8 border border-gray-200 border-t-4 border-t-orange shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col gap-6 text-left
+children:
+  # Date pill
+  - type: container
+    props:
+      className: inline-flex items-center gap-2 self-start bg-orange-light text-orange px-4 py-2 rounded-full font-bold
+    children:
+      - type: icon
+        props: { name: calendar, className: w-5 h-5 }
+      - type: text
+        element: span
+        content: $date
+  # Title
+  - type: text
+    element: h3
+    props:
+      className: text-2xl title-font text-bleu-fonce
+    content: $title
+
+  # Meta details — the practical facts a visitor weighs before clicking.
+  - type: container
+    props:
+      className: flex flex-wrap items-center gap-x-5 gap-y-2 text-gray-600
+    children:
+      - type: container
+        props:
+          className: inline-flex items-center gap-2
+        children:
+          - type: icon
+            props: { name: clock, className: w-5 h-5 text-orange }
+          - type: text
+            element: span
+            content: $time
+      - type: container
+        props:
+          className: inline-flex items-center gap-2
+        children:
+          - type: icon
+            props: { name: map-pin, className: w-5 h-5 text-orange }
+          - type: text
+            element: span
+            content: $location
+      - type: container
+        props:
+          className: inline-flex items-center gap-2
+        children:
+          - type: icon
+            props: { name: users, className: w-5 h-5 text-orange }
+          - type: text
+            element: span
+            content: $capacity
+      - type: container
+        props:
+          className: inline-flex items-center gap-2 font-bold text-orange
+        children:
+          - type: icon
+            props: { name: coins, className: w-5 h-5 }
+          - type: text
+            element: span
+            content: $price
+
+  # CTA → HelloAsso registration page
+  - type: link
+    props:
+      href: $url
+      target: _blank
+      rel: noopener noreferrer
+      className: inline-flex items-center justify-center gap-2 self-start bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg hover:shadow-xl
+    children:
+      - type: text
+        element: span
+        content: Je réserve ma place
+      - type: icon
+        props: { name: arrow-right, className: w-5 h-5 -mt-0.5 }

@@ -6,13 +6,11 @@
   'use strict';
 
   // ── Workshop dates ────────────────────────────────────────────────────────
+  // Keep in sync with the event-card list in config/pages/home.yaml. Drives the
+  // hero's "Prochaine session le …" line only; the #events section lists each
+  // workshop explicitly with its own HelloAsso registration link.
   var workshopDates = [
-    new Date('2026-01-18T10:00:00'),
-    new Date('2026-02-28T10:00:00'),
-    new Date('2026-03-21T10:00:00'),
-    new Date('2026-04-18T10:00:00'),
-    new Date('2026-05-30T10:00:00'),
-    new Date('2026-06-20T10:00:00')
+    new Date('2026-07-16T18:30:00')
   ];
 
   function getNextWorkshop() {
@@ -25,10 +23,6 @@
     return next || null;
   }
 
-  function formatDate(date) {
-    return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
-  }
-
   function formatDateWithYear(date) {
     return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
   }
@@ -37,9 +31,7 @@
     var next = getNextWorkshop();
     if (!next) return;
     var heroDate = document.getElementById('hero-next-date');
-    if (heroDate) heroDate.textContent = formatDate(next);
-    var registrationDate = document.getElementById('registration-date');
-    if (registrationDate) registrationDate.textContent = formatDateWithYear(next);
+    if (heroDate) heroDate.textContent = formatDateWithYear(next);
   }
 
   // ── Mobile menu: close when a menu link is clicked ───────────────────────
