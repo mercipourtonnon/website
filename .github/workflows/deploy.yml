@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Sovrium
+        run: |
+          curl -fsSL https://sovrium.com/install | sh
+          # Cover the common install locations, then verify
+          echo "$HOME/.sovrium/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.sovrium/bin:$HOME/.local/bin:$PATH"
+          command -v sovrium || { echo 'sovrium not on PATH after install:'; find "$HOME" -maxdepth 4 -name sovrium -type f 2>/dev/null; exit 1; }
+          sovrium --version
+
+      - name: Validate configuration
+        run: sovrium validate app.yaml
+
+      - name: Build static site
+        env:
+          NODE_ENV: production
+          SOVRIUM_DEPLOYMENT: github-pages
+          SOVRIUM_BASE_URL: https://mercipourtonnon.fr
+          SOVRIUM_GENERATE_SITEMAP: 'true'
+          SOVRIUM_GENERATE_ROBOTS: 'true'
+        run: sovrium build app.yaml
+
+      # The static exporter writes JS asset routes with a .html suffix
+      # (e.g. scroll-animation.js.html) — restore the real extension.
+      - name: Fix exported JS asset names
+        run: |
+          for f in dist/assets/*.js.html; do
+            [ -e "$f" ] && mv "$f" "${f%.html}"
+          done
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
