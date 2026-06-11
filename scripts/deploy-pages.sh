@@ -37,6 +37,10 @@ touch dist/.nojekyll
 [ -f CNAME ] && cp CNAME dist/CNAME
 
 echo "▸ Publishing to gh-pages…"
+# Idempotency: a previous run leaves a local gh-pages branch behind, which
+# makes the orphan checkout below fail ("a branch named 'gh-pages' already
+# exists"). Drop it first — the canonical copy lives on the remote.
+git branch -D gh-pages 2>/dev/null || true
 WT="$(mktemp -d)"
 git worktree remove --force "$WT" 2>/dev/null || true
 git worktree add --detach "$WT" >/dev/null
@@ -47,9 +51,12 @@ git worktree add --detach "$WT" >/dev/null
   cp -R "$REPO_ROOT/dist/." .
   git add -A
   git commit -q -m "Deploy static site (built locally with sovrium build)"
-  git push -f -u origin gh-pages
+  # No -u: avoid recreating a local tracking branch that blocks the next run.
+  git push -f origin gh-pages
 )
 git worktree remove --force "$WT"
 git worktree prune
+# The orphan checkout created a local gh-pages ref in the main repo — clear it.
+git branch -D gh-pages 2>/dev/null || true
 
 echo "✓ Deployed. Pages will refresh in ~1 min (source must be gh-pages /root)."
