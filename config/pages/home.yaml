@@ -50,33 +50,61 @@ meta:
         addressLocality: Strasbourg
         addressCountry: FR
       event:
-        '@type': EducationEvent
-        name: 'Atelier de consentement - Niveau 1 - Tout public'
-        description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
-        startDate: '2026-07-16T18:30:00+02:00'
-        endDate: '2026-07-16T21:30:00+02:00'
-        eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
-        eventStatus: https://schema.org/EventScheduled
-        location:
-          '@type': Place
-          name: Strasbourg
-          address:
-            '@type': PostalAddress
-            addressLocality: Strasbourg
-            addressCountry: FR
-        organizer:
-          '@type': Organization
-          name: Merci pour ton non
-          url: https://mercipourtonnon.fr
-        offers:
-          '@type': Offer
-          price: '0'
-          priceCurrency: EUR
-          availability: https://schema.org/InStock
-          url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
-          description: Prix libre - Personne n'est refusé·e par manque d'argent
-        maximumAttendeeCapacity: 15
-        minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - Tout public'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-06-20T14:00:00+02:00'
+          endDate: '2026-06-20T17:00:00+02:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            name: Tour du Schloessel
+            address:
+              '@type': PostalAddress
+              streetAddress: Rue de la Rotlach
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://www.billetweb.fr/ateliers-de-consentement-niveau-1
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 10
+          minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - Tout public'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-07-16T18:30:00+02:00'
+          endDate: '2026-07-16T21:30:00+02:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            name: La Plage Digitale
+            address:
+              '@type': PostalAddress
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 15
+          minimumAttendeeCapacity: 6
     faqPage:
       '@context': https://schema.org
       '@type': FAQPage
@@ -165,13 +193,45 @@ meta:
               '@type': EducationEvent
               name: 'Atelier de consentement - Niveau 1 - Tout public'
               description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+              startDate: '2026-06-20T14:00:00+02:00'
+              endDate: '2026-06-20T17:00:00+02:00'
+              eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+              eventStatus: https://schema.org/EventScheduled
+              location:
+                '@type': Place
+                name: Tour du Schloessel
+                address:
+                  '@type': PostalAddress
+                  streetAddress: Rue de la Rotlach
+                  addressLocality: Strasbourg
+                  addressCountry: FR
+              organizer:
+                '@type': Organization
+                name: Merci pour ton non
+                url: https://mercipourtonnon.fr
+              image: https://mercipourtonnon.fr/social.png
+              offers:
+                '@type': Offer
+                price: '0'
+                priceCurrency: EUR
+                availability: https://schema.org/InStock
+                url: https://www.billetweb.fr/ateliers-de-consentement-niveau-1
+                validFrom: '2025-01-01T00:00:00+02:00'
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+          - '@type': Offer
+            itemOffered:
+              '@type': EducationEvent
+              name: 'Atelier de consentement - Niveau 1 - Tout public'
+              description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
               startDate: '2026-07-16T18:30:00+02:00'
               endDate: '2026-07-16T21:30:00+02:00'
               eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
               eventStatus: https://schema.org/EventScheduled
               location:
                 '@type': Place
-                name: Strasbourg
+                name: La Plage Digitale
                 address:
                   '@type': PostalAddress
                   addressLocality: Strasbourg
@@ -591,7 +651,7 @@ components:
                         props:
                           id: hero-next-date
                           className: font-bold text-bleu-fonce
-                        content: 16 juillet 2026
+                        content: 20 juin 2026
           # Decorative colored circles
           - type: container
             props:
@@ -2182,9 +2242,18 @@ components:
                   - component: event-card
                     vars:
                       title: 'Atelier de consentement - Niveau 1 - Tout public'
+                      date: 20 juin 2026
+                      time: 14h – 17h
+                      location: Tour du Schloessel, Strasbourg
+                      capacity: 10 places
+                      price: prix libre
+                      url: https://www.billetweb.fr/ateliers-de-consentement-niveau-1
+                  - component: event-card
+                    vars:
+                      title: 'Atelier de consentement - Niveau 1 - Tout public'
                       date: 16 juillet 2026
                       time: 18h30 – 21h30
-                      location: Strasbourg
+                      location: La Plage Digitale, Strasbourg
                       capacity: 15 places
                       price: prix libre
                       url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
