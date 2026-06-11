@@ -1,0 +1,157 @@
+name: newsletter
+path: /newsletter
+sitemap:
+  priority: 0.5
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: Newsletter - Merci pour ton non
+  description: Inscris-toi à la newsletter de Merci pour ton non pour recevoir nos actualités, nos prochains ateliers et nos ressources sur le consentement.
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/newsletter
+  openGraph:
+    type: website
+    title: Newsletter | Merci pour ton non
+    description: Inscris-toi pour suivre nos actualités, nos prochains ateliers et nos ressources sur le consentement.
+    url: https://mercipourtonnon.fr/newsletter
+    image: https://mercipourtonnon.fr/social.png
+    siteName: Merci pour ton non
+    locale: fr_FR
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  customElements:
+    - type: link
+      attrs:
+        rel: stylesheet
+        href: 'https://sibforms.com/forms/end-form/build/sib-styles.css'
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#7B01FE'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+    # The shared injector wraps the form in its own card (.sib-form bg-white
+    # rounded-2xl shadow…). On this page the form lives INSIDE the main card,
+    # so neutralize the injected card chrome (same override as the old
+    # newsletter.html had in its <style> block).
+    - type: style
+      content: |
+        .sib-form { padding: 0 !important; background-color: transparent !important; box-shadow: none !important; max-width: none !important; }
+scripts:
+  inlineScripts:
+    # Brevo form configuration — verbatim from newsletter.html
+    - position: body-end
+      code: |
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Veuillez choisir un code pays';
+        window.LOCALE = 'fr';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations fournies ne sont pas valides.";
+        window.REQUIRED_ERROR_MESSAGE = "Ce champ est requis.";
+        window.GENERIC_INVALID_MESSAGE = "Les informations fournies ne sont pas valides.";
+        window.translation = { common: { selectedList: '{quantity} liste sélectionnée', selectedLists: '{quantity} listes sélectionnées' } };
+        var AUTOHIDE = Boolean(0);
+  externalScripts:
+    # Injects the Brevo form markup into #newsletter-embed (must run before main.js)
+    - src: /assets/brevo-embed.js
+      defer: true
+      position: body-end
+    - src: 'https://sibforms.com/forms/end-form/build/main.js'
+      defer: true
+      position: body-end
+components:
+  # Page wrapper — reproduces the old <body class="min-h-screen text-bleu-fonce bg-mauve-light">
+  - type: container
+    props:
+      className: min-h-screen text-bleu-fonce bg-mauve-light
+    children:
+      # Section: Header (logo + back link)
+      - type: container
+        element: header
+        props:
+          className: bg-white shadow-sm
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto px-6 py-4 flex items-center justify-between
+            children:
+              - type: link
+                props:
+                  href: /
+                  className: flex items-center
+                children:
+                  - type: image
+                    props:
+                      src: /logo-without-marging.svg
+                      alt: Merci pour ton non
+                      className: h-12 sm:h-14 w-auto
+              - type: link
+                props:
+                  href: /
+                  className: text-sm text-gray-600 hover:text-mauve font-medium transition-colors flex items-center gap-1
+                children:
+                  - type: icon
+                    props:
+                      name: chevron-left
+                      className: w-4 h-4
+                  - type: text
+                    element: span
+                    content: Retour au site
+
+      # Section: Main — centered card containing title, subtitle and the Brevo form
+      - type: container
+        element: main
+        props:
+          className: flex items-center justify-center px-6 py-16 min-h-[calc(100vh-140px)]
+        children:
+          - type: container
+            props:
+              className: max-w-lg w-full
+            children:
+              - type: container
+                props:
+                  className: bg-white rounded-2xl shadow-sm w-full p-8 sm:p-10
+                children:
+                  - type: container
+                    props:
+                      className: text-center mb-8
+                    children:
+                      - type: text
+                        element: h1
+                        props:
+                          className: text-3xl md:text-4xl title-font text-mauve mb-4
+                        content: reste informé·e
+                      - type: text
+                        element: p
+                        props:
+                          className: text-base text-gray-600
+                        content: Inscris-toi pour suivre nos actualités, nos prochains ateliers et nos ressources sur le consentement.
+                  # Brevo form — injected at runtime by /assets/brevo-embed.js
+                  # (single-card layout; injected card chrome neutralized in
+                  # this page's customElements style)
+                  - type: container
+                    props:
+                      id: newsletter-embed
+
+      # Section: Footer
+      - type: container
+        element: footer
+        props:
+          className: text-center py-8 px-6
+        children:
+          - type: link
+            props:
+              href: /
+              className: text-sm text-gray-500 hover:text-mauve transition-colors
+            content: ← Retour sur mercipourtonnon.fr
+          - type: text
+            element: p
+            props:
+              className: text-xs text-gray-400 mt-2
+            content: © 2025 Merci pour ton non. Tous droits réservés.

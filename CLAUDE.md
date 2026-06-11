@@ -1,182 +1,115 @@
-# CLAUDE.md
+# mercipourtonnon
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+A [Sovrium](https://sovrium.com) application — a self-hosted, **configuration-driven**
+platform. The entire app (data model, auth, pages, theme, i18n) is declared in one or more
+YAML config files (a single `app.yaml` to start, split via `$ref` as the app grows) and
+served by the `sovrium` runtime. There is no hand-written
+server or UI code to maintain.
 
-## Project Overview
+## How to work in this project (read first)
 
-This is a static website for "Merci pour ton non", a non-profit organization offering consent workshops in Strasbourg, France. The site is a single-page application built with vanilla HTML, CSS (Tailwind CSS v4), and JavaScript.
+- **Edit `app.yaml`, not application code.** Features are added declaratively by editing
+  the config, not by writing TypeScript/React/SQL. Prefer a schema change over new code.
+- **Validate before running:** `sovrium validate app.yaml` checks the config against the
+  schema and reports errors with paths. Always validate after editing.
+- **Start with the minimum, grow as needed.** The schema supports progressive complexity —
+  add tables, pages, auth, and theme incrementally.
+- **The authoritative contract is the schema itself:** run `sovrium schema` to print the
+  full JSON Schema (Draft-07) for `app.yaml`. When unsure about a property or field type,
+  consult the schema rather than guessing.
 
-## Development Commands
+## Commands
 
 ```bash
-# Install dependencies
-bun install
-
-# Start development server and watch CSS changes
-bun run build
-
-# Serve the site locally (opens index.html)
-bun start
+sovrium start app.yaml         # Run the app (dev server)
+sovrium start app.yaml --watch # Hot-reload on config changes
+sovrium validate app.yaml      # Validate the config against the schema
+sovrium schema                 # Print the full JSON Schema for app.yaml
+sovrium build app.yaml         # Build static output
 ```
 
-## Architecture
+## Scaling the config
 
-### Technology Stack
-- **Runtime**: Bun (JavaScript runtime)
-- **CSS Framework**: Tailwind CSS v4.1.13 (using @tailwindcss/cli with custom theme)
-- **No build framework**: Pure HTML/CSS/JS - no React, Vue, or similar
-- **Deployment**: Static site hosted via GitHub Pages (CNAME file points to mercipourtonnon.fr)
+Start with a single `app.yaml`. As the app grows, split using `$ref`.
+The rule is **one purpose per file** — if you can't describe a file
+in one short sentence, it's mixing concerns and wants a split.
 
-### File Structure
-- `index.html` - Single-page website containing all content
-- `charte.html` - Brand guidelines and visual identity documentation
-- `input.css` - Tailwind entry point with custom fonts (@font-face) and theme colors
-- `output.css` - Compiled Tailwind CSS output (generated, not manually edited)
-- `public/` - Images, favicons, team pictures, logo assets
-- `public/fonts/` - Custom fonts (Bely Display, Neue Machina)
-- `robots.txt` & `sitemap.xml` - SEO files
+The canonical layout is **one file per entity for collections, one file
+per singleton for scoped config**. Reach for it as soon as a collection
+has more than one member; don't pre-split a single-table or single-page app.
 
-### Key Features in index.html
-
-1. **Responsive Navigation**: Desktop menu + mobile/tablet sidebar menu with overlay
-2. **Dynamic Date Updates**: JavaScript automatically updates workshop dates based on hardcoded schedule
-3. **Billetweb Integration**: Event registration embedded via external script
-4. **Mobile Menu**: Custom JavaScript implementation with overlay
-5. **Scroll-Spy Navigation**: Active nav link highlighting based on scroll position
-
-### Brand Typography & Custom Styling
-- **Bely Display**: Display font for all titles (via `.title-font` class)
-  - Always lowercase (`text-transform: lowercase`)
-  - Letter-spacing: 0.05em
-  - Fallback: Archivo Black (Google Fonts)
-- **Neue Machina**: Body font for all text
-  - Weights: Light (300), Regular (400), Ultrabold (800)
-  - Fallback: Space Grotesk (Google Fonts)
-- **Custom CSS classes** defined in `<style>` tag:
-  - `.title-font` - Bely Display font for headers (lowercase)
-  - `.hero-title` - Hero title with fadeInUp animation
-  - `.gradient-text` - Orange-to-pourpre gradient text
-  - Animation keyframes: `fadeInUp`, `fadeIn`, `float`
-
-## Brand Guidelines (charte.html)
-
-### Four Brand Colors
-The brand uses four semantic colors from the logo:
-
-1. **Pourpre** (#F5004F)
-   - Energy: Émotion, authenticité, découverte
-   - Usage: Testimonials, emotional sections, authentic moments
-   - Light variant: #FFF0F5
-
-2. **Orange** (#FFAF00)
-   - Energy: Action, engagement, chaleur
-   - Usage: CTAs, registration buttons, important information
-   - Light variant: #FFF8E6
-
-3. **Mauve** (#7B01FE)
-   - Energy: Exploration, apprentissage, créativité
-   - Usage: Educational sections, exploratory content
-   - Light variant: #F3E6FF
-
-4. **Cyan** (#12A19D)
-   - Energy: Validation, calme, ressources
-   - Usage: Confirmations, downloadable resources, factual info
-   - Light variant: #E6F9F8
-
-### Color Usage Rules
-- **NEVER use saturated colors** (#FFAF00, #F5004F, etc.) as section backgrounds
-- **ALWAYS use light variants** (#FFF8E6, #FFF0F5, etc.) for section backgrounds
-- **Alternate white and colored backgrounds** between sections for visual rhythm
-- Use colors semantically based on their energy and meaning
-
-### Button Styling
-- **Rounded-full**: All buttons use fully rounded corners
-- **Color-only hover**: Buttons only darken color on hover (NO scale or shadow effects)
-- **Transition-colors**: Use `transition-colors` for smooth color changes
-- Four color variants available for different intentions
-
-### Tone of Voice
-- **Tutoiement**: Always use "tu/ton/te/tes" (informal "you")
-- **Inclusive writing**: Use ·e and ·es (participant·e, tou·te·s)
-- **No corporate jargon**: Avoid "solution", "optimisation", "performance", "ROI"
-- **No marketing hyperbole**: Avoid "révolutionnaire", "unique", "certifiant"
-
-## Content Sections (in order)
-
-1. Hero with multi-color title
-2. "Pour qui?" - Target audience cards (#pour-qui)
-3. Workshop details (#atelier)
-4. Practical information (#infos-pratiques)
-5. Testimonials (#temoignages)
-6. Mission & Approach (#mission)
-7. Values (#valeurs)
-8. Team (#equipe)
-9. Programme (#programme)
-10. FAQ (#faq)
-11. Follow Us (social media links) (#suivez-nous)
-12. Event Registration (#events)
-
-## Important Notes
-
-### Workshop Dates
-Workshop dates are hardcoded in JavaScript at the end of index.html. To update:
-1. Edit the `workshopDates` array in the script section
-2. Format: `new Date('YYYY-MM-DDTHH:mm:ss')`
-3. The script automatically selects the next future date and updates two locations:
-   - Banner: `.text-white.font-semibold`
-   - Hero: `.text-sm.text-gray-600 strong`
-
-### SEO & Meta Tags
-Extensive meta tags for SEO and social sharing in `<head>`:
-- Open Graph (Facebook, LinkedIn, WhatsApp)
-- Twitter Cards
-- Schema.org structured data for events
-- Keywords optimized for French audience
-
-### Responsive Design
-- Uses Tailwind's responsive prefixes (sm:, md:, lg:)
-- Mobile menu activates below lg: breakpoint
-- Desktop nav has Mission, Valeurs, Équipe as separate links (not grouped under "À propos")
-
-### External Dependencies
-- Google Fonts (Archivo Black, Space Grotesk) - fallbacks for custom fonts
-- Lucide Icons (https://unpkg.com/lucide@latest) - preferred over emojis per brand guidelines
-- Billetweb ticketing widget
-- Plausible Analytics (privacy-friendly analytics)
-
-## Common Tasks
-
-### Updating Team Members
-Team section (`#equipe`). Each member has:
-- Profile image in `public/pictures/`
-- Name and role
-- Fallback handling with `onerror="this.style.display='none'"`
-
-### Modifying Colors
-**IMPORTANT**: Always follow charte.html guidelines:
-- Use semantic color meanings (see Brand Guidelines section above)
-- Only use light variants for section backgrounds
-- Never use saturated colors as backgrounds
-- Alternate white and colored backgrounds between sections
-
-### Editing Content
-All content is in `index.html`. No separate content management system. Edit HTML directly for text changes.
-
-**Tone of voice checklist**:
-- [ ] Use tutoiement (tu/ton/tes)
-- [ ] Use inclusive writing (·e, ·es)
-- [ ] Avoid corporate jargon
-- [ ] Keep titles in lowercase when using `.title-font`
-
-### CSS Changes
-1. Edit Tailwind classes directly in HTML (preferred)
-2. For custom fonts or brand colors, edit `input.css` and run `bun run build`
-3. Custom theme colors are defined in `input.css` under `@theme` directive
-4. DO NOT manually edit `output.css` (auto-generated)
-
-### Adding New Icons
-Use Lucide icons instead of emojis:
-```html
-<i data-lucide="icon-name" class="w-5 h-5 text-orange"></i>
 ```
-Preferred icons: heart, ear, hand, users, shield (human-focused, not technical)
+app.yaml                              # entry point — stays at the project root
+config/theme.yaml                     # singleton — all theming
+config/auth.yaml                      # singleton — auth config
+config/i18n.yaml                      # singleton — all i18n strings
+config/analytics.yaml                 # singleton — analytics
+config/tables/contacts.yaml           # one file per table
+config/tables/orders.yaml
+config/pages/landing.yaml             # one file per page
+config/pages/dashboard.yaml
+config/components/icon-badge.yaml     # one file per reusable component template
+config/automations/on-new-order.yaml  # one file per automation
+config/forms/contact-us.yaml          # one file per standalone form
+config/buckets/uploads.yaml           # one file per bucket
+config/connections/stripe.yaml        # one file per connection
+config/agents/support-bot.yaml        # one file per AI agent
+config/actions/send-slack.yaml        # one file per reusable action template
+```
+
+In `app.yaml`: `theme: { $ref: './config/theme.yaml' }`. Collections list
+their entities: `tables: [{ $ref: './config/tables/contacts.yaml' }, …]`.
+Paths resolve relative to the file containing the `$ref`.
+
+**Root keys fall into three shapes** — split accordingly:
+
+- **Collections** (`tables`, `pages`, `forms`, `components`, `connections`,
+  `actions`, `automations`, `agents`, `buckets`, `env`) → one file per entity
+  under `config/<collection>/`.
+- **Singletons** (`auth`, `theme`, `analytics`, `languages`, `scripts`) →
+  one file per singleton at `config/<singleton>.yaml`. Never split
+  these by sub-key.
+- **Scalars** (`name`, `version`, `description`) → stay inline in `app.yaml`.
+
+**When to start splitting** — once any collection has 2+ members, move that
+collection to per-entity files in the same authoring pass. Below that
+threshold (a single table, a single page) keep it inline — the indirection
+cost isn't worth it. A single logical entity past ~300 lines is itself a
+signal to split sub-concerns (e.g. a complex table's `fields` into a sidecar),
+but that's a secondary split, not the primary one.
+
+Note: reusable **component templates** are root entities (their own files);
+page-instance components stay inside the page file.
+
+Prefer YAML for readability; switch to a `.ts` config with `defineConfig()`
+from `@sovrium/types` if you want IDE autocompletion and compile-time
+type-checking.
+
+## The `app.yaml` schema
+
+Root properties include: `name`, `description`, `tables`, `auth`, `pages`, `theme`,
+`i18n`, `analytics`, `connections`, and `agents`. Highlights:
+
+- **`tables`** — your data model. Each table has `fields`; field `type` spans many
+  categories (text, number, date/time, select, relation, attachment, rich-text, code,
+  formula, AI-compute, …). The runtime generates the database, REST API, and CRUD UI.
+- **`auth`** — authentication (email/password, magic link, OAuth) plus role-based access
+  (`admin`, `member`, `viewer`) and field-level permissions.
+- **`pages`** — composed from many built-in component types (forms, tables, kanban,
+  calendar, charts, rich content, …). Server-rendered.
+- **`theme`** — colors, fonts, spacing, radii, shadows, animations, breakpoints.
+- **`i18n`** — multi-language content (RTL supported).
+
+## Runtime data
+
+On `sovrium start`, runtime artifacts are written under `.sovrium/` (git-ignored):
+the zero-config SQLite database (`database.db`), the server lock file, and local file
+storage. Set `DATABASE_URL` to use PostgreSQL instead. Relocate the whole folder with
+the `SOVRIUM_DATA_DIR` env var. Operator settings live in **environment variables**, not
+in `app.yaml`.
+
+## Documentation
+
+- Docs: https://sovrium.com/docs
+- LLM-oriented overview: https://sovrium.com/llms.txt
+- Local schema reference: `sovrium schema`

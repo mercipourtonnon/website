@@ -1,0 +1,744 @@
+name: mentions-legales
+path: /mentions-legales
+sitemap:
+  priority: 0.3
+  changefreq: yearly
+meta:
+  lang: fr-FR
+  title: Mentions légales - Merci pour ton non
+  description: Mentions légales de l'association Merci pour ton non - Informations légales, éditeur, hébergement, RGPD et protection des données.
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/mentions-legales
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+components:
+  # Page wrapper
+  - type: container
+    props:
+      className: min-h-screen flex flex-col bg-linear-to-br from-orange-light/30 to-mauve-light/30
+    children:
+      # Navigation
+      - type: container
+        element: nav
+        props:
+          className: fixed top-0 left-0 right-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-lg
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4
+            children:
+              - type: container
+                props:
+                  className: flex justify-between items-center
+                children:
+                  - type: link
+                    props:
+                      href: /
+                      className: flex items-center text-gray-700
+                    children:
+                      - type: image
+                        props:
+                          src: /logo-without-marging.svg
+                          alt: Merci pour ton non
+                          className: h-12 sm:h-14 lg:h-16 w-auto
+                  - type: link
+                    props:
+                      href: /
+                      className: text-gray-700 hover:text-orange font-medium transition text-sm
+                    content: "← Retour à l'accueil"
+
+      # Main Content
+      - type: container
+        element: section
+        props:
+          className: relative z-10 px-6 py-16 pt-24 sm:pt-32 bg-white
+        children:
+          - type: container
+            props:
+              className: max-w-4xl mx-auto
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-4xl sm:text-5xl lg:text-7xl title-font text-mauve mb-8
+                content: mentions légales
+
+              # Section 1: Éditeur du site
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: éditeur du site
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Nom de l'association :"
+                          - type: text
+                            element: span
+                            content: " Merci pour ton non"
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Forme juridique :"
+                          - type: text
+                            element: span
+                            content: " Association de droit local (Bas-Rhin, Haut-Rhin et Moselle)"
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "SIREN :"
+                          - type: text
+                            element: span
+                            content: " 993 877 893"
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "SIRET :"
+                          - type: text
+                            element: span
+                            content: " 993 877 893 00012"
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Code NAF/APE :"
+                          - type: text
+                            element: span
+                            content: " 94.99Z (Autres organisations fonctionnant par adhésion volontaire)"
+                      - type: customHTML
+                        content: "<p><strong>Siège social :</strong><br />249 avenue de Colmar<br />67100 Strasbourg<br />France</p>"
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Email :"
+                          - type: text
+                            element: span
+                            content: " "
+                          - type: link
+                            props:
+                              href: mailto:mercipourtonnon@gmail.com
+                              className: text-orange hover:underline
+                            content: mercipourtonnon@gmail.com
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Site web :"
+                          - type: text
+                            element: span
+                            content: " "
+                          - type: link
+                            props:
+                              href: https://mercipourtonnon.fr
+                              className: text-orange hover:underline
+                            content: https://mercipourtonnon.fr
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Objet de l'association :"
+                          - type: text
+                            element: span
+                            content: " L'association œuvre à diffuser une culture du consentement auprès de chaque citoyen·ne, dans une démarche d'éducation populaire en Alsace. Elle crée des espaces de réflexion et de pratique où chacun·e peut explorer les enjeux du consentement - dans son rapport à soi, à l'autre et à la société."
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Directeur·ice de publication :"
+                          - type: text
+                            element: span
+                            content: " Mathilde Brière et Thomas Jeanneau, co-président·es de l'association Merci pour ton non"
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            props:
+                              className: font-bold
+                            content: "Date de création :"
+                          - type: text
+                            element: span
+                            content: " 24 octobre 2025"
+
+              # Section 2: Hébergement
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: hébergement
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: "Le site est hébergé par :"
+                      - type: customHTML
+                        content: "<p><strong>GitHub Pages</strong> (Microsoft Corporation)<br />One Microsoft Way<br />Redmond, WA 98052<br />États-Unis</p>"
+                      - type: text
+                        element: p
+                        content: Les données sont hébergées conformément au RGPD (Règlement Général sur la Protection des Données).
+
+              # Section 3: Limitations techniques
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: limitations techniques
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: "Le site mercipourtonnon.fr utilise les technologies web modernes pour te garantir la meilleure expérience possible. Pour profiter pleinement de toutes les fonctionnalités du site, nous te recommandons :"
+                      - type: list
+                        props:
+                          className: list-disc list-inside space-y-2 ml-4
+                        children:
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "JavaScript activé :"
+                              - type: text
+                                element: span
+                                content: " Le site utilise JavaScript pour le menu de navigation mobile, les animations et certaines interactions. Certaines fonctionnalités peuvent être limitées si JavaScript est désactivé."
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Navigateur moderne :"
+                              - type: text
+                                element: span
+                                content: " Nous recommandons d'utiliser les versions récentes de Chrome, Firefox, Safari ou Edge pour une expérience optimale."
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Hébergement européen :"
+                              - type: text
+                                element: span
+                                content: " Toutes les données du site sont hébergées dans l'Union européenne (via GitHub Pages/Microsoft), garantissant la conformité avec le RGPD."
+                      - type: text
+                        element: p
+                        props:
+                          className: mt-4
+                        content: L'association Merci pour ton non met tout en œuvre pour assurer l'accessibilité et la disponibilité du site. Toutefois, nous ne pouvons être tenus responsables des difficultés d'accès temporaires liées à des problèmes techniques indépendants de notre volonté, à la maintenance programmée, ou aux caractéristiques de ton équipement.
+
+              # Section 4: Protection des données personnelles (RGPD)
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: protection des données personnelles
+
+                  - type: text
+                    element: h3
+                    props:
+                      className: text-xl title-font text-mauve mb-3 mt-6
+                    content: données collectées
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: "Dans le cadre de ton utilisation du site, nous sommes susceptibles de collecter les données suivantes :"
+                      - type: list
+                        props:
+                          className: list-disc list-inside space-y-2 ml-4
+                        children:
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Inscriptions aux ateliers :"
+                              - type: text
+                                element: span
+                                content: " Gérées via la plateforme tierce Billetweb (nom, prénom, email, téléphone si fourni). Consulte la politique de confidentialité de Billetweb pour plus d'informations sur le traitement de tes données."
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Newsletter :"
+                              - type: text
+                                element: span
+                                content: " Gérée via la plateforme tierce Brevo (prénom ou pseudo, adresse email). Ces données sont collectées uniquement avec ton consentement explicite lors de l'inscription. Consulte la "
+                              - type: link
+                                props:
+                                  href: https://www.brevo.com/fr/legal/privacypolicy/
+                                  target: _blank
+                                  rel: noopener noreferrer
+                                  className: text-orange hover:underline
+                                content: politique de confidentialité de Brevo
+                              - type: text
+                                element: span
+                                content: " pour plus d'informations."
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Statistiques de navigation :"
+                              - type: text
+                                element: span
+                                content: " Via Plausible Analytics, un outil respectueux de la vie privée qui ne collecte aucune donnée personnelle identifiable et ne pose pas de cookies de tracking."
+
+                  - type: text
+                    element: h3
+                    props:
+                      className: text-xl title-font text-mauve mb-3 mt-6
+                    content: finalité du traitement
+                  - type: text
+                    element: p
+                    props:
+                      className: text-gray-700 leading-relaxed
+                    content: "Les données collectées sont utilisées uniquement pour :"
+                  - type: list
+                    props:
+                      className: list-disc list-inside space-y-2 ml-4 text-gray-700
+                    children:
+                      - type: list-item
+                        content: Gérer les inscriptions aux ateliers
+                      - type: list-item
+                        content: Te contacter concernant les ateliers auxquels tu t'es inscrit·e
+                      - type: list-item
+                        content: T'envoyer notre newsletter si tu t'y es inscrit·e (actualités, dates d'ateliers, ressources sur le consentement)
+                      - type: list-item
+                        content: Améliorer l'expérience utilisateur du site
+                      - type: list-item
+                        content: Répondre à tes demandes d'information
+
+                  - type: text
+                    element: h3
+                    props:
+                      className: text-xl title-font text-mauve mb-3 mt-6
+                    content: tes droits
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: "Conformément au RGPD et à la loi Informatique et Libertés, tu disposes des droits suivants :"
+                      - type: list
+                        props:
+                          className: list-disc list-inside space-y-2 ml-4
+                        children:
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Droit d'accès :"
+                              - type: text
+                                element: span
+                                content: " Tu peux demander l'accès aux données personnelles que nous détenons sur toi"
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Droit de rectification :"
+                              - type: text
+                                element: span
+                                content: " Tu peux demander la correction de données inexactes ou incomplètes"
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Droit à l'effacement :"
+                              - type: text
+                                element: span
+                                content: " Tu peux demander la suppression de tes données personnelles"
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Droit à la limitation du traitement :"
+                              - type: text
+                                element: span
+                                content: " Tu peux demander la limitation du traitement de tes données"
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Droit à la portabilité :"
+                              - type: text
+                                element: span
+                                content: " Tu peux demander de recevoir tes données dans un format structuré"
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Droit d'opposition :"
+                              - type: text
+                                element: span
+                                content: " Tu peux t'opposer au traitement de tes données"
+                      - type: text
+                        element: p
+                        props:
+                          className: mt-4
+                        children:
+                          - type: text
+                            element: span
+                            content: "Pour exercer ces droits, contacte-nous à : "
+                          - type: link
+                            props:
+                              href: mailto:mercipourtonnon@gmail.com
+                              className: text-orange hover:underline font-semibold
+                            content: mercipourtonnon@gmail.com
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            content: "Si tu estimes que tes droits ne sont pas respectés, tu peux déposer une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : "
+                          - type: link
+                            props:
+                              href: https://www.cnil.fr
+                              target: _blank
+                              rel: noopener noreferrer
+                              className: text-orange hover:underline
+                            content: www.cnil.fr
+
+                  - type: text
+                    element: h3
+                    props:
+                      className: text-xl title-font text-mauve mb-3 mt-6
+                    content: durée de conservation
+                  - type: text
+                    element: p
+                    props:
+                      className: text-gray-700 leading-relaxed
+                    content: Tes données personnelles sont conservées uniquement le temps nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, conformément aux obligations légales applicables.
+
+              # Section 5: Cookies
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: cookies
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: "Notre site utilise des cookies techniques nécessaires au bon fonctionnement du site. Le formulaire d'inscription à la newsletter (Brevo) peut utiliser des cookies techniques nécessaires à son fonctionnement. Nous utilisons également Plausible Analytics, qui est une solution d'analyse web respectueuse de la vie privée :"
+                      - type: list
+                        props:
+                          className: list-disc list-inside space-y-2 ml-4
+                        children:
+                          - type: list-item
+                            content: Ne collecte aucune donnée personnelle identifiable
+                          - type: list-item
+                            content: Ne pose pas de cookies de tracking
+                          - type: list-item
+                            content: Respecte le RGPD sans nécessiter de bandeau de consentement
+                          - type: list-item
+                            content: N'utilise pas ton adresse IP complète (anonymisation)
+                          - type: list-item
+                            content: Toutes les données sont hébergées dans l'Union européenne
+                      - type: text
+                        element: p
+                        props:
+                          className: mt-4
+                        content: Tu peux néanmoins désactiver les cookies dans les paramètres de ton navigateur si tu le souhaites. Note que cela peut affecter certaines fonctionnalités du site.
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            content: "En savoir plus sur Plausible : "
+                          - type: link
+                            props:
+                              href: https://plausible.io/privacy-focused-web-analytics
+                              target: _blank
+                              rel: noopener noreferrer
+                              className: text-orange hover:underline
+                            content: plausible.io/privacy-focused-web-analytics
+
+              # Section 6: Propriété intellectuelle
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: propriété intellectuelle
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: L'ensemble du contenu présent sur ce site (textes, images, graphismes, logo, icônes, etc.) est la propriété exclusive de l'association Merci pour ton non, sauf mention contraire.
+                      - type: text
+                        element: p
+                        content: Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de l'association.
+                      - type: text
+                        element: p
+                        content: Toute exploitation non autorisée du site ou de l'un des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+
+              # Section 7: Limitation de responsabilité
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: limitation de responsabilité
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: L'association Merci pour ton non s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, elle ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.
+                      - type: text
+                        element: p
+                        content: "L'association ne saurait être tenue responsable :"
+                      - type: list
+                        props:
+                          className: list-disc list-inside space-y-2 ml-4
+                        children:
+                          - type: list-item
+                            content: Des dommages directs ou indirects résultant de l'accès au site ou de son utilisation
+                          - type: list-item
+                            content: Des interruptions temporaires d'accès au site pour des opérations de maintenance ou pour toute autre raison
+                          - type: list-item
+                            content: Du contenu des sites externes vers lesquels le site renvoie par des liens hypertextes
+
+              # Section 8: Liens hypertextes
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: liens hypertextes
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: Le site peut contenir des liens hypertextes vers d'autres sites. L'association Merci pour ton non n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou à leur politique de confidentialité.
+                      - type: text
+                        element: p
+                        children:
+                          - type: text
+                            element: span
+                            content: "La mise en place de liens hypertextes vers le site mercipourtonnon.fr nécessite une autorisation préalable. Pour toute demande, contacte-nous à : "
+                          - type: link
+                            props:
+                              href: mailto:mercipourtonnon@gmail.com
+                              className: text-orange hover:underline
+                            content: mercipourtonnon@gmail.com
+
+              # Section 9: Droit applicable
+              - type: container
+                element: section
+                props:
+                  className: mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: droit applicable et juridiction compétente
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: Les présentes mentions légales sont régies par le droit français. En cas de litige et à défaut d'accord amiable, le tribunal compétent sera celui du ressort du siège social de l'association.
+
+              # Section 10: Contact
+              - type: container
+                element: section
+                props:
+                  className: mb-8
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: text-xl title-font text-orange mb-4
+                    content: contact
+                  - type: container
+                    props:
+                      className: space-y-3 text-gray-700 leading-relaxed
+                    children:
+                      - type: text
+                        element: p
+                        content: "Pour toute question concernant ces mentions légales ou l'utilisation de tes données personnelles, tu peux nous contacter :"
+                      - type: list
+                        props:
+                          className: list-none space-y-2 ml-4
+                        children:
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Email :"
+                              - type: text
+                                element: span
+                                content: " "
+                              - type: link
+                                props:
+                                  href: mailto:mercipourtonnon@gmail.com
+                                  className: text-orange hover:underline
+                                content: mercipourtonnon@gmail.com
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Adresse postale :"
+                              - type: text
+                                element: span
+                                content: " 249 avenue de Colmar, 67100 Strasbourg"
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Site web :"
+                              - type: text
+                                element: span
+                                content: " "
+                              - type: link
+                                props:
+                                  href: https://mercipourtonnon.fr
+                                  className: text-orange hover:underline
+                                content: https://mercipourtonnon.fr
+
+              # Dernière mise à jour
+              - type: container
+                props:
+                  className: border-t border-gray-200 pt-6 text-sm text-gray-500
+                children:
+                  - type: text
+                    element: p
+                    content: "Dernière mise à jour : 14 janvier 2026"
+
+      # Footer
+      - component: site-footer

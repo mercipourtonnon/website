@@ -1,0 +1,21 @@
+name: mercipourtonnon
+description: Ateliers de consentement à prix libre à Strasbourg
+
+# Built-in privacy-friendly analytics (server-side; inert on static hosting)
+analytics: true
+
+theme:
+  $ref: ./config/theme.yaml
+
+components:
+  - $ref: ./config/components/site-footer.yaml
+  - $ref: ./config/components/testimonial-card.yaml
+  - $ref: ./config/components/audience-card.yaml
+  - $ref: ./config/components/value-card.yaml
+  - $ref: ./config/components/team-card.yaml
+
+pages:
+  - $ref: ./config/pages/home.yaml
+  - $ref: ./config/pages/mentions-legales.yaml
+  - $ref: ./config/pages/newsletter.yaml
+  - $ref: ./config/pages/charte.yaml

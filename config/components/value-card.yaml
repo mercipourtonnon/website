@@ -1,0 +1,25 @@
+# "Nos valeurs" card — vars: $borderTop (border-t-orange), $icon (lucide name),
+# $accent (text-orange), $title, $text. Full class tokens only.
+name: value-card
+type: container
+props:
+  className: bg-white rounded-lg p-6 border border-gray-200 border-t-4 $borderTop
+children:
+  - type: container
+    props:
+      className: mb-4
+    children:
+      - type: icon
+        props:
+          name: $icon
+          className: w-8 h-8 $accent
+  - type: text
+    element: h3
+    props:
+      className: text-xl title-font $accent mb-3
+    content: $title
+  - type: text
+    element: p
+    props:
+      className: text-gray-600
+    content: $text
