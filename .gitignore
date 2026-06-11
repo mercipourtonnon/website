@@ -35,3 +35,9 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Instagram
 /public/instagram
+
+# sovrium runtime data (database, lock file, local storage)
+.sovrium
+
+# Playwright MCP working files
+.playwright-mcp
