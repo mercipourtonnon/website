@@ -1,8 +1,11 @@
+# NOTE: This CI build is disabled for now — it depends on `sovrium.com/install`,
+# which is currently unavailable (TLS error). Until it is back up, deploy locally
+# with `bash scripts/deploy-pages.sh` (builds dist/ and pushes the `gh-pages`
+# branch), and keep Pages set to "Deploy from a branch" → gh-pages /(root).
+# Re-enable the `push` trigger below once the installer endpoint is reachable.
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
