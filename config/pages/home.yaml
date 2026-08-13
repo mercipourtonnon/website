@@ -49,17 +49,18 @@ meta:
         '@type': PostalAddress
         addressLocality: Strasbourg
         addressCountry: FR
+      # The six sessions of the 2026 season. One HelloAsso "Billetterie Plus"
+      # event backs them all, hence the shared offers.url.
       event:
         - '@type': EducationEvent
-          name: 'Atelier de consentement - Niveau 1 - Tout public'
+          name: 'Atelier de consentement - Niveau 1 - 19 septembre 2026'
           description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
-          startDate: '2026-07-16T18:30:00+02:00'
-          endDate: '2026-07-16T21:30:00+02:00'
+          startDate: '2026-09-19T14:00:00+02:00'
+          endDate: '2026-09-19T17:00:00+02:00'
           eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
           eventStatus: https://schema.org/EventScheduled
           location:
             '@type': Place
-            name: La Plage Digitale
             address:
               '@type': PostalAddress
               addressLocality: Strasbourg
@@ -73,7 +74,137 @@ meta:
             price: '0'
             priceCurrency: EUR
             availability: https://schema.org/InStock
-            url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
+            url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 15
+          minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - 6 octobre 2026'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-10-06T18:30:00+02:00'
+          endDate: '2026-10-06T21:30:00+02:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            address:
+              '@type': PostalAddress
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 15
+          minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - 17 octobre 2026'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-10-17T14:00:00+02:00'
+          endDate: '2026-10-17T17:00:00+02:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            address:
+              '@type': PostalAddress
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 15
+          minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - 28 novembre 2026'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-11-28T14:00:00+01:00'
+          endDate: '2026-11-28T17:00:00+01:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            address:
+              '@type': PostalAddress
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 15
+          minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - 12 décembre 2026'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-12-12T14:00:00+01:00'
+          endDate: '2026-12-12T17:00:00+01:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            address:
+              '@type': PostalAddress
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+            description: Prix libre - Personne n'est refusé·e par manque d'argent
+          maximumAttendeeCapacity: 15
+          minimumAttendeeCapacity: 6
+        - '@type': EducationEvent
+          name: 'Atelier de consentement - Niveau 1 - 17 décembre 2026'
+          description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
+          startDate: '2026-12-17T18:30:00+01:00'
+          endDate: '2026-12-17T21:30:00+01:00'
+          eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+          eventStatus: https://schema.org/EventScheduled
+          location:
+            '@type': Place
+            address:
+              '@type': PostalAddress
+              addressLocality: Strasbourg
+              addressCountry: FR
+          organizer:
+            '@type': Organization
+            name: Merci pour ton non
+            url: https://mercipourtonnon.fr
+          offers:
+            '@type': Offer
+            price: '0'
+            priceCurrency: EUR
+            availability: https://schema.org/InStock
+            url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
             description: Prix libre - Personne n'est refusé·e par manque d'argent
           maximumAttendeeCapacity: 15
           minimumAttendeeCapacity: 6
@@ -159,19 +290,20 @@ meta:
       hasOfferCatalog:
         '@type': OfferCatalog
         name: Ateliers
+        # Only the NEXT session — the full six-date list lives in
+        # `organization.event` above; no need to repeat it here.
         itemListElement:
           - '@type': Offer
             itemOffered:
               '@type': EducationEvent
               name: 'Atelier de consentement - Niveau 1 - Tout public'
               description: Atelier interactif de 3 heures pour explorer ensemble les différentes facettes du consentement
-              startDate: '2026-07-16T18:30:00+02:00'
-              endDate: '2026-07-16T21:30:00+02:00'
+              startDate: '2026-09-19T14:00:00+02:00'
+              endDate: '2026-09-19T17:00:00+02:00'
               eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
               eventStatus: https://schema.org/EventScheduled
               location:
                 '@type': Place
-                name: La Plage Digitale
                 address:
                   '@type': PostalAddress
                   addressLocality: Strasbourg
@@ -186,7 +318,7 @@ meta:
                 price: '0'
                 priceCurrency: EUR
                 availability: https://schema.org/InStock
-                url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
+                url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
                 validFrom: '2025-01-01T00:00:00+02:00'
             price: '0'
             priceCurrency: EUR
@@ -212,7 +344,9 @@ meta:
       crossorigin: anonymous
 
   dnsPrefetch:
-    - https://www.helloasso.com
+    # Registration now lives on Billetterie Plus — a different host from the
+    # old www.helloasso.com, so the hint has to follow the CTA.
+    - https://plusbilletterie.helloasso.com
     - https://sibforms.com
 
   customElements:
@@ -591,7 +725,7 @@ components:
                         props:
                           id: hero-next-date
                           className: font-bold text-bleu-fonce
-                        content: 16 juillet 2026
+                        content: 19 septembre 2026
           # Decorative colored circles
           - type: container
             props:
@@ -2148,8 +2282,11 @@ components:
                 props:
                   id: newsletter-embed
 
-      # Section: Events / Réservation (#events) — custom list of HelloAsso workshops.
-      # Each workshop is an `event-card` instance linking to its registration page.
+      # Section: Events / Réservation (#events) — ONE HelloAsso "Billetterie Plus"
+      # event holding six dates, so there is a single registration URL and the
+      # visitor picks their session inside HelloAsso's widget. The card lives
+      # inline here (a component template can't instantiate another component);
+      # each date is an `event-date-row` instance.
       - type: container
         element: section
         props:
@@ -2173,21 +2310,111 @@ components:
                     element: p
                     props:
                       className: text-base text-gray-600
-                    content: Choisis l'atelier qui te convient — inscription en ligne, prix libre.
-              # Workshop list
+                    content: 6 dates de septembre à décembre — choisis la tienne, prix libre.
+              # Workshop card — one card, six dates, one registration URL.
               - type: container
                 props:
-                  className: grid gap-8 max-w-xl mx-auto
+                  className: grid gap-8 max-w-2xl mx-auto
                 children:
-                  - component: event-card
-                    vars:
-                      title: 'Atelier de consentement - Niveau 1 - Tout public'
-                      date: 16 juillet 2026
-                      time: 18h30 – 21h30
-                      location: La Plage Digitale, Strasbourg
-                      capacity: 15 places
-                      price: prix libre
-                      url: https://www.helloasso.com/associations/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026
+                  - type: container
+                    props:
+                      className: bg-white rounded-lg p-8 border border-gray-200 border-t-4 border-t-orange shadow-sm flex flex-col gap-6 text-left
+                    children:
+                      # Title
+                      - type: text
+                        element: h3
+                        props:
+                          className: text-2xl title-font text-bleu-fonce
+                        content: 'Atelier de consentement - Niveau 1 - Tout public'
+
+                      # Meta details — the practical facts a visitor weighs before
+                      # clicking. Times live per-date below, not here.
+                      - type: container
+                        props:
+                          className: flex flex-wrap items-center gap-x-5 gap-y-2 text-gray-600
+                        children:
+                          - type: container
+                            props:
+                              className: inline-flex items-center gap-2
+                            children:
+                              - type: icon
+                                props: { name: map-pin, className: w-5 h-5 text-orange }
+                              - type: text
+                                element: span
+                                content: Strasbourg — adresse communiquée aux inscrit·es
+                          - type: container
+                            props:
+                              className: inline-flex items-center gap-2
+                            children:
+                              - type: icon
+                                props: { name: users, className: w-5 h-5 text-orange }
+                              - type: text
+                                element: span
+                                content: 6 à 15 places
+                          - type: container
+                            props:
+                              className: inline-flex items-center gap-2 font-bold text-orange
+                            children:
+                              - type: icon
+                                props: { name: coins, className: w-5 h-5 }
+                              - type: text
+                                element: span
+                                content: prix libre
+
+                      # The six sessions, chronological.
+                      - type: container
+                        props:
+                          className: flex flex-col
+                        children:
+                          - component: event-date-row
+                            vars:
+                              date: samedi 19 septembre 2026
+                              time: 14h – 17h
+                              facilitators: Laetitia & Thomas
+                          - component: event-date-row
+                            vars:
+                              date: mardi 6 octobre 2026
+                              time: 18h30 – 21h30
+                              facilitators: Mathilde & Thomas
+                          - component: event-date-row
+                            vars:
+                              date: samedi 17 octobre 2026
+                              time: 14h – 17h
+                              facilitators: Dilara & Morgane
+                          - component: event-date-row
+                            vars:
+                              date: samedi 28 novembre 2026
+                              time: 14h – 17h
+                              facilitators: Laetitia & Morgane
+                          - component: event-date-row
+                            vars:
+                              date: samedi 12 décembre 2026
+                              time: 14h – 17h
+                              facilitators: Dilara & Mathilde
+                          - component: event-date-row
+                            vars:
+                              date: jeudi 17 décembre 2026
+                              time: 18h30 – 21h30
+                              facilitators: Morgane & Thomas
+
+                      # CTA → HelloAsso Billetterie Plus (date chosen in the widget)
+                      - type: link
+                        props:
+                          href: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+                          target: _blank
+                          rel: noopener noreferrer
+                          className: inline-flex items-center justify-center gap-2 self-start bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg hover:shadow-xl
+                        children:
+                          - type: text
+                            element: span
+                            content: Je réserve ma place
+                          - type: icon
+                            props: { name: arrow-right, className: w-5 h-5 -mt-0.5 }
+                      - type: text
+                        element: p
+                        props:
+                          className: text-sm text-gray-500
+                        content: Tu choisis ta date au moment de l'inscription.
               - type: container
                 props:
                   className: bg-white rounded-lg p-8 max-w-4xl mx-auto mt-12

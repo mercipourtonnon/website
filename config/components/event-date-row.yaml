@@ -1,0 +1,43 @@
+# Event date row — one session of the multi-date workshop.
+# Vars: $date ("samedi 19 septembre 2026"), $time ("14h – 17h"),
+# $facilitators ("Laetitia & Thomas"). Full Tailwind class tokens only.
+name: event-date-row
+type: container
+props:
+  className: flex items-start gap-3 py-3 border-b border-gray-100
+children:
+  # Bare calendar icon rather than the old event-card pill: six stacked pills
+  # would out-shout the single CTA below the list.
+  - type: icon
+    props: { name: calendar, className: w-5 h-5 text-orange shrink-0 mt-0.5 }
+  - type: container
+    props:
+      className: flex flex-col gap-0.5
+    children:
+      # Primary line — date dominates, horaire follows. Wraps on narrow screens.
+      - type: container
+        props:
+          className: flex flex-wrap items-baseline gap-x-3 gap-y-1
+        children:
+          - type: text
+            element: span
+            props:
+              className: font-bold text-bleu-fonce
+            content: $date
+          - type: text
+            element: span
+            props:
+              className: text-gray-600
+            content: $time
+      # Secondary line — facilitation, deliberately quieter.
+      - type: text
+        element: span
+        props:
+          className: text-sm text-gray-500
+        children:
+          - type: text
+            element: span
+            content: 'avec '
+          - type: text
+            element: span
+            content: $facilitators
