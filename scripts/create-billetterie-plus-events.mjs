@@ -45,7 +45,7 @@ const REFERENCE_DESCRIPTION =
 // Les 6 nouvelles dates programmées (source : Notion "Dates d'ateliers", vue Programmées).
 // Offset horaire : CEST (+02:00) jusqu'au 25 oct. 2026, CET (+01:00) ensuite.
 const ATELIERS = [
-  { key: '19-septembre-2026', dateLabel: 'samedi 19 septembre 2026 à 14h',  start: '2026-09-19T14:00:00+02:00', end: '2026-09-19T17:00:00+02:00', facilitators: ['Laetitia B.', 'Thomas Jeanneau'] },
+  { key: '19-septembre-2026', dateLabel: 'samedi 19 septembre 2026 à 14h',  start: '2026-09-19T14:00:00+02:00', end: '2026-09-19T17:00:00+02:00', facilitators: ['Dilara Simsek', 'Thomas Jeanneau'] },
   { key: '6-octobre-2026',    dateLabel: 'mardi 6 octobre 2026 à 18h30',    start: '2026-10-06T18:30:00+02:00', end: '2026-10-06T21:30:00+02:00', facilitators: ['Mathilde Brière', 'Thomas Jeanneau'] },
   { key: '17-octobre-2026',   dateLabel: 'samedi 17 octobre 2026 à 14h',    start: '2026-10-17T14:00:00+02:00', end: '2026-10-17T17:00:00+02:00', facilitators: ['Dilara Simsek', 'Mogo'] },
   { key: '28-novembre-2026',  dateLabel: 'samedi 28 novembre 2026 à 14h',   start: '2026-11-28T14:00:00+01:00', end: '2026-11-28T17:00:00+01:00', facilitators: ['Laetitia B.', 'Mogo'] },
